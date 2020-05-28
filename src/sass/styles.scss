@@ -1,6 +1,6 @@
 @import './components/transitions',
         './components/fonts',
-        './components/colors',
+        './components/variables',
         './components/header',
         './components/chooseRoom';
 
@@ -68,9 +68,9 @@ header {
 #main__container {
     width: 70%;
     margin: 2em auto;
-    background-color: #f0f0f0;
+    background-color: $background-color;
     padding: 2em;
-    border-radius: 5px;
+    border-radius: $border-radius-big;
 }
 
 #main__container > h1 {
@@ -79,10 +79,10 @@ header {
 
 #super-goals__container {
     width: 25%;
-    background-color: #f0f0f0;
+    background-color: $background-color;
     padding: 2em;
     margin: 2em auto;
-    border-radius: 5px;
+    border-radius: $border-radius-big;
 }
 
 #super-goals__container h1 {
@@ -95,7 +95,7 @@ header {
     cursor: pointer;
     color: black;
     transition: 200ms ease-in-out;
-    border-radius: 5px;
+    border-radius: $border-radius-big;
 }
 
 .goal__container > div {
@@ -109,14 +109,14 @@ header {
 .goal-type {
     padding: .5em;
     background-color: #34b6dd;
-    color: white;
-    border-radius: 5px;
+    color: $white;
+    border-radius: $border-radius-small;
     font-size: 13px;
 }
 
 .goal-type2 {
     padding: .5em;
-    color: #17686d;
+    color: $green;
     font-size: 13px;
 }
 
@@ -140,12 +140,12 @@ header {
 }
 
 button {
-    font-family: 'publicSans', sans-serif;
+    font-family: 'publicSans-medium', sans-serif;
     padding: 10px;
-    background-color: #17686d;
+    background-color: $green;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: $border-radius-small;
     font-size: 1em;
     margin-right: .5em;
     height: 50px;
@@ -157,8 +157,8 @@ button {
 
 button:focus{
     outline: none;
-    color: white;
-    background-color: #f6ae1a;
+    color: $white;
+    background-color: $yellow;
 }
 
 button:hover {
@@ -172,26 +172,26 @@ button:hover {
 }
 
 .filter {
-    background-color: black;
+    background-color: $black;
     color: white;
     width: 5em;
     margin-right: 0;
 }
 
 .filter:focus {
-    background-color: black;
+    background-color: $black;
 }
 
 #button__container span {
-    color: #b4b4b4;
+    color: $grey;
 }
 
 .message {
     display: flex;
     margin-top: 2em;
-    background-color: white;
+    background-color: $white;
     padding: 1.5em 0em;
-    border-radius: 5px;
+    border-radius: $border-radius-small;
 }
 
 .message span {
@@ -199,13 +199,13 @@ button:hover {
 }
 
 .message span:nth-child(3) {
-    color: #888888;
+    color: $grey;
     margin-top: .25em;
 }
 
 .image__container {
     width: 15em;
-    border-right: 2px solid #e51f4f;
+    border-right: 2px solid $red;
     padding: 1.5em .5em;
     text-align: center;
 }
@@ -242,7 +242,7 @@ select {
 select {
     flex: 1;
     padding: 0 .5em;
-    color: black;
+    color: $black;
     cursor: pointer;
 }
 
@@ -254,7 +254,7 @@ select {
     height: 3em;
     line-height: 3;
     overflow: hidden;
-    border-radius: .25em;
+    border-radius: $border-radius-small;
     margin-right: 0.9em;
 }
 
@@ -278,13 +278,13 @@ select::-ms-expand {
 
 /* Transition */
 .select:hover::after {
-    color: #17686d;
+    color: $green;
 }
 
 option {
     padding: 1em;
     margin: 1em;
-    color: black;
+    color: $black;
 }
 
 .show {
