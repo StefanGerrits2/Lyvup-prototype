@@ -1,0 +1,46 @@
+{
+    "name": "lyvup-prototype",
+    "version": "1.0.0",
+    "description": "Lyvup website",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "predev": "npm run build:css",
+        "dev": "nodemon server.js",
+        "start": "node server.js",
+        "prebuild:css": "rimraf ./public/dist",
+        "build:css": "gulp sass",
+        "watch:css": "gulp watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/StefanGerrits2/Lyvup-prototype.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/StefanGerrits2/Lyvup-prototype/issues"
+    },
+    "homepage": "https://github.com/StefanGerrits2/Lyvup-prototype#readme",
+    "dependencies": {
+        "compression": "^1.7.4",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-handlebars": "^4.0.3",
+        "express-minify-html-2": "^1.0.1",
+        "http": "0.0.1-security",
+        "node-fetch": "^2.6.0",
+        "socket.io": "^2.3.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "eslint": "^6.8.0",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-sass": "^4.0.2",
+        "nodemon": "^2.0.2",
+        "rimraf": "^3.0.2"
+    }
+}
