@@ -44,23 +44,6 @@ p, span {
     font-family: 'publicSans', sans-serif;
 }
 
-header ul {
-    display: flex;
-    list-style-type: none;
-}
-
-header ul li {
-    margin: 0 1em;
-}
-
-header {
-    border-bottom: 1px solid black;
-    display: flex;
-    align-items: center;
-    height: 75px;
-    padding-left: 1em;
-}
-
 #content__container {
     display: flex;
     width: 90%;
