@@ -1,9 +1,7 @@
-function notFound (req, res) {
-    res.status(404);
-    if (req.accepts('html')) {
-        res.render('notFound.hbs');
-        return;
-    }
+function team(req, res) {
+    res.render('team.hbs', {
+        // Data
+    });
 }
 
-module.exports = notFound;
+module.exports = team;

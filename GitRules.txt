@@ -1,0 +1,15 @@
+1. Als je klaar bent met een feature:
+- Commit en push je laatste changes.
+- Ga naar develop en pull alle changes daar(dus niet je eigen)/ git fetch
+- Ga terug naar je eigen branch en merge develop naar jezelf
+- (Optional) Fix merge conflics
+- (Optional) Push the fixes van je conflics naar je eigen branch
+- Ga naar develop en merge je eigen branch
+Develop is nu up-to-date
+
+2. Laat minimaal 1 persoon jou feature testen
+
+3. Maak nooit changes in develop of master zonder dat het hele team het weet en het er mee eens is.
+
+4. Probeer zo min mogelijk in files te werken waarvan je weet dat anderen er ook in werken. Bespreek als dit het geval is.
+ 
