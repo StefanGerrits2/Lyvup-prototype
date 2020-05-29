@@ -1,0 +1,60 @@
+// ID's
+#Karmaboard {
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+// classes
+.hidden {
+    display: none;
+}
+
+.gridElement {
+    margin-top: 3px;
+    min-height: 50px;
+    grid-template-rows: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+}
+
+.leaderboardImage {
+    max-height: 50px;
+}
+
+.tabcontent {
+    margin-top: 5px;
+    padding: 2px;
+    border: 1px solid black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    font-family: "bitter", serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+// elements

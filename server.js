@@ -20,6 +20,7 @@ const publicPath = path.join(__dirname, './public/');
 const home = require('./routes/home.js');
 const feedback = require('./routes/feedback.js');
 const notFound = require('./routes/notFound.js');
+const leaderboard = require('./routes/leaderboard.js');
 
 app
     .set('view engine', 'hbs')
@@ -48,6 +49,7 @@ app
     // Get routes
     .get('/', home)
     .get('/feedback', feedback)
+    .get('/leaderboard', leaderboard)
 
     // 404 not found
     .use(notFound);

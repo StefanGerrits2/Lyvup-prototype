@@ -1,0 +1,83 @@
+{{> header}}
+
+<div id="content__container">
+    <div id="main__container">
+        <h1>Ranglijst</h1>
+        <p>Hier kan je de langlijsten vinden over karma en achievements</p>
+
+        {{!-- tab menu --}}
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Karma')">Karma</button>
+            <button class="tablinks" onclick="openCity(event, 'Achievements')">Achievements</button>
+        </div>
+
+        <div id="Karma" class="tabcontent">
+            <h3>Karma</h3>
+
+            <div class="dropdown">
+                <button class="dropbtn">Team</button>
+                <div class="dropdown-content">
+                    <a href="#">Meesterproef</a>
+                    <a href="#">Meester 2</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Dag</button>
+                <div class="dropdown-content">
+                    <a href="#">Dag</a>
+                    <a href="#">Week</a>
+                    <a href="#">Maand</a>
+                </div>
+            </div>
+
+            <div id="Karmaboard">
+                <div class="gridElement">
+                    <h3>#1</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                </div>
+                <div class="gridElement">
+                    <h3>#2</h3>
+                </div>
+                <div class="gridElement">
+                    <h3>#3</h3>
+                </div>
+                <div class="gridElement">
+                    <h3>#4</h3>
+                </div>
+                <div class="gridElement">
+                    <h3>#5</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="Achievements" class="tabcontent hidden">
+            <h3>Achievements</h3>
+
+            <div class="dropdown">
+                <button class="dropbtn">Team</button>
+                <div class="dropdown-content">
+                    <a href="#">Meesterproef</a>
+                    <a href="#">Meester 2</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Dag</button>
+                <div class="dropdown-content">
+                    <a href="#">Dag</a>
+                    <a href="#">Week</a>
+                    <a href="#">Maand</a>
+                </div>
+            </div>
+
+            <div id="board">
+                
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="js/leaderboard.js"></script>
