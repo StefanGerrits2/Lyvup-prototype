@@ -19,6 +19,7 @@ const publicPath = path.join(__dirname, './public/');
 // Routes
 const home = require('./routes/home.js');
 const feedback = require('./routes/feedback.js');
+const compliment = require('./routes/compliment.js');
 const notFound = require('./routes/notFound.js');
 
 app
@@ -48,6 +49,7 @@ app
     // Get routes
     .get('/', home)
     .get('/feedback', feedback)
+    .get('/compliment-or-feedback', compliment)
 
     // 404 not found
     .use(notFound);
