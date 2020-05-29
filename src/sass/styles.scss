@@ -1,8 +1,10 @@
 @import './components/transitions',
-        './components/fonts',
-        './components/variables',
-        './components/header',
-        './components/chooseRoom';
+'./components/fonts',
+'./components/variables',
+'./components/header',
+'./components/chooseRoom',
+'./components/team';
+
 
 * {
     box-sizing: border-box;
@@ -24,7 +26,7 @@ h1 {
     font-family: 'bitter', serif;
     margin-bottom: 0.25em;
 }
-  
+
 h2 {
     font-size: 2.5em;
     font-family: 'publicSans', sans-serif;
@@ -34,13 +36,14 @@ h3 {
     font-size: 2em;
     font-family: 'publicSans', sans-serif;
 }
-  
+
 h4 {
     font-size: 1.5em;
     font-family: 'publicSans', sans-serif;
 }
 
-p, span {
+p,
+span {
     font-family: 'publicSans', sans-serif;
 }
 
@@ -96,7 +99,7 @@ header {
     margin-bottom: 1em;
 }
 
-.goal__container > div {
+.goal__container>div {
     padding: .75em;
 }
 
@@ -140,7 +143,7 @@ header {
     transform: scale(1.05);
 }
 
-.request_count{
+.request_count {
     color: #000;
 }
 
@@ -167,7 +170,7 @@ button:hover {
     background-color: #114c4c;
 }
 
-button:focus{
+button:focus {
     outline: none;
     color: $white;
     background-color: $yellow;

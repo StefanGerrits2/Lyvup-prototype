@@ -1,0 +1,66 @@
+#team__container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin-top: 3em;
+}
+
+.profile__container {
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    width: 30%;
+    color: black;
+    transition: 200ms ease-in-out;
+    border-radius: $border-radius-big;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+}
+
+.profile__container a {
+    font-family: publicSans-medium;
+    color: black;
+    transition: 200ms ease-in-out;
+}
+
+.profile__container a:hover {
+    font-family: publicSans-medium;
+    color: $yellow;
+}
+
+.profile__container img {
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: .75em;
+    width: 100px;
+    height: 100px;
+}
+
+.profileinfo__container {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info__container h1 {
+    font-size: 14px;
+    padding: 0.5em 1em 0.5em 1em;
+    color: $white;
+    background-color: $green;
+    border-radius: 5px;
+}
+
+.info__container {
+    transition: 200ms ease-in-out;
+}
+
+.info__container:hover {
+    transform: scale(1.05);
+}
+
+.popup__container {
+    display: none;
+}

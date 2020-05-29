@@ -14,21 +14,22 @@ const port = process.env.PORT || 3000;
 const publicPath = path.join(__dirname, './public/');
 
 // Modules
- 
+
 
 // Routes
 const home = require('./routes/home.js');
 const feedback = require('./routes/feedback.js');
+const team = require('./routes/team.js');
 const notFound = require('./routes/notFound.js');
 
 app
     .set('view engine', 'hbs')
-    .engine( 'hbs', hbs( {
+    .engine('hbs', hbs({
         extname: 'hbs',
         defaultLayout: 'main',
         partialsDir: __dirname + '/views/partials/'
     }))
-    
+
     .use(compression())
     .use('/', express.static(publicPath))
 
@@ -47,6 +48,7 @@ app
 
     // Get routes
     .get('/', home)
+    .get('/team', team)
     .get('/feedback', feedback)
 
     // 404 not found
@@ -54,10 +56,10 @@ app
 
 // Socket
 socket.on('connection', socket => {
-    
+
     // Disconnect
     socket.on('disconnect', () => {
-        
+
     });
 });
 
