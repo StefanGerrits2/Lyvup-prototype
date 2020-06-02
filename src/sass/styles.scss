@@ -1,11 +1,11 @@
 @import './components/transitions',
-        './components/fonts',
-        './components/variables',
-        './components/header',
-        './components/fixed-thumbs-up',
-        './pages/giveCompliment',
-        './pages/team',
-        './pages/goals.scss';
+'./components/fonts',
+'./components/variables',
+'./components/header',
+'./components/fixed-thumbs-up',
+'./pages/giveCompliment',
+'./pages/team',
+'./pages/goals.scss';
 
 * {
     box-sizing: border-box;
@@ -262,7 +262,7 @@ button:focus {
     border-radius: $border-radius-big;
     margin-top: 3em;
 
-    & > div:not(:last-of-type) {
+    &>div:not(:last-of-type) {
         margin-bottom: 1em;
     }
 }
