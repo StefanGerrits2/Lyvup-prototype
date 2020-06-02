@@ -10,7 +10,7 @@
 }
 
 .gridElement {
-    margin-top: 2em;
+    margin-top: 1em;
     min-height: 75px;
     grid-template-rows: auto;
     border: 1px solid black;
@@ -36,9 +36,13 @@
     margin-left: .5em;
 }
 
+.tablinks{
+    display: inline-block;
+}
+
 .tabcontent {
     margin-top: 5px;
-    padding: 2em;
+    padding: 1.5em;
     border: 1px solid black;
     border-radius: 5px;
 }
