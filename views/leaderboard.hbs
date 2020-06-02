@@ -1,0 +1,158 @@
+{{> header}}
+
+<div id="content__container">
+    <div id="main__container__single">
+        <h1>Ranglijst</h1>
+        <p>Hier kan je de langlijsten vinden over karma en achievements</p>
+
+        {{!-- tab menu --}}
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Karma')">Karma</button>
+            <button class="tablinks" onclick="openCity(event, 'Achievements')">Achievements</button>
+            <button class="tablinks" onclick="openCity(event, 'Teams')">Teams</button>
+        </div>
+
+        <div id="Karma" class="tabcontent">
+            <h3>Karma</h3>
+
+            <div class="selectContainer">
+                <div class="select">
+                    <select name="teams" id="select1">
+                        <option value="sample">Meesterproef</option>
+                        <option value="sample">Meester 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="selectContainer">
+                <div class="select">
+                    <select name="teams" id="select1">
+                        <option value="sample">Dag</option>
+                        <option value="sample">Week</option>
+                        <option value="sample">Maand</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="Karmaboard">
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#1</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h3 class="leaderboardName">Reinier</h3>
+                    <h3 class="leaderboardKarma">2100 karma</h3>
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#2</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h3 class="leaderboardName">Monika</h3>
+                    <h3 class="leaderboardKarma">2050 karma</h3>
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#3</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h3 class="leaderboardName">Michel</h3>
+                    <h3 class="leaderboardKarma">1900 karma</h3>
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#4</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h3 class="leaderboardName">Max</h3>
+                    <h3 class="leaderboardKarma">1870 karma</h3>
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#5</h3>
+                    <img class="leaderboardImage" src="/images/stefan.jpg" alt="profile">
+                    <h3 class="leaderboardName">Stefan</h3>
+                    <h3 class="leaderboardKarma">1750 karma</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="Achievements" class="tabcontent hidden">
+            <h3>Achievements</h3>
+
+            <div class="selectContainer">
+                <div class="select">
+                    <select name="teams" id="select1">
+                        <option value="sample">Meesterproef</option>
+                        <option value="sample">Meester 2</option>>
+                    </select>
+                </div>
+            </div>
+
+            <div class="selectContainer">
+                <div class="select">
+                    <select name="teams" id="select1">
+                        <option value="sample">Dag</option>
+                        <option value="sample">Week</option>
+                        <option value="sample">Maand</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="achievementBoard">
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#1</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h3 class="leaderboardName">Reinier</h3>
+                    <img class="leaderboardImage" src="/images/icon1.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon2.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon3.png" alt="achievement">
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#2</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h3 class="leaderboardName">Monika</h3>
+                    <img class="leaderboardImage" src="/images/icon4.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon3.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon1.png" alt="achievement">
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#3</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h3 class="leaderboardName">Michel</h3>
+                    <img class="leaderboardImage" src="/images/icon3.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon4.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon2.png" alt="achievement">
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#4</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h3 class="leaderboardName">Max</h3>
+                    <img class="leaderboardImage" src="/images/icon2.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon3.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon1.png" alt="achievement">
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#5</h3>
+                    <img class="leaderboardImage" src="/images/stefan.jpg" alt="profile">
+                    <h3 class="leaderboardName">Stefan</h3>
+                    <img class="leaderboardImage" src="/images/icon1.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon4.png" alt="achievement">
+                    <img class="leaderboardImage" src="/images/icon2.png" alt="achievement">
+                </div>
+            </div>
+        </div>
+
+        <div id="Teams" class="tabcontent hidden">
+            <h3>Team</h3>
+
+            <div id="Teamboard">
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#1</h3>
+                    <h3 class="leaderboardName">Meesterproef</h3>
+                    <h3 class="leaderboardKarma">10500 karma</h3>
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#2</h3>
+                    <h3 class="leaderboardName">Meester 2</h3>
+                    <h3 class="leaderboardKarma">8700 karma</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> thumbs-up}}
+
+<script src="js/leaderboard.js"></script>

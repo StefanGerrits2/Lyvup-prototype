@@ -11,7 +11,7 @@
     background-color: white;
     margin: 1em;
     padding: 1em;
-    width: 30%;
+    width: 13em;
     color: black;
     transition: 200ms ease-in-out;
     border-radius: $border-radius-big;
@@ -48,6 +48,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .info__container h1 {
@@ -66,6 +67,124 @@
     transform: scale(1.05);
 }
 
+.hide__popup {
+    visibility: hidden;
+}
+
 .popup__container {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+}
+
+.show__popup {
+    opacity: 1;
+    left: 10%;
+    top: 15%;
+    height: 70%;
+    width: 80%;
+    z-index: 1000;
+    background-color: white;
+    position: fixed;
+    visibility: visible;
+    transition: 200ms ease-in-out;
+}
+
+.show__popup h1 {
+    font-size: 1.5em;
+    margin: 1.5em;
+}
+
+.hide__popup {
+    visibility: hidden;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+}
+
+#popup {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    width: 65%;
+    margin: auto;
+}
+
+.popup_item:first-child {
+    width: 53%;
+
+}
+
+.popup_item {
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    width: 30%em;
+    height: fit-content;
+    color: black;
+    transition: 200ms ease-in-out;
+    border-radius: $border-radius-big;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+}
+
+.clearScreen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+}
+
+.blurScreen {
+    opacity: 0.7;
+    height: 101%;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+}
+
+.close:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.close:before,
+.close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: $green;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.strong__container {
+    margin: 1em;
+    padding: 0.2em 1em 0.2em 1em;
+    width: fit-content;
+    transition: 200ms ease-in-out;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
 }

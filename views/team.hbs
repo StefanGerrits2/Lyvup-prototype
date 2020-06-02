@@ -5,8 +5,9 @@
         <h1>Team</h1>
         <div class="select">
             <select name="teams">
-                <option value="sample">meesterproef</option>
-                <option value="sample">meesterproef 2</option>
+                {{#each data}}
+                <option value="sample">{{acc_wly_name}}</option>
+                {{/each}}
             </select>
         </div>
 
@@ -79,11 +80,64 @@
 </div>
 
 <div class="popup__container">
+    <h1>Info over: Reinier van Limpt</h1>
+    <div class="close">
+        <svg viewbox="0 0 40 40">
+            <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+        </svg>
+    </div>
     <div id="popup">
-        <div>Doelen</div>
-        <div>sterkte kanten</div>
+        <div class="popup_item">
+            <h4>Doelen</h4>
+            <article class="goal__container">
+                <div class="flex">
+                    <img src="./images/goals_icon.svg" alt="">
+                    <div class="goal-buttons__container">
+                        <span class="goal-type">Samenwerken</span><span class="goal-type2">Verbeteren</span><span
+                            class="goal-estimate">12 uur resterend</span>
+                    </div>
+                </div>
+                <div>
+                    <p>Beter worden in samen werken door vaker te communiceren</p>
+                </div>
+            </article>
+            <article class="goal__container">
+                <div class="flex">
+                    <img src="./images/goals_icon.svg" alt="">
+                    <div class="goal-buttons__container">
+                        <span class="goal-type">Communiceren</span><span class="goal-type2">Verbeteren</span><span
+                            class="goal-estimate">12 uur resterend</span>
+                    </div>
+                </div>
+                <div>
+                    <p>Communicate more over slack</p>
+                </div>
+            </article>
+        </div>
+        <div class="popup_item">
+            <h4>Sterke kanten</h4>
+            <div>
+                <div class="strong__container">
+                    <span>enthousiasme en passie</span>
+                </div>
+                <div class="strong__container">
+                    <span>humor en speelsheid</span>
+                </div>
+                <div class="strong__container">
+                    <span>vergevingsgezindheid</span>
+                </div>
+                <div class="strong__container">
+                    <span>zingeving</span>
+                </div>
+                <div class="strong__container">
+                    <span>optimisme</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<div class="clearScreen"></div>
 
 {{> thumbs-up}}
 

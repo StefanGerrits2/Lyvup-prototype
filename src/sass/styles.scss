@@ -1,11 +1,19 @@
 @import './components/transitions',
-        './components/fonts',
-        './components/variables',
-        './components/header',
-        './components/fixed-thumbs-up',
-        './pages/giveCompliment',
-        './pages/team',
-        './pages/goals.scss';
+'./components/fonts',
+'./components/variables',
+'./components/header',
+'./components/fixed-thumbs-up',
+'./pages/giveCompliment',
+'./components/leaderboard',
+'./pages/team',
+'./pages/goals.scss',
+'./components/profile',
+'./pages/home.scss';
+
+
+html {
+    font-family: 'publicSans', sans-serif;
+}
 
 * {
     box-sizing: border-box;
@@ -63,6 +71,14 @@ p {
 
 #main__container {
     width: 65%;
+    margin: 1%;
+    background-color: $white;
+    padding: 2em;
+    border-radius: $border-radius-big;
+}
+
+#main__container__single {
+    width: 90%;
     margin: 1%;
     background-color: $white;
     padding: 2em;
@@ -147,7 +163,7 @@ p {
 }
 
 .goal__container div:nth-of-type(1) {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -160,7 +176,8 @@ p {
     color: #000;
 }
 
-button {
+button,
+input[type="submit"] {
     font-family: 'publicSans-medium', sans-serif;
     padding: 10px;
     background-color: $green;
@@ -244,7 +261,7 @@ button:focus {
     border-radius: $border-radius-big;
     margin-top: 3em;
 
-    & > div:not(:last-of-type) {
+    &>div:not(:last-of-type) {
         margin-bottom: 1em;
     }
 }
