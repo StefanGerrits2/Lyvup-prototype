@@ -6,7 +6,8 @@
 './pages/giveCompliment',
 './components/leaderboard',
 './pages/team',
-'./pages/goals.scss';
+'./pages/goals.scss',
+'./pages/home.scss';
 
 * {
     box-sizing: border-box;
@@ -156,7 +157,7 @@ p {
 }
 
 .goal__container div:nth-of-type(1) {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -169,7 +170,8 @@ p {
     color: #000;
 }
 
-button {
+button,
+input[type="submit"] {
     font-family: 'publicSans-medium', sans-serif;
     padding: 10px;
     background-color: $green;

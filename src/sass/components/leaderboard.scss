@@ -2,6 +2,10 @@
 #Karmaboard {
     display: grid;
     grid-template-rows: 20% 20% 20% 20% 20%;
+
+    & img {
+        border-radius: 50%;
+    }
 }
 
 // classes
@@ -24,16 +28,19 @@
 .leaderboardImage {
     max-height: 50px;
     margin-right: .5em;
-    margin-left: .5em;
 }
 
 .leaderboardName {
     border-right: 2px solid #e51f4f;
     padding-right: .5em;
+    margin-right: .5em;
 }
 
 .leaderboardKarma {
-    margin-left: .5em;
+}
+
+.leaderboardNumber{
+    margin-right: .5em;
 }
 
 .tablinks{

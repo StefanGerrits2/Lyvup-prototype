@@ -17,6 +17,8 @@ async function compliment(req, res) {
         res.render('giveCompliment.hbs', {
             data: userTeams
         });
+
+        console.log(req.body);
     } catch (error) {
         res.render('giveCompliment.hbs', {
             //
