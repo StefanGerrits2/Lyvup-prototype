@@ -1,0 +1,276 @@
+.bodyTextBold {
+    font-family: "publicSans-bold";
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    margin: 1em;
+}
+
+h1 {
+    font-family: bitter;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: "publicSans";
+    font-size: 2.5em;
+}
+
+h3 {
+    font-family: "publicSans";
+    font-size: 2em;
+}
+
+h4 {
+    font-family: "publicSans";
+    font-size: 1.5em;
+}
+
+h4:first-child {
+    margin: 0;
+    margin-top: 1em;
+}
+
+p {
+    font-family: "publicSans";
+    font-size: 16px;
+    line-height: 200%;
+}
+
+.bodyTextBold {
+    font-family: "publicSans-bold";
+    font-size: 13px;
+}
+
+.challenge__Text {
+    font-family: "publicSans";
+    font-size: 13px;
+}
+
+.challenge__time {
+    font-family: "publicSans";
+    font-size: 10px;
+}
+
+span {
+    font-family: "publicSans-bold";
+    font-size: 13px;
+}
+
+section {
+    width: 90%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar span {
+    text-align: center;
+    display: block;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    padding: 1em;
+    padding-bottom: 2em;
+    margin: 1%;
+    width: 35%;
+    height: 30%;
+    border-radius: 15px;
+}
+
+.sidebar h4 {
+    margin-bottom: 0.8em;
+}
+
+.sidebar h4:first-child {
+    margin-top: 2em;
+}
+
+.content {
+    background-color: white;
+    padding: 1em;
+    margin: 1%;
+    width: 70%;
+    border-radius: 15px;
+    padding-bottom: 2em;
+}
+
+.avatarProfile {
+    border-radius: 50%;
+    display: block;
+    margin-top: 2.5em;
+    margin-left: 1em;
+    margin-right: 4em;
+    width: 5em;
+}
+
+.avatar {
+    border-radius: 50%;
+    display: block;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5em;
+}
+
+.icon {
+    width: 2em;
+    margin-right: 1em;
+}
+
+.content ul li {
+    display: block;
+}
+
+.goal__container {
+    width: 50%;
+    margin: 0.5em;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    transition: 200ms ease-in-out;
+    border: 1px solid rgb(243, 241, 241);
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+    border-radius: 5px;
+}
+
+.goal__container > div {
+    padding: 0.75em;
+}
+
+.goal-type {
+    padding: 0.5em;
+    background-color: #34b6dd;
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.goal-type2 {
+    padding: 0.5em;
+    color: #17686d;
+    font-size: 13px;
+}
+
+.goal-buttons__container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.strong__container {
+    margin: 1em;
+    padding: 0.2em 1em 0.2em 1em;
+    transition: 200ms ease-in-out;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+}
+
+.strong__container span {
+    font-family: "publicSans";
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.content .flex:first-child {
+    justify-content: space-between;
+}
+
+.container2 {
+    background-color: white;
+    // box-shadow: 0px 2px 0px 1px #e5e5e5;
+    margin: auto;
+    padding: 1em;
+    transition: 200ms ease-in-out;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.container3 {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container4 {
+    width: 95%;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+td {
+    padding: 0.5em;
+}
+
+button {
+    transition: all 200ms ease-in-out;
+    background-color: #17686d;
+    height: 30px;
+    width: 10em;
+    font-family: "publicSans-bold", sans-serif;
+    font-size: 13px;
+    margin: 0.5%;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.center {
+    width: 10em;
+    margin-left: 6em;
+}
+
+.circles {
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    background-color: #f6ae1a;
+    box-shadow: 0px 1px 0px 1px #e5e5e5;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    margin-top: 1em;
+    transition: 200ms ease-in-out;
+}
+
+.challenge__container {
+    width: 10em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0em 1em 0em 1em;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    border: 1px solid rgb(243, 241, 241);
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+    border-radius: 5px;
+    transition: 200ms ease-in-out;
+}
+
+.goal__container:hover,
+.strong__container:hover,
+.circles:hover,
+.challenge__container:hover {
+    transform: scale(1.05);
+}
+
+button:hover {
+    background-color: #114c4c;
+    transform: scale(1.05);
+}
