@@ -14,28 +14,21 @@
       </div>
     </div>
     <div id="setGoals__container">
+      {{#each data}}
       <article class="goal__container">
         <div class="flex">
           <img src="./images/goals_icon.svg" alt="">
           <div class="goal-buttons__container">
-            <span class="goal-type">Samenwerken</span><span class="goal-type2">Verbeteren</span><span class="goal-estimate">12 uur resterend</span>
+            <span class="goal-type">{{title}}</span><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">{{daysToExpiry}}</span>
           </div>
         </div>
         <div>
-          <p>Beter worden in samen werken door vaker te communiceren</p>
+          {{#each skills}}
+          <p>{{description}}</p>
+          {{/each}}
         </div>
       </article>
-      <article class="goal__container">
-        <div class="flex">
-          <img src="./images/goals_icon.svg" alt="">
-          <div class="goal-buttons__container">
-            <span class="goal-type">Communiceren</span><span class="goal-type2">Verbeteren</span><span class="goal-estimate">12 uur resterend</span>
-          </div>
-        </div>
-        <div>
-          <p>Communicate more over slack</p>
-        </div>
-      </article>
+      {{/each}}
     </div>
     <h2>Completed Goals</h2>
     <div id=completedGoals__container>
@@ -87,3 +80,5 @@
 </div>
 
 {{> thumbs-up}}
+
+<script src="js/goals.js"></script>
