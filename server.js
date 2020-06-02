@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
-const fetch = require('node-fetch');
 
 const app = express();
 const server = require('http').Server(app);
@@ -23,6 +22,7 @@ const compliment = require('./routes/compliment.js');
 const team = require('./routes/team.js');
 const notFound = require('./routes/notFound.js');
 const goals = require('./routes/goals.js');
+const leaderboard = require('./routes/leaderboard.js');
 
 app
   .set('view engine', 'hbs')
@@ -54,6 +54,7 @@ app
   .get('/compliment-or-feedback', compliment)
   .get('/team', team)
   .get('/goals', goals)
+  .get('/leaderboard', leaderboard)
 
   // 404 not found
   .use(notFound);

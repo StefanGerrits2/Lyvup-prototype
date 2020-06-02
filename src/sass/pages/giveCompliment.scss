@@ -2,6 +2,7 @@
 #option__container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #team2__container {
@@ -32,6 +33,8 @@
         border: 1px solid $grey;
         color: $grey;
         font-size: 14px;
+        width: 14em;
+        text-align: center;
     }
 
     & input[type="radio"]:checked + label {
@@ -86,6 +89,7 @@
         border: none;
         margin-top: 2em;
         display: block;
+        width: 100%;
 
         &:focus {
             outline: none;
@@ -107,4 +111,57 @@
     padding: 2em;
     border-radius: $border-radius-big;
     margin: 2em auto;
+}
+
+// Mediaqueries
+@media screen and (max-width: 1300px) {
+    #team-member__container {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #team-member__container {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #team-member__container {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #option__container {
+        & label {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #team-member__container {
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #compliment__container {
+        margin: 0;
+        width: 100%;
+        padding: 1.5em;
+
+        & h1 {
+            font-size: 2em;
+        }
+
+        & textarea {
+            width: 100%;
+        }
+
+        & h2 {
+            line-height: 100%;
+        }
+    }
 }
