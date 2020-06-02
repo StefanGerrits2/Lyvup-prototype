@@ -24,6 +24,11 @@
     transition: 200ms ease-in-out;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
+
 .profile__container a:hover {
     font-family: publicSans-medium;
     color: $yellow;
