@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
-const fetch = require('node-fetch');
 
 const app = express();
 const server = require('http').Server(app);
@@ -15,9 +14,6 @@ const port = process.env.PORT || 3000;
 const publicPath = path.join(__dirname, './public/');
 
 // Modules
-
-const token = '2c4367bb-f072-4726-b437-0c6c77479a9a';
-const lang = 'dutch';
 
 // Routes
 const home = require('./routes/home.js');
@@ -60,14 +56,6 @@ app
 
     // 404 not found
     .use(notFound);
-
-// fetch(`https://lyvup.com/api/getPageDescription?token=2c4367bb-f072-4726-b437-0c6c77479a9a&lang=dutch`)
-//   .then(async response => {
-//     const data = await response
-//     var stringified = JSON.stringify(data);
-//     var parsedObj = JSON.parse(stringified);
-//     console.log(parsedObj);
-//   })
 
 // Socket
 socket.on('connection', socket => {
