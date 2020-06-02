@@ -2,7 +2,10 @@
         './components/fonts',
         './components/variables',
         './components/header',
-        './components/chooseRoom';
+        './components/fixed-thumbs-up',
+        './pages/giveCompliment',
+        './pages/team',
+        './pages/goals.scss';
 
 * {
     box-sizing: border-box;
@@ -15,7 +18,7 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    font-size: 13px;
+    font-size: 16px;
     background-color: $background-color;
 }
 
@@ -24,24 +27,50 @@ h1 {
     font-family: 'bitter', serif;
     margin-bottom: 0.25em;
 }
-  
+
 h2 {
+    line-height: 200%;
     font-size: 2.5em;
     font-family: 'publicSans', sans-serif;
+    margin-bottom: 0.25em;
 }
 
 h3 {
     font-size: 2em;
     font-family: 'publicSans', sans-serif;
 }
-  
+
 h4 {
     font-size: 1.5em;
     font-family: 'publicSans', sans-serif;
 }
 
-p, span {
+p,
+span {
+    font-size: 1em;
+    margin: 8px;
     font-family: 'publicSans', sans-serif;
+}
+
+p {
+    line-height: 200%;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header ul li {
+    margin: 0 1em;
+}
+
+header {
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    height: 75px;
+    padding-left: 1em;
 }
 
 #content__container {
@@ -51,22 +80,23 @@ p, span {
 }
 
 #main__container {
-    width: 70%;
-    margin: 2em auto;
+    width: 65%;
+    margin: 1%;
     background-color: $white;
     padding: 2em;
     border-radius: $border-radius-big;
 }
 
 #super-goals__container {
-    width: 25%;
+    width: 35%;
     background-color: $white;
     padding: 2em;
-    margin: 2em auto;
+    margin: 1%;
     border-radius: $border-radius-big;
 }
 
 .goal__container {
+    margin: 10px;
     background-color: white;
     cursor: pointer;
     color: black;
@@ -79,12 +109,29 @@ p, span {
     margin-bottom: 1em;
 }
 
-.goal__container > div {
+#goals__container div:not(:last-of-type) {
+    margin-bottom: 1em;
+}
+
+.goal__container>div {
     padding: .75em;
 }
 
 .goal__container img {
-    width: 2em;
+    width: 3em;
+}
+
+#goals__container {
+    padding: 10px;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin-top: 3em;
+}
+
+#setGoals__container {
+    padding: 10px;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
 }
 
 #goals__container {
@@ -95,6 +142,9 @@ p, span {
 }
 
 .goal-type {
+    width: 200px;
+    margin: 8px;
+    text-align: center;
     padding: .5em;
     background-color: #34b6dd;
     color: $white;
@@ -115,6 +165,7 @@ p, span {
 }
 
 .goal__container div:nth-of-type(1) {
+    width: 90%;
     display: flex;
     justify-content: space-between;
 }
@@ -123,7 +174,7 @@ p, span {
     transform: scale(1.05);
 }
 
-.request_count{
+.request_count {
     color: #000;
 }
 
@@ -140,6 +191,13 @@ button {
     width: 10em;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    display: block;
+    align-items: center;
+}
+
+button img {
+    padding-right: 5px;
+    height: 25px;
 }
 
 button:hover {
@@ -150,7 +208,7 @@ button:hover {
     background-color: #114c4c;
 }
 
-button:focus{
+button:focus {
     outline: none;
     color: $white;
     background-color: $yellow;
@@ -160,6 +218,10 @@ button:focus{
     display: flex;
     margin-top: 3em;
     justify-content: space-between;
+}
+
+#button__container {
+    display: flex;
 }
 
 .filter {
@@ -200,7 +262,7 @@ button:focus{
     border-radius: $border-radius-big;
     margin-top: 3em;
 
-    & :not(:last-of-type) {
+    & > div:not(:last-of-type) {
         margin-bottom: 1em;
     }
 }
@@ -239,6 +301,7 @@ select {
     border: 0 !important;
     background: #d4d4d4;
     background-image: none;
+    font-family: 'publicSans', sans-serif;
 }
 
 select {
