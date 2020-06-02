@@ -10,22 +10,37 @@
 }
 
 .gridElement {
-    margin-top: 3px;
-    min-height: 50px;
+    margin-top: 2em;
+    min-height: 75px;
     grid-template-rows: auto;
     border: 1px solid black;
     border-radius: 20px;
     display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1em;
 }
 
 .leaderboardImage {
     max-height: 50px;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+
+.leaderboardName {
+    border-right: 2px solid #e51f4f;
+    padding-right: .5em;
+}
+
+.leaderboardKarma {
+    margin-left: .5em;
 }
 
 .tabcontent {
     margin-top: 5px;
-    padding: 2px;
+    padding: 2em;
     border: 1px solid black;
+    border-radius: 5px;
 }
 
 .dropdown-content {
@@ -55,6 +70,15 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+}
+
+.dropbtn {
+    background-color: #d4d4d4;
+    color: black;
+}
+
+.selectContainer{
+    display: inline-block;
 }
 
 // elements
