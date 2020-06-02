@@ -4,6 +4,7 @@
         './components/header',
         './components/fixed-thumbs-up',
         './pages/giveCompliment',
+        './components/leaderboard',
         './pages/team',
         './pages/goals.scss';
 
@@ -63,6 +64,14 @@ p {
 
 #main__container {
     width: 65%;
+    margin: 1%;
+    background-color: $white;
+    padding: 2em;
+    border-radius: $border-radius-big;
+}
+
+#main__container__single {
+    width: 90%;
     margin: 1%;
     background-color: $white;
     padding: 2em;
