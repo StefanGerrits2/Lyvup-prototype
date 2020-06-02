@@ -24,6 +24,7 @@ const compliment = require('./routes/compliment.js');
 const team = require('./routes/team.js');
 const notFound = require('./routes/notFound.js');
 const goals = require('./routes/goals.js');
+const leaderboard = require('./routes/leaderboard.js');
 
 app
     .set('view engine', 'hbs')
@@ -56,8 +57,9 @@ app
     .post('/compliment-or-feedback', urlencodedParser, compliment)
     .get('/team', team)
     .get('/goals', goals)
+    .get('/leaderboard', leaderboard)
 
-    // 404 not found
+// 404 not found
     .use(notFound);
 
 // Socket
