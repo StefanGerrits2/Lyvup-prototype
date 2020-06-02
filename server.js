@@ -61,14 +61,6 @@ app
     // 404 not found
     .use(notFound);
 
-// fetch(`https://lyvup.com/api/getPageDescription?token=2c4367bb-f072-4726-b437-0c6c77479a9a&lang=dutch`)
-//   .then(async response => {
-//     const data = await response
-//     var stringified = JSON.stringify(data);
-//     var parsedObj = JSON.parse(stringified);
-//     console.log(parsedObj);
-//   })
-
 // Socket
 socket.on('connection', socket => {
 
