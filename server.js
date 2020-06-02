@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
-const fetch = require('node-fetch');
 
 const app = express();
 const server = require('http').Server(app);
@@ -16,9 +15,6 @@ const publicPath = path.join(__dirname, './public/');
 
 // Modules
 
-const token = '2c4367bb-f072-4726-b437-0c6c77479a9a';
-const lang = 'dutch';
-
 // Routes
 const home = require('./routes/home.js');
 const feedback = require('./routes/feedback.js');
@@ -26,6 +22,7 @@ const compliment = require('./routes/compliment.js');
 const team = require('./routes/team.js');
 const notFound = require('./routes/notFound.js');
 const goals = require('./routes/goals.js');
+const leaderboard = require('./routes/leaderboard.js');
 
 app
     .set('view engine', 'hbs')
@@ -57,17 +54,10 @@ app
     .get('/compliment-or-feedback', compliment)
     .get('/team', team)
     .get('/goals', goals)
+    .get('/leaderboard', leaderboard)
 
     // 404 not found
     .use(notFound);
-
-// fetch(`https://lyvup.com/api/getPageDescription?token=2c4367bb-f072-4726-b437-0c6c77479a9a&lang=dutch`)
-//   .then(async response => {
-//     const data = await response
-//     var stringified = JSON.stringify(data);
-//     var parsedObj = JSON.parse(stringified);
-//     console.log(parsedObj);
-//   })
 
 // Socket
 socket.on('connection', socket => {

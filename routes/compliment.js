@@ -1,7 +1,19 @@
+require('dotenv').config();
+const Fetcher = require('../modules/fetch.js');
+
 // Render home page
-function compliment (req, res) {
+async function compliment (req, res) {
+    // URLS
+    const baseURL = 'https://lyvup.com/api/';
+    const query = `getTeamsOfUser?token=${process.env.TOKEN}&lang=dutch`;
+    const fullURL = baseURL.concat(query);
+
+    // Get clicked beer
+    const userTeams = await Fetcher.get(fullURL);
+    console.log(userTeams.getTeamsOfUser.data);
+
     res.render('giveCompliment.hbs', {
-        // Data
+        data: userTeams
     });
 }
 
