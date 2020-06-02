@@ -1,5 +1,7 @@
 require('dotenv').config();
 const express = require('express');
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({ extended: true });
 const path = require('path');
 const hbs = require('express-handlebars');
 
@@ -51,6 +53,7 @@ app
     .get('/', home)
     .get('/feedback', feedback)
     .get('/compliment-or-feedback', compliment)
+    .post('/compliment-or-feedback', urlencodedParser, compliment)
     .get('/team', team)
     .get('/goals', goals)
 

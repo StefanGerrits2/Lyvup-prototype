@@ -2,7 +2,7 @@ require('dotenv').config();
 const Fetcher = require('../modules/fetch.js');
 
 // Render home page
-async function compliment (req, res) {
+async function compliment(req, res) {
 
     try {
         // URLS
@@ -17,6 +17,8 @@ async function compliment (req, res) {
         res.render('giveCompliment.hbs', {
             data: userTeams
         });
+
+        console.log(req.body);
     }
 
     catch (error) {
