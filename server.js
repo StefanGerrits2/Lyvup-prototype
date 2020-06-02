@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
-const fetch = require('node-fetch')
+const fetch = require('node-fetch');
 
 const app = express();
 const server = require('http').Server(app);
@@ -22,40 +22,44 @@ const lang = 'dutch';
 // Routes
 const home = require('./routes/home.js');
 const feedback = require('./routes/feedback.js');
+const compliment = require('./routes/compliment.js');
+const team = require('./routes/team.js');
 const notFound = require('./routes/notFound.js');
-const goals = require('./routes/goals.js')
+const goals = require('./routes/goals.js');
 
 app
-  .set('view engine', 'hbs')
-  .engine('hbs', hbs({
-    extname: 'hbs',
-    defaultLayout: 'main',
-    partialsDir: __dirname + '/views/partials/'
-  }))
+    .set('view engine', 'hbs')
+    .engine('hbs', hbs({
+        extname: 'hbs',
+        defaultLayout: 'main',
+        partialsDir: __dirname + '/views/partials/'
+    }))
 
-  .use(compression())
-  .use('/', express.static(publicPath))
+    .use(compression())
+    .use('/', express.static(publicPath))
 
-  .use(minifyHTML({
-    override: true,
-    exception_url: false,
-    htmlMinifier: {
-      removeComments: true,
-      collapseWhitespace: true,
-      collapseBooleanAttributes: true,
-      removeAttributeQuotes: true,
-      removeEmptyAttributes: true,
-      minifyJS: true
-    }
-  }))
+    .use(minifyHTML({
+        override: true,
+        exception_url: false,
+        htmlMinifier: {
+            removeComments: true,
+            collapseWhitespace: true,
+            collapseBooleanAttributes: true,
+            removeAttributeQuotes: true,
+            removeEmptyAttributes: true,
+            minifyJS: true
+        }
+    }))
 
-  // Get routes
-  .get('/', home)
-  .get('/feedback', feedback)
-  .get('/goals', goals)
+    // Get routes
+    .get('/', home)
+    .get('/feedback', feedback)
+    .get('/compliment-or-feedback', compliment)
+    .get('/team', team)
+    .get('/goals', goals)
 
-  // 404 not found
-  .use(notFound);
+    // 404 not found
+    .use(notFound);
 
 // fetch(`https://lyvup.com/api/getPageDescription?token=2c4367bb-f072-4726-b437-0c6c77479a9a&lang=dutch`)
 //   .then(async response => {
@@ -68,10 +72,10 @@ app
 // Socket
 socket.on('connection', socket => {
 
-  // Disconnect
-  socket.on('disconnect', () => {
+    // Disconnect
+    socket.on('disconnect', () => {
 
-  });
+    });
 });
 
 // Listen

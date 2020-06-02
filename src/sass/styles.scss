@@ -2,7 +2,9 @@
         './components/fonts',
         './components/variables',
         './components/header',
-        './components/chooseRoom',
+        './components/fixed-thumbs-up',
+        './pages/giveCompliment',
+        './pages/team',
         './pages/goals.scss';
 
 * {
@@ -30,6 +32,7 @@ h2 {
     line-height: 200%;
     font-size: 2.5em;
     font-family: 'publicSans', sans-serif;
+    margin-bottom: 0.25em;
 }
 
 h3 {
@@ -42,14 +45,15 @@ h4 {
     font-family: 'publicSans', sans-serif;
 }
 
-p, span {
-  font-size: 1em;
-  margin: 8px;
-  font-family: 'publicSans', sans-serif;
+p,
+span {
+    font-size: 1em;
+    margin: 8px;
+    font-family: 'publicSans', sans-serif;
 }
 
 p {
-  line-height: 200%;
+    line-height: 200%;
 }
 
 header ul {
@@ -105,7 +109,11 @@ header {
     margin-bottom: 1em;
 }
 
-.goal__container > div {
+#goals__container div:not(:last-of-type) {
+    margin-bottom: 1em;
+}
+
+.goal__container>div {
     padding: .75em;
 }
 
@@ -126,15 +134,22 @@ header {
     border-radius: $border-radius-big;
 }
 
+#goals__container {
+    padding: 10px;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin-top: 3em;
+}
+
 .goal-type {
-  width: 200px;
-  margin: 8px;
-  text-align: center;
-  padding: .5em;
-  background-color: #34b6dd;
-  color: $white;
-  border-radius: $border-radius-small;
-  font-size: 13px;
+    width: 200px;
+    margin: 8px;
+    text-align: center;
+    padding: .5em;
+    background-color: #34b6dd;
+    color: $white;
+    border-radius: $border-radius-small;
+    font-size: 13px;
 }
 
 .goal-type2 {
@@ -159,7 +174,7 @@ header {
     transform: scale(1.05);
 }
 
-.request_count{
+.request_count {
     color: #000;
 }
 
@@ -176,12 +191,12 @@ button {
     width: 10em;
     cursor: pointer;
     transition: all .2s ease-in-out;
-    display: flex;
+    display: block;
     align-items: center;
 }
 
 button img {
-  padding-right:5px;
+    padding-right: 5px;
     height: 25px;
 }
 
@@ -193,7 +208,7 @@ button:hover {
     background-color: #114c4c;
 }
 
-button:focus{
+button:focus {
     outline: none;
     color: $white;
     background-color: $yellow;
@@ -286,6 +301,7 @@ select {
     border: 0 !important;
     background: #d4d4d4;
     background-image: none;
+    font-family: 'publicSans', sans-serif;
 }
 
 select {

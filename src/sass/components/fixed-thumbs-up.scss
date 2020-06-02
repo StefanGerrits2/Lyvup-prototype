@@ -1,0 +1,35 @@
+#thumbs__container {
+    background-color: $red;
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+
+        &::before {
+            content: "Geef compliment of vraag feedback";
+            position: absolute;
+            right: 5em;
+            color: white;
+            background-color: black;
+            padding: .75em;
+            border-radius: $border-radius-small;
+            width: 10em;
+            font-family: 'publicSans', sans-serif;
+            font-size: 14px;
+        }
+    }
+
+    & img {
+        width: 2em;
+        margin: 0 auto;
+    }
+}
