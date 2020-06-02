@@ -27,6 +27,7 @@ const team = require('./routes/team.js');
 const notFound = require('./routes/notFound.js');
 const goals = require('./routes/goals.js');
 const leaderboard = require('./routes/leaderboard.js');
+const profile = require('./routes/profile.js');
 
 app
   .set('view engine', 'hbs')
@@ -65,6 +66,7 @@ app
   .get('/team', team)
   .get('/goals', goals)
   .get('/leaderboard', leaderboard)
+  .get('/profile', profile)
 
   // 404 not found
   .use(notFound);
