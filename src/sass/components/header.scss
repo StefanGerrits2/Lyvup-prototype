@@ -1,7 +1,6 @@
 header {
     font-family: 'publicSans-medium', sans-serif;
     background-color: white;
-    border-bottom: 1px solid black;
     display: flex;
     height: 75px;
     align-items: center;
@@ -9,8 +8,9 @@ header {
 }
 
 header img {
-    max-height: 50px;
+    max-height: 30px;
     width: auto;
+    margin-right: 1em;
 }
 
 header ul {
@@ -19,7 +19,7 @@ header ul {
 }
 
 header ul li {
-    margin: 0 2em;
+    margin: 0 1.25em;
 }
 
 header ul li a {

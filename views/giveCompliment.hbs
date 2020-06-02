@@ -7,9 +7,9 @@
         <p>Team</p>
         <div class="select">
             <select name="members" id="select2">
-                <option value="sample">Meesterproef</option>
-                <option value="sample">Sample</option>
-                <option value="sample">Sample</option>
+                {{#each data}}
+                    <option value="sample">{{acc_wly_name}}</option>
+                {{/each}}
             </select>
         </div>
     </div>
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <textarea name="textarea" id="" cols="80" rows="10" placeholder="Typ hier je compliment..."></textarea>
+    <textarea name="textarea" id="" rows="10" placeholder="Typ hier je compliment..."></textarea>
     <button type="button" class="defaultButton">Versturen</button>
 </div>
 
