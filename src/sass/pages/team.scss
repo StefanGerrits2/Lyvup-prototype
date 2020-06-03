@@ -2,14 +2,42 @@
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     margin-top: 3em;
 }
 
+.container__teampage {
+    display: flex;
+}
+
+#teamoverview__container {
+    width: 60%;
+    height: fit-content;
+    margin: 1%;
+    background-color: $white;
+    padding: 2em;
+    border-radius: $border-radius-big;
+}
+
+#team-aside__container {
+    width: 40%;
+    background-color: $white;
+    padding: 2em;
+    margin: 1%;
+    border-radius: $border-radius-big;
+}
+
+#team-aside__container h4 {
+    margin-top: 1em;
+}
+
+
+
 .profile__container {
     background-color: white;
-    margin: 1em;
+    margin: 0.5em 0.3em 0.5em 0.3em;
     padding: 1em;
     width: 13em;
     color: black;
@@ -24,9 +52,17 @@
     transition: 200ms ease-in-out;
 }
 
-.flex {
-    display: flex;
+.container {
     align-items: center;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin-top: 2em;
+    width: 100%;
 }
 
 .profile__container a:hover {
@@ -187,4 +223,124 @@
     align-items: center;
     background-color: white;
     box-shadow: 0px 2px 0px 1px #e5e5e5;
+}
+
+.player__container {
+    background-color: white;
+    margin: 0.5em;
+    padding: 1em;
+    width: 8em;
+    height: 14em;
+    margin: 0.5em 0.3em 0.5em 0.3em;
+    color: black;
+    transition: 200ms ease-in-out;
+    border-radius: $border-radius-big;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+}
+
+.player__container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 2px 0px 1px #e5e5e500;
+}
+
+.player__container img {
+    width: 90px;
+    height: 90px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: block;
+    background: linear-gradient(-90deg, #ffd000, #ffd000, rgb(252, 30, 97), #ffd000, #ffd000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease-in-out infinite;
+    background-clip: padding-box;
+    padding: 3px;
+    margin: 0.7em auto;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.playerinfo__container {
+    padding: 0;
+    text-align: left;
+}
+
+.playerinfo__container a {
+    font-family: publicSans-medium;
+    font-size: 13px;
+    color: black;
+}
+
+.playerinfo__container p {
+    font-size: 11px;
+    color: black;
+}
+
+.playerinfo__container a:hover {
+    color: $yellow;
+}
+
+@media screen and (max-width: 1400px) {
+    #content__container {
+        flex-direction: column;
+    }
+
+    #teamoverview__container,
+    #team-aside__container {
+        width: 100%;
+    }
+
+    .goal__container img {
+        display: flex;
+    }
+}
+
+// Mediaqueries
+@media screen and (max-width: 600) {
+    //
+}
+
+.statistic__container {
+    font-size: 14px;
+    width: 12em;
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+}
+
+#all-team-goals {
+    margin: 0.5em;
+    border-left: 5px solid $light-blue;
+}
+
+#completer-team-goals {
+    margin: 0.5em;
+    border-left: 5px solid $light-blue;
+}
+
+#all-team-compliments {
+    margin: 0.5em;
+    border-left: 5px solid $red;
+}
+
+#my-team-compliments {
+    margin: 0.5em;
+    border-left: 5px solid $red;
+}
+
+h3 {
+    margin-left: 0.5em;
 }
