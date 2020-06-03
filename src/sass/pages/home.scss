@@ -1,0 +1,55 @@
+.dashboard__container {
+  width: 90%;
+  display: grid;
+  padding: 1%;
+  margin: auto;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-gap: 2%;
+}
+
+.left__container {
+  background-color: $white;
+  padding: 1em;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.center__container {
+  background-color: $white;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.activity__container {
+  background-color: $light-grey;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.activity__section {
+  display: flex;
+
+  & img {
+    max-height: 40px;
+    width: auto;
+    margin-right: 10px;
+  }
+}
+
+.activity__card {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: 200ms ease-in-out;
+  box-shadow: 0 2px 0 1px #e5e5e5;
+  width: 100%;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.right__container {
+
+}

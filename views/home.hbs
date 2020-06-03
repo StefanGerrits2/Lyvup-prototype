@@ -1,12 +1,33 @@
 {{> header}}
 
-<h1>Dashboard</h1>
+<div class="dashboard__container">
+    <div class="left__container">
+        <h4>Complimenten</h4>
+        <h4>Tests</h4>
+        <h4>Doelen</h4>
+        <h4>To Do</h4>
+        <h4>Verzoeken</h4>
 
-{{#each data.praise_data.praise_array}}
-    <p>Message: {{message}}</p>
-    <p>Date: {{created_on}}</p>
-    <p>From: {{from_user_id.[0].name}} {{from_user_id.[0].last_name}}</p>
-    <p>To: {{to_user_id.[0].name}} {{to_user_id.[0].last_name}}</p>
-{{/each}}
+    </div>
+    <div class="center__container">
+        <div class="activity__container">
+            {{#each data.activities_data.activities}}
+                <div class="activity__section">
+                    <img src="/images/user.svg" alt="">
+                    <div class="activity__card">
+                        <p>{{title}}</p>
+                        <p>{{message}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="right__container">
+
+    </div>
+</div>
+
+
+
 
 {{> thumbs-up}}
