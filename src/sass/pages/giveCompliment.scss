@@ -35,6 +35,12 @@
         font-size: 14px;
         width: 14em;
         text-align: center;
+        user-select: none;
+
+        &:hover {
+            color: $red;
+            border-color: $red;
+        }
     }
 
     & input[type="radio"]:checked + label {
@@ -42,6 +48,7 @@
         background-color: $red;
         color: $white;
         border: none;
+        border: 1px solid $red;
     }
 }
 
@@ -49,14 +56,14 @@
     margin-top: 3em;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
 #team-member__container {
     margin-top: 2em;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-
-    & input[type="checkbox"] {
-        display: none;
-    }
 
     & input[type="checkbox"]:checked + label div img {
         border: 5px solid $green;
@@ -66,10 +73,13 @@
         display: flex;
         flex-direction: column;
         width: 10em;
-        margin: 2em auto;
+        margin: 4em auto;
+        width: 13em;
+        height: 13em;
 
         & img {
             width: 100%;
+            height: 100%;
             border-radius: 50%;
             margin: 0 auto;
             margin-bottom: 1em;
@@ -114,6 +124,129 @@
 
     & button {
         margin-top: 2em;
+    }
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+#super-compliment__container {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+
+    & p {
+        margin-right: 1em;
+    }
+
+    & label {
+        cursor: pointer;
+        margin-right: 2em;
+        padding: 1em;
+        border-radius: $border-radius-small;
+        border: 1px solid $grey;
+        color: $grey;
+        font-size: 14px;
+        text-align: center;
+        user-select: none;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+
+        &:hover {
+            border: 1px solid $white;
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -2;
+                left: -250%;
+                top: -340%;
+                width: 600%;
+                height: 800%;
+                background-color: $green;
+                background-repeat: no-repeat;
+                background-size: 50% 50%, 50% 50%;
+                background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+                background-image: linear-gradient($green, $green), linear-gradient($yellow, $yellow), linear-gradient($red, $red), linear-gradient($light-blue, $light-blue);
+                animation: rotate 12s linear infinite;
+                box-sizing: border-box;
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                left: 6px;
+                top: 6px;
+                width: calc(100% - 12px);
+                height: calc(100% - 12px);
+                background: white;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    & input[type="checkbox"]:checked + label {
+        cursor: pointer;
+        color: $black;
+        border: none;
+        border: 1px solid $white;
+        z-index: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            left: -250%;
+            top: -340%;
+            width: 600%;
+            height: 800%;
+            background-color: $green;
+            background-repeat: no-repeat;
+            background-size: 50% 50%, 50% 50%;
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+            background-image: linear-gradient($green, $green), linear-gradient($yellow, $yellow), linear-gradient($red, $red), linear-gradient($light-blue, $light-blue);
+            animation: rotate 12s linear infinite;
+            box-sizing: border-box;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 6px;
+            top: 6px;
+            width: calc(100% - 12px);
+            height: calc(100% - 12px);
+            background: white;
+            box-sizing: border-box;
+        }
+    }
+}
+
+#selected-members__container {
+    margin-top: 6em;
+    display: flex;
+    
+    & > h4 {
+        margin: 0;
+        margin-right: .5em;
+    }
+
+    & #selected-members {
+        display: flex;
+
+        & p {
+            padding: 0 .3em;
+
+            &::after {
+                content: ',';
+            }
+        }
     }
 }
 

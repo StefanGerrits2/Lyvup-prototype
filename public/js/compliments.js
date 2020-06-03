@@ -21,3 +21,48 @@ document.querySelector('.option2').addEventListener('click', () => {
         document.querySelector('textarea').placeholder = 'Vraag hier om feedback';
     }
 });
+
+// Super compliment button
+const superComplimentLabel = document.querySelector('#super-compliment__button');
+let superComplimentStatus = false;
+
+superComplimentLabel.addEventListener('click', () => {
+    if (!superComplimentStatus) {
+        superComplimentLabel.textContent = 'Super compliment geactiveerd!';
+        superComplimentStatus = true;
+    }
+
+    else {
+        superComplimentLabel.textContent = 'Activeer een super compliment';
+        superComplimentStatus = false;
+    }
+});
+
+// Show selected members
+// Change on click
+document.querySelectorAll('#team-member__container label').forEach(item => {
+    item.addEventListener('click', () => {
+        setTimeout(() => {
+            // Get values
+            const values = Array
+                .from(document.querySelectorAll('input[type="checkbox"]'))
+                .filter((checkbox) => checkbox.checked && checkbox.value !== 'yes')
+                .map((checkbox) => checkbox.value);
+
+            // Reset container
+            const container = document.querySelector('#selected-members');
+            container.textContent = '';
+
+            // Create list
+            values.forEach(item => {
+                const p = document.createElement('p');
+                container.appendChild(p);
+                p.textContent = item;
+            });
+
+            // Change title bases on amount of people selected
+            const title = document.querySelector('#selected-members__container h4');
+            title.textContent = values.length > 1 ? 'Geselecteerde personen:' : 'Geselecteerde persoon:';
+        }, 0);
+    });
+});
