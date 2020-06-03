@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({
-  extended: true
+    extended: true
 });
 const path = require('path');
 const hbs = require('express-handlebars');
@@ -30,51 +30,51 @@ const leaderboard = require('./routes/leaderboard.js');
 const profile = require('./routes/profile.js');
 
 app
-  .set('view engine', 'hbs')
-  .engine(
-    'hbs',
-    hbs({
-      extname: 'hbs',
-      defaultLayout: 'main',
-      partialsDir: __dirname + '/views/partials/',
-    })
-  )
+    .set('view engine', 'hbs')
+    .engine(
+        'hbs',
+        hbs({
+            extname: 'hbs',
+            defaultLayout: 'main',
+            partialsDir: __dirname + '/views/partials/',
+        })
+    )
 
-  .use(compression())
-  .use('/', express.static(publicPath))
+    .use(compression())
+    .use('/', express.static(publicPath))
 
-  .use(
-    minifyHTML({
-      override: true,
-      exception_url: false,
-      htmlMinifier: {
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true,
-        removeAttributeQuotes: true,
-        removeEmptyAttributes: true,
-        minifyJS: true,
-      },
-    })
-  )
+    .use(
+        minifyHTML({
+            override: true,
+            exception_url: false,
+            htmlMinifier: {
+                removeComments: true,
+                collapseWhitespace: true,
+                collapseBooleanAttributes: true,
+                removeAttributeQuotes: true,
+                removeEmptyAttributes: true,
+                minifyJS: true,
+            },
+        })
+    )
 
-  // Get routes
-  .get('/', home)
-  .get('/feedback', feedback)
-  .get('/compliment-or-feedback', compliment)
-  .post('/compliment-or-feedback', urlencodedParser, compliment)
-  .get('/team', team)
-  .get('/goals', goals)
-  .get('/leaderboard', leaderboard)
-  .get('/profile', profile)
+// Get routes
+    .get('/', home)
+    .get('/feedback', feedback)
+    .get('/compliment-or-feedback', compliment)
+    .post('/compliment-or-feedback', urlencodedParser, compliment)
+    .get('/team', team)
+    .get('/goals', goals)
+    .get('/leaderboard', leaderboard)
+    .get('/profile', profile)
 
-  // 404 not found
-  .use(notFound);
+// 404 not found
+    .use(notFound);
 
 // Socket
 socket.on('connection', (socket) => {
-  // Disconnect
-  socket.on('disconnect', () => {});
+    // Disconnect
+    socket.on('disconnect', () => {});
 });
 
 // Listen

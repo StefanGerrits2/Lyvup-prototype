@@ -10,6 +10,11 @@
 './components/profile',
 './pages/home.scss';
 
+
+html {
+    font-family: 'publicSans', sans-serif;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;

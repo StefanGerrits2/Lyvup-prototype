@@ -1,36 +1,7 @@
 .bodyTextBold {
-    font-family: "publicSans-bold";
+    font-family: "publicSans-medium", sans-serif;
     font-size: 13px;
     font-weight: bold;
-}
-
-nav {
-    display: flex;
-}
-
-li {
-    list-style: none;
-    margin: 1em;
-}
-
-h1 {
-    font-family: bitter;
-    font-size: 3em;
-}
-
-h2 {
-    font-family: "publicSans";
-    font-size: 2.5em;
-}
-
-h3 {
-    font-family: "publicSans";
-    font-size: 2em;
-}
-
-h4 {
-    font-family: "publicSans";
-    font-size: 1.5em;
 }
 
 h4:first-child {
@@ -38,14 +9,14 @@ h4:first-child {
     margin-top: 1em;
 }
 
-p {
-    font-family: "publicSans";
+p, tr {
+    font-family: "publicSans"!important;
     font-size: 16px;
     line-height: 200%;
 }
 
 .bodyTextBold {
-    font-family: "publicSans-bold";
+    font-family: "publicSans-medium";
     font-size: 13px;
 }
 
@@ -60,7 +31,7 @@ p {
 }
 
 span {
-    font-family: "publicSans-bold";
+    font-family: "publicSans-medium", sans-serif;
     font-size: 13px;
 }
 
@@ -132,42 +103,6 @@ section {
     display: block;
 }
 
-.goal__container {
-    width: 50%;
-    margin: 0.5em;
-    background-color: white;
-    cursor: pointer;
-    color: black;
-    transition: 200ms ease-in-out;
-    border: 1px solid rgb(243, 241, 241);
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
-    border-radius: 5px;
-}
-
-.goal__container > div {
-    padding: 0.75em;
-}
-
-.goal-type {
-    padding: 0.5em;
-    background-color: #34b6dd;
-    color: white;
-    border-radius: 5px;
-    font-size: 13px;
-}
-
-.goal-type2 {
-    padding: 0.5em;
-    color: #17686d;
-    font-size: 13px;
-}
-
-.goal-buttons__container {
-    display: flex;
-    align-items: center;
-    padding: 0;
-}
-
 .strong__container {
     margin: 1em;
     padding: 0.2em 1em 0.2em 1em;
@@ -180,7 +115,7 @@ section {
 }
 
 .strong__container span {
-    font-family: "publicSans";
+    font-family: "publicSans", sans-serif;
 }
 
 .flex {
