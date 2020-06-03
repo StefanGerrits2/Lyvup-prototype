@@ -2,6 +2,10 @@
 #Karmaboard {
     display: grid;
     grid-template-rows: 20% 20% 20% 20% 20%;
+
+    & img {
+        border-radius: 50%;
+    }
 }
 
 // classes

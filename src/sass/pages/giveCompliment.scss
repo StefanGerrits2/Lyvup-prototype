@@ -46,7 +46,7 @@
 }
 
 #select__container {
-    margin-top: 4em;
+    margin-top: 3em;
 }
 
 #team-member__container {
@@ -54,7 +54,15 @@
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
 
-    & > div {
+    & input[type="checkbox"] {
+        display: none;
+    }
+
+    & input[type="checkbox"]:checked + label div img {
+        border: 5px solid $green;
+    }
+
+    & label > div {
         display: flex;
         flex-direction: column;
         width: 10em;
@@ -66,16 +74,19 @@
             margin: 0 auto;
             margin-bottom: 1em;
             cursor: pointer;
+            border: 5px solid $white;
         }
 
         & p {
             text-align: center;
         }
 
-        & p:last-of-type {
+        & span {
             color: $grey;
             margin-top: .25em;
             font-size: 14px;
+            text-align: center;
+            margin-top: 0;
         }
     }
 }
@@ -90,6 +101,7 @@
         margin-top: 2em;
         display: block;
         width: 100%;
+        margin-bottom: 2em;
 
         &:focus {
             outline: none;

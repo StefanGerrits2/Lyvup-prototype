@@ -1,3 +1,12 @@
 {{> header}}
 
+<h1>Dashboard</h1>
+
+{{#each data.praise_data.praise_array}}
+    <p>Message: {{message}}</p>
+    <p>Date: {{created_on}}</p>
+    <p>From: {{from_user_id.[0].name}} {{from_user_id.[0].last_name}}</p>
+    <p>To: {{to_user_id.[0].name}} {{to_user_id.[0].last_name}}</p>
+{{/each}}
+
 {{> thumbs-up}}
