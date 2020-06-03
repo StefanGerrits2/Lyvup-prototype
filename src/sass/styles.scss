@@ -227,14 +227,20 @@ button:focus {
     display: flex;
 }
 
-.filter {
+.filter-button {
     background-color: $black;
     color: white;
-    width: 5em;
+    width: fit-content;
+    padding: 0 1.5em;
     margin-right: 0;
+    display: none;
+
+    &:hover {
+        background-color: black;
+    }
 }
 
-.filter:focus {
+.filter-button:focus {
     background-color: $black;
 }
 
@@ -292,8 +298,8 @@ button:focus {
 }
 
 .filter__container {
-    display: none;
     margin-top: 2em;
+    display: flex;
 }
 
 /* Reset Select */
@@ -357,6 +363,10 @@ option {
 
 .show {
     display: flex;
+}
+
+.hide {
+    display: none;
 }
 
 @media screen and (max-width: 1500px) {
