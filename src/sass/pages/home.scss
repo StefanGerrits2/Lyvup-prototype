@@ -61,9 +61,11 @@
 }
 
 .activity__container {
-  background-color: $light-grey;
+  //background-color: $light-grey;
   border-radius: 10px;
   padding: 10px;
+  background-image: url(/images/background.png);
+  background-size: 500%;
 }
 
 .activity__section {
