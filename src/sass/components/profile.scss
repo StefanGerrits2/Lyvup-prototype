@@ -126,7 +126,6 @@ td {
 }
 
 .profile__grid__element{
-    // background-color: red;
     border-radius: 50px;
     min-height: 50px;
     margin: .5em;
@@ -141,7 +140,7 @@ td {
 }
 
 .achievementIcon:hover{
-    transform: scale(1.2);
+    border-radius: 50px;
 }
 
 .profile__challange__container{
@@ -163,4 +162,34 @@ td {
 
 .editButton{
     float: right;
+}
+
+#achievement__container {
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+
+        &::before {
+            content: "Achievement 1: 5/5 complimenten gegeven";
+            position: absolute;
+            right: 5em;
+            color: white;
+            background-color: black;
+            padding: .75em;
+            border-radius: $border-radius-small;
+            width: 10em;
+            font-family: 'publicSans', sans-serif;
+            font-size: 14px;
+        }
+    }
+}
+
+#profile__main__container {
+    padding: 20px;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
