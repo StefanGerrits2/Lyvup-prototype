@@ -21,7 +21,7 @@
     max-height: 8em;
     width: 8em;
     border-radius: 50%;
-    border: 3px solid $red;
+    border: 2px solid $red;
     margin-right: 10px;
   }
 }
@@ -101,7 +101,10 @@
   display: flex;
 
   & p {
+    margin-left: auto;
     text-align: right;
+    font-weight: bold;
+    color: $red;
   }
 }
 
