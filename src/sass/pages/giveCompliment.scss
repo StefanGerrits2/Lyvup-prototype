@@ -54,6 +54,28 @@
 
 #select__container {
     margin-top: 3em;
+
+    & #select-button__container {
+        display: flex;
+
+        & button {
+            margin: 2em 1em 0 0;
+            width: auto;
+
+            &:nth-of-type(2) {
+                background-color: $white;
+                color: $grey;
+
+                &:focus {
+                    background-color: $white;
+                }
+            }
+
+            &:focus {
+                background-color: $green;
+            }
+        }
+    }
 }
 
 input[type="checkbox"] {
@@ -63,7 +85,7 @@ input[type="checkbox"] {
 #team-member__container {
     margin-top: 2em;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
 
     & input[type="checkbox"]:checked + label div img {
         border: 5px solid $green;
@@ -74,8 +96,8 @@ input[type="checkbox"] {
         flex-direction: column;
         width: 10em;
         margin: 4em auto;
-        width: 13em;
-        height: 13em;
+        width: 10em;
+        height: 10em;
 
         & img {
             width: 100%;
