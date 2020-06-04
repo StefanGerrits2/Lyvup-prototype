@@ -4,8 +4,7 @@ const fetch = require('node-fetch');
 function checkStatus(response) {
     if (response.ok) {
         return response;
-    } 
-    else {
+    } else {
         const error = new Error(response.statusText);
         error.response = response;
         throw error;
@@ -15,8 +14,8 @@ function checkStatus(response) {
 const Fetcher = {
     get: (url) =>
         fetch(url)
-            .then(checkStatus)
-            .then(res => res.json())
+        .then(checkStatus)
+        .then(res => res.json())
 };
 
 module.exports = Fetcher;

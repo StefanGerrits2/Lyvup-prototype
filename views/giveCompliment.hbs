@@ -3,91 +3,87 @@
 <div id="compliment__container" id="center">
     <h1>Geef complimenten of vraag feedback</h1>
 
-    <div id="team2__container">
-        <p>Team</p>
-        <div class="select">
-            <select name="members" id="select2">
-                {{#each data}}
-                    <option value="sample">{{acc_wly_name}}</option>
-                {{/each}}
-            </select>
-        </div>
-    </div>
-
-    <div id="option__container">
-        <p>Ik wil...</p>
-        <input id="praise" class="option1" type="radio" name="type" checked>
-        <label for="praise">een compliment geven</label>
-
-        <input id="feedback" class="option2" type="radio" name="type">
-        <label for="feedback">feedback vragen</label>
-    </div>
-
-    <div id="select__container">
-        <h2>Compliment geven</h2>
-        <p>Selecteer minimaal 1 persoon</p>
-
-        <div id="team-member__container">
-            <div>
-                <img src="/images/random4.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/reinier.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/stefan.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/reinier.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/random3.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/stefan.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/random1.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/random2.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/random4.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/stefan.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
-            </div>
-            <div>
-                <img src="/images/random1.jpg" alt="">
-                <p>Stefan Gerrits</p>
-                <p>Teamspeler</p>
+    <form method="post" action="/compliment-or-feedback">
+        <div id="team2__container">
+            <p>Team</p>
+            <div class="select">
+                <select name="members" id="select2">
+                    {{#each data}}
+                        <option value={{acc_wly_name}}>{{acc_wly_name}}</option>
+                    {{/each}}
+                </select>
             </div>
         </div>
-    </div>
 
-    <textarea name="textarea" id="" rows="10" placeholder="Typ hier je compliment..."></textarea>
-    <button type="button" class="defaultButton">Versturen</button>
+        <div id="option__container">
+            <p>Ik wil...</p>
+            <input id="praise" class="option1" type="radio" value="praise" name="type" checked>
+            <label for="praise">een compliment geven</label>
+
+            <input id="feedback" class="option2" type="radio" value="ask-feedback" name="type">
+            <label for="feedback">feedback vragen</label>
+        </div>
+
+        <div id="select__container">
+            <h2>Compliment geven</h2>
+            <p>Selecteer minimaal 1 persoon</p>
+
+            <div id="team-member__container">
+                <input name="selectedMembers" type="checkbox" id="1" value="Stefan1">
+                <label for="1">
+                    <div>
+                        <img src="/images/stefan.jpg" alt="">
+                        <p>Stefan Gerrits</p>
+                        <span>Teamspeler</span>
+                    </div>
+                </label>
+
+                <input name="selectedMembers" type="checkbox" id="2" value="Stefan2">
+                <label for="2">
+                    <div>
+                        <img src="/images/reinier.jpg" alt="">
+                        <p>Stefan Gerrits</p>
+                        <span>Teamspeler</span>
+                    </div>
+                </label>
+                <input name="selectedMembers" type="checkbox" id="3" value="Stefan3">
+                <label for="3">
+                    <div>
+                        <img src="/images/random4.jpg" alt="">
+                        <p>Stefan Gerrits</p>
+                        <span>Teamspeler</span>
+                    </div>
+                </label>
+                <input name="selectedMembers" type="checkbox" id="4" value="Stefan4">
+                <label for="4">
+                    <div>
+                        <img src="/images/random3.jpg" alt="">
+                        <p>Stefan Gerrits</p>
+                        <span>Teamspeler</span>
+                    </div>
+                </label>
+                <input name="selectedMembers" type="checkbox" id="5" value="Stefan5">
+                <label for="5">
+                    <div>
+                        <img src="/images/random2.jpg" alt="">
+                        <p>Stefan Gerrits</p>
+                        <span>Teamspeler</span>
+                    </div>
+                </label>
+                <input name="selectedMembers" type="checkbox" id="6" value="Stefan6">
+                <label for="6">
+                    <div>
+                        <img src="/images/random1.jpg" alt="">
+                        <p>Stefan Gerrits</p>
+                        <span>Teamspeler</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <textarea name="textarea" id="" rows="10" required placeholder="Typ hier je compliment..."></textarea>
+        <input type="submit" class="defaultButton" value="Versturen">
+    </form>
 </div>
 
 <script src="js/compliments.js"></script>
