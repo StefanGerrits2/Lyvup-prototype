@@ -2,11 +2,12 @@
     position: relative;
     padding: 10px;
     display: flex;
-    align-content: space-between;
     flex-wrap: wrap;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     margin-top: 3em;
+    background-image: url(/images/background.png);
+    background-size: 500%;
 }
 
 .container__teampage {
@@ -38,8 +39,8 @@
     background-color: white;
     margin: 0.5em 0.3em 0.5em 0.3em;
     padding: 1em;
-    width: 13em;
-    max-height: 11em;
+    width: 14em;
+    max-height: 13em;
     color: black;
     transition: 200ms ease-in-out;
     border-radius: $border-radius-big;
@@ -151,7 +152,7 @@
     margin: 0.5em;
     padding: 1em;
     width: 8em;
-    height: 14em;
+    height: fit-content;
     margin: 0.5em 0.3em 0.5em 0.3em;
     color: black;
     transition: 200ms ease-in-out;
@@ -243,8 +244,15 @@
 }
 
 #all-team-goals {
-    margin: 0.5em;
+    margin: 0.8em;
     border-left: 5px solid $light-blue;
+}
+
+#all-team-goals h3,
+#completer-team-goals h3,
+#all-team-compliments h3,
+#my-team-compliments h3 {
+    margin-left: 1em;
 }
 
 #completer-team-goals {
@@ -262,6 +270,14 @@
     border-left: 5px solid $red;
 }
 
-h3 {
-    margin-left: 0.5em;
+.strong__container {
+    margin: 1em;
+    padding: 0.2em 1em 0.2em 1em;
+    width: fit-content;
+    transition: 200ms ease-in-out;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
 }
