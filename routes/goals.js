@@ -17,7 +17,7 @@ async function goals(req, res) {
 
         userGoals.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
 
-        console.log(userGoals);
+        console.log(userGoals[0]);
 
         res.render('goals.hbs', {
             data: userGoals,

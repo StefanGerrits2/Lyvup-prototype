@@ -38,14 +38,14 @@ button {
 h1 {
     font-size: 3em;
     font-family: 'bitter', serif;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.2em;
 }
 
 h2 {
     line-height: 200%;
     font-size: 2.5em;
     font-family: 'publicSans', sans-serif;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.2em;
 }
 
 h3 {
@@ -60,7 +60,7 @@ h4 {
 
 p,
 span {
-    font-size: 1em;
+    font-size: 14px;
     font-family: 'publicSans', sans-serif;
 }
 
@@ -86,7 +86,7 @@ p {
     width: 90%;
     margin: 1%;
     background-color: $white;
-    padding: 2em;
+    padding: 1.5em;
     border-radius: $border-radius-big;
 }
 
@@ -106,6 +106,9 @@ p {
     transition: 200ms ease-in-out;
     border-radius: $border-radius-big;
     box-shadow: 0px 2px 0px 1px #e5e5e5;
+    & p{
+      padding-left:15px;
+    }
 }
 
 #goals__container div:not(:last-of-type) {
@@ -117,7 +120,10 @@ p {
 }
 
 .goal__container>div {
-    padding: .75em;
+    padding-right: .75em;
+    padding-left: .75em;
+    padding-bottom: .75em;
+    padding-top: .35em;
 }
 
 .goal__container img {
@@ -129,12 +135,16 @@ p {
     background-color: $light-grey;
     border-radius: $border-radius-big;
     margin-top: 3em;
+    background-image: url(/images/background.png);
+    background-size: 500%;
 }
 
 #setGoals__container {
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
+    background-image: url(/images/background.png);
+    background-size: 500%;
 }
 
 #goals__container {
@@ -153,6 +163,10 @@ p {
     color: $white;
     border-radius: $border-radius-small;
     font-size: 13px;
+}
+
+.goal-type-image {
+  height: 30px;
 }
 
 .goal-type2 {
@@ -250,6 +264,7 @@ button:focus {
 }
 
 .message {
+    margin: 10px;
     display: flex;
     background-color: $white;
     padding: 1.5em 0em;
@@ -270,7 +285,8 @@ button:focus {
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
-    margin-top: 3em;
+    background-image: url(/images/background.png);
+    background-size: 500%;
 
     &>div:not(:last-of-type) {
         margin-bottom: 1em;

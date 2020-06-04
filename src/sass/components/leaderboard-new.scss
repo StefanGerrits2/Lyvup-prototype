@@ -22,33 +22,36 @@
     display: flex;
     align-items: center;
     background-color: $white;
-    padding: .5em;
+    padding: 0.5em;
     box-shadow: 0px 2px 0px 2px #e5e5e5;
 }
 
 .leaderboardImage {
     max-height: 50px;
-    margin-right: .5em;
+    margin-right: 0.5em;
     border-radius: 50px;
 }
 
 .leaderboardName {
     border-right: 2px solid #e51f4f;
-    padding-right: .5em;
-    margin-right: .5em;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
 }
 
-.leaderboardNumber{
-    margin-right: .5em;
+.leaderboardKarma {
 }
 
-.tablinks{
+.leaderboardNumber {
+    margin-right: 0.5em;
+}
+
+.tablinks {
     display: inline-block;
 }
 
 .tabcontent {
-    margin-top: .75em;
-    padding-top: 1.0em;
+    margin-top: 0.75em;
+    padding-top: 1em;
     padding-left: 1.5em;
     padding-right: 1.5em;
     padding-bottom: 1.5em;
@@ -90,8 +93,13 @@
     color: black;
 }
 
-.selectContainer{
+.selectContainer {
     display: inline-block;
 }
 
 // elements
+#leaderboard__grid {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
