@@ -1,6 +1,6 @@
 function leaderboard (req, res) {
     res.render('leaderboard.hbs', {
-        // Data
+        leaderboard: true
     });
 }
 

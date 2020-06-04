@@ -20,12 +20,13 @@ async function goals(req, res) {
         console.log(userGoals);
 
         res.render('goals.hbs', {
-            data: userGoals
+            data: userGoals,
+            goals: true
         });
-        
+
     } catch (error) {
         res.render('goals.hbs', {
-            // Data
+            goals: true
         });
         console.log(error);
     }

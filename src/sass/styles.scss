@@ -28,6 +28,7 @@ body {
     overflow-x: hidden;
     font-size: 14px;
     background-color: $background-color;
+    animation: page-transition .1s ease-in-out;
 }
 
 button {

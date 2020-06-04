@@ -16,11 +16,12 @@ async function compliment(req, res) {
         console.log(userTeams);
 
         res.render('team.hbs', {
-            data: userTeams
+            data: userTeams,
+            team: true
         });
     } catch (error) {
         res.render('team.hbs', {
-            //
+            team: true
         });
 
         console.log(error);
