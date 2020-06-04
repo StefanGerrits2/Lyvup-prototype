@@ -92,6 +92,7 @@
     border-radius: $border-radius-big;
     margin-top: 2em;
     width: 100%;
+    justify-content: space-between;
 }
 
 .profile__container h3 {
@@ -151,7 +152,7 @@
     background-color: white;
     margin: 0.5em;
     padding: 1em;
-    width: 8em;
+    width: 30%;
     height: fit-content;
     margin: 0.5em 0.3em 0.5em 0.3em;
     color: black;
@@ -235,7 +236,7 @@
 
 .statistic__container {
     font-size: 14px;
-    width: 12em;
+    width: 45%;
     margin: 1em;
     padding: 1em;
     background-color: white;
