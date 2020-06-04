@@ -10,6 +10,11 @@
 './components/profile',
 './pages/home.scss';
 
+
+html {
+    font-family: 'publicSans', sans-serif;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -28,14 +33,14 @@ body {
 h1 {
     font-size: 3em;
     font-family: 'bitter', serif;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.2em;
 }
 
 h2 {
     line-height: 200%;
     font-size: 2.5em;
     font-family: 'publicSans', sans-serif;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.2em;
 }
 
 h3 {
@@ -76,7 +81,7 @@ p {
     width: 90%;
     margin: 1%;
     background-color: $white;
-    padding: 2em;
+    padding: 1.5em;
     border-radius: $border-radius-big;
 }
 
@@ -107,7 +112,10 @@ p {
 }
 
 .goal__container>div {
-    padding: .75em;
+    padding-right: .75em;
+    padding-left: .75em;
+    padding-bottom: .75em;
+    padding-top: .35em;
 }
 
 .goal__container img {
