@@ -1,8 +1,34 @@
 {{> header}}
 
+<div id="form__container">
+<form class="addGoal__form" action="index.html" method="post">
+    <label for="competentie">Competentie</label>
+    <div class="select">
+      <select name="competentie" id="select1">
+          <option value="stressbestendig">Stressbestendig</option>
+          <option value="proactief">Proactief</option>
+          <option value="flexibiliteit">Flexibiliteit</option>
+          <option value="communiceren">Communiceren</option>
+      </select>
+    </div>
+      <label for="doel">Doel</label>
+      <div class="select">
+        <select name="doel" id="select1">
+            <option value="verbeteren toepassen">Verbeteren / Toepassen</option>
+            <option value="verbeteren">Verbeteren</option>
+            <option value="toepassen">Toepassen</option>
+        </select>
+        </div>
+        <label for="deadline">Deadline</label>
+        <input required name="deadline" type="date">
+        <label for="toelichting">Beschrijf hier jouw doel...</label>
+        <textarea name="toelichting" id="" rows="10" required placeholder="..."></textarea>
+</form>
+</div>
+
 <div id="content__container">
   <div id="main__container">
-    <div class="goalsHead">
+    <div class="goals-head">
       <h1>Doelen</h1>
       <div class=addGoals>
         <button class="goalsButton" type="button">
@@ -13,13 +39,14 @@
         </button>
       </div>
     </div>
+    <h2>Actieve doelen</h2>
     <div id="setGoals__container">
       {{#each data}}
       <article class="goal__container">
         <div class="flex">
           <img src="./images/goals_icon.svg" alt="">
           <div class="goal-buttons__container">
-            <span class="goal-type">{{title}}</span><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">{{daysToExpiry}}</span>
+            <span class="goal-type">{{title}}</span><img class="goal-type-image" src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">{{daysToExpiry}}</span>
           </div>
         </div>
         <div>
@@ -36,7 +63,7 @@
         <div class="flex">
           <img src="./images/goals_icon.svg" alt="">
           <div class="goal-buttons__container">
-            <span class="goal-type">Communiceren</span><span class="goal-type2">Verbeteren</span><span class="goal-estimate">12 uur resterend</span>
+            <span class="goal-type">Communiceren</span><img class="goal-type-image" src="./images/apply.svg" alt=""><span class="goal-type2">apply</span><span class="goal-estimate">12 uur resterend</span>
           </div>
         </div>
         <div>
@@ -47,7 +74,7 @@
         <div class="flex">
           <img src="./images/goals_icon.svg" alt="">
           <div class="goal-buttons__container">
-            <span class="goal-type">Communiceren</span><span class="goal-type2">Verbeteren</span><span class="goal-estimate">12 uur resterend</span>
+            <span class="goal-type">Communiceren</span><img class="goal-type-image" src="./images/improve.svg" alt=""><span class="goal-type2">improve</span><span class="goal-estimate">12 uur resterend</span>
           </div>
         </div>
         <div>
@@ -60,24 +87,43 @@
     <div class="complimentsHead">
       <h1>Complimenten</h1>
     </div>
+    <h2>Klik op een doel om te filteren.</h2>
     <div id="messages__container">
-      <div class="compliment__container">
+      <div class="compliment__container visible">
         <div class="compliments-buttons__container">
-          <p><b>Monika Streljajevravejejeva</b></p> <span class="compliment-date">Vandaag, op</span><span class="goal-type">Communiceren</span>
+          <p><b>Monika Streljajevravejejeva</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Conflict hanteren</span>
         </div>
         <img class="userImg" src="/images/reinier.jpg">
         <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.</p>
       </div>
-      <div class="compliment__container">
+      <div class="compliment__container visible">
         <div class="compliments-buttons__container">
-          <p><b>Frank Wood</b></p> <span class="compliment-date">Vandaag, op</span><span class="goal-type">Communiceren</span>
+          <p><b>Reinier van Limpt</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Stressbestendig</span>
+        </div>
+        <img class="userImg" src="/images/user.png">
+        <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.</p>
+      </div>
+      <div class="compliment__container visible">
+        <div class="compliments-buttons__container">
+          <p><b>Frank Wood</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Stressbestendig</span>
         </div>
         <img class="userImg" src="/images/reinier.jpg">
         <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.</p>
       </div>
+      <div class="compliment__container visible">
+        <div class="compliments-buttons__container">
+          <p><b>Stefan</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Proactief</span>
+        </div>
+        <img class="userImg" src="/images/stefan.jpg">
+        <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.</p>
+      </div>
+      <button class="complimentsButton" type="button">
+          Alle complimenten tonen
+      </button>
     </div>
   </div>
 </div>
+
 
 {{> thumbs-up}}
 
