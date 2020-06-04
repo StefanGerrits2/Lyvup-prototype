@@ -157,6 +157,10 @@ p {
     font-size: 13px;
 }
 
+.goal-type-image {
+  height: 30px;
+}
+
 .goal-type2 {
     padding: .5em;
     color: $green;
@@ -267,7 +271,6 @@ button:focus {
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
-    margin-top: 3em;
     background-image: url(/images/background.png);
     background-size: 500%;
 
