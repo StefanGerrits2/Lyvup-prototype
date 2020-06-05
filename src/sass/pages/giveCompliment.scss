@@ -6,7 +6,7 @@
 }
 
 #team2__container {
-    margin-top: 3em;
+    margin-top: 1.5em;
 
     & > p {
         margin-right: 1.5em;
@@ -27,8 +27,8 @@
 
     & label {
         cursor: pointer;
-        margin-right: 2em;
-        padding: 1em;
+        margin-right: 1em;
+        padding: .75em;
         border-radius: $border-radius-small;
         border: 1px solid $grey;
         color: $grey;
@@ -53,7 +53,6 @@
 }
 
 #select__container {
-    margin-top: 3em;
 
     & #select-button__container {
         display: flex;
@@ -85,7 +84,7 @@ input[type="checkbox"] {
 #team-member__container {
     margin-top: 2em;
     display: grid;
-    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    grid-template-columns: 25% 25% 25% 25%;
 
     & input[type="checkbox"]:checked + label div img {
         border: 5px solid $green;
@@ -124,6 +123,41 @@ input[type="checkbox"] {
 }
 
 #compliment__container {
+    width: 100%;
+    right: 0;
+    height: 100%;
+
+    h1 {
+        margin-bottom: 1em;
+    }
+
+    & form {
+        display: flex;
+        position: relative;
+    }
+
+    #form1__container {
+        padding: 2em;
+        border-right: 1px solid $background-color;
+        background-color: $white;
+        min-height: 100vh;
+        width: 20%;
+    }
+    
+    #select__container {
+        padding: 2em;
+        background-color: $white;
+        min-height: 100vh;
+        width: 55%;
+    }
+    
+    #form3__container {
+        width: 25%;
+        padding: 2em;
+        background-color: $background-color;
+        min-height: 100%;
+    }
+
     & textarea {
         border-radius: $border-radius-small; 
         font-family: 'publicSans', sans-serif;
@@ -167,7 +201,7 @@ input[type="checkbox"] {
     & label {
         cursor: pointer;
         margin-right: 2em;
-        padding: 1em;
+        padding: .75em;
         border-radius: $border-radius-small;
         border: 1px solid $grey;
         color: $grey;
@@ -251,7 +285,6 @@ input[type="checkbox"] {
 }
 
 #selected-members__container {
-    margin-top: 6em;
 
     & > h4 {
         margin: 0;
@@ -259,24 +292,17 @@ input[type="checkbox"] {
     }
 
     & #selected-members {
-        display: flex;
+        margin-top: 1em;
 
         & p {
             padding: 0.4em 0.4em 0 0;
+            display: inline;
 
             &::after {
                 content: ',';
             }
         }
     }
-}
-
-#compliment__container {
-    width: 90%;
-    background-color: $white;
-    padding: 2em;
-    border-radius: $border-radius-big;
-    margin: 2em auto;
 }
 
 // Mediaqueries
