@@ -1,12 +1,76 @@
 {{> header}}
 
-<h1>Dashboard</h1>
+<div class="dashboard__container">
+    <div class="left__container">
+        <img src="/images/user.svg" alt="">
+        <h3>{{ data.user_result.[0].name }} {{ data.user_result.[0].last_name }}</h3>
+    </div>
+    <div class="center__container">
+        <div class="activity__container">
+            {{#each data.activities_data.activities}}
+                <div class="activity__section">
+                    <img src="/images/user.svg" alt="">
+                    <div class="activity__card">
+                        <div class="card__header">
+                            <h4>{{title}}</h4>
+                            <p>{{created_on}}</p>
+                        </div>
+                        <p>{{message}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="right__container">
+        <div class="data__collaps">
+            <a href="#">
+                <h4>Complimenten</h4>
+                <!--                <img src="/images/arrow.svg" alt="">-->
+            </a>
+            <div class="data__container">
+                <p>Totaal: {{ data.praise_result.[0].total}}</p>
+                <p>Aangevraagd: {{ data.praise_result.[0].request_count}}</p>
+                <p>Verzonden: {{ data.praise_result.[0].sent_count}}</p>
+            </div>
+        </div>
+        <div class="data__collaps">
+            <a href="#">
+                <h4>Asssessments</h4>
+                <!--                <img src="/images/arrow.svg" alt="">-->
+            </a>
+            <div class="data__container">
+                {{#each data.test_data}}
+                    <p>{{title}}</p>
+                {{/each}}
+            </div>
+        </div>
+        <div class="data__collaps">
+            <a href="#">
+                <h4>Doelen</h4>
+                <!--                <img src="/images/arrow.svg" alt="">-->
+            </a>
+            <div class="data__container">
+                <p>Totaal: {{ data.goal_result.[0].total}}</p>
+                <p>Behaald: {{ data.goal_result.[0].completed_goal}}</p>
+                <p>Afwachtend: {{ data.goal_result.[0].pending_goal}}</p>
+            </div>
+        </div>
+        <div class="data__collaps">
+            <a href="#">
+                <h4>To Do</h4>
+                <!--                <img src="/images/arrow.svg" alt="">-->
+            </a>
+        </div>
+        <div class="data__collaps">
+            <a href="#">
+                <h4>Verzoeken</h4>
+                <!--                <img src="/images/arrow.svg" alt="">-->
+            </a>
+        </div>
+    </div>
+</div>
 
-{{#each data.praise_data.praise_array}}
-    <p>Message: {{message}}</p>
-    <p>Date: {{created_on}}</p>
-    <p>From: {{from_user_id.[0].name}} {{from_user_id.[0].last_name}}</p>
-    <p>To: {{to_user_id.[0].name}} {{to_user_id.[0].last_name}}</p>
-{{/each}}
+
+
 
 {{> thumbs-up}}

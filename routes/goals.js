@@ -1,33 +1,35 @@
 require('dotenv').config();
 const Fetcher = require('../modules/fetch.js');
-const dateChecker = require('../modules/dateChecker.js')
+const dateChecker = require('../modules/dateChecker.js');
 
-let dateCheckedGoals = []
+let dateCheckedGoals = [];
 
 async function goals(req, res) {
 
-  try {
-    const baseURL = 'https://lyvup.com/api/';
-    const query = `getUserGoals/2/?token=${process.env.TOKEN}&lang=dutch`;
-    const goalsURL = baseURL.concat(query);
+    try {
+        const baseURL = 'https://lyvup.com/api/';
+        const query = `getUserGoals/2/?token=${process.env.TOKEN}&lang=dutch`;
+        const goalsURL = baseURL.concat(query);
 
-    // Get user goals
-    let userGoals = await Fetcher.get(goalsURL);
-    userGoals = userGoals.getUserGoals.data
+        // Get user goals
+        let userGoals = await Fetcher.get(goalsURL);
+        userGoals = userGoals.getUserGoals.data;
 
-    userGoals.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
+        userGoals.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
 
-    console.log(userGoals[0])
+        console.log(userGoals[0]);
 
-    res.render('goals.hbs', {
-      data: userGoals
-    });
-  } catch (error) {
-    res.render('goals.hbs', {
-      // Data
-    });
-    console.log(error);
-  }
+        res.render('goals.hbs', {
+            data: userGoals,
+            goals: true
+        });
+
+    } catch (error) {
+        res.render('goals.hbs', {
+            goals: true
+        });
+        console.log(error);
+    }
 }
 
 module.exports = goals;

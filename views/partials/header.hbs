@@ -2,13 +2,13 @@
     <a href="/"><img src="/images/lyvupLogo.png" alt=""></a>
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/feedback">Feedback</a></li>
-            <li><a href="/team">Team</a></li>
-            <li><a href="/goals">Doelen</a></li>
-            <li><a href="/leaderboard">Leaderboard</a></li>
+            <li><a {{#if home}} class="active-nav" {{/if}} href="/">Home</a></li>
+            <li><a {{#if feedback}} class="active-nav" {{/if}} href="/feedback">Feedback</a></li>
+            <li><a {{#if team}} class="active-nav" {{/if}} href="/team">Team</a></li>
+            <li><a {{#if goals}} class="active-nav" {{/if}} href="/goals">Doelen</a></li>
+            <li><a {{#if leaderboard}} class="active-nav" {{/if}} href="/leaderboard">Leaderboard</a></li>
             {{!-- <li><a href="/leaderboard-new">Leaderboard New</a></li> --}}
-            <li><a href="/profile">Profiel</a></li>
+            <li><a {{#if profile}} class="active-nav" {{/if}} href="/profile">Profiel</a></li>
         </ul>
     </nav>
 </header>

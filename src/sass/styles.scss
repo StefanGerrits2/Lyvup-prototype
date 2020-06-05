@@ -28,6 +28,11 @@ body {
     overflow-x: hidden;
     font-size: 14px;
     background-color: $background-color;
+    animation: page-transition .1s ease-in-out;
+}
+
+button {
+    user-select: none;
 }
 
 h1 {
@@ -55,7 +60,7 @@ h4 {
 
 p,
 span {
-    font-size: 1em;
+    font-size: 14px;
     font-family: 'publicSans', sans-serif;
 }
 
@@ -230,7 +235,7 @@ button:focus {
 
 #super-button__container {
     display: flex;
-    margin-top: 3em;
+    margin: 3em 0em;
     justify-content: space-between;
 }
 
@@ -238,14 +243,20 @@ button:focus {
     display: flex;
 }
 
-.filter {
+.filter-button {
     background-color: $black;
     color: white;
-    width: 5em;
+    width: fit-content;
+    padding: 0 1.5em;
     margin-right: 0;
+    display: none;
+
+    &:hover {
+        background-color: black;
+    }
 }
 
-.filter:focus {
+.filter-button:focus {
     background-color: $black;
 }
 
@@ -300,13 +311,13 @@ button:focus {
     margin: 0 auto;
     display: block;
     margin-bottom: .75em;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 
 .filter__container {
-    display: none;
-    margin-top: 2em;
+    margin: 2em 0em;
+    display: flex;
 }
 
 /* Reset Select */
@@ -370,6 +381,10 @@ option {
 
 .show {
     display: flex;
+}
+
+.hide {
+    display: none;
 }
 
 @media screen and (max-width: 1500px) {

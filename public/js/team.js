@@ -1,21 +1,30 @@
-const info = document.querySelectorAll('.info__container');
-const popup = document.querySelector('.popup__container');
-const clearScreen = document.querySelector('.clearScreen');
-const close = document.querySelector('.close');
+const profile__container = document.querySelectorAll('.profile__container');
 
-info.forEach((button) => {
+profile__container.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log('je klikte');
-        popup.classList.add('show__popup');
+        let item_index = Array.prototype.indexOf.call(profile__container, button);
 
-        clearScreen.classList.add('blurScreen');
+        console.log(item_index)
 
-        close.addEventListener('click', () => {
-            popup.classList.remove('show__popup');
-            popup.classList.add('pop__container');
-            clearScreen.classList.remove('blurScreen');
-            clearScreen.classList.add('clearScreen');
+        // Add 1 to (index+1) until it reaches the clicked item
+        let plus = 1;
+        profile__container.forEach(function (button, index) {
+            console.log(button);
+            if (index < 1) {
+                plus = 0;
+            } else if (index == 1) {
+                button.style.order = plus += 2;
+                if (index = 2) {
+                    button.style.order = index - 1;
+                } else if (index = 3) {
+                    button.style.order = index - 2;
+                }
+            } else if (index > 2) {
+                button.style.order = index + 2;
+            }
         });
+
+        button.classList.toggle('collapse');
 
     });
 });

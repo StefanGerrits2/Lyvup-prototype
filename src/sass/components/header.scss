@@ -5,6 +5,9 @@ header {
     height: 75px;
     align-items: center;
     padding-left: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 header img {
@@ -32,4 +35,10 @@ header ul li a {
         transition: 200ms;
         border-bottom: 3px solid $yellow;
     }
+}
+
+.active-nav {
+    color: $yellow;
+    transition: 200ms;
+    border-bottom: 3px solid $yellow;
 }

@@ -1,7 +1,7 @@
 // Render home page
 function feedback (req, res) {
     res.render('feedback.hbs', {
-        // Data
+        feedback: true
     });
 }
 
