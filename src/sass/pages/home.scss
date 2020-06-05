@@ -1,0 +1,116 @@
+.dashboard__container {
+  width: 90%;
+  display: grid;
+  padding: 1%;
+  margin: auto;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-gap: 2%;
+}
+
+.left__container {
+  background-color: $white;
+  padding: 1em;
+  border-radius: 10px;
+  height: fit-content;
+  position: sticky;
+  top: 94px;
+  display: flex;
+  align-items: center;
+
+  & img {
+    max-height: 8em;
+    width: 8em;
+    border-radius: 50%;
+    border: 2px solid $red;
+    margin-right: 10px;
+  }
+}
+
+.data__collaps {
+  margin-bottom: 10px;
+
+  & h4 {
+    margin-top: 0;
+  }
+
+  & img {
+    max-height: 10px;
+    width: auto;
+  }
+
+  & a {
+    text-decoration: none;
+    color: $black;
+    background-color: $light-grey;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & .data__container {
+    margin: 0 10px;
+  }
+}
+
+.center__container {
+  background-color: $white;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.activity__container {
+  //background-color: $light-grey;
+  border-radius: 10px;
+  padding: 10px;
+  background-image: url(/images/background.png);
+  background-size: 500%;
+}
+
+.activity__section {
+  display: flex;
+
+  & img {
+    max-height: 3em;
+    width: 3em;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid $red;
+  }
+}
+
+.activity__card {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: 200ms ease-in-out;
+  box-shadow: 0 2px 0 1px #e5e5e5;
+  width: 100%;
+
+  & h4 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+}
+
+.card__header {
+  display: flex;
+
+  & p {
+    margin-left: auto;
+    text-align: right;
+    font-weight: bold;
+    color: $red;
+  }
+}
+
+.right__container {
+  background-color: $white;
+  padding: 1em;
+  border-radius: 10px;
+  height: fit-content;
+  position: sticky;
+  top: 94px;
+}

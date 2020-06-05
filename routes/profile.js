@@ -1,6 +1,6 @@
 function profile (req, res) {
     res.render('profile.hbs', {
-        // Data
+        profile: true
     });
 }
 

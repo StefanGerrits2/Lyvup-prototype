@@ -12,7 +12,8 @@ async function home (req, res) {
     console.log(userDashboard.getUserDashboard.data);
 
     res.render('home.hbs', {
-        data: userDashboard.getUserDashboard.data
+        data: userDashboard.getUserDashboard.data,
+        home: true
     });
 }
 

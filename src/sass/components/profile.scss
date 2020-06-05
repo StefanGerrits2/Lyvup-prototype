@@ -119,10 +119,10 @@ td {
 .profile__grid__container{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% auto;
-    grid-template-rows: 33.3% 33.3% auto;
     margin-bottom: 1.5em;
     background-color: $light-grey;
     border-radius: $border-radius-big;
+    padding: 1em 0em;
 }
 
 .profile__grid__element{
