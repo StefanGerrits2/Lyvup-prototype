@@ -2,75 +2,119 @@
 
 <div class="dashboard__container">
     <div class="left__container">
-        <img src="/images/user.svg" alt="">
+        <img src="/images/random4.jpg" alt="">
         <h3>{{ data.user_result.[0].name }} {{ data.user_result.[0].last_name }}</h3>
     </div>
     <div class="center__container">
         <div class="activity__container">
-            {{#each data.activities_data.activities}}
-                <div class="activity__section">
-                    <img src="/images/user.svg" alt="">
-                    <div class="activity__card">
-                        <div class="card__header">
-                            <h4>{{title}}</h4>
-                            <p>{{created_on}}</p>
-                        </div>
-                        <p>{{message}}</p>
-                    </div>
+            <!-- CARD -->
+            <div class="activity__card">
+                <img src="/images/stefan.jpg" alt="">
+                <div class="card__header">
+                    <h4>{{data.activities_data.activities.[0].title}}</h4>
+                    <span>{{data.activities_data.activities.[0].created_on}}</span>
+                    <p>{{data.activities_data.activities.[0].message}}</p>
+                    <img src="/images/random4.jpg" alt="">
+                    <img src="/images/stefan.jpg" alt="">
+                    <img src="/images/random1.jpg" alt="">
                 </div>
-            {{/each}}
+            </div>
+            <!-- CARD -->
+            <div class="activity__card">
+                <img src="/images/reinier.jpg" alt="">
+                <div class="card__header">
+                    <h4>{{data.activities_data.activities.[1].title}}</h4>
+                    <span>{{data.activities_data.activities.[1].created_on}}</span>
+                    <p>{{data.activities_data.activities.[1].message}}</p>
+                    <img src="/images/random2.jpg" alt="">
+                </div>
+            </div>
+            <!-- CARD -->
+            <div class="activity__card">
+                <img src="/images/random1.jpg" alt="">
+                <div class="card__header">
+                    <h4>{{data.activities_data.activities.[2].title}}</h4>
+                    <span>{{data.activities_data.activities.[2].created_on}}</span>
+                    <p>{{data.activities_data.activities.[2].message}}</p>
+                    <img src="/images/random3.jpg" alt="">
+                    <img src="/images/random2.jpg" alt="">
+                </div>
+            </div>
+            <!-- CARD -->
+            <div class="activity__card">
+                <img src="/images/random2.jpg" alt="">
+                <div class="card__header">
+                    <h4>{{data.activities_data.activities.[3].title}}</h4>
+                    <span>{{data.activities_data.activities.[3].created_on}}</span>
+                    <p>{{data.activities_data.activities.[3].message}}</p>
+                    <img src="/images/stefan.jpg" alt="">
+                    <img src="/images/stefan.jpg" alt="">
+                </div>
+            </div>
+            <!-- CARD -->
+            <div class="activity__card">
+                <img src="/images/random3.jpg" alt="">
+                <div class="card__header">
+                    <h4>{{data.activities_data.activities.[4].title}}</h4>
+                    <span>{{data.activities_data.activities.[4].created_on}}</span>
+                    <p>{{data.activities_data.activities.[4].message}}</p>
+                    <img src="/images/stefan.jpg" alt="">
+                    <img src="/images/stefan.jpg" alt="">
+                    <img src="/images/stefan.jpg" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <div class="right__container">
-        <div class="data__collaps">
-            <a href="#">
-                <h4>Complimenten</h4>
-                <!--                <img src="/images/arrow.svg" alt="">-->
-            </a>
-            <div class="data__container">
-                <p>Totaal: {{ data.praise_result.[0].total}}</p>
-                <p>Aangevraagd: {{ data.praise_result.[0].request_count}}</p>
-                <p>Verzonden: {{ data.praise_result.[0].sent_count}}</p>
+
+        <button class="collapsible">Totaal</button>
+        <div class="collapse-content">
+            <div class="statistic__container">
+                <p>Complimenten totaal:</p>
+                <div id="all-team-compliments">
+                    <h3>{{ data.praise_result.[0].total}}</h3>
+                </div>
+            </div>
+            <div class="statistic__container">
+                <p>Complimenten aangevraagd:</p>
+                <div id="all-team-compliments">
+                    <h3>{{ data.praise_result.[0].request_count}}</h3>
+                </div>
+            </div>
+            <div class="statistic__container">
+                <p>Complimenten verzonden:</p>
+                <div id="all-team-compliments">
+                    <h3>{{ data.praise_result.[0].sent_count}}</h3>
+                </div>
+            </div>
+            <div class="statistic__container">
+                <p>Doelen totaal:</p>
+                <div id="completer-team-goals">
+                    <h3>{{ data.goal_result.[0].total}}</h3>
+                </div>
+            </div>
+            <div class="statistic__container">
+                <p>Doelen behaald:</p>
+                <div id="completer-team-goals">
+                    <h3>{{ data.goal_result.[0].completed_goal}}</h3>
+                </div>
+            </div>
+            <div class="statistic__container">
+                <p>Doelen afwachtend:</p>
+                <div id="completer-team-goals">
+                    <h3>{{ data.goal_result.[0].pending_goal}}</h3>
+                </div>
             </div>
         </div>
-        <div class="data__collaps">
-            <a href="#">
-                <h4>Asssessments</h4>
-                <!--                <img src="/images/arrow.svg" alt="">-->
-            </a>
-            <div class="data__container">
-                {{#each data.test_data}}
-                    <p>{{title}}</p>
-                {{/each}}
-            </div>
-        </div>
-        <div class="data__collaps">
-            <a href="#">
-                <h4>Doelen</h4>
-                <!--                <img src="/images/arrow.svg" alt="">-->
-            </a>
-            <div class="data__container">
-                <p>Totaal: {{ data.goal_result.[0].total}}</p>
-                <p>Behaald: {{ data.goal_result.[0].completed_goal}}</p>
-                <p>Afwachtend: {{ data.goal_result.[0].pending_goal}}</p>
-            </div>
-        </div>
-        <div class="data__collaps">
-            <a href="#">
-                <h4>To Do</h4>
-                <!--                <img src="/images/arrow.svg" alt="">-->
-            </a>
-        </div>
-        <div class="data__collaps">
-            <a href="#">
-                <h4>Verzoeken</h4>
-                <!--                <img src="/images/arrow.svg" alt="">-->
-            </a>
+        <button class="collapsible">To Do</button>
+        <div class="collapse-content">
+            {{#each data.test_data}}
+                <p>{{title}}</p>
+            {{/each}}
         </div>
     </div>
 </div>
 
-
-
-
 {{> thumbs-up}}
+
+<script src="js/home.js"></script>
