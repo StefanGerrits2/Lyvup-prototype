@@ -1,58 +1,55 @@
 {{> header}}
 
-<div id="form__container">
-<form class="addGoal__form" action="index.html" method="post">
-    <label for="competentie">Competentie</label>
-    <div class="select">
-      <select name="competentie" id="select1">
-          <option value="stressbestendig">Stressbestendig</option>
-          <option value="proactief">Proactief</option>
-          <option value="flexibiliteit">Flexibiliteit</option>
-          <option value="communiceren">Communiceren</option>
-      </select>
-    </div>
-      <label for="doel">Doel</label>
-      <div class="select">
-        <select name="doel" id="select1">
-            <option value="verbeteren toepassen">Verbeteren / Toepassen</option>
-            <option value="verbeteren">Verbeteren</option>
-            <option value="toepassen">Toepassen</option>
-        </select>
-        </div>
-        <label for="deadline">Deadline</label>
-        <input required name="deadline" type="date">
-        <label for="toelichting">Beschrijf hier jouw doel...</label>
-        <textarea name="toelichting" id="" rows="10" required placeholder="..."></textarea>
-</form>
-</div>
-
 <div id="content__container">
   <div id="main__container">
     <div class="goals-head">
+      <img src="./images/goals_icon.svg" alt="">
       <h1>Doelen</h1>
       <div class=addGoals>
-        <button class="goalsButton" type="button">
-          <div class="flex">
-            <img src="./images/plus_icon.svg" alt="">
-            Toevoegen
-          </div>
+        <button class="goals-button" type="button">
+            Doel toevoegen
         </button>
       </div>
     </div>
+    <section class="addGoals__container">
+      <h2>Doel toevoegen</h2>
+      <h4>Welke kanten van jezelf wil je verder ontwikkelen en/of toepassen?</h4>
+      <form class="addGoal__form" action="/goals" method="post">
+          <div class="select">
+            <select required name="competentie" id="select1">
+                <option value="Stressbestendig">Stressbestendig</option>
+                <option value="Proactief">Proactief</option>
+                <option value="Flexibiliteit">Flexibiliteit</option>
+                <option value="Communiceren">Communiceren</option>
+            </select>
+          </div>
+          <div class="select">
+            <select required name="doel" id="select1">
+                <option value="Apply / Improve">Toepassen / Ontwikkelen</option>
+                <option value="Apply">Toepassen</option>
+                <option value="Improve">Ontwikkelen</option>
+            </select>
+          </div>
+          <div class="datePicker">
+            <input required name="deadline" type="date">
+            <label for="deadline">Deadline</label>
+          </div>
+          <div class="goalDescription">
+            <label for="toelichting">Beschrijving</label>
+            <textarea required name="toelichting" id="" rows="10" required placeholder="Schrijf hier de beschrijving van jouw doel..."></textarea>
+          </div>
+          <input class="submitGoal" type="submit" value="doel toevoegen">
+      </form>
+    </section>
     <h2>Actieve doelen</h2>
     <div id="setGoals__container">
       {{#each data}}
-      <article class="goal__container">
-        <div class="flex">
-          <img src="./images/goals_icon.svg" alt="">
+      <article class="goal__container" id='{{id}}'>
           <div class="goal-buttons__container">
-            <span class="goal-type">{{title}}</span><img class="goal-type-image" src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">{{daysToExpiry}}</span>
+            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image" src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">{{daysToExpiry}}</span>
           </div>
-        </div>
         <div>
-          {{#each skills}}
           <p>{{description}}</p>
-          {{/each}}
         </div>
       </article>
       {{/each}}
@@ -61,9 +58,8 @@
     <div id=completedGoals__container>
       <article class="goal__container">
         <div class="flex">
-          <img src="./images/goals_icon.svg" alt="">
           <div class="goal-buttons__container">
-            <span class="goal-type">Communiceren</span><img class="goal-type-image" src="./images/apply.svg" alt=""><span class="goal-type2">apply</span><span class="goal-estimate">12 uur resterend</span>
+            <span class="goal-type">Communiceren</span><img class="goal-type-image" src="./images/apply.svg" alt=""><span class="goal-type2">apply</span><span class="goal-estimate">Doel behaald: 25-5-2020</span>
           </div>
         </div>
         <div>
@@ -72,9 +68,8 @@
       </article>
       <article class="goal__container">
         <div class="flex">
-          <img src="./images/goals_icon.svg" alt="">
           <div class="goal-buttons__container">
-            <span class="goal-type">Communiceren</span><img class="goal-type-image" src="./images/improve.svg" alt=""><span class="goal-type2">improve</span><span class="goal-estimate">12 uur resterend</span>
+            <span class="goal-type">Communiceren</span><img class="goal-type-image" src="./images/improve.svg" alt=""><span class="goal-type2">improve</span><span class="goal-estimate">Doel behaald: 3-6-2020</span>
           </div>
         </div>
         <div>
@@ -86,22 +81,22 @@
   <div id="super-goals__container">
     <div class="complimentsHead">
       <h1>Complimenten</h1>
+      <span class="goal-indicator indicator-inactive">Klik op een doel om te filteren.</span>
     </div>
-    <h2>Klik op een doel om te filteren.</h2>
     <div id="messages__container">
       <div class="compliment__container visible">
         <div class="compliments-buttons__container">
           <p><b>Monika Streljajevravejejeva</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Conflict hanteren</span>
         </div>
         <img class="userImg" src="/images/reinier.jpg">
-        <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.</p>
+        <p class="compliment-message">Je wireframes van de doelenpagina zien er goed uit! Vooral omdat deze ook al bijna helemaal consistent zijn met de andere designs.</p>
       </div>
       <div class="compliment__container visible">
         <div class="compliments-buttons__container">
           <p><b>Reinier van Limpt</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Stressbestendig</span>
         </div>
         <img class="userImg" src="/images/user.png">
-        <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.</p>
+        <p class="compliment-message">Goed gewerkt gister.</p>
       </div>
       <div class="compliment__container visible">
         <div class="compliments-buttons__container">
@@ -115,7 +110,14 @@
           <p><b>Stefan</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Proactief</span>
         </div>
         <img class="userImg" src="/images/stefan.jpg">
-        <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.</p>
+        <p class="compliment-message">Ik vond je presentatie voor de groep gisteren uitstekend (persoonlijk). Je hebt het zeer duidelijk en to the point verteld en die grap over UX was hilarisch.</p>
+      </div>
+      <div class="compliment__container visible">
+        <div class="compliments-buttons__container">
+          <p><b>Stefan</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Communiceren</span>
+        </div>
+        <img class="userImg" src="/images/stefan.jpg">
+        <p class="compliment-message">Ik vind het knap hoe jij, ook namens de groep, naar ons toe (moeilijke) onderwerpen bespreekbaar maakt op een ontwapenende manier.</p>
       </div>
       <button class="complimentsButton" type="button">
           Alle complimenten tonen

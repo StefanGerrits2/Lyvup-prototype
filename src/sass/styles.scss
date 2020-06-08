@@ -99,13 +99,15 @@ p {
 }
 
 .goal__container {
-    margin: 10px;
-    background-color: white;
-    cursor: pointer;
-    color: black;
-    transition: 200ms ease-in-out;
-    border-radius: $border-radius-big;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
+  box-sizing: border-box;
+  border-right: 10px solid #fff;
+  margin: 10px;
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  transition: 200ms ease-in-out;
+  border-radius: $border-radius-big;
+  box-shadow: 0px 2px 0px 1px #e5e5e5;
     & p{
       padding-left:15px;
     }
@@ -120,10 +122,7 @@ p {
 }
 
 .goal__container>div {
-    padding-right: .75em;
-    padding-left: .75em;
-    padding-bottom: .75em;
-    padding-top: .35em;
+    padding: .75em;
 }
 
 .goal__container img {

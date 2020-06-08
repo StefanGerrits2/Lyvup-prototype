@@ -6,17 +6,19 @@ document.querySelectorAll('.compliment__container').forEach(item => {
 
 const complimentsButton = document.querySelector('.complimentsButton')
 const complimentsContainer = document.querySelector('#super-goals__container')
-const activeFilterText = complimentsContainer.querySelector('h2')
+const filterText = complimentsContainer.querySelector('.goal-indicator')
 
-// sets all compliments to visible and shows their goal meta
+// sets all compliments to visible and visibles their goal meta
 complimentsButton.addEventListener('click', function() {
+  filterText.classList.remove('indicator-active')
+  filterText.classList.add('indicator-inactive')
   document.querySelectorAll('.goal-type').forEach(item => {
     if (item.classList.contains('invisible')) {
       item.classList.remove('invisible')
     }
   })
 
-  activeFilterText.innerHTML = `Klik op een doel om te filteren.`
+  filterText.innerHTML = `Klik op een doel om te filteren.`
 
   document.querySelectorAll('.compliment__container').forEach(item => {
     if (item.classList.contains('hidden')) {
@@ -33,6 +35,8 @@ complimentsButton.addEventListener('click', function() {
 // makes goals clickable and initiates the filter
 document.querySelectorAll('.goal__container').forEach(item => {
   item.addEventListener('click', event => {
+    filterText.classList.remove('indicator-inactive')
+    filterText.classList.add('indicator-active')
 
     document.querySelectorAll('.goal__container').forEach(item => {
       item.classList.remove('active-section')
@@ -40,7 +44,7 @@ document.querySelectorAll('.goal__container').forEach(item => {
 
     const goalType = event.currentTarget.querySelector('.goal-type').textContent.replace(/\s/g, '')
     const goalTypeText = event.currentTarget.querySelector('.goal-type').textContent
-    activeFilterText.innerHTML = `op doel: <span class="goal-type">${goalTypeText}</span>`
+    filterText.innerHTML = `${goalTypeText}`
 
     event.currentTarget.classList.add('active-section')
 
@@ -52,7 +56,7 @@ document.querySelectorAll('.goal__container').forEach(item => {
       }
     })
 
-    // and shows only compliments corresponding to goalType
+    // and visibles only compliments corresponding to goalType
     document.querySelectorAll(`.${goalType}`).forEach(item => {
       const goalMeta = item.querySelector('.goal-type')
       goalMeta.classList.add('invisible')
@@ -69,3 +73,38 @@ document.querySelectorAll('.goal__container').forEach(item => {
     })
   })
 })
+
+
+const goalFormContainer = document.querySelector('.addGoals__container');
+const goalsButton = document.querySelector('.goals-button');
+
+goalFormContainer.classList.add('hidden');
+
+if (document.addEventListener) {
+  // Eventlistener exists
+  goalsButton.addEventListener('click', toggleFilter);
+  goalsButton.addEventListener('keypress', toggleFilter);
+
+} else if (document.attachEvent) {
+  // Eventlistener does not exist -> use attachEvent
+  goalsButton.attachEvent('click', toggleFilter);
+  goalsButton.attachEvent('keypress', toggleFilter);
+}
+
+function toggleFilter() {
+  if (goalFormContainer.classList.contains('hidden')) {
+    goalFormContainer.classList.remove('hidden');
+    goalFormContainer.classList.add('visible');
+  } else {
+    goalFormContainer.classList.add('hidden');
+    goalFormContainer.classList.remove('visible');
+  }
+}
+
+// const goalSubmission = document.querySelector('.submitGoal');
+//
+// goalSubmission.addEventListener('click', processForm);
+//
+// function processForm() {
+//   event.preventDefault()
+// }
