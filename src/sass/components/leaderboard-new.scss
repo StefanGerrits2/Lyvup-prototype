@@ -1,22 +1,11 @@
 // ID's
-#Karmaboard {
-    display: grid;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-
-    & img {
-        border-radius: 50%;
-    }
-}
 
 // classes
-.hidden {
-    display: none;
-}
 
 .big__grid{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: fit-content fit-content;
     height: 95%;
     margin: 1em;
     background-color: white;
@@ -52,52 +41,54 @@
 
 .grid__base{
     min-width: 50%;
-    min-height: 50%;
-    padding: 1em;
+    padding: .5em;
     background-color: $white;
 }
 
 .grey__Background{
-    background-color: $light-grey;
+    background-image: url(/images/background.png);
+    background-size: 500%;
     padding: .5em;
     border-radius: 10px;
 }
 
 .challenges{
     display: flex;
-    height: 70%;
 }
 
 .individual__challenge{
     margin: .5em;
-    background-color: $light-grey;
+    background-image: url(/images/background.png);
+    background-size: 500%;
     padding: .5em;
     border-radius: 10px;
     width: 50%;
     height: 100%;
-    overflow-y: scroll;
+}
+
+.challengeButton{
+    margin-top: .5em;;
 }
 
 .team__challenge{
     margin: .5em;
-    background-color: $light-grey;
+    background-image: url(/images/background.png);
+    background-size: 500%;
     padding: .5em;
     border-radius: 10px;
     width: 50%;
     height: 100%;
-    overflow-y: scroll;
 }
 
 .gridElement {
+    margin-top: .75em;
     min-height: 30px;
-    grid-template-rows: auto;
-    border: 1px solid black;
     border-radius: 20px;
     display: flex;
     align-items: center;
     background-color: $white;
     padding: 0.5em;
-    box-shadow: 0px 2px 0px 2px #e5e5e5;
+    box-shadow: 0px 2px 0px 2px $grey;
 }
 
 .leaderboardImage {
@@ -114,6 +105,12 @@
 
 .leaderboardNumber {
     margin-right: 0.5em;
+}
+
+.selectContainer{
+    display: inline-block;
+    margin-left: 1em;
+    margin-top: 1em;
 }
 
 // elements
