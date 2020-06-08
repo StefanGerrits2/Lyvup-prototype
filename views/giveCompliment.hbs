@@ -1,59 +1,9 @@
-<div id="main">
-    <div id="new-header">
-        <img src="/images/lyvupLogo.png" alt="">
-            <div class="select">
-                <select name="team" id="select2">
-                    {{#each data}}
-                        <option value={{acc_wly_name}}>{{acc_wly_name}}</option>
-                    {{/each}}
-                </select>
-            </div>
+<div id="page">
+    {{> new-header}}
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">
-                        <img src="/images/thumbs_up.svg" alt="">
-                        <p>Home</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/feedback">
-                        <img src="/images/thumbs_up.svg" alt="">
-                        <p>Feedback</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/team">
-                        <img src="/images/thumbs_up.svg" alt="">
-                        <p>Team</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/goals">
-                        <img src="/images/thumbs_up.svg" alt="">
-                        <p>Doelen</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/leaderboard">
-                        <img src="/images/thumbs_up.svg" alt="">
-                        <p>Leaderboard</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/profile">
-                        <img src="/images/thumbs_up.svg" alt="">
-                        <p>Profiel</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    <div id="compliment__container" id="center">
+    <main id="compliment__container" id="center">
         <form method="post" action="/compliment-or-feedback">
-            <div id="form1__container">
+            <div id="select__container">
                 <div id="option__container">
                     <p>Ik wil...</p>
                     <input id="praise" class="option1" type="radio" value="praise" name="type" checked>
@@ -68,9 +18,7 @@
                     <input name="superCompliment?" type="checkbox" id="supercompliment" value="yes">
                     <label id="super-compliment__button" for="supercompliment">Activeer een super compliment</label>
                 </div>
-            </div>
 
-            <div id="select__container">
                 <h2>Compliment geven</h2>
                 <p>Selecteer minimaal 1 persoon</p>
                 <div id="select-button__container">
@@ -144,22 +92,33 @@
                             <span>Teamspeler</span>
                         </div>
                     </label>
+                    <input name="selectedMembers" type="checkbox" id="9" value="Anna testpersoon">
+                    <label for="9">
+                        <div>
+                            <img src="/images/random3.jpg" alt="">
+                            <p>Anna testpersoon</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
                 </div>
             </div>
 
-            <div id="form3__container">
+            <aside>
+                <div id="more-information">
+                    <h4>Teamlid informatie</h4>
+                    <p>Klik op een info knop om zijn/haar doelen te bekijken</p>
+                </div>
+
                 <div id="selected-members__container">
                     <h4>Geselecteerde persoon:</h4>
-                    <div id="selected-members">
+                    <div id="selected-members"></div>
 
-                    </div>
+                    <textarea name="textarea" id="" rows="10" required placeholder="Typ hier je compliment..."></textarea>
+                    <input type="submit" class="defaultButton" value="Versturen">
                 </div>
-
-                <textarea name="textarea" id="" rows="10" required placeholder="Typ hier je compliment..."></textarea>
-                <input type="submit" class="defaultButton" value="Versturen">
-            </div>
+            </aside>
         </form>
-    </div>
+    </main>
 </div>
 
 <script src="js/compliments.js"></script>

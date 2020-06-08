@@ -25,13 +25,13 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     font-size: 14px;
     background-color: $background-color;
     animation: page-transition .1s ease-in-out;
 }
 
-#main {
+#page {
     display: flex;
 }
 
@@ -74,16 +74,14 @@ p {
 
 #content__container {
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
 #main__container {
     width: 65%;
-    margin: 1%;
     background-color: $white;
-    padding: 2em;
-    border-radius: $border-radius-big;
+    padding: 3em;
 }
 
 #main__container__single {
@@ -96,9 +94,8 @@ p {
 
 #super-goals__container {
     width: 35%;
-    background-color: $white;
-    padding: 2em;
-    margin: 1%;
+    background-color: $background-color;
+    padding: 3em;
     border-radius: $border-radius-big;
 
     & h1 {
@@ -309,6 +306,8 @@ button:focus {
     border-radius: $border-radius-big;
     background-image: url(/images/background.png);
     background-size: 500%;
+    height: 30em;
+    overflow-y: scroll;
 
     &>div:not(:last-of-type) {
         margin-bottom: 1em;
@@ -347,15 +346,12 @@ select {
     outline: 0;
     box-shadow: none;
     border: 0 !important;
-    background: #d4d4d4;
+    background: rgb(235, 235, 235);
+    color: $green;
     background-image: none;
     font-family: 'publicSans', sans-serif;
-}
-
-select {
     flex: 1;
     padding: 0 .5em;
-    color: $black;
     cursor: pointer;
 }
 
@@ -383,10 +379,11 @@ select::-ms-expand {
     top: 0;
     right: 0;
     padding: 0 1em;
-    background: #c0c0c0;
+    background: #d3d3d3;
     cursor: pointer;
     pointer-events: none;
     transition: .25s all ease;
+    color: $green;
 }
 
 /* Transition */
