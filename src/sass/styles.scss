@@ -83,6 +83,7 @@ p {
     background-color: $white;
     padding: 2.1em 3em 3em 3em;
     height: 100vh;
+    overflow-y: auto;
 }
 
 #main__container__single {
@@ -161,8 +162,8 @@ p {
     border-radius: $border-radius-big;
     background-image: url(/images/background.png);
     background-size: 500%;
-    height: 30em;
-    overflow-y: scroll;
+    max-height: 45vh;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -312,7 +313,7 @@ button:focus {
     background-image: url(/images/background.png);
     background-size: 500%;
     height: 30em;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     &>div:not(:last-of-type) {
         margin-bottom: 1em;
