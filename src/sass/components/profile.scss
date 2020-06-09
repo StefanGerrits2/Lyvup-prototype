@@ -65,24 +65,24 @@ td {
 }
 
 .profile__goals__container {
-    display: flex;
     width: 100%;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     margin-bottom: .5em;
     justify-content: space-between;
     padding: 5px;
+    background-image: url(/images/background.png);
+    background-size: 500%;
 }
 
 .goal__profile {
-    // margin: 10px;
     background-color: white;
     cursor: pointer;
     color: black;
     transition: 200ms ease-in-out;
     border-radius: $border-radius-big;
     box-shadow: 0px 2px 0px 1px #e5e5e5;
-    max-width: 24%;
+    margin: .5em;
 }
 
 .goal__profile>div {
@@ -93,14 +93,25 @@ td {
 }
 
 .profile__sides__container {
-    display: flex;
     width: 100%;
     background-color: $light-grey;
     border-radius: $border-radius-big;
+    margin-left: .5em;
+    padding: .5em;
+}
+
+.sides__gradient{
+    background: linear-gradient(-90deg, #ffd000, #ffd000, green, #ffd000, #ffd000);
+    animation: gradient 15s ease-in-out infinite;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-top: .5em;
+    display: block;
+    background-size: 300% 300%;
 }
 
 .sides__container {
-    margin: 20px;
+    margin: .5em;
     padding-left: 5px;
     padding-right: 5px;
     background-color: white;
@@ -143,10 +154,24 @@ td {
     border-radius: 50px;
 }
 
-.profile__challange__container{
+.profile__challenge__container{
     background-color: $light-grey;
     display: flex;
     border-radius: 10px;
+}
+
+.profile__individual{
+    height: 100%;
+    border-right: 1px solid black;
+    overflow: auto;
+    padding: .5em;
+}
+
+.profile__team{
+    height: 100%;
+    border-left: 1px solid black;
+    overflow: auto;
+    padding: .5em;
 }
 
 .profile__challange{
@@ -162,6 +187,10 @@ td {
 
 .editButton{
     float: right;
+}
+
+.profile__bottom{
+    display: flex;
 }
 
 #achievement__container {
@@ -187,9 +216,18 @@ td {
 }
 
 #profile__main__container {
-    padding: 20px;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin: 3em 0;
+    background-color: $white;
+}
+
+#profile__right__container {
+    width: 40%;
+    background-color: $background-color;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vw;
+    overflow-y: scroll;
+
+    & > button {
+        margin-top: 1.5em;
+    }
 }
