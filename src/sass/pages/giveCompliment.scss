@@ -14,8 +14,10 @@
 }
 
 #option__container {
-    margin-top: 1em;
     font-family: 'publicSans', sans-serif;
+    justify-content: space-between;
+    height: 2em;
+    margin-bottom: 2em;
 
     & > p {
         margin-right: 1em;
@@ -58,7 +60,7 @@
         display: flex;
 
         & button {
-            margin: 2em 1em 0 0;
+            margin: 1em 1em 0 0;
             width: auto;
 
             &:nth-of-type(2) {
@@ -188,7 +190,6 @@ input[type="checkbox"] {
 #super-compliment__container {
     display: flex;
     align-items: center;
-    margin: 2em 0em 1em 0em;
 
     & p {
         margin-right: 1em;
@@ -207,6 +208,7 @@ input[type="checkbox"] {
         position: relative;
         overflow: hidden;
         z-index: 0;
+        width: 17em;
 
         &:hover {
             border: 1px solid $white;
