@@ -1,9 +1,8 @@
 .goals-head {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
   & img{
+    margin-right: 1em;
     width: 3em;
   }
   & h1{
@@ -12,7 +11,7 @@
 }
 
 .complimentsHead {
-    height: 10em;
+    height: 8.2em;
     & h1{
       margin-bottom: 1em;
     }
@@ -27,6 +26,10 @@
   padding: 5px;
   margin-left: auto;
   background-color: $red;
+}
+
+.goals-button{
+  float: right;
 }
 
 .complimentsButton:hover{
@@ -171,6 +174,9 @@
     padding: 10px;
     background-color: #c5d6d5;
     border-radius: 10px;
+    height: 20em;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 aside{
@@ -190,6 +196,11 @@ aside{
 .active-section {
   box-sizing: border-box;
   border-color: $light-blue !important;
+}
+
+.goals-aside {
+  height: 50em !important;
+  background-image: none !important;
 }
 
 .flashed {

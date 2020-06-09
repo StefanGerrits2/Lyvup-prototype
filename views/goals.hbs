@@ -1,15 +1,15 @@
-{{> header}}
-
+<div id="page">
+  {{> new-header}}
 <div id="content__container">
   <div id="main__container">
     <div class="goals-head">
       <img src="./images/goals_icon.svg" alt="">
       <h1>Doelen</h1>
-      <div class=addGoals>
-        <button class="goals-button" type="button">
-            Doel toevoegen
-        </button>
-      </div>
+    </div>
+    <div class=addGoals>
+      <button class="goals-button" type="button">
+          Doel toevoegen
+      </button>
     </div>
     <section class="addGoals__container">
       <h2>Doel toevoegen</h2>
@@ -59,7 +59,10 @@
       <article class="goal__container">
         <div class="flex">
           <div class="goal-buttons__container">
-            <span class="goal-type">Communiceren</span><img class="goal-type-image" src="./images/apply.svg" alt=""><span class="goal-type2">apply</span><span class="goal-estimate">Doel behaald: 25-5-2020</span>
+            <aside>
+              <span class="goal-type">Communiceren</span>
+            </aside>
+            <img class="goal-type-image" src="./images/apply.svg" alt=""><span class="goal-type2">apply</span><span class="goal-estimate">Doel behaald: 25-5-2020</span>
           </div>
         </div>
         <div>
@@ -69,7 +72,10 @@
       <article class="goal__container">
         <div class="flex">
           <div class="goal-buttons__container">
-            <span class="goal-type">Communiceren</span><img class="goal-type-image" src="./images/improve.svg" alt=""><span class="goal-type2">improve</span><span class="goal-estimate">Doel behaald: 3-6-2020</span>
+            <aside>
+              <span class="goal-type">Communiceren</span>
+            </aside>
+            <img class="goal-type-image" src="./images/improve.svg" alt=""><span class="goal-type2">improve</span><span class="goal-estimate">Doel behaald: 3-6-2020</span>
           </div>
         </div>
         <div>
@@ -78,12 +84,12 @@
       </article>
     </div>
   </div>
-  <div id="super-goals__container">
+  <aside id="super-goals__container">
     <div class="complimentsHead">
       <h1>Complimenten</h1>
       <span class="goal-indicator indicator-inactive">Klik op een doel om te filteren.</span>
     </div>
-    <div id="messages__container">
+    <div id="messages__container" class="goals-aside">
       <div class="compliment__container visible">
         <div class="compliments-buttons__container">
           <p><b>Monika Streljajevravejejeva</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Conflict hanteren</span>
@@ -123,10 +129,9 @@
           Alle complimenten tonen
       </button>
     </div>
-  </div>
+  </aside>
 </div>
-
-
 {{> thumbs-up}}
+</div>
 
 <script src="js/goals.js"></script>

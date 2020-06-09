@@ -1,122 +1,124 @@
-{{> header}}
+<div id="page">
+    {{> new-header}}
 
-<div id="compliment__container" id="center">
-    <h1>Geef complimenten of vraag feedback</h1>
+    <main id="compliment__container" id="center">
+        <form method="post" action="/compliment-or-feedback">
+            <div id="select__container">
+                <div id="option__container">
+                    <div>
+                        <input id="praise" class="option1" type="radio" value="praise" name="type" checked>
+                        <label for="praise">een compliment geven</label>
 
-    <form method="post" action="/compliment-or-feedback">
-        <div id="team2__container">
-            <p>Team</p>
-            <div class="select">
-                <select name="team" id="select2">
-                    {{#each data}}
-                        <option value={{acc_wly_name}}>{{acc_wly_name}}</option>
-                    {{/each}}
-                </select>
+                        <input id="feedback" class="option2" type="radio" value="ask-feedback" name="type">
+                        <label for="feedback">feedback vragen</label>
+                    </div>
+
+                    <div id="super-compliment__container">
+                        <input name="superCompliment?" type="checkbox" id="supercompliment" value="yes">
+                        <label id="super-compliment__button" for="supercompliment">Activeer een super compliment</label>
+                    </div>
+                </div>
+
+                <h2>Compliment geven</h2>
+                <p>Selecteer minimaal 1 persoon</p>
+                <div id="select-button__container">
+                    <button id="select-all" type="button">Iedereen selecteren</button>
+                    <button id="deselect-all" type="button">Selectie ongedaan maken</button>
+                </div>
+
+                <div id="team-member__container">
+                    <input name="selectedMembers" type="checkbox" id="1" value="Stefan Gerrits">
+                    <label for="1">
+                        <div>
+                            <img src="/images/stefan.jpg" alt="">
+                            <p>Stefan Gerrits</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
+
+                    <input name="selectedMembers" type="checkbox" id="2" value="Reinier van Limpt">
+                    <label for="2">
+                        <div>
+                            <img src="/images/reinier.jpg" alt="">
+                            <p>Reinier van Limpt</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
+                    <input name="selectedMembers" type="checkbox" id="3" value="Lex testpersoon">
+                    <label for="3">
+                        <div>
+                            <img src="/images/random4.jpg" alt="">
+                            <p>Lex testpersoon</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
+                    <input name="selectedMembers" type="checkbox" id="4" value="Anna testpersoon">
+                    <label for="4">
+                        <div>
+                            <img src="/images/random3.jpg" alt="">
+                            <p>Anna testpersoon</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
+                    <input name="selectedMembers" type="checkbox" id="5" value="Tim testpersoon">
+                    <label for="5">
+                        <div>
+                            <img src="/images/random2.jpg" alt="">
+                            <p>Tim testpersoon</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
+                    <input name="selectedMembers" type="checkbox" id="6" value="Lisabeth testpersoon">
+                    <label for="6">
+                        <div>
+                            <img src="/images/random1.jpg" alt="">
+                            <p>Lisabeth testpersoon</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
+                    <input name="selectedMembers" type="checkbox" id="7" value="Lisabeth testpersoon">
+                    <label for="7">
+                        <div>
+                            <img src="/images/random1.jpg" alt="">
+                            <p>Lisabeth testpersoon</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
+                    <input name="selectedMembers" type="checkbox" id="8" value="Anna testpersoon">
+                    <label for="8">
+                        <div>
+                            <img src="/images/random3.jpg" alt="">
+                            <p>Anna testpersoon</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
+                    <input name="selectedMembers" type="checkbox" id="9" value="Anna testpersoon">
+                    <label for="9">
+                        <div>
+                            <img src="/images/random3.jpg" alt="">
+                            <p>Anna testpersoon</p>
+                            <span>Teamspeler</span>
+                        </div>
+                    </label>
+                </div>
             </div>
-        </div>
 
-        <div id="option__container">
-            <p>Ik wil...</p>
-            <input id="praise" class="option1" type="radio" value="praise" name="type" checked>
-            <label for="praise">een compliment geven</label>
+            <aside>
+                <div id="more-information">
+                    <h4>Teamlid informatie</h4>
+                    <p>Klik op een info knop om zijn/haar doelen te bekijken</p>
+                </div>
 
-            <input id="feedback" class="option2" type="radio" value="ask-feedback" name="type">
-            <label for="feedback">feedback vragen</label>
-        </div>
+                <div id="selected-members__container">
+                    <h4>Geselecteerde persoon:</h4>
+                    <div id="selected-members"></div>
 
-        <div id="super-compliment__container">
-            <p>Super compliment?</p>
-            <input name="superCompliment?" type="checkbox" id="supercompliment" value="yes">
-            <label id="super-compliment__button" for="supercompliment">Activeer een super compliment</label>
-        </div>
-
-        <div id="select__container">
-            <h2>Compliment geven</h2>
-            <p>Selecteer minimaal 1 persoon</p>
-            <div id="select-button__container">
-                <button id="select-all" type="button">Iedereen selecteren</button>
-                <button id="deselect-all" type="button">Selectie ongedaan maken</button>
-            </div>
-
-            <div id="team-member__container">
-                <input name="selectedMembers" type="checkbox" id="1" value="Stefan Gerrits">
-                <label for="1">
-                    <div>
-                        <img src="/images/stefan.jpg" alt="">
-                        <p>Stefan Gerrits</p>
-                        <span>Teamspeler</span>
-                    </div>
-                </label>
-
-                <input name="selectedMembers" type="checkbox" id="2" value="Reinier van Limpt">
-                <label for="2">
-                    <div>
-                        <img src="/images/reinier.jpg" alt="">
-                        <p>Reinier van Limpt</p>
-                        <span>Teamspeler</span>
-                    </div>
-                </label>
-                <input name="selectedMembers" type="checkbox" id="3" value="Lex testpersoon">
-                <label for="3">
-                    <div>
-                        <img src="/images/random4.jpg" alt="">
-                        <p>Lex testpersoon</p>
-                        <span>Teamspeler</span>
-                    </div>
-                </label>
-                <input name="selectedMembers" type="checkbox" id="4" value="Anna testpersoon">
-                <label for="4">
-                    <div>
-                        <img src="/images/random3.jpg" alt="">
-                        <p>Anna testpersoon</p>
-                        <span>Teamspeler</span>
-                    </div>
-                </label>
-                <input name="selectedMembers" type="checkbox" id="5" value="Tim testpersoon">
-                <label for="5">
-                    <div>
-                        <img src="/images/random2.jpg" alt="">
-                        <p>Tim testpersoon</p>
-                        <span>Teamspeler</span>
-                    </div>
-                </label>
-                <input name="selectedMembers" type="checkbox" id="6" value="Lisabeth testpersoon">
-                <label for="6">
-                    <div>
-                        <img src="/images/random1.jpg" alt="">
-                        <p>Lisabeth testpersoon</p>
-                        <span>Teamspeler</span>
-                    </div>
-                </label>
-                <input name="selectedMembers" type="checkbox" id="7" value="Lisabeth testpersoon">
-                <label for="7">
-                    <div>
-                        <img src="/images/random1.jpg" alt="">
-                        <p>Lisabeth testpersoon</p>
-                        <span>Teamspeler</span>
-                    </div>
-                </label>
-                <input name="selectedMembers" type="checkbox" id="8" value="Anna testpersoon">
-                <label for="8">
-                    <div>
-                        <img src="/images/random3.jpg" alt="">
-                        <p>Anna testpersoon</p>
-                        <span>Teamspeler</span>
-                    </div>
-                </label>
-            </div>
-        </div>
-
-        <div id="selected-members__container">
-            <h4>Geselecteerde persoon:</h4>
-            <div id="selected-members">
-
-            </div>
-        </div>
-
-        <textarea name="textarea" id="" rows="10" required placeholder="Typ hier je compliment..."></textarea>
-        <input type="submit" class="defaultButton" value="Versturen">
-    </form>
+                    <textarea name="textarea" id="" rows="10" required placeholder="Typ hier je compliment..."></textarea>
+                    <input type="submit" class="defaultButton" value="Versturen">
+                </div>
+            </aside>
+        </form>
+    </main>
 </div>
 
 <script src="js/compliments.js"></script>
