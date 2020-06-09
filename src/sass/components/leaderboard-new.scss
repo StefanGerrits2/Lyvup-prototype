@@ -1,14 +1,18 @@
 // ID's
 
 // classes
-
 .big__grid{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: fit-content fit-content;
     height: 95%;
     margin: 1em;
     background-color: white;
+}
+
+.overflow{
+    overflow-y: auto;
+    height: 100vh;
 }
 
 .karma__individual__container{
@@ -37,6 +41,7 @@
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 2;
+    margin-bottom: 5em;
 }
 
 .grid__base{
@@ -52,10 +57,6 @@
     border-radius: 10px;
 }
 
-.challenges{
-    display: flex;
-}
-
 .individual__challenge{
     margin: .5em;
     background-image: url(/images/background.png);
@@ -64,6 +65,10 @@
     border-radius: 10px;
     width: 50%;
     height: 100%;
+}
+
+.width{
+    width: 100%;
 }
 
 .challengeButton{
@@ -93,9 +98,10 @@
 
 .leaderboard__challange{
     background-color: $white;
-    margin: 1em;
-    padding: 5px;
+    margin: .75em;
+    padding: .5em;
     border-radius: 10px;
+    box-shadow: 0px 2px 0px 2px $grey;
 }
 
 .leaderboard__challange:hover{
@@ -103,21 +109,39 @@
     cursor: pointer;
 }
 
-.border__yellow{
-    border: 3px solid yellow;
+// .border__yellow{
+//     border: 3px solid yellow;
+// }
+// .border__orange{
+//     border: 3px solid orange;
+// }
+// .border__blue{
+//     border: 3px solid lightskyblue;
+// }
+// .border__purple{
+//     border: 3px solid rebeccapurple;
+// }
+
+.border__yellow:hover{
+    background-color: rgba($color: yellow, $alpha: 0.5);
 }
-.border__orange{
-    border: 3px solid orange;
+.border__orange:hover{
+    background-color: rgba($color: orange, $alpha: 0.5);
 }
-.border__blue{
-    border: 3px solid lightskyblue;
+.border__blue:hover{
+    background-color: rgba($color: lightskyblue, $alpha: 0.5);
 }
-.border__purple{
-    border: 3px solid rebeccapurple;
+.border__purple:hover{
+    background-color: rgba($color: rebeccapurple, $alpha: 0.5);
 }
 
 .align__center{
     align-items: center;
+}
+
+.leaderboard__small__title{
+    margin-left: .5em;
+    margin-top: .5em;
 }
 
 .goal__leaderboard{
@@ -125,6 +149,10 @@
     background-color: $white;
     margin: .5em;
     padding: .5em;
+}
+
+.goal__leaderboard:hover{
+    transform: scale(1.05);
 }
 
 .leaderboardImage {

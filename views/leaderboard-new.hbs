@@ -1,6 +1,7 @@
 {{> header}}
 
-<div class="flex">
+<div class="overflow">
+
     <div class="selectContainer">
         <div class="select">
             <select name="teams" id="select1">
@@ -10,136 +11,181 @@
             </select>
         </div>
     </div>
-</div>
 
-<div class="big__grid">
-    <div class="grid__base karma__individual__container">
-        <h3>Karma individueel</h3>
+    <div class="big__grid">
+        <div class="grid__base karma__individual__container">
+            <h3>Karma individueel</h3>
 
-        <div class="grey__Background">
-            <div class="gridElement">
-                <h3 class="leaderboardNumber">#1</h3>
-                <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
-                <h4 class="leaderboardName">Reinier</h4>
-                <h4 class="leaderboardKarma">2100 karma punten</h4>
-            </div>
-            <div class="gridElement">
-                <h3 class="leaderboardNumber">#2</h3>
-                <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
-                <h4 class="leaderboardName">Monika</h4>
-                <h4 class="leaderboardKarma">2050 karma punten</h4>
-            </div>
-            <div class="gridElement">
-                <h3 class="leaderboardNumber">#3</h3>
-                <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
-                <h4 class="leaderboardName">Michel</h4>
-                <h4 class="leaderboardKarma">1900 karma punten</h4>
-            </div>
-            <div class="gridElement">
-                <h3 class="leaderboardNumber">#4</h3>
-                <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
-                <h4 class="leaderboardName">Max</h4>
-                <h4 class="leaderboardKarma">1870 karma punten</h4>
-            </div>
-            <div class="gridElement">
-                <h3 class="leaderboardNumber">#5</h3>
-                <img class="leaderboardImage" src="/images/stefan.jpg" alt="profile">
-                <h4 class="leaderboardName">Stefan</h4>
-                <h4 class="leaderboardKarma">1750 karma punten</h4>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid__base karma__team__container">
-        <h3>Karma team</h3>
-
-        <div class="grey__Background">
-            <div class="gridElement">
-                <h3 class="leaderboardNumber">#1</h3>
-                <h4 class="leaderboardName">Meesterproef</h4>
-                <h4 class="leaderboardKarma">11000 karma punten</h4>
-            </div>
-            <div class="gridElement">
-                <h3 class="leaderboardNumber">#2</h3>
-                <h4 class="leaderboardName">Meester2</h4>
-                <h4 class="leaderboardKarma">10050 karma punten</h4>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid__base challenge__leaderboard__container">
-        <h3>Challenges</h3>
-        <div class="challenges">
-            <div class="individual__challenge">
-                <h3>Individueel</h3>
-                <div class="leaderboard__challange border__orange">
-                    <p class="bodyTextBold">Complimenten geven</p>
-                    <img class="float__right leaderboardImage " src="/images/icon4.png" alt="achievement">
-                    <p>Geef 100 complimenten aan je teamleden voor de gegeven tijd.</p>
-                    <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
-                </div>
-                <div class="leaderboard__challange border__blue">
-                    <p class="bodyTextBold">Doelen</p>
-                    <img class="float__right leaderboardImage " src="/images/icon3.png" alt="achievement">
-                    <p>Maak 4 doelen voor gegeven tijd.</p>
-                    <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
-                </div>
-                <div class="leaderboard__challange border__yellow">
-                    <p class="bodyTextBold">Complimenten geven</p>
-                    <img class="float__right leaderboardImage " src="/images/icon1.png" alt="achievement">
-                    <p>Geef 100 complimenten voor de gegeven tijd.</p>
-                    <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
-                </div>
-            </div>
-
-            <div class="team__challenge">
-                <h3>Team</h3>
-                <div class="leaderboard__challange border__yellow">
-                    <p class="bodyTextBold">Complimenten geven</p>
-                    <img class="float__right leaderboardImage " src="/images/icon1.png" alt="achievement">
-                    <p>Geef als team 1000 complimenten voor de gegeven tijd.</p>
-                    <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
-                </div>
-                <div class="leaderboard__challange border__blue">
-                    <p class="bodyTextBold">Doelen</p>
-                    <img class="float__right leaderboardImage " src="/images/icon3.png" alt="achievement">
-                    <p>Maak als team 20 doelen aan voor de gegeven tijd</p>
-                    <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
-                </div>
-                <div class="leaderboard__challange border__purple">
-                    <p class="bodyTextBold">Complimenten geven</p>
-                    <img class="float__right leaderboardImage " src="/images/icon2.png" alt="achievement">
-                    <p>Geef 100 complimenten voor de gegeven tijd.</p>
-                    <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
-                </div>
-            </div>
-        </div>
-        <button>Add challenge</button>
-
-    </div>
-
-    <div class="grid__base challenge__achievement__container">
-        <h3>Achievements</h3>
-
-        <div class="grey__Background">
-            <div class="goal__leaderboard">
-                <div class="flex align__center">
+            <div class="grey__Background">
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#1</h3>
                     <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
-                    <h4>Reinier heeft een achievement gehaald:</h4>
+                    <h4 class="leaderboardName">Reinier</h4>
+                    <h4>2100 karma punten</h4>
                 </div>
-                <p>09-06-2020 12:42</p>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#2</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h4 class="leaderboardName">Monika</h4>
+                    <h4>2050 karma punten</h4>
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#3</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h4 class="leaderboardName">Michel</h4>
+                    <h4>1900 karma punten</h4>
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#4</h3>
+                    <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
+                    <h4 class="leaderboardName">Max</h4>
+                    <h4>1870 karma punten</h4>
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#5</h3>
+                    <img class="leaderboardImage" src="/images/stefan.jpg" alt="profile">
+                    <h4 class="leaderboardName">Stefan</h4>
+                    <h4>1750 karma punten</h4>
+                </div>
+                <h4>Mijn positie: </h4>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#8</h3>
+                    <img class="leaderboardImage" src="/images/random2.jpg" alt="profile">
+                    <h4 class="leaderboardName">Max</h4>
+                    <h4 class="leaderboardKarma">800 karma punten</h4>
+                </div>
             </div>
-            <div class="goal__leaderboard">
-                <p>Test doel</p>
+        </div>
+
+        <div class="grid__base karma__team__container">
+            <h3>Karma team</h3>
+
+            <div class="grey__Background">
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#1</h3>
+                    <h4 class="leaderboardName">Meesterproef</h4>
+                    <h4>11000 karma punten</h4>
+                </div>
+                <div class="gridElement">
+                    <h3 class="leaderboardNumber">#2</h3>
+                    <h4 class="leaderboardName">Meester2</h4>
+                    <h4>10050 karma punten</h4>
+                </div>
             </div>
-            <div class="goal__leaderboard">
-                <p>Nog een doel</p>
+        </div>
+
+        <div class="grid__base challenge__leaderboard__container">
+            <h3>Challenges</h3>
+            <div class="flex">
+                <div class="individual__challenge">
+                    <h4 class="leaderboard__small__title">Individueel</h4>
+                    <div class="leaderboard__challange border__orange">
+                        <p class="bodyTextBold">Complimenten geven</p>
+                        <img class="float__right leaderboardImage " src="/images/icon4.png" alt="achievement">
+                        <p>Geef 100 complimenten aan je teamleden voor de gegeven tijd.</p>
+                        <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
+                    </div>
+                    <div class="leaderboard__challange border__blue">
+                        <p class="bodyTextBold">Doelen</p>
+                        <img class="float__right leaderboardImage " src="/images/icon3.png" alt="achievement">
+                        <p>Maak 4 doelen voor gegeven tijd.</p>
+                        <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
+                    </div>
+                    <div class="leaderboard__challange border__yellow">
+                        <p class="bodyTextBold">Complimenten geven</p>
+                        <img class="float__right leaderboardImage " src="/images/icon1.png" alt="achievement">
+                        <p>Geef 100 complimenten voor de gegeven tijd.</p>
+                        <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
+                    </div>
+                </div>
+
+                <div class="team__challenge">
+                    <h4 class="leaderboard__small__title">Team</h4>
+                    <div class="leaderboard__challange border__yellow">
+                        <p class="bodyTextBold">Complimenten geven</p>
+                        <img class="float__right leaderboardImage " src="/images/icon1.png" alt="achievement">
+                        <p>Geef als team 1000 complimenten voor de gegeven tijd.</p>
+                        <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
+                    </div>
+                    <div class="leaderboard__challange border__blue">
+                        <p class="bodyTextBold">Doelen</p>
+                        <img class="float__right leaderboardImage " src="/images/icon3.png" alt="achievement">
+                        <p>Maak als team 20 doelen aan voor de gegeven tijd</p>
+                        <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
+                    </div>
+                    <div class="leaderboard__challange border__purple">
+                        <p class="bodyTextBold">Complimenten geven</p>
+                        <img class="float__right leaderboardImage " src="/images/icon2.png" alt="achievement">
+                        <p>Geef 100 complimenten voor de gegeven tijd.</p>
+                        <p class="bodyTextItalic">03-06-2020 / 05-05-2020</p>
+                    </div>
+                </div>
             </div>
-            <div class="goal__leaderboard">
-                <p>Wow zo veel doelen</p>
+            <button class="left__margin">Add challenge</button>
+
+        </div>
+
+        <div class="grid__base challenge__achievement__container">
+            <h3>Achievements</h3>
+
+            <div class="flex ">
+                <div class="width">
+                    <div class="grey__Background">
+                        <h4 class="leaderboard__small__title">Individueel</h4>
+                        <div class="leaderboard__challange border__purple">
+                            <h4>Reinier heeft een achievement gehaald:</h4>
+                            <div class="align__center">
+                                <img class="leaderboardImage float__right" src="/images/icon2.png" alt="achievement">
+                                <p>Geef 20 complimenten.</p>
+                            </div>
+                            <p>09-06-2020 12:42</p>
+                        </div>
+
+                        <div class="leaderboard__challange border__yellow">
+                            <h4>Reinier heeft een achievement gehaald:</h4>
+                            <div class="align__center">
+                                <img class="leaderboardImage float__right" src="/images/icon1.png" alt="achievement">
+                                <p>Haal 5 doelen.</p>
+                            </div>
+                            <p>09-06-2020 12:42</p>
+                        </div>
+                        <div class="leaderboard__challange border__blue">
+                            <h4>Reinier heeft een achievement gehaald:</h4>
+                            <div class="align__center">
+                                <img class="leaderboardImage float__right" src="/images/icon3.png" alt="achievement">
+                                <p>Haal 5 doelen.</p>
+                            </div>
+                            <p>09-06-2020 12:42</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="width">
+                    <div class="grey__Background">
+                        <h4 class="leaderboard__small__title">Team</h4>
+                        <div class="leaderboard__challange border__purple">
+                            <h4>Het team Meester2 heeft een achievement gehaald:</h4>
+                            <div class="align__center">
+                                <img class="leaderboardImage float__right" src="/images/icon2.png" alt="achievement">
+                                <p>Geef 200 complimenten.</p>
+                            </div>
+                            <p>08-06-2020 12:42</p>
+                        </div>
+
+                        <div class="leaderboard__challange border__orange">
+                            <h4>Het team Meesterproef heeft een achievement gehaald:</h4>
+                            <div class="align__center">
+                                <p>Haal 50 doelen.</p>
+                                <img class="leaderboardImage float__right" src="/images/icon4.png" alt="achievement">
+                            </div>
+                            <p>01-06-2020 09:12</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </div>
 
 {{> thumbs-up}}
