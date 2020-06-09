@@ -1,33 +1,98 @@
 // ID's
-#Karmaboard {
-    display: grid;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-
-    & img {
-        border-radius: 50%;
-    }
-}
 
 // classes
-.hidden {
-    display: none;
+
+.big__grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: fit-content fit-content;
+    height: 95%;
+    margin: 1em;
+    background-color: white;
+}
+
+.karma__individual__container{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.karma__team__container{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.challenge__leaderboard__container{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.challenge__achievement__container{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.grid__base{
+    min-width: 50%;
+    padding: .5em;
+    background-color: $white;
+}
+
+.grey__Background{
+    background-image: url(/images/background.png);
+    background-size: 500%;
+    padding: .5em;
+    border-radius: 10px;
+}
+
+.challenges{
+    display: flex;
+}
+
+.individual__challenge{
+    margin: .5em;
+    background-image: url(/images/background.png);
+    background-size: 500%;
+    padding: .5em;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+.challengeButton{
+    margin-top: .5em;;
+}
+
+.team__challenge{
+    margin: .5em;
+    background-image: url(/images/background.png);
+    background-size: 500%;
+    padding: .5em;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
 }
 
 .gridElement {
-    margin-top: 1em;
-    min-height: 80px;
-    grid-template-rows: auto;
-    border: 1px solid black;
+    margin-top: .75em;
+    min-height: 30px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     background-color: $white;
     padding: 0.5em;
-    box-shadow: 0px 2px 0px 2px #e5e5e5;
+    box-shadow: 0px 2px 0px 2px $grey;
 }
 
 .leaderboardImage {
-    max-height: 50px;
+    max-height: 40px;
     margin-right: 0.5em;
     border-radius: 50px;
 }
@@ -38,68 +103,14 @@
     margin-right: 0.5em;
 }
 
-.leaderboardKarma {
-}
-
 .leaderboardNumber {
     margin-right: 0.5em;
 }
 
-.tablinks {
+.selectContainer{
     display: inline-block;
-}
-
-.tabcontent {
-    margin-top: 0.75em;
-    padding-top: 1em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    padding-bottom: 1.5em;
-    border-radius: 10px;
-    background-color: $light-grey;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    font-family: "bitter", serif;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropbtn {
-    background-color: #d4d4d4;
-    color: black;
-}
-
-.selectContainer {
-    display: inline-block;
+    margin-left: 1em;
+    margin-top: 1em;
 }
 
 // elements
-#leaderboard__grid {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-}

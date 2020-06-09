@@ -4,7 +4,8 @@
 './components/header',
 './components/fixed-thumbs-up',
 './pages/giveCompliment',
-'./components/leaderboard',
+// './components/leaderboard',
+'./components/leaderboard-new',
 './pages/team',
 './pages/goals.scss',
 './components/profile',
@@ -46,10 +47,9 @@ h1 {
 }
 
 h2 {
-    line-height: 200%;
     font-size: 2.5em;
     font-family: 'publicSans', sans-serif;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
 }
 
 h3 {
@@ -81,7 +81,7 @@ p {
 #main__container {
     width: 65%;
     background-color: $white;
-    padding: 3em;
+    padding: 2.1em 3em 3em 3em;
 }
 
 #main__container__single {
