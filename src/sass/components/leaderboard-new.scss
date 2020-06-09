@@ -91,6 +91,31 @@
     box-shadow: 0px 2px 0px 2px $grey;
 }
 
+.leaderboard__challange{
+    background-color: $white;
+    margin: 1em;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.leaderboard__challange:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.border__yellow{
+    border: 3px solid yellow;
+}
+.border__orange{
+    border: 3px solid orange;
+}
+.border__blue{
+    border: 3px solid lightskyblue;
+}
+.border__purple{
+    border: 3px solid rebeccapurple;
+}
+
 .leaderboardImage {
     max-height: 40px;
     margin-right: 0.5em;
