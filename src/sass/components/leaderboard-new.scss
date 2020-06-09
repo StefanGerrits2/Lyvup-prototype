@@ -116,6 +116,17 @@
     border: 3px solid rebeccapurple;
 }
 
+.align__center{
+    align-items: center;
+}
+
+.goal__leaderboard{
+    border-radius: 10px;
+    background-color: $white;
+    margin: .5em;
+    padding: .5em;
+}
+
 .leaderboardImage {
     max-height: 40px;
     margin-right: 0.5em;
