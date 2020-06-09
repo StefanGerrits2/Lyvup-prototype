@@ -1,0 +1,54 @@
+    <div id="new-header">
+        <a href="/"><img id="logo" src="/images/lyvupLogo.png" alt=""></a>
+            <div class="select">
+                <select name="team" id="select2">
+                    <!-- {{#each data}}
+                        <option value={{acc_wly_name}}>{{acc_wly_name}}</option>
+                    {{/each}} -->
+                </select>
+            </div>
+
+        <nav>
+            <ul>
+                <li {{#if home}} class="active-nav" {{/if}}>
+                    <a href="/">
+                        <div><img src="/images/nav-home.svg" alt=""></div>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li {{#if feedback}} class="active-nav" {{/if}}>
+                    <a href="/feedback">
+                        <div><img src="/images/nav-feedback.svg" alt=""></div>
+                        <p>Feedback</p>
+                    </a>
+                </li>
+                <li {{#if team}} class="active-nav" {{/if}}>
+                    <a href="/team">
+                        <div><img src="/images/nav-team.svg" alt=""></div>
+                        <p>Team</p>
+                    </a>
+                </li>
+                <li {{#if goals}} class="active-nav" {{/if}}>
+                    <a href="/goals">
+                        <div><img src="/images/nav-goals.svg" alt=""></div>
+                        <p>Mijn doelen</p>
+                    </a>
+                </li>
+                <li {{#if leaderboard}} class="active-nav" {{/if}}>
+                    <a href="/leaderboard">
+                        <div><img src="/images/nav-leaderboard.svg" alt=""></div>
+                        <p>Leaderboard</p>
+                    </a>
+                </li>
+                <li {{#if profile}} class="active-nav" {{/if}}>
+                    <a href="/profile">
+                        <div><img src="/images/nav-profile.svg" alt=""></div>
+                        <p>Profiel</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="toggle-header">
+            <img src="/images/chevron_left.svg" alt="">
+        </div>
+    </div>

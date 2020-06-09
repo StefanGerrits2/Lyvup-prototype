@@ -1,8 +1,8 @@
 #thumbs__container {
     background-color: $red;
     border-radius: 50%;
-    width: 4em;
-    height: 4em;
+    width: 4.5em;
+    height: 4.5em;
     display: flex;
     align-items: center;
     position: fixed;
@@ -29,7 +29,7 @@
     }
 
     & img {
-        width: 2em;
+        width: 2.25em;
         margin: 0 auto;
     }
 }

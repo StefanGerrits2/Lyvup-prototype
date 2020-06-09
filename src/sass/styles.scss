@@ -26,10 +26,14 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     font-size: 14px;
     background-color: $background-color;
     animation: page-transition .1s ease-in-out;
+}
+
+#page {
+    display: flex;
 }
 
 button {
@@ -43,10 +47,9 @@ h1 {
 }
 
 h2 {
-    line-height: 200%;
     font-size: 2.5em;
     font-family: 'publicSans', sans-serif;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
 }
 
 h3 {
@@ -71,16 +74,15 @@ p {
 
 #content__container {
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
 #main__container {
     width: 65%;
-    margin: 1%;
     background-color: $white;
-    padding: 2em;
-    border-radius: $border-radius-big;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vh;
 }
 
 #main__container__single {
@@ -93,20 +95,35 @@ p {
 
 #super-goals__container {
     width: 35%;
-    background-color: $white;
-    padding: 2em;
-    margin: 1%;
+    background-color: $background-color;
+    padding: 2.1em 3em 3em 3em;
     border-radius: $border-radius-big;
+
+    & h1 {
+        margin-bottom: 0;
+        margin-bottom: 15px;
+    }
+
+    & div:first-of-type img {
+        width: 3em;
+        margin-right: 1em;
+    }
+}
+
+.text-help {
+    margin-top: 1em;
 }
 
 .goal__container {
-    margin: 10px;
-    background-color: white;
-    cursor: pointer;
-    color: black;
-    transition: 200ms ease-in-out;
-    border-radius: $border-radius-big;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
+  box-sizing: border-box;
+  border-right: 10px solid #fff;
+  margin: 10px;
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  transition: 200ms ease-in-out;
+  border-radius: $border-radius-big;
+  box-shadow: 0px 2px 0px 1px #e5e5e5;
     & p{
       padding-left:15px;
     }
@@ -121,10 +138,7 @@ p {
 }
 
 .goal__container>div {
-    padding-right: .75em;
-    padding-left: .75em;
-    padding-bottom: .75em;
-    padding-top: .35em;
+    padding: .75em;
 }
 
 .goal__container img {
@@ -141,11 +155,15 @@ p {
 }
 
 #setGoals__container {
+    margin-bottom:  15px;
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     background-image: url(/images/background.png);
     background-size: 500%;
+    height: 30em;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #goals__container {
@@ -189,7 +207,7 @@ p {
 }
 
 .goal__container:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .request_count {
@@ -273,6 +291,11 @@ button:focus {
     box-shadow: 0px 2px 0px 1px #e5e5e5;
 }
 
+.flex {
+    display: flex;
+    align-content: center;
+}
+
 .message span {
     display: block;
 }
@@ -288,6 +311,8 @@ button:focus {
     border-radius: $border-radius-big;
     background-image: url(/images/background.png);
     background-size: 500%;
+    height: 30em;
+    overflow-y: scroll;
 
     &>div:not(:last-of-type) {
         margin-bottom: 1em;
@@ -297,7 +322,7 @@ button:focus {
 .image__container {
     width: 15em;
     border-right: 2px solid $red;
-    padding: 1.5em .5em;
+    padding: .5em;
     text-align: center;
 }
 
@@ -326,15 +351,12 @@ select {
     outline: 0;
     box-shadow: none;
     border: 0 !important;
-    background: #d4d4d4;
+    background: rgb(235, 235, 235);
+    color: $green;
     background-image: none;
     font-family: 'publicSans', sans-serif;
-}
-
-select {
     flex: 1;
     padding: 0 .5em;
-    color: $black;
     cursor: pointer;
 }
 
@@ -362,10 +384,11 @@ select::-ms-expand {
     top: 0;
     right: 0;
     padding: 0 1em;
-    background: #c0c0c0;
+    background: #d3d3d3;
     cursor: pointer;
     pointer-events: none;
     transition: .25s all ease;
+    color: $green;
 }
 
 /* Transition */

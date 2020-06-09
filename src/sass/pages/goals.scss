@@ -1,23 +1,23 @@
-.hidden{
-  display: none !important;
-}
-
-.visible{
-  display: flex !important;
-}
-
-.invisible{
-  visibility: hidden;
-}
-
 .goals-head {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
   & img{
-    width: 2em;
+    margin-right: 1em;
+    width: 3em;
   }
+  & h1{
+    width:75%
+  }
+}
+
+.complimentsHead {
+    height: 8.2em;
+    & h1{
+      margin-bottom: 1em;
+    }
+    & span{
+      width: 200px;
+    }
 }
 
 .complimentsButton{
@@ -26,6 +26,10 @@
   padding: 5px;
   margin-left: auto;
   background-color: $red;
+}
+
+.goals-button{
+  float: right;
 }
 
 .complimentsButton:hover{
@@ -43,23 +47,65 @@
   border-radius: 100px;
 }
 
-#form__container{
-  display: none;
-  position: relative;
-  width: 100%;
-  height: 100%;
+.goals-button:focus{
+  background-color: $green;
 }
 
 .addGoal__form{
-  position: absolute;
-  width: 40%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
 
   & label{
-    width: 100%;
     text-align: center;
+  }
+}
+
+.addGoals__container{
+  transition: .2s ease-in-out;
+  border: 2px solid #34b6dd;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 0 1px #e5e5e5;
+  & h4 {
+    width: 100%;
+  }
+  & .select {
+    width: 32%;
+    margin: 0.65%;
+  }
+  & .datePicker {
+    width: 32%;
+    margin: 0.65%;
+    & input {
+      font-family: publicSans, sans-serif;
+      background-color: #d4d4d4;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      height: 100%;
+    }
+  }
+  & .goalDescription {
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+    & textarea {
+      border-radius: 5px;
+      font-family: publicSans, sans-serif;
+      padding: 2em;
+      border: none;
+      margin-top: 2em;
+      display: block;
+      width: 100%;
+      height: 100px;
+      margin-bottom: 2em;
+    }
   }
 }
 
@@ -97,14 +143,44 @@
 .goal-estimate {
   font-size: 0.8em;
     text-align: right;
-    width: 50%;
+    width: 65%;
     color: #008000;
+}
+
+.goal-indicator{
+    width: 150px;
+    margin: 8px;
+    text-align: center;
+    padding: .5em;
+    border-radius: $border-radius-small;
+    font-size: 13px;
+}
+
+.goal-type-container{
+  width: 200px;
+}
+
+.indicator-inactive {
+  background-color: none;
+  color: black;
+}
+
+.indicator-active {
+  background-color: $light-blue;
+  color: $white;
 }
 
 #completedGoals__container {
     padding: 10px;
     background-color: #c5d6d5;
     border-radius: 10px;
+    height: 20em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+aside{
+  width: 150px;
 }
 
 .compliment__container {
@@ -112,7 +188,7 @@
   border-left: 10px solid white;
 }
 
-.goal__container {
+.my__goal__container {
   box-sizing: border-box;
   border-right: 10px solid white !important;
 }
@@ -122,8 +198,25 @@
   border-color: $light-blue !important;
 }
 
+.goals-aside {
+  height: 50em !important;
+  background-image: none !important;
+}
+
 .flashed {
   animation: shortFlash 0.3s linear alternate;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.visible{
+  display: flex !important;
+}
+
+.invisible{
+  visibility: hidden;
 }
 
 @keyframes shortFlash {

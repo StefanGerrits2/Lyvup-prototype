@@ -154,7 +154,7 @@ td {
     border-radius: 50px;
 }
 
-.profile__challange__container{
+.profile__challenge__container{
     background-color: $light-grey;
     display: flex;
     border-radius: 10px;
@@ -216,17 +216,18 @@ td {
 }
 
 #profile__main__container {
-    padding: .5em;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin: 3em 0;
+    background-color: $white;
 }
 
 #profile__right__container {
     width: 40%;
-    background-color: $white;
-    padding: 2em;
-    margin: 1%;
-    border-radius: $border-radius-big;
+    background-color: $background-color;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vw;
+    overflow-y: scroll;
+
+    & > button {
+        margin-top: 1.5em;
+    }
 }
