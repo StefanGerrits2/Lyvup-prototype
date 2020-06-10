@@ -29,6 +29,7 @@ const goals = require('./routes/goals.js');
 const leaderboard = require('./routes/leaderboard.js');
 const leaderboard_new = require('./routes/leaderboard-new.js');
 const profile = require('./routes/profile.js');
+const landing = require('./routes/landing.js')
 
 app
     .set('view engine', 'hbs')
@@ -69,6 +70,7 @@ app
     .get('/leaderboard', leaderboard)
     .get('/leaderboard-new', leaderboard_new)
     .get('/profile', profile)
+    .get('/landing', landing)
 
 // 404 not found
     .use(notFound);

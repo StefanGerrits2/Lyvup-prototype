@@ -14,9 +14,6 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
-
-
-
 const dots = document.getElementById('dots');
 const moreText = document.getElementById('more');
 const moreButton = document.getElementById('moreButton');
