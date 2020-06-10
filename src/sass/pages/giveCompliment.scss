@@ -97,29 +97,17 @@ input[type="checkbox"] {
     margin-top: 2em;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 50vh;
 
-    & input[type="checkbox"]:checked + label div img {
-        border: 5px solid $green;
+    & input[type="checkbox"]:checked + label img {
+        border: 5px solid $yellow;
     }
 
-    & label > div {
+    & > div {
         display: flex;
         flex-direction: column;
         margin: 0em auto 6em auto;
-        width: 10em;
-        height: 10em;
-
-        & img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            margin: 0 auto;
-            margin-bottom: .5em;
-            cursor: pointer;
-            border: 5px solid $white;
-        }
 
         & p {
             text-align: center;
@@ -131,6 +119,28 @@ input[type="checkbox"] {
             font-size: 14px;
             text-align: center;
             margin-top: 0;
+        }
+
+        & label  {
+            width: 10em;
+            height: 10em;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                margin: 0 auto;
+                margin-bottom: .5em;
+                cursor: pointer;
+                border: 5px solid $white;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    border: 5px solid $green;
+                    transition: 0.2s ease-in-out;
+                    transform: rotate(7deg);
+                }
+            }
         }
     }
 }
@@ -188,6 +198,20 @@ input[type="checkbox"] {
 
     & button {
         margin-top: 2em;
+    }
+}
+
+#more-information {
+    & #goals__container {
+        height: 31vh;
+        overflow-y: auto;
+        display: none;
+        flex-direction: column;
+        background-image: none;
+
+        & > p {
+            padding: .5em;
+        }
     }
 }
 
@@ -292,23 +316,23 @@ input[type="checkbox"] {
     }
 }
 
-#selected-members__container {
+#more-information {
 
     & > h4 {
         margin: 0;
         margin-right: .5em;
     }
+}
 
-    & #selected-members {
-        margin-top: 1em;
+#selected-members {
+    margin: 1em 0em;
 
-        & p {
-            padding: 0.4em 0.4em 0 0;
-            display: inline;
+    & p {
+        padding: 0.4em 0.4em 0 0;
+        display: inline;
 
-            &::after {
-                content: ',';
-            }
+        &::after {
+            content: ',';
         }
     }
 }
