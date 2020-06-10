@@ -83,6 +83,7 @@ p {
     background-color: $white;
     padding: 2.1em 3em 3em 3em;
     height: 100vh;
+    overflow-y: auto;
 }
 
 #main__container__single {
@@ -343,6 +344,7 @@ button:focus {
 .filter__container {
     margin: 2em 0em;
     display: flex;
+    overflow: hidden;
 }
 
 /* Reset Select */
@@ -408,6 +410,10 @@ option {
 
 .hide {
     display: none;
+}
+
+.expandFilter {
+    animation: expandFilter 0.3s linear alternate;
 }
 
 @media screen and (max-width: 1500px) {

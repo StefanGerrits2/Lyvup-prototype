@@ -1,391 +1,398 @@
 #team__container {
-    position: relative;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin-top: 3em;
-    background-image: url(/images/background.png);
-    background-size: 500%;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $light-grey;
+  border-radius: $border-radius-big;
+  margin-top: 3em;
+  background-image: url(/images/background.png);
+  background-size: 500%;
 }
 
 .container__teampage {
-    display: flex;
+  display: flex;
 }
 
 #teamoverview__container {
-    width: 60%;
-    height: fit-content;
-    background-color: $white;
-    height: 100vh;
-    padding: 2.1em 3em 3em 3em;
-    overflow-y: scroll;
+  width: 60%;
+  height: fit-content;
+  background-color: $white;
+  height: 100vh;
+  padding: 2.1em 3em 3em 3em;
+  overflow-y: auto;
 }
 
 #team-aside__container {
-    width: 40%;
-    background-color: $background-color;
-    padding: 2.1em 3em 3em 3em;
-    height: fit-content;
-    overflow-y: scroll;
-    height: 100vh;
+  width: 40%;
+  background-color: $background-color;
+  padding: 2.1em 3em 3em 3em;
+  height: fit-content;
+  overflow-y: auto;
+  height: 100vh;
 }
 
 #team-aside__container h4 {
-    margin-top: 2em;
-    margin-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 .container .goal__container span,
 .container .goal__container p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .profileinfo-meta {
-    width: 100%;
+  width: 100%;
 }
 
 .container {
-    align-items: center;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    width: 100%;
-    justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: $light-grey;
+  border-radius: $border-radius-big;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .profile__container {
-    background-color: white;
-    margin: 0.6%;
-    padding: 1em;
-    max-width: 32%;
-    max-height: 13em;
-    color: black;
-    transition: 200ms ease-in-out;
-    border-radius: $border-radius-big;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
-    display: inline-block;
-    overflow: hidden;
+  background-color: white;
+  margin: 0.6%;
+  padding: 1em;
+  max-width: 32%;
+  max-height: 13em;
+  color: black;
+  transition: 200ms ease-in-out;
+  border-radius: $border-radius-big;
+  box-shadow: 0px 2px 0px 1px #e5e5e5;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .collapse {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .profile__container h3 {
-    margin: 0;
-    margin-top: 1em;
-    font-size: 15px;
-    font-family: publicSans-medium;
+  margin: 0;
+  margin-top: 1em;
+  font-size: 15px;
+  font-family: publicSans-medium;
 }
 
 .profile__container a {
-    font-family: publicSans-medium;
-    color: black;
-    transition: 200ms ease-in-out;
+  font-family: publicSans-medium;
+  color: black;
+  transition: 200ms ease-in-out;
 }
 
 .profile__container a:hover {
-    font-family: publicSans-medium;
-    color: $yellow;
+  font-family: publicSans-medium;
+  color: $yellow;
 }
 
 .profile__container img {
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: .75em;
-    width: 100px;
-    height: 100px;
-    transition: al 200ms ease-in-out;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 0.75em;
+  width: 100px;
+  height: 100px;
+  transition: al 200ms ease-in-out;
 }
 
 .collapse img {
-    margin-left: 4.5em;
-    transition: al 200ms ease-in-out;
+  margin-left: 4.5em;
+  transition: al 200ms ease-in-out;
 }
 
 .profileinfo__container {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3em;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
 }
 
 .flex-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .flex-container2 {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .flex-container2 img {
-    width: 30px;
-    height: 30px;
-    margin: 0;
-    padding: 0;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .flex-container2 h3 {
-    margin: 0;
-    margin-left: 1em;
+  margin: 0;
+  margin-left: 1em;
 }
 
 .flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .info__container {
-    font-size: 14px;
-    font-family: 'bitter', serif;
-    width: 2.5em;
-    height: 2.5em;
-    display: inline-flex;
-    justify-content: center;
-    text-align: center;
-    margin: 0.4em;
-    box-shadow: 0 2px 0 1px #e5e5e5;
-    transition: all .2s ease-in-out;
+  font-size: 14px;
+  font-family: "bitter", serif;
+  width: 2.5em;
+  height: 2.5em;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0.4em;
+  box-shadow: 0 2px 0 1px #e5e5e5;
+  transition: all 0.2s ease-in-out;
 }
 
 .profile_card {
-    display: flex;
-    width: 20em;
+  display: flex;
+  width: 20em;
 }
 
 .info__container:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 2px 0px 1px transparent;
+  transform: scale(1.05);
+  box-shadow: 0px 2px 0px 1px transparent;
 }
 
 .player__container {
-    background-color: white;
-    margin: 0.5em;
-    padding: 1em;
-    width: 30%;
-    height: fit-content;
-    margin: 0.5em 0.3em 0.5em 0.3em;
-    color: black;
-    transition: 200ms ease-in-out;
-    border-radius: $border-radius-big;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
+  background-color: white;
+  margin: 0.5em;
+  padding: 1em;
+  width: 30%;
+  height: fit-content;
+  margin: 0.5em 0.3em 0.5em 0.3em;
+  color: black;
+  transition: 200ms ease-in-out;
+  border-radius: $border-radius-big;
+  box-shadow: 0px 2px 0px 1px #e5e5e5;
 }
 
 .player__container:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 2px 0px 1px #e5e5e500;
+  transform: scale(1.05);
+  box-shadow: 0px 2px 0px 1px #e5e5e500;
 }
 
 .player__container img {
-    width: 90px;
-    height: 90px;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    display: block;
-    background: linear-gradient(-90deg, #ffd000, #ffd000, rgb(252, 30, 97), #ffd000, #ffd000);
-    background-size: 400% 400%;
-    animation: gradient 15s ease-in-out infinite;
-    background-clip: padding-box;
-    padding: 3px;
-    margin: 0.7em auto;
+  width: 90px;
+  height: 90px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  display: block;
+  background: linear-gradient(
+    -90deg,
+    #ffd000,
+    #ffd000,
+    rgb(252, 30, 97),
+    #ffd000,
+    #ffd000
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease-in-out infinite;
+  background-clip: padding-box;
+  padding: 3px;
+  margin: 0.7em auto;
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    50% {
-        background-position: 100% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
+  }
 
-    100% {
-        background-position: 0% 50%;
-    }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .playerinfo__container {
-    padding: 0;
-    text-align: left;
+  padding: 0;
+  text-align: left;
 }
 
 .playerinfo__container a {
-    font-family: publicSans-medium;
-    font-size: 13px;
-    color: black;
+  font-family: publicSans-medium;
+  font-size: 13px;
+  color: black;
 }
 
 .playerinfo__container p {
-    font-size: 11px;
-    color: black;
+  font-size: 11px;
+  color: black;
 }
 
 .playerinfo__container a:hover {
-    color: $yellow;
+  color: $yellow;
 }
 
 .statistic__container {
-    font-size: 14px;
-    width: 45%;
-    margin: 2.5%;
-    padding: 1em;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
+  font-size: 14px;
+  width: 45%;
+  margin: 2.5%;
+  padding: 1em;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 0px 1px #e5e5e5;
 }
 
 #all-team-goals {
-    margin: 0.8em;
-    border-left: 5px solid $light-blue;
+  margin: 0.8em;
+  border-left: 5px solid $light-blue;
 }
 
 #all-team-goals h3,
 #completer-team-goals h3,
 #all-team-compliments h3,
 #my-team-compliments h3 {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
 #completer-team-goals {
-    margin: 0.5em;
-    border-left: 5px solid $light-blue;
+  margin: 0.5em;
+  border-left: 5px solid $light-blue;
 }
 
 #all-team-compliments {
-    margin: 0.5em;
-    border-left: 5px solid $red;
+  margin: 0.5em;
+  border-left: 5px solid $red;
 }
 
 #my-team-compliments {
-    margin: 0.5em;
-    border-left: 5px solid $red;
+  margin: 0.5em;
+  border-left: 5px solid $red;
 }
 
 .strong-wrapper {
-    padding: 0;
-    width: 35%;
+  padding: 0;
+  width: 35%;
 }
 
 .strong__super-container {
-    align-items: center;
-    padding: 10px;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin-top: 1em;
-    width: 100%;
+  align-items: center;
+  padding: 10px;
+  background-color: $light-grey;
+  border-radius: $border-radius-big;
+  margin-top: 1em;
+  width: 100%;
 }
 
 .strong__container {
-    margin: 1em;
-    padding: 0.2em 1em 0.2em 1em;
-    width: fit-content;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
-    transition: 200ms ease-in-out;
+  margin: 1em;
+  padding: 0.2em 1em 0.2em 1em;
+  width: fit-content;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 2px 0px 1px #e5e5e5;
+  transition: 200ms ease-in-out;
 }
 
 .strong__container span {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .goal-wrapper {
-    padding: 0;
-    width: 60%;
+  padding: 0;
+  width: 60%;
 }
 
 .goalsuper-container span,
 .goalsuper-container p {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .goalsuper-container {
-    align-items: center;
-    padding: 5px;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin-top: 1em;
-    max-height: 15em;
-    overflow: hidden;
-    overflow-y: scroll;
+  align-items: center;
+  padding: 5px;
+  background-color: $light-grey;
+  border-radius: $border-radius-big;
+  margin-top: 1em;
+  max-height: 15em;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .achievement__super-container {
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin: 0;
-    margin-top: 1em;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  background-color: $light-grey;
+  border-radius: $border-radius-big;
+  margin: 0;
+  margin-top: 1em;
 }
 
 .achievement-wrapper {
-    margin: 0;
-    padding: 0;
-    width: 33%;
-    margin-top: 1em;
+  margin: 0;
+  padding: 0;
+  width: 33%;
+  margin-top: 1em;
 }
 
 .achievement-wrapper img {
-    width: 30px;
-    height: 30px;
-    margin: 0 !important;
-    padding: 0 !important;
+  width: 30px;
+  height: 30px;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .challenges-wrapper {
-    margin: 0;
-    margin-top: 1em;
-    width: 65%;
+  margin: 0;
+  margin-top: 1em;
+  width: 65%;
 }
 
 .challenge__super-container {
-    align-items: center;
-    padding: 5px;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin-top: 1em;
-    max-height: 15em;
-    overflow: hidden;
-    overflow-y: scroll;
+  align-items: center;
+  padding: 5px;
+  background-color: $light-grey;
+  border-radius: $border-radius-big;
+  margin-top: 1em;
+  max-height: 15em;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 1400px) {
-    #content__container {
-        flex-direction: column;
-    }
+  #content__container {
+    flex-direction: column;
+  }
 
-    #teamoverview__container,
-    #team-aside__container {
-        width: 100%;
-    }
+  #teamoverview__container,
+  #team-aside__container {
+    width: 100%;
+  }
 
-    .goal__container img {
-        display: flex;
-    }
+  .goal__container img {
+    display: flex;
+  }
 }
 
 // Mediaqueries
 @media screen and (max-width: 600) {
-    //
+  //
 }
