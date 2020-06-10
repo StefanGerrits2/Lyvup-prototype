@@ -369,23 +369,3 @@
     overflow: hidden;
     overflow-y: scroll;
 }
-
-@media screen and (max-width: 1400px) {
-    #content__container {
-        flex-direction: column;
-    }
-
-    #teamoverview__container,
-    #team-aside__container {
-        width: 100%;
-    }
-
-    .goal__container img {
-        display: flex;
-    }
-}
-
-// Mediaqueries
-@media screen and (max-width: 600) {
-    //
-}

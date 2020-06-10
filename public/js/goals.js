@@ -80,6 +80,8 @@ const goalsButton = document.querySelector('.goals-button');
 
 goalFormContainer.classList.add('hidden');
 
+
+
 if (document.addEventListener) {
   // Eventlistener exists
   goalsButton.addEventListener('click', toggleFilter);
@@ -95,19 +97,13 @@ function toggleFilter() {
   if (goalFormContainer.classList.contains('hidden')) {
     goalFormContainer.classList.remove('hidden');
     goalFormContainer.classList.add('visible');
+    goalFormContainer.classList.toggle('expand');
   } else {
     goalFormContainer.classList.add('hidden');
     goalFormContainer.classList.remove('visible');
+    goalFormContainer.classList.toggle('expand');
   }
 }
-
-// const goalSubmission = document.querySelector('.submitGoal');
-//
-// goalSubmission.addEventListener('click', processForm);
-//
-// function processForm() {
-//   event.preventDefault()
-// }
 
 // Header animations
 const toggleHeader = document.querySelector('#toggle-header');

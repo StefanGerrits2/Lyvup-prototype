@@ -55,6 +55,7 @@ h2 {
 h3 {
     font-size: 2em;
     font-family: 'publicSans', sans-serif;
+    margin-bottom: 0.5em;
 }
 
 h4 {
@@ -64,7 +65,7 @@ h4 {
 
 p,
 span {
-    font-size: 14px;
+    font-size: 1em;
     font-family: 'publicSans', sans-serif;
 }
 
@@ -79,6 +80,7 @@ p {
 }
 
 #main__container {
+  position: relative;
     width: 65%;
     background-color: $white;
     padding: 2.1em 3em 3em 3em;
@@ -104,15 +106,15 @@ p {
         margin-bottom: 0;
         margin-bottom: 15px;
     }
-
-    & div:first-of-type img {
-        width: 3em;
-        margin-right: 1em;
-    }
 }
 
 .text-help {
     margin-top: 1em;
+}
+
+.heading-icon {
+      width: 3em;
+      margin-right: 1em;
 }
 
 .goal__container {
@@ -156,14 +158,15 @@ p {
 }
 
 #setGoals__container {
+  width: 100%;
     margin-bottom:  15px;
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     background-image: url(/images/background.png);
     background-size: 500%;
-    height: 30em;
-    overflow-y: scroll;
+    max-height: 45vh;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -313,7 +316,7 @@ button:focus {
     background-image: url(/images/background.png);
     background-size: 500%;
     height: 30em;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     &>div:not(:last-of-type) {
         margin-bottom: 1em;
@@ -416,28 +419,108 @@ option {
     animation: expandFilter 0.3s linear alternate;
 }
 
-@media screen and (max-width: 1500px) {
-    .goal__container img {
-        display: none;
+@media screen and (max-width: 1550px) {
+    body {
+      font-size: 12.5px;
     }
-}
+    #main__container, .right__container, .center__container, #super-goals__container{
+      padding: 1.5em 2em 2em;
+    }
+    #setGoals__container, #completedGoals__container, #messages__container, #goals__container, .container {
+      padding: 2px;
+    }
+    h3{
+      margin-bottom: 0.2em;
+    }
+    .goal__container:hover {
+        transform: scale(1.02);
+    }
+    #setGoals__container, #completedGoals__container{
+      margin-bottom: 10px;
+    }
+  }
 
 @media screen and (max-width: 1400px) {
-    #content__container {
-        flex-direction: column;
+    body {
+      font-size: 12px;
     }
-
-    #main__container,
-    #super-goals__container {
-        width: 100%;
+    .goal-type{
+      font-size: 11px;
     }
-
-    .goal__container img {
-        display: flex;
+    .player__container img
+    {
+      width: 60px;
+      height: auto;
+    }
+    #setGoals__container{
+      max-height: 35em;
+    }
+    .userImg{
+      display: none;
+    }
+    .compliment-message{
+      width: auto;
     }
 }
 
-// Mediaqueries
-@media screen and (max-width: 600) {
-    //
+@media screen and (max-width: 1300px) {
+    button{
+      height: auto;
+    }
+    .collapsible{
+      height: 4em;
+    }
+    .goal-type{
+      font-size: 11px;
+    }
+    .player__container img
+    {
+      width: 60px;
+      height: auto;
+    }
+    #setGoals__container{
+      max-height: 35em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  body{
+    font-size: 14px;
+    overflow:auto;
+  }
+  #main__container, #content__container, #super-goals__container, #teamoverview__container, #team-aside__container, #profile__right__container, #compliment__container aside, #compliment__container form #select__container, .center__container {
+    width: 100%;
+    height: 100%;
+  }
+  .right__container{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+  }
+  #content__container, .dashboard__container, #compliment__container form {
+    flex-direction: column;
+  }
+  .userImg{
+    display: block;
+    width: 15%;
+  }
+  .compliment-message{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body{
+    font-size: 12px;
+    overflow:auto;
+  }
+}
+
+@media screen and (max-width: 822px) {
+  #super-compliment__container{
+  margin: 1em 0em;
+  & label {
+  margin: 1em 0em;
+  }
+  }
 }
