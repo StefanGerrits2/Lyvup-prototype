@@ -104,7 +104,6 @@ p {
 
     & h1 {
         margin-bottom: 0;
-        margin-bottom: 15px;
     }
 }
 
@@ -158,14 +157,14 @@ p {
 }
 
 #setGoals__container {
-  width: 100%;
-    margin-bottom:  15px;
+    width: 100%;
+    margin-bottom: 2em;
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     background-image: url(/images/background.png);
     background-size: 500%;
-    max-height: 45vh;
+    max-height: 40vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -517,10 +516,11 @@ option {
 }
 
 @media screen and (max-width: 822px) {
-  #super-compliment__container{
-  margin: 1em 0em;
-  & label {
-  margin: 1em 0em;
-  }
-  }
+    #super-compliment__container{
+        margin: 1em 0em;
+
+        & label {
+        margin: 1em 0em;
+        }
+    }
 }

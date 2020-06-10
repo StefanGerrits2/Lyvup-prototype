@@ -73,19 +73,20 @@ header ul li a {
         list-style-type: none;
 
         & li  {
-            padding: .75em;
-            transition: 0.2s ease-in-out;
-            border-radius: $border-radius-small;
             position: relative;
-
-            &:hover {
-                background-color: $light-grey;
-                cursor: pointer;
-            }
+            box-sizing: content-box;
 
             & a {
                 display: flex;
                 text-decoration: none;
+                padding: .75em;
+                transition: 0.2s ease-in-out;
+                border-radius: $border-radius-small;
+
+                &:hover {
+                    background-color: $light-grey;
+                    cursor: pointer;
+                }
 
                 & > div {
                     display: flex;
