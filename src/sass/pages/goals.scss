@@ -29,7 +29,9 @@
 }
 
 .goals-button{
-  float: right;
+  position: absolute;
+  right: 2em;
+  top: 2em;
 }
 
 .complimentsButton:hover{
@@ -181,7 +183,7 @@
     padding: 10px;
     background-color: #c5d6d5;
     border-radius: 10px;
-    max-height: 30vh;
+    max-height: 20em;
     overflow-y: auto;
     overflow-x: hidden;
 }
