@@ -29,7 +29,7 @@ const goals = require('./routes/goals.js');
 const leaderboard = require('./routes/leaderboard.js');
 const leaderboard_new = require('./routes/leaderboard-new.js');
 const profile = require('./routes/profile.js');
-const landing = require('./routes/landing.js')
+const landing = require('./routes/landing.js');
 
 app
     .set('view engine', 'hbs')
@@ -60,25 +60,28 @@ app
         })
     )
 
-// Get routes
+
+    // Get routes
     .get('/', home)
     .get('/feedback', feedback)
     .get('/compliment-or-feedback', compliment)
     .post('/compliment-or-feedback', urlencodedParser, compliment)
     .get('/team', team)
     .get('/goals', goals)
+    .post('/goals', urlencodedParser, goals)
     .get('/leaderboard', leaderboard)
     .get('/leaderboard-new', leaderboard_new)
     .get('/profile', profile)
     .get('/landing', landing)
 
-// 404 not found
+    // 404 not found
     .use(notFound);
 
 // Socket
 socket.on('connection', (socket) => {
     // Disconnect
-    socket.on('disconnect', () => {});
+    socket.on('disconnect', () => {
+    });
 });
 
 // Listen

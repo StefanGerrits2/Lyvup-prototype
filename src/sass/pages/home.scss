@@ -1,19 +1,30 @@
 .dashboard__container {
-  width: 90%;
-  display: grid;
-  padding: 1%;
-  margin: auto;
-  grid-template-columns: 2fr 3fr 2fr;
-  grid-gap: 2%;
+  width: 100%;
+  display: flex;
 }
 
 .left__container {
   background-color: $white;
   padding: 2em;
   border-radius: 10px;
-  height: fit-content;
-  position: sticky;
-  top: 94px;
+}
+
+.center__container {
+  background-color: $white;
+  padding: 2.1em 3em 3em 3em;
+  width: 65%;
+  height: 100vw;
+  overflow-y: auto;
+}
+
+.right__container {
+  background-color: $background-color;
+  padding: 2.1em 3em 3em 3em;
+  width: 35%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
 }
 
 .profile__picture {
@@ -37,14 +48,7 @@
 }
 
 .active__challenges {
-  margin: 2em 0;
-}
-
-.center__container {
-  background-color: $white;
-  padding: 2em;
-  border-radius: 10px;
-  height: fit-content;
+  margin-top: 2em;
 }
 
 .activity__container {
@@ -55,6 +59,8 @@
   background-size: 500%;
   display: flex;
   flex-wrap: wrap;
+  overflow-y: auto;
+  height: 85vh;
 }
 
 
@@ -98,17 +104,6 @@
     width: 100%;
     margin: 1em 0;
   }
-}
-
-.right__container {
-  background-color: $white;
-  padding: 1em;
-  border-radius: 10px;
-  height: fit-content;
-  position: sticky;
-  top: 94px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .collapsible {

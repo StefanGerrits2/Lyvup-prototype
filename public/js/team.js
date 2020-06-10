@@ -2,29 +2,50 @@ const profile__container = document.querySelectorAll('.profile__container');
 
 profile__container.forEach((button) => {
     button.addEventListener('click', () => {
-        let item_index = Array.prototype.indexOf.call(profile__container, button);
-
-        console.log(item_index)
-
-        // Add 1 to (index+1) until it reaches the clicked item
-        let plus = 1;
-        profile__container.forEach(function (button, index) {
-            console.log(button);
-            if (index < 1) {
-                plus = 0;
-            } else if (index == 1) {
-                button.style.order = plus += 2;
-                if (index = 2) {
-                    button.style.order = index - 1;
-                } else if (index = 3) {
-                    button.style.order = index - 2;
-                }
-            } else if (index > 2) {
-                button.style.order = index + 2;
-            }
-        });
+        let card_index = Array.prototype.indexOf.call(profile__container, button);
+        console.log(card_index);
 
         button.classList.toggle('collapse');
-
     });
+});
+
+// Header animations
+const toggleHeader = document.querySelector('#toggle-header');
+const header = document.querySelector('#new-header');
+const navTexts = document.querySelectorAll('#new-header li p');
+const logo = document.querySelector('#logo');
+const navIcons = document.querySelectorAll('#new-header li a img');
+const dropdown = document.querySelector('#new-header .select');
+const hoverableIcons = document.querySelectorAll('#new-header li');
+
+toggleHeader.addEventListener('click', () => {
+    // Toggle header
+    header.classList.toggle('toggle-header');
+
+    // Animation
+    toggleHeader.classList.toggle('toggle-animation');
+
+    // Toggle text
+    for (let i = 0; i < navTexts.length; i++) {
+        navTexts[i].classList.toggle('toggle-nav-text');
+    }
+
+    // Toggle logo
+    logo.classList.toggle('toggle-logo');
+
+    // Toggle icons
+    for (let i = 0; i < navIcons.length; i++) {
+        navIcons[i].classList.toggle('toggle-icons-width');
+    }
+
+    // Toggle dropdown
+    dropdown.classList.toggle('hide-dropdown');
+
+    // Toggle hoverable icons
+    for (let i = 0; i < hoverableIcons.length; i++) {
+        hoverableIcons[i].classList.toggle('hoverable');
+    }
+
+    // Move toggle header button
+    toggleHeader.classList.toggle('move-button');
 });

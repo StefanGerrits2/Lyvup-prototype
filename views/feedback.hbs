@@ -1,101 +1,104 @@
-{{> header}}
+<div id="page">
+    {{> new-header}}
 
-<div id="content__container">
-    <div id="main__container">
-        <h1>Feedback</h1>
-        <p>Overzicht van feedback die je hebt gekregen, verstuurd en aangevraagd hebt.</p>
-        <div id="super-button__container">
-            <div id="button__container">
-                <button type="button" class="defaultButton">Ontvangen <span class="request_count">(3)</span></button>
-                <button type="button" class="defaultButton">Verstuurd <span class="request_count">(0)</span></button>
-                <button type="button" class="defaultButton">Aangevraagd <span class="request_count">(0)</span></button>
-            </div>
-            <button type="button" class="filter-button">Filter</button>
-        </div>
-        <div class="filter__container">
-            <div class="select">
-                <select name="teams" id="select1">
-                    <option value="sample">Alle teams</option>
-                    <option value="sample">Sample</option>
-                    <option value="sample">Sample</option>
-                </select>
-            </div>
-            <div class="select">
-                <select name="members" id="select2">
-                    <option value="sample">Alle leden</option>
-                    <option value="sample">Sample</option>
-                    <option value="sample">Sample</option>
-                </select>
-            </div>
-            <div class="select">
-                <select name="period" id="select3">
-                    <option value="sample">Alle perioden</option>
-                    <option value="sample">Sample</option>
-                    <option value="sample">Sample</option>
-                </select>
-            </div>
-        </div>
-        <div id="messages__container">
-                <div class="message">
-                    <div class="image__container">
-                        <img src="/images/stefan.jpg" alt="">
-                        <span>Stefan Gerrits</span>
-                        <span>25-5-2020</span>
-                    </div>
-                    <div class="text__container">
-                        <p>Goed gewerkt gisteren!</p>
-                    </div>
+    <main id="content__container">
+        <div id="main__container">
+            <h1>Feedback</h1>
+            <p>Overzicht van feedback die je hebt gekregen, verstuurd en aangevraagd hebt.</p>
+            <div id="super-button__container">
+                <div id="button__container">
+                    <button type="button" class="defaultButton">Ontvangen <span class="request_count">(3)</span></button>
+                    <button type="button" class="defaultButton">Verstuurd <span class="request_count">(0)</span></button>
+                    <button type="button" class="defaultButton">Aangevraagd <span class="request_count">(0)</span></button>
                 </div>
-                <div class="message">
-                    <div class="image__container">
-                        <img src="/images/reinier.jpg" alt="">
-                        <span>Reinier van Limpt</span>
-                        <span>25-5-2020</span>
-                    </div>
-                    <div class="text__container">
-                        <p>Goede customer story van de huidige app beschreven, duidelijke flow </p>
-                    </div>
+                <button type="button" class="filter-button">Filter</button>
+            </div>
+            <div class="filter__container">
+                <div class="select">
+                    <select name="teams" id="select1">
+                        <option value="sample">Alle teams</option>
+                        <option value="sample">Sample</option>
+                        <option value="sample">Sample</option>
+                    </select>
                 </div>
-                <div class="message">
-                    <div class="image__container">
-                        <img src="/images/reinier.jpg" alt="">
-                        <span>Reinier van Limpt</span>
-                        <span>25-5-2020</span>
-                    </div>
-                    <div class="text__container">
-                        <p>Goede customer story van de huidige app beschreven, duidelijke flow </p>
-                    </div>
+                <div class="select">
+                    <select name="members" id="select2">
+                        <option value="sample">Alle leden</option>
+                        <option value="sample">Sample</option>
+                        <option value="sample">Sample</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <select name="period" id="select3">
+                        <option value="sample">Alle perioden</option>
+                        <option value="sample">Sample</option>
+                        <option value="sample">Sample</option>
+                    </select>
                 </div>
             </div>
-        </div>
-    <div id="super-goals__container">
-        <h1>Mijn doelen</h1>
-        <p>Klik op een doel om ontvangen feedback over dat doel te zien.</p>
-        <div id="goals__container">
-            <div class="goal__container">
-                <div>
-                    <div class="goal-buttons__container">
-                        <span class="goal-type">Samenwerken</span><span class="goal-type2">Verbeteren</span>
+            <div id="messages__container">
+                    <div class="message">
+                        <div class="image__container">
+                            <img src="/images/stefan.jpg" alt="">
+                            <span>Stefan Gerrits</span>
+                            <span>25-5-2020</span>
+                        </div>
+                        <div class="text__container">
+                            <p>Goed gewerkt gisteren!</p>
+                        </div>
                     </div>
-                    <img src="/images/goals_icon.svg" alt="">
-                </div>
-                <div>
-                    <p>Beter worden in samen werken door vaker te communiceren</p>
+                    <div class="message">
+                        <div class="image__container">
+                            <img src="/images/reinier.jpg" alt="">
+                            <span>Reinier van Limpt</span>
+                            <span>25-5-2020</span>
+                        </div>
+                        <div class="text__container">
+                            <p>Goede customer story van de huidige app beschreven, duidelijke flow </p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="image__container">
+                            <img src="/images/reinier.jpg" alt="">
+                            <span>Reinier van Limpt</span>
+                            <span>25-5-2020</span>
+                        </div>
+                        <div class="text__container">
+                            <p>Goede customer story van de huidige app beschreven, duidelijke flow </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="goal__container">
-                <div>
-                    <div class="goal-buttons__container">
-                        <span class="goal-type">Proactief</span><span class="goal-type2">Verbeteren</span>
+        <aside id="super-goals__container">
+            <div class="flex">
+                <img class="heading-icon" src="/images/goals_icon.svg" alt="">
+                <h1>Mijn doelen</h1>
+            </div>
+            <p class="text-help">Klik op een doel om ontvangen feedback over dat doel te zien.</p>
+            <div id="goals__container">
+                <div class="goal__container">
+                    <div>
+                        <div class="goal-buttons__container">
+                            <span class="goal-type">Samenwerken</span><span class="goal-type2">Verbeteren</span>
+                        </div>
                     </div>
-                    <img src="/images/goals_icon.svg" alt="">
+                    <div>
+                        <p>Beter worden in samen werken door vaker te communiceren</p>
+                    </div>
                 </div>
-                <div>
-                    <p>Test doel</p>
+                <div class="goal__container">
+                    <div>
+                        <div class="goal-buttons__container">
+                            <span class="goal-type">Proactief</span><span class="goal-type2">Verbeteren</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Test doel</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </aside>
+    </main>
 </div>
 
 {{> thumbs-up}}

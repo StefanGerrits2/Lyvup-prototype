@@ -4,7 +4,8 @@
 './components/header',
 './components/fixed-thumbs-up',
 './pages/giveCompliment',
-'./components/leaderboard',
+// './components/leaderboard',
+'./components/leaderboard-new',
 './pages/team',
 './pages/goals.scss',
 './components/profile',
@@ -25,10 +26,14 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     font-size: 14px;
     background-color: $background-color;
     animation: page-transition .1s ease-in-out;
+}
+
+#page {
+    display: flex;
 }
 
 button {
@@ -42,15 +47,15 @@ h1 {
 }
 
 h2 {
-    line-height: 200%;
     font-size: 2.5em;
     font-family: 'publicSans', sans-serif;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
 }
 
 h3 {
     font-size: 2em;
     font-family: 'publicSans', sans-serif;
+    margin-bottom: 0.5em;
 }
 
 h4 {
@@ -60,7 +65,7 @@ h4 {
 
 p,
 span {
-    font-size: 14px;
+    font-size: 1em;
     font-family: 'publicSans', sans-serif;
 }
 
@@ -70,16 +75,17 @@ p {
 
 #content__container {
     display: flex;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
 #main__container {
+  position: relative;
     width: 65%;
-    margin: 1%;
     background-color: $white;
-    padding: 2em;
-    border-radius: $border-radius-big;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 #main__container__single {
@@ -92,20 +98,34 @@ p {
 
 #super-goals__container {
     width: 35%;
-    background-color: $white;
-    padding: 2em;
-    margin: 1%;
+    background-color: $background-color;
+    padding: 2.1em 3em 3em 3em;
     border-radius: $border-radius-big;
+
+    & h1 {
+        margin-bottom: 0;
+    }
+}
+
+.text-help {
+    margin-top: 1em;
+}
+
+.heading-icon {
+      width: 3em;
+      margin-right: 1em;
 }
 
 .goal__container {
-    margin: 10px;
-    background-color: white;
-    cursor: pointer;
-    color: black;
-    transition: 200ms ease-in-out;
-    border-radius: $border-radius-big;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
+  box-sizing: border-box;
+  border-right: 10px solid #fff;
+  margin: 10px;
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  transition: 200ms ease-in-out;
+  border-radius: $border-radius-big;
+  box-shadow: 0px 2px 0px 1px #e5e5e5;
     & p{
       padding-left:15px;
     }
@@ -120,10 +140,7 @@ p {
 }
 
 .goal__container>div {
-    padding-right: .75em;
-    padding-left: .75em;
-    padding-bottom: .75em;
-    padding-top: .35em;
+    padding: .75em;
 }
 
 .goal__container img {
@@ -140,11 +157,16 @@ p {
 }
 
 #setGoals__container {
+    width: 100%;
+    margin-bottom: 2em;
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     background-image: url(/images/background.png);
     background-size: 500%;
+    max-height: 40vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #goals__container {
@@ -188,7 +210,7 @@ p {
 }
 
 .goal__container:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .request_count {
@@ -272,6 +294,11 @@ button:focus {
     box-shadow: 0px 2px 0px 1px #e5e5e5;
 }
 
+.flex {
+    display: flex;
+    align-content: center;
+}
+
 .message span {
     display: block;
 }
@@ -287,6 +314,8 @@ button:focus {
     border-radius: $border-radius-big;
     background-image: url(/images/background.png);
     background-size: 500%;
+    height: 30em;
+    overflow-y: auto;
 
     &>div:not(:last-of-type) {
         margin-bottom: 1em;
@@ -296,7 +325,7 @@ button:focus {
 .image__container {
     width: 15em;
     border-right: 2px solid $red;
-    padding: 1.5em .5em;
+    padding: .5em;
     text-align: center;
 }
 
@@ -317,6 +346,7 @@ button:focus {
 .filter__container {
     margin: 2em 0em;
     display: flex;
+    overflow: hidden;
 }
 
 /* Reset Select */
@@ -325,15 +355,12 @@ select {
     outline: 0;
     box-shadow: none;
     border: 0 !important;
-    background: #d4d4d4;
+    background: rgb(235, 235, 235);
+    color: $green;
     background-image: none;
     font-family: 'publicSans', sans-serif;
-}
-
-select {
     flex: 1;
     padding: 0 .5em;
-    color: $black;
     cursor: pointer;
 }
 
@@ -361,10 +388,11 @@ select::-ms-expand {
     top: 0;
     right: 0;
     padding: 0 1em;
-    background: #c0c0c0;
+    background: #d3d3d3;
     cursor: pointer;
     pointer-events: none;
     transition: .25s all ease;
+    color: $green;
 }
 
 /* Transition */
@@ -386,28 +414,113 @@ option {
     display: none;
 }
 
-@media screen and (max-width: 1500px) {
-    .goal__container img {
-        display: none;
-    }
+.expandFilter {
+    animation: expandFilter 0.3s linear alternate;
 }
+
+@media screen and (max-width: 1550px) {
+    body {
+      font-size: 12.5px;
+    }
+    #main__container, .right__container, .center__container, #super-goals__container{
+      padding: 1.5em 2em 2em;
+    }
+    #setGoals__container, #completedGoals__container, #messages__container, #goals__container, .container {
+      padding: 2px;
+    }
+    h3{
+      margin-bottom: 0.2em;
+    }
+    .goal__container:hover {
+        transform: scale(1.02);
+    }
+    #setGoals__container, #completedGoals__container{
+      margin-bottom: 10px;
+    }
+  }
 
 @media screen and (max-width: 1400px) {
-    #content__container {
-        flex-direction: column;
+    body {
+      font-size: 12px;
     }
-
-    #main__container,
-    #super-goals__container {
-        width: 100%;
+    .goal-type{
+      font-size: 11px;
     }
-
-    .goal__container img {
-        display: flex;
+    .player__container img
+    {
+      width: 60px;
+      height: auto;
+    }
+    #setGoals__container{
+      max-height: 35em;
+    }
+    .userImg{
+      display: none;
+    }
+    .compliment-message{
+      width: auto;
     }
 }
 
-// Mediaqueries
-@media screen and (max-width: 600) {
-    //
+@media screen and (max-width: 1300px) {
+    button{
+      height: auto;
+    }
+    .collapsible{
+      height: 4em;
+    }
+    .goal-type{
+      font-size: 11px;
+    }
+    .player__container img
+    {
+      width: 60px;
+      height: auto;
+    }
+    #setGoals__container{
+      max-height: 35em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  body{
+    font-size: 14px;
+    overflow:auto;
+  }
+  #main__container, #content__container, #super-goals__container, #teamoverview__container, #team-aside__container, #profile__right__container, #compliment__container aside, #compliment__container form #select__container, .center__container {
+    width: 100%;
+    height: 100%;
+  }
+  .right__container{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+  }
+  #content__container, .dashboard__container, #compliment__container form {
+    flex-direction: column;
+  }
+  .userImg{
+    display: block;
+    width: 15%;
+  }
+  .compliment-message{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body{
+    font-size: 12px;
+    overflow:auto;
+  }
+}
+
+@media screen and (max-width: 822px) {
+    #super-compliment__container{
+        margin: 1em 0em;
+
+        & label {
+        margin: 1em 0em;
+        }
+    }
 }

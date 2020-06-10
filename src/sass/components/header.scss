@@ -37,8 +37,193 @@ header ul li a {
     }
 }
 
+/* new header */
 .active-nav {
-    color: $yellow;
+    background-color: #D2D1D7;
     transition: 200ms;
-    border-bottom: 3px solid $yellow;
+}
+
+#new-header {
+    background-color: $background-color;
+    height: 100vh;
+    width: 15em;
+    padding: 2em;
+    position: relative;
+    transition: .2s ease-in-out;
+
+    & .select {
+        opacity: 1;
+        transition: .2s ease-in-out;
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    & select {
+        background-color: white;
+    }
+
+    & > a img {
+        width: 8em;
+        margin-bottom: 1em;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+    }
+
+    & ul {
+        list-style-type: none;
+
+        & li  {
+            position: relative;
+            box-sizing: content-box;
+
+            & a {
+                display: flex;
+                text-decoration: none;
+                padding: .75em;
+                transition: 0.2s ease-in-out;
+                border-radius: $border-radius-small;
+
+                &:hover {
+                    background-color: $light-grey;
+                    cursor: pointer;
+                }
+
+                & > div {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            & img {
+                width: 1.5em;
+                margin-right: 1em;
+                transition: .2s ease-in-out;
+
+            }
+
+            & p {
+                color: #4A494A;
+                transition: .2s ease-in-out;
+                font-size: 14px;
+            }
+        }
+
+        & .hoverable {
+            margin-bottom: 1em;
+
+            &:hover {
+                &::before {
+                    position: absolute;
+                    bottom: 0.1em;
+                    color: $white;
+                    background-color: black;
+                    padding: .75em;
+                    border-radius: $border-radius-small;
+                    font-family: 'publicSans', sans-serif;
+                    font-size: 14px;
+                    z-index: 999;
+                    left: 4.9em;
+                    padding: .8em 1em;
+                }
+            }
+        }
+
+        // After texts per element
+        & .hoverable:nth-of-type(1):hover {
+            &::before {
+                content: "Dashboard";
+            }
+        }
+        & .hoverable:nth-of-type(2):hover {
+            &::before {
+                content: "Feedback";
+            }
+        }
+        & .hoverable:nth-of-type(3):hover {
+            &::before {
+                content: "Team";
+            }
+        }
+        & .hoverable:nth-of-type(4):hover {
+            &::before {
+                content: "Mijn doelen";
+                width: 5.5em;
+            }
+        }
+        & .hoverable:nth-of-type(5):hover {
+            &::before {
+                content: "Leaderboard";
+            }
+        }
+        & .hoverable:nth-of-type(6):hover {
+            &::before {
+                content: "Profiel";
+            }
+        }
+    }
+}
+
+#toggle-header {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    background-color: $white;
+    z-index: 999;
+    position: absolute;
+    top: 2.5em;
+    right: -1.2em;
+    cursor: pointer;
+    background-color: $green;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+
+    &:hover {
+        background-color: #114c4c;
+
+        & img {
+            transform: scale(1.1);
+        }
+    }
+
+    & img {
+        filter: invert(1);
+        margin: 0 auto;
+        width: 30px;
+        transition: .2s ease-in-out;
+    }
+}
+
+.toggle-animation {
+    transform: rotate(180deg);
+    transition: .3s linear;
+}
+
+.toggle-header {
+    width: 5em!important;
+    padding: 1em!important;
+}
+
+.toggle-nav-text {
+    display: none;
+}
+
+.toggle-logo {
+    width: 3.5em!important;
+    transition: .2s ease-in-out;
+    margin-bottom: 4em!important;
+}
+
+.toggle-icons-width {
+    width: 1.5em!important;
+    transition: .2s ease-in-out;
+}
+
+.hide-dropdown {
+    display: none!important;
+    transition: .2s ease-in-out;
+}
+
+.move-button {
+    top: 3.5em!important;
 }

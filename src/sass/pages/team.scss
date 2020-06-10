@@ -17,58 +17,24 @@
 #teamoverview__container {
     width: 60%;
     height: fit-content;
-    margin: 1%;
     background-color: $white;
-    padding: 2em;
-    border-radius: $border-radius-big;
+    height: 100vh;
+    padding: 2.1em 3em 3em 3em;
+    overflow-y: auto;
 }
 
 #team-aside__container {
     width: 40%;
-    background-color: $white;
-    padding: 2em;
-    margin: 1%;
-    border-radius: $border-radius-big;
+    background-color: $background-color;
+    padding: 2.1em 3em 3em 3em;
+    height: fit-content;
+    overflow-y: auto;
+    height: 100vh;
 }
 
 #team-aside__container h4 {
-    margin-top: 1em;
-}
-
-.profile__container {
-    background-color: white;
-    margin: 0.5em 0.3em 0.5em 0.3em;
-    padding: 1em;
-    width: 14em;
-    max-height: 13em;
-    color: black;
-    transition: 200ms ease-in-out;
-    border-radius: $border-radius-big;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
-    overflow: hidden;
-    z-index: 1;
-    display: inline-block;
-}
-
-.collapse {
-    width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-}
-
-.strong__container {
-    margin: 1em;
-    padding: .5em 1em .5em 1em;
-    transition: .2s ease-in-out;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 2px 0 1px #e5e5e5;
-}
-
-.strong__container span {
-    font-size: 12px;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 .container .goal__container span,
@@ -76,10 +42,8 @@
     font-size: 12px;
 }
 
-.profile__container a {
-    font-family: publicSans-medium;
-    color: black;
-    transition: 200ms ease-in-out;
+.profileinfo-meta {
+    width: 100%;
 }
 
 .container {
@@ -90,9 +54,27 @@
     align-items: flex-start;
     background-color: $light-grey;
     border-radius: $border-radius-big;
-    margin-top: 2em;
     width: 100%;
     justify-content: space-between;
+}
+
+.profile__container {
+    background-color: white;
+    margin: 0.6%;
+    padding: 1em;
+    max-width: 32%;
+    max-height: 13em;
+    color: black;
+    transition: 200ms ease-in-out;
+    border-radius: $border-radius-big;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.collapse {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .profile__container h3 {
@@ -102,8 +84,10 @@
     font-family: publicSans-medium;
 }
 
-.profile__container .container {
-    margin-top: 0.5em;
+.profile__container a {
+    font-family: publicSans-medium;
+    color: black;
+    transition: 200ms ease-in-out;
 }
 
 .profile__container a:hover {
@@ -118,10 +102,12 @@
     margin-bottom: .75em;
     width: 100px;
     height: 100px;
+    transition: al 200ms ease-in-out;
 }
 
 .collapse img {
-    margin-left: 1em;
+    margin-left: 4.5em;
+    transition: al 200ms ease-in-out;
 }
 
 .profileinfo__container {
@@ -130,20 +116,59 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3em;
 }
 
-.info__container h1 {
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.flex-container2 {
+    display: flex;
+    align-items: center;
+}
+
+.flex-container2 img {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container2 h3 {
+    margin: 0;
+    margin-left: 1em;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.info__container {
     font-size: 14px;
-    padding: 0.5em 1em 0.5em 1em;
-    color: $white;
-    background-color: $green;
-    border-radius: 5px;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
-    transition: all 200ms ease-in-out;
+    font-family: 'bitter', serif;
+    width: 2.5em;
+    height: 2.5em;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0.4em;
+    box-shadow: 0 2px 0 1px #e5e5e5;
+    transition: all .2s ease-in-out;
 }
 
-.info__container h1:hover {
-    cursor: pointer;
+.profile_card {
+    display: flex;
+    width: 20em;
+}
+
+.info__container:hover {
     transform: scale(1.05);
     box-shadow: 0px 2px 0px 1px transparent;
 }
@@ -214,30 +239,10 @@
     color: $yellow;
 }
 
-@media screen and (max-width: 1400px) {
-    #content__container {
-        flex-direction: column;
-    }
-
-    #teamoverview__container,
-    #team-aside__container {
-        width: 100%;
-    }
-
-    .goal__container img {
-        display: flex;
-    }
-}
-
-// Mediaqueries
-@media screen and (max-width: 600) {
-    //
-}
-
 .statistic__container {
     font-size: 14px;
     width: 45%;
-    margin: 1em;
+    margin: 2.5%;
     padding: 1em;
     background-color: white;
     border-radius: 5px;
@@ -271,14 +276,96 @@
     border-left: 5px solid $red;
 }
 
+.strong-wrapper {
+    padding: 0;
+    width: 35%;
+}
+
+.strong__super-container {
+    align-items: center;
+    padding: 10px;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin-top: 1em;
+    width: 100%;
+}
+
 .strong__container {
     margin: 1em;
     padding: 0.2em 1em 0.2em 1em;
     width: fit-content;
-    transition: 200ms ease-in-out;
     border-radius: 10px;
     display: flex;
     align-items: center;
     background-color: white;
     box-shadow: 0px 2px 0px 1px #e5e5e5;
+    transition: 200ms ease-in-out;
+}
+
+.strong__container span {
+    font-size: 12px;
+}
+
+.goal-wrapper {
+    padding: 0;
+    width: 60%;
+}
+
+.goalsuper-container span,
+.goalsuper-container p {
+    font-size: 10px;
+}
+
+.goalsuper-container {
+    align-items: center;
+    padding: 5px;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin-top: 1em;
+    max-height: 15em;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.achievement__super-container {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin: 0;
+    margin-top: 1em;
+}
+
+.achievement-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 33%;
+    margin-top: 1em;
+}
+
+.achievement-wrapper img {
+    width: 30px;
+    height: 30px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.challenges-wrapper {
+    margin: 0;
+    margin-top: 1em;
+    width: 65%;
+}
+
+.challenge__super-container {
+    align-items: center;
+    padding: 5px;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin-top: 1em;
+    max-height: 15em;
+    overflow: hidden;
+    overflow-y: scroll;
 }

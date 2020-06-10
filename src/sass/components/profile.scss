@@ -65,24 +65,27 @@ td {
 }
 
 .profile__goals__container {
-    display: flex;
     width: 100%;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     margin-bottom: .5em;
     justify-content: space-between;
     padding: 5px;
+    background-image: url(/images/background.png);
+    background-size: 500%;
+    height: 15em;
+    overflow-y: auto;
+    margin-top: 1em;
 }
 
 .goal__profile {
-    // margin: 10px;
     background-color: white;
     cursor: pointer;
     color: black;
     transition: 200ms ease-in-out;
     border-radius: $border-radius-big;
     box-shadow: 0px 2px 0px 1px #e5e5e5;
-    max-width: 24%;
+    margin: .5em;
 }
 
 .goal__profile>div {
@@ -93,21 +96,25 @@ td {
 }
 
 .profile__sides__container {
-    display: flex;
     width: 100%;
     background-color: $light-grey;
     border-radius: $border-radius-big;
+    padding-bottom: .75em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
 }
 
 .sides__container {
-    margin: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
+    margin: .1em;
+    padding: 0px 5px;
     background-color: white;
     color: black;
     transition: 200ms ease-in-out;
     border-radius: $border-radius-big;
     box-shadow: 0px 2px 0px 1px #e5e5e5;
+    width: fit-content;
+    margin: .75em .75em 0 .75em;
 }
 
 .goal-type2 {
@@ -119,7 +126,7 @@ td {
 .profile__grid__container{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% auto;
-    margin-bottom: 1.5em;
+    margin-bottom: 3em;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     padding: 1em 0em;
@@ -143,25 +150,52 @@ td {
     border-radius: 50px;
 }
 
-.profile__challange__container{
-    background-color: $light-grey;
+.profile__challenge__container {
     display: flex;
+    justify-content: space-between;
     border-radius: 10px;
+
+    & > div  {
+        width: 48%;
+
+        & h4 {
+            margin-bottom: .5em;
+        }
+    }
+}
+
+.profile__individual{
+    overflow: auto;
+    padding: .5em;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    max-height: 20em;
 }
 
 .profile__challange{
     background-color: $white;
     margin: 10px;
     padding: 5px;
-}
-
-.profile__challange:hover{
-    transform: scale(1.05);
-    cursor: pointer;
+    border-radius: $border-radius-small;
 }
 
 .editButton{
     float: right;
+}
+
+.profile__bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > div {
+        width: 48%;
+    }
+
+    & img {
+        width: 3em;
+        margin-right: 1em;
+    }
 }
 
 #achievement__container {
@@ -174,7 +208,8 @@ td {
         &::before {
             content: "Achievement 1: 5/5 complimenten gegeven";
             position: absolute;
-            right: 5em;
+            top: -5.5em;
+            left: -2em;
             color: white;
             background-color: black;
             padding: .75em;
@@ -187,9 +222,33 @@ td {
 }
 
 #profile__main__container {
-    padding: 20px;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin: 3em 0;
+    background-color: $white;
+
+    .image__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .message {
+        margin: 0;
+    }
+
+    & img {
+       width: 10em;
+       height: 10em;
+    }
+}
+
+#profile__right__container {
+    width: 40%;
+    background-color: $background-color;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vw;
+    overflow-y: auto;
+
+    & > button {
+        margin-top: 1.5em;
+    }
 }

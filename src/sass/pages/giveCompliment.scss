@@ -6,7 +6,7 @@
 }
 
 #team2__container {
-    margin-top: 3em;
+    margin-top: 1.5em;
 
     & > p {
         margin-right: 1.5em;
@@ -14,8 +14,10 @@
 }
 
 #option__container {
-    margin-top: 2em;
     font-family: 'publicSans', sans-serif;
+    justify-content: space-between;
+    height: 4em;
+    margin-bottom: 1em;
 
     & > p {
         margin-right: 1em;
@@ -27,12 +29,12 @@
 
     & label {
         cursor: pointer;
-        margin-right: 2em;
-        padding: 1em;
+        margin-right: 1em;
+        padding: .75em;
         border-radius: $border-radius-small;
         border: 1px solid $grey;
         color: $grey;
-        font-size: 14px;
+        font-size: 13px;
         width: 14em;
         text-align: center;
         user-select: none;
@@ -53,14 +55,23 @@
 }
 
 #select__container {
-    margin-top: 3em;
-
     & #select-button__container {
         display: flex;
+        margin-top: 2em;
 
         & button {
-            margin: 2em 1em 0 0;
+            margin: 1em 1em 0 0;
             width: auto;
+            padding-left: 0;
+
+            &:nth-of-type(1) {
+                background-color: $white;
+                color: $green;
+
+                &:focus {
+                    background-color: $white;
+                }
+            }
 
             &:nth-of-type(2) {
                 background-color: $white;
@@ -85,7 +96,9 @@ input[type="checkbox"] {
 #team-member__container {
     margin-top: 2em;
     display: grid;
-    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    grid-template-columns: 25% 25% 25% 25%;
+    overflow-y: scroll;
+    height: 50vh;
 
     & input[type="checkbox"]:checked + label div img {
         border: 5px solid $green;
@@ -94,8 +107,7 @@ input[type="checkbox"] {
     & label > div {
         display: flex;
         flex-direction: column;
-        width: 10em;
-        margin: 4em auto;
+        margin: 0em auto 6em auto;
         width: 10em;
         height: 10em;
 
@@ -104,7 +116,7 @@ input[type="checkbox"] {
             height: 100%;
             border-radius: 50%;
             margin: 0 auto;
-            margin-bottom: 1em;
+            margin-bottom: .5em;
             cursor: pointer;
             border: 5px solid $white;
         }
@@ -124,8 +136,38 @@ input[type="checkbox"] {
 }
 
 #compliment__container {
+    width: 100%;
+    right: 0;
+    height: 100%;
+
+    h1 {
+        margin-bottom: 1em;
+    }
+
+    & form {
+        display: flex;
+        position: relative;
+    }
+
+    #select__container {
+        padding: 2.1em 3em 3em 3em;
+        background-color: $white;
+        min-height: 100vh;
+        width: 70%;
+    }
+
+    aside {
+        width: 30%;
+        padding: 2.1em 3em 3em 3em;
+        background-color: $background-color;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     & textarea {
-        border-radius: $border-radius-small; 
+        border-radius: $border-radius-small;
         font-family: 'publicSans', sans-serif;
         background-color: $light-grey;
         padding: 2em;
@@ -139,7 +181,7 @@ input[type="checkbox"] {
             outline: none;
         }
 
-        &::placeholder { 
+        &::placeholder {
             color: $grey;
         }
     }
@@ -158,7 +200,6 @@ input[type="checkbox"] {
 #super-compliment__container {
     display: flex;
     align-items: center;
-    margin-top: 2em;
 
     & p {
         margin-right: 1em;
@@ -167,16 +208,17 @@ input[type="checkbox"] {
     & label {
         cursor: pointer;
         margin-right: 2em;
-        padding: 1em;
+        padding: .75em;
         border-radius: $border-radius-small;
         border: 1px solid $grey;
         color: $grey;
-        font-size: 14px;
+        font-size: 13px;
         text-align: center;
         user-select: none;
         position: relative;
         overflow: hidden;
         z-index: 0;
+        width: 17em;
 
         &:hover {
             border: 1px solid $white;
@@ -197,7 +239,7 @@ input[type="checkbox"] {
                 animation: rotate 12s linear infinite;
                 box-sizing: border-box;
             }
-            
+
             &::after {
                 content: '';
                 position: absolute;
@@ -235,7 +277,7 @@ input[type="checkbox"] {
             box-sizing: border-box;
             animation: rotate 12s linear infinite;
         }
-        
+
         &::after {
             content: '';
             position: absolute;
@@ -251,7 +293,6 @@ input[type="checkbox"] {
 }
 
 #selected-members__container {
-    margin-top: 6em;
 
     & > h4 {
         margin: 0;
@@ -259,75 +300,15 @@ input[type="checkbox"] {
     }
 
     & #selected-members {
-        display: flex;
+        margin-top: 1em;
 
         & p {
             padding: 0.4em 0.4em 0 0;
+            display: inline;
 
             &::after {
                 content: ',';
             }
-        }
-    }
-}
-
-#compliment__container {
-    width: 90%;
-    background-color: $white;
-    padding: 2em;
-    border-radius: $border-radius-big;
-    margin: 2em auto;
-}
-
-// Mediaqueries
-@media screen and (max-width: 1300px) {
-    #team-member__container {
-        grid-template-columns: 25% 25% 25% 25%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    #team-member__container {
-        grid-template-columns: 33% 33% 33%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #team-member__container {
-        grid-template-columns: 50% 50%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #option__container {
-        & label {
-            margin-bottom: 1em;
-        }
-    }
-}
-
-@media screen and (max-width: 500px) {
-    #team-member__container {
-        grid-template-columns: 100%;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    #compliment__container {
-        margin: 0;
-        width: 100%;
-        padding: 1.5em;
-
-        & h1 {
-            font-size: 2em;
-        }
-
-        & textarea {
-            width: 100%;
-        }
-
-        & h2 {
-            line-height: 100%;
         }
     }
 }

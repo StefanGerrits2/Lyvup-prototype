@@ -1,190 +1,193 @@
-{{> header}}
+<div id="page">
+    {{> new-header}}
 
-<div class="dashboard__container">
-    <div class="left__container">
-        <div class="dash_profile__container">
-            <img class="profile__picture" src="/images/random3.jpg" alt="">
-            <div>
-                <h3>{{ data.user_result.[0].name }} {{ data.user_result.[0].last_name }}</h3>
-                <p>Karma: 2075</p>
+    <div class="dashboard__container">
+        <div class="center__container">
+            <div class="dash_filter__container">
+                <button id="compliment_filter">Complimenten</button>
+                <button id="goal_filter">Doelen</button>
+                <button id="feedback_filter">Feedback</button>
             </div>
-        </div>
-        <div class="active__challenges">
-            <h4>Actieve challenges</h4>
-            <div class="dash_active__container">
-                <div class="profile__challange"><p class="bodyTextBold">Complimenten geven</p>
-                    <p>Geef 100 complimenten voor de gegeven tijd.</p>
-                    <p class="bodyTextItalic">03-06-2020 - 05-05-2020</p>
-                </div>
-                <div class="profile__challange"><p class="bodyTextBold">Complimenten geven</p>
-                    <p>Geef 100 complimenten voor de gegeven tijd.</p>
-                    <p class="bodyTextItalic">03-06-2020 - 05-05-2020</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="center__container">
-        <div class="dash_filter__container">
-            <button id="compliment_filter">Complimenten</button>
-            <button id="goal_filter">Doelen</button>
-            <button id="feedback_filter">Feedback</button>
-        </div>
 
-        <div class="activity__container">
-            <!-- CARD -->
-            <div class="activity__card">
-                <div class="dash_image__container">
-                    <img src="/images/stefan.jpg" alt="">
-                </div>
-                <div class="card__container">
-                    <div class="card__header">
-                        <h4>{{data.activities_data.activities.[0].title}}</h4>
-                        <span>{{data.activities_data.activities.[0].created_on}}</span>
-                        <p>{{data.activities_data.activities.[0].message}}</p>
+            <div class="activity__container">
+                <!-- CARD -->
+                <div class="activity__card">
+                    <div class="dash_image__container">
+                        <img src="/images/stefan.jpg" alt="">
                     </div>
-                    <div class="receivers">
-                        <img src="/images/random4.jpg" alt="">
-                        <div class="receivers_tooltip">
-                            <h4>+2</h4>
+                    <div class="card__container">
+                        <div class="card__header">
+                            <h4>{{data.activities_data.activities.[0].title}}</h4>
+                            <span>{{data.activities_data.activities.[0].created_on}}</span>
+                            <p>{{data.activities_data.activities.[0].message}}</p>
+                        </div>
+                        <div class="receivers">
+                            <img src="/images/random4.jpg" alt="">
+                            <div class="receivers_tooltip">
+                                <h4>+2</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- CARD -->
-            <div class="activity__card">
-                <div class="dash_image__container">
-                    <img src="/images/reinier.jpg" alt="">
-                </div>
-                <div class="card__container">
-                    <div class="card__header">
-                        <h4>{{data.activities_data.activities.[1].title}}</h4>
-                        <span>{{data.activities_data.activities.[1].created_on}}</span>
-                        <p>{{data.activities_data.activities.[1].message}}</p>
-                    </div>
-                    <div class="receivers">
-                        <img src="/images/random4.jpg" alt="">
-                        <div class="receivers_tooltip">
-                            <h4>+3</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- CARD -->
-            <div class="activity__card">
-                <div class="dash_image__container">
-                    <img src="/images/random1.jpg" alt="">
-                </div>
-                <div class="card__container">
-                    <div class="card__header">
-                        <h4>{{data.activities_data.activities.[2].title}}</h4>
-                        <span>{{data.activities_data.activities.[2].created_on}}</span>
-                        <p>{{data.activities_data.activities.[2].message}}</p>
-                    </div>
-                    <div class="receivers">
-                        <img src="/images/random4.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <!-- CARD -->
-            <div class="activity__card">
-                <div class="dash_image__container">
-                    <img src="/images/random2.jpg" alt="">
-                </div>
-                <div class="card__container">
-                    <div class="card__header">
-                        <h4>{{data.activities_data.activities.[3].title}}</h4>
-                        <span>{{data.activities_data.activities.[3].created_on}}</span>
-                        <p>{{data.activities_data.activities.[3].message}}</p>
-                    </div>
-                    <div class="receivers">
-                        <img src="/images/random4.jpg" alt="">
-                        <div class="receivers_tooltip">
-                            <h4>+2</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- CARD -->
-            <div class="activity__card">
-                <div class="dash_image__container">
-                    <img src="/images/random3.jpg" alt="">
-                </div>
-                <div class="card__container">
-                    <div class="card__header">
-                        <h4>{{data.activities_data.activities.[4].title}}</h4>
-                        <span>{{data.activities_data.activities.[4].created_on}}</span>
-                        <p>
-                            Dating back to the 18th century, this refurbished farmhouse is composed of 2 wings,
-                            connected in the middle to form a ‘U’ shaped property. With beamed ceilings and original
-                            features,
-                            <span id="dots">...</span>
-                            <span id="more">
-                                {{data.activities_data.activities.[4].message}}
-                            </span>
-                            <button id="moreButton">Lees meer</button>
-                        </p>
-                    </div>
-                    <div class="receivers">
-                        <img src="/images/random1.jpg" alt="">
+                <!-- CARD -->
+                <div class="activity__card">
+                    <div class="dash_image__container">
                         <img src="/images/reinier.jpg" alt="">
                     </div>
+                    <div class="card__container">
+                        <div class="card__header">
+                            <h4>{{data.activities_data.activities.[1].title}}</h4>
+                            <span>{{data.activities_data.activities.[1].created_on}}</span>
+                            <p>{{data.activities_data.activities.[1].message}}</p>
+                        </div>
+                        <div class="receivers">
+                            <img src="/images/random4.jpg" alt="">
+                            <div class="receivers_tooltip">
+                                <h4>+3</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="activity__card">
+                    <div class="dash_image__container">
+                        <img src="/images/random1.jpg" alt="">
+                    </div>
+                    <div class="card__container">
+                        <div class="card__header">
+                            <h4>{{data.activities_data.activities.[2].title}}</h4>
+                            <span>{{data.activities_data.activities.[2].created_on}}</span>
+                            <p>{{data.activities_data.activities.[2].message}}</p>
+                        </div>
+                        <div class="receivers">
+                            <img src="/images/random4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="activity__card">
+                    <div class="dash_image__container">
+                        <img src="/images/random2.jpg" alt="">
+                    </div>
+                    <div class="card__container">
+                        <div class="card__header">
+                            <h4>{{data.activities_data.activities.[3].title}}</h4>
+                            <span>{{data.activities_data.activities.[3].created_on}}</span>
+                            <p>{{data.activities_data.activities.[3].message}}</p>
+                        </div>
+                        <div class="receivers">
+                            <img src="/images/random4.jpg" alt="">
+                            <div class="receivers_tooltip">
+                                <h4>+2</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="activity__card">
+                    <div class="dash_image__container">
+                        <img src="/images/random3.jpg" alt="">
+                    </div>
+                    <div class="card__container">
+                        <div class="card__header">
+                            <h4>{{data.activities_data.activities.[4].title}}</h4>
+                            <span>{{data.activities_data.activities.[4].created_on}}</span>
+                            <p>
+                                Dating back to the 18th century, this refurbished farmhouse is composed of 2 wings,
+                                connected in the middle to form a ‘U’ shaped property. With beamed ceilings and original
+                                features,
+                                <span id="dots">...</span>
+                                <span id="more">
+                                    {{data.activities_data.activities.[4].message}}
+                                </span>
+                                <button id="moreButton">Lees meer</button>
+                            </p>
+                        </div>
+                        <div class="receivers">
+                            <img src="/images/random1.jpg" alt="">
+                            <img src="/images/reinier.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="right__container">
+        <aside class="right__container">
+            <div class="left__container">
+                <div class="dash_profile__container">
+                    <img class="profile__picture" src="/images/random3.jpg" alt="">
+                    <div>
+                        <h3>{{ data.user_result.[0].name }} {{ data.user_result.[0].last_name }}</h3>
+                        <p>Karma: 2075</p>
+                    </div>
+                </div>
+                <div class="active__challenges">
+                    <h4>Actieve challenges</h4>
+                    <div class="dash_active__container">
+                        <div class="profile__challange"><p class="bodyTextBold">Complimenten geven</p>
+                            <p>Geef 100 complimenten voor de gegeven tijd.</p>
+                            <p class="bodyTextItalic">03-06-2020 - 05-05-2020</p>
+                        </div>
+                        <div class="profile__challange"><p class="bodyTextBold">Complimenten geven</p>
+                            <p>Geef 100 complimenten voor de gegeven tijd.</p>
+                            <p class="bodyTextItalic">03-06-2020 - 05-05-2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <button class="collapsible">Totaal</button>
-        <div id="totaal_collapse" class="collapse-content">
-            <div class="data__container">
-                <p>Complimenten totaal:</p>
-                <div id="all-team-compliments">
-                    <h3>{{data.praise_result.[0].total}}</h3>
+            <button class="collapsible">Totaal</button>
+            <div id="totaal_collapse" class="collapse-content">
+                <div class="data__container">
+                    <p>Complimenten totaal:</p>
+                    <div id="all-team-compliments">
+                        <h3>{{data.praise_result.[0].total}}</h3>
+                    </div>
+                </div>
+                <div class="data__container">
+                    <p>Complimenten aangevraagd:</p>
+                    <div id="all-team-compliments">
+                        <h3>{{data.praise_result.[0].request_count}}</h3>
+                    </div>
+                </div>
+                <div class="data__container">
+                    <p>Complimenten verzonden:</p>
+                    <div id="all-team-compliments">
+                        <h3>{{data.praise_result.[0].sent_count}}</h3>
+                    </div>
+                </div>
+                <div class="data__container">
+                    <p>Doelen totaal:</p>
+                    <div id="completer-team-goals">
+                        <h3>{{data.goal_result.[0].total}}</h3>
+                    </div>
+                </div>
+                <div class="data__container">
+                    <p>Doelen behaald:</p>
+                    <div id="completer-team-goals">
+                        <h3>{{data.goal_result.[0].completed_goal}}</h3>
+                    </div>
+                </div>
+                <div class="data__container">
+                    <p>Doelen afwachtend:</p>
+                    <div id="completer-team-goals">
+                        <h3>{{data.goal_result.[0].pending_goal}}</h3>
+                    </div>
                 </div>
             </div>
-            <div class="data__container">
-                <p>Complimenten aangevraagd:</p>
-                <div id="all-team-compliments">
-                    <h3>{{data.praise_result.[0].request_count}}</h3>
-                </div>
+
+            <button class="collapsible">To Do</button>
+            <div id="todo__collapse" class="collapse-content">
+                {{#each data.test_data}}
+                    <div class="todo__item">
+                        <p>{{title}}</p>
+                        <img src="/images/cross_icon.svg" alt="">
+                    </div>
+                {{/each}}
             </div>
-            <div class="data__container">
-                <p>Complimenten verzonden:</p>
-                <div id="all-team-compliments">
-                    <h3>{{data.praise_result.[0].sent_count}}</h3>
-                </div>
-            </div>
-            <div class="data__container">
-                <p>Doelen totaal:</p>
-                <div id="completer-team-goals">
-                    <h3>{{data.goal_result.[0].total}}</h3>
-                </div>
-            </div>
-            <div class="data__container">
-                <p>Doelen behaald:</p>
-                <div id="completer-team-goals">
-                    <h3>{{data.goal_result.[0].completed_goal}}</h3>
-                </div>
-            </div>
-            <div class="data__container">
-                <p>Doelen afwachtend:</p>
-                <div id="completer-team-goals">
-                    <h3>{{data.goal_result.[0].pending_goal}}</h3>
-                </div>
-            </div>
-        </div>
-        <button class="collapsible">To Do</button>
-        <div id="todo__collapse" class="collapse-content">
-            {{#each data.test_data}}
-                <div class="todo__item">
-                    <p>{{title}}</p>
-                    <img src="/images/cross_icon.svg" alt="">
-                </div>
-            {{/each}}
-        </div>
+        </aside>
     </div>
+
+    {{> thumbs-up}}
 </div>
-
-{{> thumbs-up}}
 
 <script src="js/home.js"></script>
