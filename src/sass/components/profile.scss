@@ -225,7 +225,7 @@ td {
     background-color: $background-color;
     padding: 2.1em 3em 3em 3em;
     height: 100vw;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     & > button {
         margin-top: 1.5em;

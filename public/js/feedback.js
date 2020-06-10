@@ -18,14 +18,18 @@ else if (document.attachEvent) {
 }
 
 function toggleFilter() {
+    // Expand
     if (filterContainer.classList.contains('hide')) {
         filterContainer.classList.remove('hide');
         filterContainer.classList.add('show');
+        filterContainer.classList.toggle('expandFilter');
     }
 
+    //
     else {
         filterContainer.classList.add('hide');
         filterContainer.classList.remove('show');
+        filterContainer.classList.toggle('expandFilter');
     }
 }
 

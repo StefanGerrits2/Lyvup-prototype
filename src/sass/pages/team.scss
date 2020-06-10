@@ -20,6 +20,7 @@
     background-color: $white;
     height: 100vh;
     padding: 2.1em 3em 3em 3em;
+    overflow-y: auto;
 }
 
 #team-aside__container {
@@ -27,7 +28,7 @@
     background-color: $background-color;
     padding: 2.1em 3em 3em 3em;
     height: fit-content;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 100vh;
 }
 
