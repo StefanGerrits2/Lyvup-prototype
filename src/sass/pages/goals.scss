@@ -1,12 +1,15 @@
 .goals-head {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 1em;
+
   & img{
     margin-right: 1em;
     width: 3em;
   }
   & h1{
-    width:75%
+    width:75%;
+    margin-bottom: 0;
   }
 }
 
@@ -29,7 +32,9 @@
 }
 
 .goals-button{
-  float: right;
+  position: absolute;
+  right: 2em;
+  top: 2em;
 }
 
 .complimentsButton:hover{
@@ -63,15 +68,17 @@
 }
 
 .addGoals__container{
-  transition: .2s ease-in-out;
   border: 2px solid #34b6dd;
   box-sizing: border-box;
   flex-wrap: wrap;
   width: 100%;
   background-color: #f9f9f9;
+  margin-top: 4em;
+  margin-bottom: 1em;
   padding: 2em;
   border-radius: 10px;
   box-shadow: 0 2px 0 1px #e5e5e5;
+  overflow: hidden;
   & h4 {
     width: 100%;
   }
@@ -134,10 +141,15 @@
   align-items: center;
 }
 
-.compliments-buttons__container p{
+.compliments-buttons__container{
+  & p{
   padding: 10px 0px 0px 0px;
-  width: 100%;
-  margin: auto;
+  width: 75%;
+  }
+  & .goal-type{
+    margin-left: auto;
+    width: auto;
+  }
 }
 
 .goal-estimate {
@@ -149,7 +161,6 @@
 
 .goal-indicator{
     width: 150px;
-    margin: 8px;
     text-align: center;
     padding: .5em;
     border-radius: $border-radius-small;
@@ -168,12 +179,14 @@
 .indicator-active {
   background-color: $light-blue;
   color: $white;
+  margin-top: 2em;
 }
 
 #completedGoals__container {
     padding: 10px;
     background-color: #c5d6d5;
     border-radius: 10px;
+    max-height: 20em;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -198,12 +211,12 @@ aside{
 }
 
 .goals-aside {
-  height: 50em !important;
+  height: 45em !important;
   background-image: none !important;
 }
 
-.flashed {
-  animation: shortFlash 0.3s linear alternate;
+.expand {
+  animation: expand 0.3s linear alternate;
 }
 
 .hidden{
@@ -222,4 +235,9 @@ aside{
   0% {transform: scale(1.00);}
   30% {transform: scale(1.005);}
   100% {transform: scale(1.00);}
+}
+
+@keyframes expand {
+  0% {height: 1em}
+  100% {height: 30em}
 }

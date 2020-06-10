@@ -37,7 +37,7 @@ header ul li a {
     }
 }
 
-/* new header */ 
+/* new header */
 .active-nav {
     background-color: #D2D1D7;
     transition: 200ms;
@@ -98,15 +98,16 @@ header ul li a {
                 width: 1.5em;
                 margin-right: 1em;
                 transition: .2s ease-in-out;
-                
+
             }
 
             & p {
                 color: #4A494A;
                 transition: .2s ease-in-out;
+                font-size: 14px;
             }
         }
-        
+
         & .hoverable {
             margin-bottom: 1em;
 
