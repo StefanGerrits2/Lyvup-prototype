@@ -102,7 +102,6 @@ p {
 
     & h1 {
         margin-bottom: 0;
-        margin-bottom: 15px;
     }
 
     & div:first-of-type img {
@@ -425,11 +424,6 @@ option {
 @media screen and (max-width: 1400px) {
     #content__container {
         flex-direction: column;
-    }
-
-    #main__container,
-    #super-goals__container {
-        width: 100%;
     }
 
     .goal__container img {
