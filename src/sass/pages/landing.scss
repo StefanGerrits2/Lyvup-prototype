@@ -1,0 +1,15 @@
+#landing__header {
+  height: 6em;
+  background-color: $white;
+  border-bottom: 2px solid $light-grey;
+  padding: 1em;
+
+  & img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+#landing__main {
+  background-color: $white;
+}
