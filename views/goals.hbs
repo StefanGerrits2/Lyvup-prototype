@@ -1,10 +1,10 @@
 <div id="page">
   {{> new-header}}
-<div id="content__container">
+<div id="content__container" class="goals-content__container">
   <div id="main__container">
     <div class="goals-head">
       <img src="./images/goals_icon.svg" alt="">
-      <h1>Doelen</h1>
+      <h1>Mijn doelen</h1>
     </div>
     <div class=addGoals>
       <button class="goals-button" type="button">
@@ -16,7 +16,7 @@
       <h4>Welke kanten van jezelf wil je verder ontwikkelen en/of toepassen?</h4>
       <form class="addGoal__form" action="/goals" method="post">
           <div class="select">
-            <select required name="competentie" id="select1">
+            <select required name="competentie" >
                 <option value="Stressbestendig">Stressbestendig</option>
                 <option value="Proactief">Proactief</option>
                 <option value="Flexibiliteit">Flexibiliteit</option>
@@ -24,7 +24,7 @@
             </select>
           </div>
           <div class="select">
-            <select required name="doel" id="select1">
+            <select required name="doel" >
                 <option value="Apply / Improve">Toepassen / Ontwikkelen</option>
                 <option value="Apply">Toepassen</option>
                 <option value="Improve">Ontwikkelen</option>
@@ -41,7 +41,7 @@
           <input class="submitGoal" type="submit" value="doel toevoegen">
       </form>
     </section>
-    <h2>Actieve doelen</h2>
+    <h3>Actieve doelen</h3>
     <div id="setGoals__container">
       {{#each data}}
       <article class="goal__container" id='{{id}}'>
@@ -51,10 +51,42 @@
         <div>
           <p>{{description}}</p>
         </div>
+        <button id="{{id}}"class="goal-editor">Doel aanpassen</button>
+        <div id="edit-goals__container" class="edit-{{id}}">
+          <form class="addGoal__form" action="/goals" method="post">
+            <input class="id-getter" type="number" name="editId" value="{{id}}">
+              <div class="select">
+                <select name="competentie" >
+                    <option selected value="{{title}}">{{title}}</option>
+                    <option value="Stressbestendig">Stressbestendig</option>
+                    <option value="Proactief">Proactief</option>
+                    <option value="Flexibiliteit">Flexibiliteit</option>
+                    <option value="Communiceren">Communiceren</option>
+                </select>
+              </div>
+              <div class="select">
+                <select name="doel" >
+                    <option selected value="{{goal_type}}">{{goal_type}}</option>
+                    <option value="Apply / Improve">Toepassen / Ontwikkelen</option>
+                    <option value="Apply">Toepassen</option>
+                    <option value="Improve">Ontwikkelen</option>
+                </select>
+              </div>
+              <div class="datePicker">
+                <input required name="deadline" type="date">
+                <label for="deadline">Deadline</label>
+              </div>
+              <div class="goalDescription">
+                <label for="toelichting">Beschrijving</label>
+                <textarea type="text" class="new-goalText" name="toelichting" rows="10" placeholder="Laat dit veld leeg als je geen nieuwe beschrijving wilt invoeren..."></textarea>
+                <input class="submitGoal" type="submit" value="doel aanpassen">
+              </div>
+          </form>
+        </div>
       </article>
       {{/each}}
     </div>
-    <h2>Voltooide doelen</h2>
+    <h3>Voltooide doelen</h3>
     <div id=completedGoals__container>
       <article class="goal__container">
         <div class="flex">
@@ -86,8 +118,11 @@
   </div>
   <aside id="super-goals__container">
     <div class="complimentsHead">
-      <h1>Complimenten</h1>
-      <span class="goal-indicator indicator-inactive">Klik op een doel om te filteren.</span>
+      <div class="flex">
+          <img class="heading-icon" src="/images/praise_icon.svg" alt="">
+          <h1>Complimenten</h1>
+      </div>
+      <h3 class="goal-indicator indicator-inactive">Klik op een doel om te filteren.</h3>
     </div>
     <div id="messages__container" class="goals-aside">
       <div class="compliment__container visible">
@@ -132,6 +167,6 @@
   </aside>
 </div>
 {{> thumbs-up}}
-</div>
+
 
 <script src="js/goals.js"></script>

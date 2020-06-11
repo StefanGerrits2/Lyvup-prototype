@@ -97,29 +97,17 @@ input[type="checkbox"] {
     margin-top: 2em;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 50vh;
 
-    & input[type="checkbox"]:checked + label div img {
-        border: 5px solid $green;
+    & input[type="checkbox"]:checked + label img {
+        border: 5px solid $yellow;
     }
 
-    & label > div {
+    & > div {
         display: flex;
         flex-direction: column;
         margin: 0em auto 6em auto;
-        width: 10em;
-        height: 10em;
-
-        & img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            margin: 0 auto;
-            margin-bottom: .5em;
-            cursor: pointer;
-            border: 5px solid $white;
-        }
 
         & p {
             text-align: center;
@@ -131,6 +119,28 @@ input[type="checkbox"] {
             font-size: 14px;
             text-align: center;
             margin-top: 0;
+        }
+
+        & label  {
+            width: 10em;
+            height: 10em;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                margin: 0 auto;
+                margin-bottom: .5em;
+                cursor: pointer;
+                border: 5px solid $white;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    border: 5px solid $green;
+                    transition: 0.2s ease-in-out;
+                    transform: rotate(7deg);
+                }
+            }
         }
     }
 }
@@ -155,7 +165,7 @@ input[type="checkbox"] {
         min-height: 100vh;
         width: 70%;
     }
-    
+
     aside {
         width: 30%;
         padding: 2.1em 3em 3em 3em;
@@ -167,7 +177,7 @@ input[type="checkbox"] {
     }
 
     & textarea {
-        border-radius: $border-radius-small; 
+        border-radius: $border-radius-small;
         font-family: 'publicSans', sans-serif;
         background-color: $light-grey;
         padding: 2em;
@@ -181,13 +191,27 @@ input[type="checkbox"] {
             outline: none;
         }
 
-        &::placeholder { 
+        &::placeholder {
             color: $grey;
         }
     }
 
     & button {
         margin-top: 2em;
+    }
+}
+
+#more-information {
+    & #goals__container {
+        height: 31vh;
+        overflow-y: auto;
+        display: none;
+        flex-direction: column;
+        background-image: none;
+
+        & > p {
+            padding: .5em;
+        }
     }
 }
 
@@ -239,7 +263,7 @@ input[type="checkbox"] {
                 animation: rotate 12s linear infinite;
                 box-sizing: border-box;
             }
-            
+
             &::after {
                 content: '';
                 position: absolute;
@@ -277,7 +301,7 @@ input[type="checkbox"] {
             box-sizing: border-box;
             animation: rotate 12s linear infinite;
         }
-        
+
         &::after {
             content: '';
             position: absolute;
@@ -292,76 +316,23 @@ input[type="checkbox"] {
     }
 }
 
-#selected-members__container {
+#more-information {
 
     & > h4 {
         margin: 0;
         margin-right: .5em;
     }
-
-    & #selected-members {
-        margin-top: 1em;
-
-        & p {
-            padding: 0.4em 0.4em 0 0;
-            display: inline;
-
-            &::after {
-                content: ',';
-            }
-        }
-    }
 }
 
-// Mediaqueries
-@media screen and (max-width: 1300px) {
-    #team-member__container {
-        grid-template-columns: 25% 25% 25% 25%;
-    }
-}
+#selected-members {
+    margin: 1em 0em;
 
-@media screen and (max-width: 1000px) {
-    #team-member__container {
-        grid-template-columns: 33% 33% 33%;
-    }
-}
+    & p {
+        padding: 0.4em 0.4em 0 0;
+        display: inline;
 
-@media screen and (max-width: 800px) {
-    #team-member__container {
-        grid-template-columns: 50% 50%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #option__container {
-        & label {
-            margin-bottom: 1em;
-        }
-    }
-}
-
-@media screen and (max-width: 500px) {
-    #team-member__container {
-        grid-template-columns: 100%;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    #compliment__container {
-        margin: 0;
-        width: 100%;
-        padding: 1.5em;
-
-        & h1 {
-            font-size: 2em;
-        }
-
-        & textarea {
-            width: 100%;
-        }
-
-        & h2 {
-            line-height: 100%;
+        &::after {
+            content: ',';
         }
     }
 }
