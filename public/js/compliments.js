@@ -97,48 +97,22 @@ function showSelectedMembers() {
         });
 
         // Change title bases on amount of people selected
-        const title = document.querySelector('#selected-members__container h4');
-        title.textContent = values.length > 1 ? 'Geselecteerde personen:' : 'Geselecteerde persoon:';
+        const title = document.querySelector('#more-information h3');
+
+        const memberInfo = document.querySelector('#goals__container');
+
+        if (values.length > 1) {
+            memberInfo.setAttribute('style', 'display: none');
+            title.textContent = 'Geselecteerde personen:';
+        }
+
+        else if (values.length  === 0) {
+            memberInfo.setAttribute('style', 'display: none');
+        }
+
+        else {
+            title.textContent = 'Geselecteerde persoon:';
+            memberInfo.setAttribute('style', 'display: flex');
+        }
     }, 0);
 }
-
-// Header animations
-const toggleHeader = document.querySelector('#toggle-header');
-const header = document.querySelector('#new-header');
-const navTexts = document.querySelectorAll('#new-header li p');
-const logo = document.querySelector('#logo');
-const navIcons = document.querySelectorAll('#new-header li a img');
-const dropdown = document.querySelector('#new-header .select');
-const hoverableIcons = document.querySelectorAll('#new-header li');
-
-toggleHeader.addEventListener('click', () => {
-    // Toggle header
-    header.classList.toggle('toggle-header');
-
-    // Animation
-    toggleHeader.classList.toggle('toggle-animation');
-
-    // Toggle text
-    for (let i = 0; i < navTexts.length; i++) {
-        navTexts[i].classList.toggle('toggle-nav-text');
-    }
-
-    // Toggle logo
-    logo.classList.toggle('toggle-logo');
-
-    // Toggle icons
-    for (let i = 0; i < navIcons.length; i++) {
-        navIcons[i].classList.toggle('toggle-icons-width');
-    }
-
-    // Toggle dropdown
-    dropdown.classList.toggle('hide-dropdown');
-
-    // Toggle hoverable icons
-    for (let i = 0; i < hoverableIcons.length; i++) {
-        hoverableIcons[i].classList.toggle('hoverable');
-    }
-
-    // Move toggle header button
-    toggleHeader.classList.toggle('move-button');
-});

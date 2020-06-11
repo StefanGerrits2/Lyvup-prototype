@@ -2,68 +2,50 @@
 
 // classes
 
-.big__grid{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: fit-content fit-content;
-    height: 95%;
-    margin: 1em;
-    background-color: white;
+.overflow{
+    overflow-y: auto;
+    height: 100vh;
 }
 
-.karma__individual__container{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
+#leaderboard__container {
+    width: 100%;
+    display: flex;
 }
 
-.karma__team__container{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
+#leaderboard__container #main__container {
+    width: 40%;
+    margin-right: 0;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vh;
 }
 
-.challenge__leaderboard__container{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
+#leaderboard__container #leaderboard__right {
+    width: 60%;
+    overflow-y: auto;
+    background-color: $background-color;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vh;
 }
 
-.challenge__achievement__container{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
 
-.grid__base{
-    min-width: 50%;
-    padding: .5em;
-    background-color: $white;
-}
 
 .grey__Background{
-    background-image: url(/images/background.png);
     background-size: 500%;
     padding: .5em;
     border-radius: 10px;
 }
 
-.challenges{
-    display: flex;
-}
-
 .individual__challenge{
     margin: .5em;
-    background-image: url(/images/background.png);
     background-size: 500%;
     padding: .5em;
     border-radius: 10px;
     width: 50%;
     height: 100%;
+}
+
+.width{
+    width: 100%;
 }
 
 .challengeButton{
@@ -72,7 +54,6 @@
 
 .team__challenge{
     margin: .5em;
-    background-image: url(/images/background.png);
     background-size: 500%;
     padding: .5em;
     border-radius: 10px;
@@ -89,6 +70,65 @@
     background-color: $white;
     padding: 0.5em;
     box-shadow: 0px 2px 0px 2px $grey;
+}
+
+.leaderboard__challange{
+    background-color: $white;
+    margin: .75em;
+    padding: .5em;
+    border-radius: 10px;
+    box-shadow: 0px 2px 0px 2px $grey;
+}
+
+.leaderboard__challange:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+// .border__yellow{
+//     border: 3px solid yellow;
+// }
+// .border__orange{
+//     border: 3px solid orange;
+// }
+// .border__blue{
+//     border: 3px solid lightskyblue;
+// }
+// .border__purple{
+//     border: 3px solid rebeccapurple;
+// }
+
+.border__yellow:hover{
+    background-color: rgba($color: yellow, $alpha: 0.5);
+}
+.border__orange:hover{
+    background-color: rgba($color: orange, $alpha: 0.5);
+}
+.border__blue:hover{
+    background-color: rgba($color: lightskyblue, $alpha: 0.5);
+}
+.border__purple:hover{
+    background-color: rgba($color: rebeccapurple, $alpha: 0.5);
+}
+
+.align__center{
+    align-items: center;
+}
+
+.leaderboard__small__title{
+    margin-left: .5em;
+    margin-top: .5em;
+}
+
+.goal__leaderboard{
+    border-radius: 10px;
+    background-color: $white;
+    margin: .5em;
+    padding: .5em;
+}
+
+.goal__leaderboard:hover{
+    transform: scale(1.05);
 }
 
 .leaderboardImage {

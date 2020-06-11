@@ -81,7 +81,7 @@ p {
 }
 
 #main__container {
-  position: relative;
+    position: relative;
     width: 65%;
     background-color: $white;
     padding: 2.1em 3em 3em 3em;
@@ -105,6 +105,51 @@ p {
 
     & h1 {
         margin-bottom: 0;
+    }
+
+    & > div {
+        margin-top: 2em;
+    }
+
+    & #filter1, #filter2 {
+        & > div:first-of-type {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1em;
+        }
+
+        & input {
+            display: none;
+
+            &:checked + label {
+                border: 3px solid $yellow;
+            }
+        }
+
+        & label {
+            cursor: pointer;
+            padding: 1em;
+            border-radius: $border-radius-big;
+            border: 3px solid $background-color;
+            background-color: $white;
+            margin: 0em .5em .5em 0em;
+        }
+    }
+
+    & #filter3 {
+        & input {
+            display: none;
+
+            &:checked + label > div {
+                border: 3px solid $yellow;
+            }
+        }
+
+        & label div {
+            border: 3px solid $white;
+            border-radius: $border-radius-small;
+        }
+        
     }
 }
 
@@ -152,7 +197,7 @@ p {
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
-    margin-top: 3em;
+    margin-top: 1em;
     background-image: url(/images/background.png);
     background-size: 500%;
 }
@@ -168,13 +213,6 @@ p {
     max-height: 40vh;
     overflow-y: auto;
     overflow-x: hidden;
-}
-
-#goals__container {
-    padding: 10px;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin-top: 3em;
 }
 
 .goal-type {
@@ -263,6 +301,27 @@ button:focus {
 
 #button__container {
     display: flex;
+    margin: 2em 0em;
+
+    & input {
+        display: none;
+
+        &:checked + label {
+            background-color: $yellow;
+        }
+    }
+
+    & label {
+        padding: 1em;
+        background-color: $green;
+        cursor: pointer;
+        border-radius: $border-radius-small;
+        margin-right: 1em;
+        color: $white;
+        width: 11em;
+        text-align: center;
+        user-select: none;
+    }
 }
 
 .filter-button {
@@ -315,7 +374,7 @@ button:focus {
     border-radius: $border-radius-big;
     background-image: url(/images/background.png);
     background-size: 500%;
-    height: 30em;
+    height: 40em;
     overflow-y: auto;
 
     &>div:not(:last-of-type) {
@@ -517,11 +576,25 @@ option {
 }
 
 @media screen and (max-width: 822px) {
-    #super-compliment__container{
-        margin: 1em 0em;
+    #option__container {
+        height: 8.5em;
+    }
 
-        & label {
-        margin: 1em 0em;
-        }
+    #option__container div:first-of-type {
+        width: 100%;
+    }
+
+    #team-member__container {
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #team-member__container {
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 }
