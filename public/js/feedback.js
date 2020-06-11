@@ -13,3 +13,9 @@ function showFilters () {
         }
     }, 0);
 }
+
+document.querySelectorAll('label').forEach(item => {
+    item.addEventListener('keypress', () => {
+        item.click();
+    });
+});

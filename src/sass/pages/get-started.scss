@@ -1,0 +1,156 @@
+.get-started {
+    background-color: $light-grey;
+    list-style-type: none;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.get-started a {
+    color: #4a494a;
+    text-decoration: none;
+    margin-top: 1em;
+}
+
+.team__card {
+    width: 25%;
+    height: fit-content;
+    background-color: $white;
+    padding: 2em;
+    box-shadow: 0 2px 0 1px #e5e5e5;
+    border-radius: 10px;
+}
+
+.team-user-img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 2em;
+    border-radius: 50%;
+    display: block;
+}
+
+.team_card__container {
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.team_card__container a {
+    margin-top: 27em;
+    text-decoration: none;
+    color: #4a494a;
+    font-size: 12px;
+    transition: all 350ms ease-in-out
+}
+
+.team_card__container a:hover {
+    color: $yellow;
+}
+
+.team__card input {
+    font-family: publicSans, sans-serif;
+    padding: 10px;
+    width: 10em;
+    display: block;
+    font-size: 13px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    transition: all 350ms ease-in-out
+}
+
+.team__card input:focus {
+    border: 1px solid transparent;
+    outline: none;
+    box-shadow: 0 0 0 3px $green;
+}
+
+.team__card button {
+    font-size: 11px;
+    width: 8em;
+    height: 3em;
+    margin: 0 auto;
+}
+
+.invite-container textarea {
+    font-family: publicSans, sans-serif;
+    padding: 10px;
+    width: 20em;
+    display: block;
+    font-size: 13px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    margin-bottom: 2em;
+
+    transition: all 350ms ease-in-out;
+
+    &:focus {
+        border: 1px solid transparent;
+        outline: none;
+        box-shadow: 0 0 0 3px $green;
+    }
+}
+
+.sign-up,
+.invite-container {
+    padding: 10px;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    width: fit-content;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.sign-up input {
+    font-family: publicSans, sans-serif;
+    padding: 10px;
+    width: 20em;
+    display: block;
+    font-size: 13px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    margin: 1em;
+    margin-left: 0;
+
+    transition: all 350ms ease-in-out;
+
+    &:focus {
+        border: 1px solid transparent;
+        outline: none;
+        box-shadow: 0 0 0 3px $green;
+    }
+}
+
+.margin-top {
+    margin-top: 2em;
+}
+
+#finish {
+    text-decoration: none;
+    background-color: $green;
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.items-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}

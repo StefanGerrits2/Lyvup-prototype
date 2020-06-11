@@ -1,0 +1,73 @@
+<div id="landing__header">
+    <div class="header__container">
+        <div class="header__left">
+            <img src="/images/lyvupLogo.png" alt="">
+            <a href="#">Home</a>
+            <a href="#">Prijzen</a>
+        </div>
+        <div class="header__right">
+            <a href="#">Login</a>
+            <a href="/onboarding"><button>Beginnen</button></a>
+        </div>
+    </div>
+</div>
+
+<div class="flex-center">
+    <div class="steps flex-column">
+        <span class="line"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+    </div>
+
+    <form id="regForm" formaction="/get-started" method="post" novalidate>
+        <!-- One "tab" for each step in the form: -->
+        <div class="flex-column">
+            <div class="tab">
+                <h1>Creeer je lyvup omgeving</h1>
+                <p>Creëer een geheel nieuwe werkruimte voor jou en je team.
+                </p>
+                <label>Als eerste hebben wij jouw email nodig:
+                    <input placeholder="wat is je email?" oninput="this.className = ''" name="mail"
+                        autocomplete="new-password">
+                </label>
+            </div>
+            <div class="tab">
+                <h1>Valideer je mail adres</h1>
+                <p>We hebben een 4 cijferige code naar mail@adres.nl gestuurd om je email te valideren</p>
+                <label>Vul hier de validatie code in
+                    <input id="code" oninput="this.className = ''" name="code" autocomplete="new-password" pattern="\d*"
+                        maxlength="4">
+                </label>
+
+                <a href="">stuur de code opnieuw</a>
+            </div>
+            <div class="tab">
+                <h1>Stel jouw werkomgeving op</h1>
+                <label>Wat is de naam van het bedrijf?
+                    <input oninput="this.className = ''" name="company" autocomplete="new-password">
+                </label>
+
+                <label>En in welk team zit je?
+                    <input oninput="this.className = ''" name="team" autocomplete="new-password">
+                </label>
+            </div>
+            <div class="tab">
+                <h1>Creeeren van de werkomgeving is gelukt!</h1>
+                <p>Je kunt nu je team opzetten en de applicatie ontdekken!</p>
+                <button type="submit" id="done">Bekijk je nieuwe lyvup omgeving</button>
+            </div>
+            <div>
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">vorige</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">volgende</button>
+            </div>
+
+            <div>
+                <!-- Circles which indicates the steps of the form: -->
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="js/onboarding.js"></script>
