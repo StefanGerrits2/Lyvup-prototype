@@ -17,14 +17,15 @@
                 <p>Creëer een geheel nieuwe werkruimte voor jou en je team.
                 </p>
                 <label>Als eerste hebben wij jouw email nodig:
-                    <input placeholder="wat is je email?" oninput="this.className = ''" autocomplete="new-password">
+                    <input placeholder="wat is je email?" oninput="this.className = ''" name="mail"
+                        autocomplete="new-password">
                 </label>
             </div>
             <div class="tab">
                 <h1>Valideer je mail adres</h1>
                 <p>We hebben een 4 cijferige code naar mail@adres.nl gestuurd om je email te valideren</p>
                 <label>Vul hier de validatie code in
-                    <input id="code" oninput="this.className = ''" autocomplete="new-password" pattern="\d*"
+                    <input id="code" oninput="this.className = ''" name="code" autocomplete="new-password" pattern="\d*"
                         maxlength="4">
                 </label>
 
@@ -33,11 +34,11 @@
             <div class="tab">
                 <h1>Stel jouw werkomgeving op</h1>
                 <label>Wat is de naam van het bedrijf?
-                    <input oninput="this.className = ''" autocomplete="new-password">
+                    <input oninput="this.className = ''" name="company" autocomplete="new-password">
                 </label>
 
                 <label>En in welk team zit je?
-                    <input oninput="this.className = ''" autocomplete="new-password">
+                    <input oninput="this.className = ''" name="team" autocomplete="new-password">
                 </label>
             </div>
             <div class="tab">

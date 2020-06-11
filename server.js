@@ -30,6 +30,8 @@ const leaderboard = require('./routes/leaderboard.js');
 const leaderboard_new = require('./routes/leaderboard-new.js');
 const profile = require('./routes/profile.js');
 const onboarding = require('./routes/onboarding.js');
+const get_started = require('./routes/get-started.js');
+const onboarding_post = require('./routes/onboarding-post.js');
 
 app
   .set('view engine', 'hbs')
@@ -71,7 +73,9 @@ app
   .get('/leaderboard', leaderboard)
   .get('/leaderboard-new', leaderboard_new)
   .get('/profile', profile)
+  .get('/get-started', get_started)
   .get('/onboarding', onboarding)
+  .post('/onboarding', urlencodedParser, onboarding_post)
 
   // 404 not found
   .use(notFound);
