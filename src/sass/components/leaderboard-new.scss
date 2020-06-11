@@ -1,57 +1,35 @@
 // ID's
 
 // classes
-.big__grid{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: fit-content fit-content;
-    height: 95%;
-    margin: 1em;
-    background-color: white;
-}
 
 .overflow{
     overflow-y: auto;
     height: 100vh;
 }
 
-.karma__individual__container{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
+#leaderboard__container {
+    width: 100%;
+    display: flex;
 }
 
-.karma__team__container{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
+#leaderboard__container #main__container {
+    width: 40%;
+    margin-right: 0;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vh;
 }
 
-.challenge__leaderboard__container{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
+#leaderboard__container #leaderboard__right {
+    width: 60%;
+    overflow-y: auto;
+    background-color: $background-color;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vh;
 }
 
-.challenge__achievement__container{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    margin-bottom: 5em;
-}
 
-.grid__base{
-    min-width: 50%;
-    padding: .5em;
-    background-color: $white;
-}
 
 .grey__Background{
-    background-image: url(/images/background.png);
     background-size: 500%;
     padding: .5em;
     border-radius: 10px;
@@ -59,7 +37,6 @@
 
 .individual__challenge{
     margin: .5em;
-    background-image: url(/images/background.png);
     background-size: 500%;
     padding: .5em;
     border-radius: 10px;
@@ -77,7 +54,6 @@
 
 .team__challenge{
     margin: .5em;
-    background-image: url(/images/background.png);
     background-size: 500%;
     padding: .5em;
     border-radius: 10px;

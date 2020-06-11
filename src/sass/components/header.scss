@@ -62,6 +62,10 @@ header ul li a {
         background-color: white;
     }
 
+    & nav {
+        overflow: hidden;
+    }
+
     & > a img {
         width: 8em;
         margin-bottom: 1em;
