@@ -96,11 +96,15 @@ function toggleGoalForm() {
   if (goalFormContainer.classList.contains('hidden')) {
     goalFormContainer.classList.remove('hidden');
     goalFormContainer.classList.add('visible');
-    goalFormContainer.classList.toggle('expand');
+    goalFormContainer.classList.remove('shrink');
+    goalFormContainer.classList.add('expand');
   } else {
     goalFormContainer.classList.add('hidden');
-    goalFormContainer.classList.remove('visible');
-    goalFormContainer.classList.toggle('expand');
+    goalFormContainer.classList.remove('expand');
+    goalFormContainer.classList.add('shrink');
+    setTimeout(function() {
+      goalFormContainer.classList.remove('visible');
+    }, 300);
   }
 }
 
@@ -117,11 +121,15 @@ const editButton = document.querySelectorAll('.goal-editor').forEach(item => {
     if (selectedForm.classList.contains('hidden')) {
       selectedForm.classList.remove('hidden')
       selectedForm.classList.add('visible')
-      selectedForm.classList.toggle('expandSmall');
+      selectedForm.classList.remove('shrinkSmall');
+      selectedForm.classList.add('expandSmall');
     } else {
       selectedForm.classList.add('hidden')
-      selectedForm.classList.remove('visible')
-      selectedForm.classList.toggle('expandSmall');
+      selectedForm.classList.remove('expandSmall');
+      selectedForm.classList.add('shrinkSmall');
+      setTimeout(function() {
+        selectedForm.classList.remove('visible')
+      }, 300);
       event.target.classList.remove('red')
       event.target.innerHTML = "doel aanpassen"
     }

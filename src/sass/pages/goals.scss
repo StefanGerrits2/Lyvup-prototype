@@ -298,8 +298,16 @@ aside{
   animation: expandSmall 0.3s linear alternate;
 }
 
+.shrinkSmall {
+  animation: shrinkSmall 0.3s linear alternate;
+}
+
 .expand {
   animation: expand 0.3s linear alternate;
+}
+
+.shrink {
+  animation: shrink 0.3s linear alternate;
 }
 
 .hidden{
@@ -333,7 +341,17 @@ aside{
   100% {height: 30em}
 }
 
+@keyframes shrink {
+  0% {height: 30em}
+  100% {height: 1em}
+}
+
 @keyframes expandSmall {
   0% {height: 1em}
   100% {height: 14em}
+}
+
+@keyframes shrinkSmall {
+  0% {height: 14em}
+  100% {height: 1em}
 }
