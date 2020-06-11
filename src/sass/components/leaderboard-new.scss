@@ -1,17 +1,4 @@
 // ID's
-
-// classes
-
-.overflow{
-    overflow-y: auto;
-    height: 100vh;
-}
-
-#leaderboard__container {
-    width: 100%;
-    display: flex;
-}
-
 #leaderboard__container #main__container {
     width: 40%;
     margin-right: 0;
@@ -25,109 +12,112 @@
     background-color: $background-color;
     padding: 2.1em 3em 3em 3em;
     height: 100vh;
+    overflow-x: hidden;
 }
 
+// classes
+.top__container{
+    min-height: 50%;
+    height: 62%;
+}
 
+.overflow {
+    overflow-y: auto;
+    height: 100vh;
+}
 
-.grey__Background{
+#leaderboard__container {
+    width: 100%;
+    display: flex;
+}
+
+.grey__Background {
     background-size: 500%;
-    padding: .5em;
+    padding: 0.5em;
     border-radius: 10px;
 }
 
-.individual__challenge{
-    margin: .5em;
-    background-size: 500%;
-    padding: .5em;
-    border-radius: 10px;
+.individual__challenge {
     width: 50%;
     height: 100%;
 }
 
-.width{
+.width {
     width: 100%;
 }
 
-.challengeButton{
-    margin-top: .5em;;
+.challengeButton {
+    margin-top: 0.5em;
 }
 
-.team__challenge{
-    margin: .5em;
-    background-size: 500%;
-    padding: .5em;
-    border-radius: 10px;
+.team__challenge {
     width: 50%;
     height: 100%;
 }
 
+.box__shadow{
+    box-shadow: 0px 2px 0px 2px $grey;
+}
+
 .gridElement {
-    margin-top: .75em;
+    margin-top: 0.75em;
+    margin-left: .5em;
     min-height: 30px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     background-color: $white;
     padding: 0.5em;
-    box-shadow: 0px 2px 0px 2px $grey;
+    box-shadow: 0px 2px 0px 1px $grey;
 }
 
-.leaderboard__challange{
+.leaderboard__challange {
     background-color: $white;
-    margin: .75em;
-    padding: .5em;
+    margin: 0.75em;
+    padding: 0.5em;
     border-radius: 10px;
     box-shadow: 0px 2px 0px 2px $grey;
 }
 
-.leaderboard__challange:hover{
+.leaderboard__challange:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
 
-// .border__yellow{
-//     border: 3px solid yellow;
-// }
-// .border__orange{
-//     border: 3px solid orange;
-// }
-// .border__blue{
-//     border: 3px solid lightskyblue;
-// }
-// .border__purple{
-//     border: 3px solid rebeccapurple;
-// }
-
-.border__yellow:hover{
+.border__yellow:hover {
     background-color: rgba($color: yellow, $alpha: 0.5);
 }
-.border__orange:hover{
+.border__orange:hover {
     background-color: rgba($color: orange, $alpha: 0.5);
 }
-.border__blue:hover{
+.border__blue:hover {
     background-color: rgba($color: lightskyblue, $alpha: 0.5);
 }
-.border__purple:hover{
+.border__purple:hover {
     background-color: rgba($color: rebeccapurple, $alpha: 0.5);
 }
 
-.align__center{
+.align__center {
     align-items: center;
 }
 
-.leaderboard__small__title{
-    margin-left: .5em;
-    margin-top: .5em;
+.leaderboard__small__title {
+    margin-left: 0.5em;
+    margin-top: 0.5em;
 }
 
-.goal__leaderboard{
+.leaderboard__small__title__right{
+    margin-left: 0.5em;
+}
+
+.goal__leaderboard {
     border-radius: 10px;
     background-color: $white;
-    margin: .5em;
-    padding: .5em;
+    margin: 0.5em;
+    padding: 0.5em;
 }
 
-.goal__leaderboard:hover{
+.goal__leaderboard:hover {
     transform: scale(1.05);
 }
 
@@ -147,10 +137,21 @@
     margin-right: 0.5em;
 }
 
-.selectContainer{
+.selectContainer {
     display: inline-block;
     margin-left: 1em;
     margin-top: 1em;
 }
 
+.dots {
+    max-width: 30px;
+    max-height: 30px;
+    margin-top: 0.5em;
+    margin-bottom: -0.5em;
+}
+
+.left__margin {
+    margin-left: auto;
+    order: 2;
+}
 // elements

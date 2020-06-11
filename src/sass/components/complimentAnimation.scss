@@ -1,0 +1,102 @@
+.compliment__animation {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -200px; /* negative half of width above */
+    margin-top: -200px; /* negative half of height above */
+}
+
+// .demo {
+//     width: $leafWidth * 1.5;
+//     height: $leafWidth * 1.5;
+//     position: relative;
+// }
+
+// // $leafWidth: 150px;
+
+// .leaf {
+//     width: $leafWidth;
+//     height: $leafWidth;
+//     border-radius: $leafWidth 0px;
+//     background: linear-gradient(45deg, rgba(188, 190, 192, 1) 8%, rgba(158, 31, 99, 1) 30%, rgba(158, 31, 99, 1) 100%);
+//     position: absolute;
+//     opacity: 0.8;
+//     transform-origin: top right;
+//     transform: rotateZ(135deg);
+// }
+
+// .leaf_1{
+//     animation: Lotus1 2s linear 1;
+// }
+// .leaf_2{
+//     animation: Lotus2 2s linear 1;
+// }
+// .leaf_3{
+//     animation: Lotus3 2s linear 1;
+// }
+// .leaf_4{
+//     animation: Lotus4 2s linear 1;
+// }
+// .leaf_5{
+//     animation: Lotus5 2s linear 1;
+// }
+
+// @keyframes Lotus1 {
+//     0% {
+//         transform: rotateZ(135deg);
+//     }
+//     50% {
+//         transform: rotateZ(180deg);
+//     }
+//     100% {
+//         transform: rotateZ(225deg);
+//     }
+// }
+
+// @keyframes Lotus2 {
+//     0% {
+//         transform: rotateZ(135deg);
+//     }
+//     50% {
+//         transform: rotateZ(180deg);
+//     }
+//     100% {
+//         transform: rotateZ(225deg);
+//     }
+// }
+
+// @keyframes Lotus3 {
+//     0% {
+//         transform: rotateZ(135deg);
+//     }
+//     50% {
+//         transform: rotateZ(180deg);
+//     }
+//     100% {
+//         transform: rotateZ(225deg);
+//     }
+// }
+
+// @keyframes Lotus4 {
+//     0% {
+//         transform: rotateZ(135deg);
+//     }
+//     50% {
+//         transform: rotateZ(180deg);
+//     }
+//     100% {
+//         transform: rotateZ(225deg);
+//     }
+// }
+
+// @keyframes Lotus5 {
+//     0% {
+//         transform: rotateZ(135deg);
+//     }
+//     50% {
+//         transform: rotateZ(180deg);
+//     }
+//     100% {
+//         transform: rotateZ(225deg);
+//     }
+// }

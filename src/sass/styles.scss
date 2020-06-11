@@ -9,86 +9,94 @@
 './components/fixed-thumbs-up',
 './pages/giveCompliment',
 './components/leaderboard-new',
+'./components/complimentAnimation',
 './pages/team',
 './pages/goals.scss',
 './components/profile',
-'./pages/home.scss';
+'./pages/home.scss',
+'./pages/onboarding.scss',
+'./pages/get-started.scss',
+'./pages/landing.scss';
 
 
 html {
-    font-family: 'publicSans', sans-serif;
+  font-family: 'publicSans', sans-serif;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-size: 14px;
-    background-color: $background-color;
-    animation: page-transition .1s ease-in-out;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  background-color: $background-color;
+  animation: page-transition .1s ease-in-out;
 }
 
 #page {
-    display: flex;
+  display: flex;
 }
 
 button {
-    user-select: none;
+  user-select: none;
 }
 
 h1 {
-    font-size: 3em;
-    font-family: 'bitter', serif;
-    margin-bottom: 0.2em;
+  font-size: 3em;
+  font-family: 'bitter', serif;
+  margin-bottom: 0.2em;
 }
 
 h2 {
-    font-size: 2.5em;
-    font-family: 'publicSans', sans-serif;
-    margin-bottom: 0.5em;
+  font-size: 2.5em;
+  font-family: 'publicSans', sans-serif;
+  margin-bottom: 0.5em;
 }
 
 h3 {
-    font-size: 2em;
-    font-family: 'publicSans', sans-serif;
-    margin-bottom: 0.5em;
+  font-size: 2em;
+  font-family: 'publicSans', sans-serif;
+  margin-bottom: 0.5em;
 }
 
 h4 {
-    font-size: 1.5em;
-    font-family: 'publicSans', sans-serif;
+  font-size: 1.5em;
+  font-family: 'publicSans', sans-serif;
 }
 
 p,
 span {
-    font-size: 1em;
-    font-family: 'publicSans', sans-serif;
+  font-size: 1em;
+  font-family: 'publicSans', sans-serif;
 }
 
 p {
-    line-height: 200%;
+  line-height: 200%;
 }
 
 #content__container {
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #main__container {
-    position: relative;
-    width: 65%;
-    background-color: $white;
-    padding: 2.1em 3em 3em 3em;
-    height: 100vh;
-    overflow-y: auto;
+  position: relative;
+  width: 65%;
+  background-color: $white;
+  padding: 2.1em 3em 3em 3em;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 #main__container__single {
@@ -113,17 +121,18 @@ p {
         margin-top: 2em;
     }
 
-    & #filter1, #filter2 {
-        & > div:first-of-type {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 1em;
+    & #filter1,
+    #filter2 {
+        &>div:first-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1em;
         }
 
         & input {
-            display: none;
+        display: none;
 
-            &:checked + label {
+            &:checked+label {
                 border: 3px solid $yellow;
             }
         }
@@ -148,7 +157,7 @@ p {
         & input {
             display: none;
 
-            &:checked + label > div {
+            &:checked+label>div {
                 border: 3px solid $yellow;
             }
         }
@@ -160,16 +169,22 @@ p {
     }
 }
 
+
+
+  
+
+
 .text-help {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .heading-icon {
-      width: 3em;
-      margin-right: 1em;
+  width: 3em;
+  margin-right: 1em;
 }
 
 .goal__container {
+  position: relative;
   box-sizing: border-box;
   border-right: 10px solid #fff;
   margin: 10px;
@@ -179,58 +194,58 @@ p {
   transition: 200ms ease-in-out;
   border-radius: $border-radius-big;
   box-shadow: 0px 2px 0px 1px #e5e5e5;
-    & p{
-      padding-left:15px;
-    }
+
+  & p {
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
 }
 
 #goals__container div:not(:last-of-type) {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 #goals__container div:not(:last-of-type) {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .goal__container>div {
-    padding: .75em;
+  padding: .75em;
 }
 
 .goal__container img {
-    width: 3em;
+  width: 3em;
 }
 
 #goals__container {
-    padding: 10px;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    margin-top: 1em;
-    background-image: url(/images/background.png);
-    background-size: 500%;
+  padding: 10px;
+  background-color: $light-grey;
+  border-radius: $border-radius-big;
+  margin-top: 1em;
 }
 
 #setGoals__container {
-    width: 100%;
-    margin-bottom: 2em;
-    padding: 10px;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    background-image: url(/images/background.png);
-    background-size: 500%;
-    max-height: 40vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 10px;
+  background-color: $light-grey;
+  border-radius: $border-radius-big;
+  background-image: url(/images/background.png);
+  background-size: 500%;
+  max-height: 40vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .goal-type {
-    width: 200px;
-    margin: 8px;
-    text-align: center;
-    padding: .5em;
-    background-color: #34b6dd;
-    color: $white;
-    border-radius: $border-radius-small;
-    font-size: 13px;
+  width: 200px;
+  margin: 8px;
+  text-align: center;
+  padding: .5em;
+  background-color: #34b6dd;
+  color: $white;
+  border-radius: $border-radius-small;
+  font-size: 13px;
 }
 
 .goal-type-image {
@@ -238,85 +253,85 @@ p {
 }
 
 .goal-type2 {
-    padding: .5em;
-    color: $green;
-    font-size: 13px;
+  padding: .5em;
+  color: $green;
+  font-size: 13px;
 }
 
 .goal-buttons__container {
-    display: flex;
-    align-items: center;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 
 .goal__container div:nth-of-type(1) {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .goal__container:hover {
-    transform: scale(1.04);
+  transform: scale(1.04);
 }
 
 .request_count {
-    color: #000;
+  color: #000;
 }
 
 button,
 input[type="submit"] {
-    font-family: 'publicSans-medium', sans-serif;
-    padding: 10px;
-    background-color: $green;
-    color: white;
-    border-radius: $border-radius-small;
-    font-size: 1em;
-    margin-right: .5em;
-    height: 50px;
-    border: none;
-    width: 10em;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    display: block;
-    align-items: center;
+  font-family: 'publicSans-medium', sans-serif;
+  padding: 10px;
+  background-color: $green;
+  color: white;
+  border-radius: $border-radius-small;
+  font-size: 1em;
+  margin-right: .5em;
+  height: 50px;
+  border: none;
+  width: 10em;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  display: block;
+  align-items: center;
 }
 
 button img {
-    padding-right: 5px;
-    height: 25px;
+  padding-right: 5px;
+  height: 25px;
 }
 
 button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .defaultButton:hover {
-    background-color: #114c4c;
+  background-color: #114c4c;
 }
 
-button:focus {
-    outline: none;
-    color: $white;
-    background-color: $yellow;
-}
+// button:focus {
+//     outline: none;
+//     color: $white;
+//     background-color: $yellow;
+// }
 
 #super-button__container {
-    display: flex;
-    margin: 3em 0em;
-    justify-content: space-between;
+  display: flex;
+  margin: 3em 0em;
+  justify-content: space-between;
 }
 
 #button__container {
-    display: flex;
-    margin: 2em 0em;
+  display: flex;
+  margin: 2em 0em;
 
-    & input {
-        display: none;
+  & input {
+    display: none;
 
-        &:checked + label {
-            background-color: $yellow;
-        }
+    &:checked+label {
+      background-color: $yellow;
     }
+  }
 
     & label {
         padding: 1em;
@@ -338,88 +353,88 @@ button:focus {
 }
 
 .filter-button {
-    background-color: $black;
-    color: white;
-    width: fit-content;
-    padding: 0 1.5em;
-    margin-right: 0;
-    display: none;
+  background-color: $black;
+  color: white;
+  width: fit-content;
+  padding: 0 1.5em;
+  margin-right: 0;
+  display: none;
 
-    &:hover {
-        background-color: black;
-    }
+  &:hover {
+    background-color: black;
+  }
 }
 
 .filter-button:focus {
-    background-color: $black;
+  background-color: $black;
 }
 
 #button__container span {
-    color: $grey;
+  color: $grey;
 }
 
 .message {
-    margin: 10px;
-    display: flex;
-    background-color: $white;
-    padding: 1.5em 0em;
-    border-radius: $border-radius-small;
-    box-shadow: 0px 2px 0px 1px #e5e5e5;
+  margin: 10px;
+  display: flex;
+  background-color: $white;
+  padding: 1.5em 0em;
+  border-radius: $border-radius-small;
+  box-shadow: 0px 2px 0px 1px #e5e5e5;
 }
 
 .flex {
-    display: flex;
-    align-content: center;
+  display: flex;
+  align-content: center;
 }
 
 .message span {
-    display: block;
+  display: block;
 }
 
 .message span:nth-child(3) {
-    color: $grey;
-    margin-top: .25em;
+  color: $grey;
+  margin-top: .25em;
 }
 
 #messages__container {
-    padding: 10px;
-    background-color: $light-grey;
-    border-radius: $border-radius-big;
-    background-image: url(/images/background.png);
-    background-size: 500%;
-    height: 40em;
-    overflow-y: auto;
+  padding: 10px;
+  background-color: $light-grey;
+  border-radius: $border-radius-big;
+  background-image: url(/images/background.png);
+  background-size: 500%;
+  height: 40em;
+  overflow-y: auto;
 
-    &>div:not(:last-of-type) {
-        margin-bottom: 1em;
-    }
+  &>div:not(:last-of-type) {
+    margin-bottom: 1em;
+  }
 }
 
 .image__container {
-    width: 15em;
-    border-right: 2px solid $red;
-    padding: .5em;
-    text-align: center;
+  width: 15em;
+  border-right: 2px solid $red;
+  padding: .5em;
+  text-align: center;
 }
 
 .text__container {
-    width: 100%;
-    padding: 1.5em;
+  width: 100%;
+  padding: 1.5em;
 }
 
 .message img {
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: .75em;
-    width: 60px;
-    height: 60px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: .75em;
+  width: 60px;
+  height: 60px;
 }
 
 .filter__container {
-    margin: 2em 0em;
-    display: flex;
-    overflow: hidden;
+  margin: 2em 0em;
+  display: flex;
+  overflow: hidden;
 }
 
 /* Reset Select */
@@ -438,175 +453,291 @@ select {
 
 /* Custom Select */
 .select {
-    position: relative;
-    display: flex;
-    width: 12em;
-    height: 3em;
-    line-height: 3;
-    overflow: hidden;
-    border-radius: $border-radius-small;
-    margin-right: 0.9em;
+  position: relative;
+  display: flex;
+  width: 12em;
+  height: 3em;
+  line-height: 3;
+  overflow: hidden;
+  border-radius: $border-radius-small;
+  margin-right: 0.9em;
 }
 
 /* Remove IE arrow */
 select::-ms-expand {
-    display: none;
+  display: none;
 }
 
 /* Arrow */
 .select::after {
-    content: '\25BC';
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 1em;
-    background: #d3d3d3;
-    cursor: pointer;
-    pointer-events: none;
-    transition: .25s all ease;
-    color: $green;
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #d3d3d3;
+  cursor: pointer;
+  pointer-events: none;
+  transition: .25s all ease;
+  color: $green;
 }
 
 /* Transition */
 .select:hover::after {
-    color: $green;
+  color: $green;
 }
 
 option {
-    padding: 1em;
-    margin: 1em;
-    color: $black;
+  padding: 1em;
+  margin: 1em;
+  color: $black;
 }
 
 .show {
-    display: flex;
+  display: flex;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .expandFilter {
-    animation: expandFilter 0.3s linear alternate;
+  animation: expandFilter 0.3s linear alternate;
 }
 
 @media screen and (max-width: 1550px) {
-    body {
-      font-size: 12.5px;
-    }
-    #main__container, .right__container, .center__container, #super-goals__container{
-      padding: 1.5em 2em 2em;
-    }
-    #setGoals__container, #completedGoals__container, #messages__container, #goals__container, .container {
-      padding: 2px;
-    }
-    h3{
-      margin-bottom: 0.2em;
-    }
-    .goal__container:hover {
-        transform: scale(1.02);
-    }
-    #setGoals__container, #completedGoals__container{
-      margin-bottom: 10px;
-    }
+  body {
+    font-size: 12.5px;
   }
 
+  #main__container,
+  .right__container,
+  .center__container,
+  #super-goals__container {
+    padding: 1.5em 2em 2em;
+  }
+
+  #setGoals__container,
+  #completedGoals__container,
+  #messages__container,
+  #goals__container,
+  .container {
+    padding: 2px;
+  }
+
+  h3 {
+    margin-bottom: 0.2em;
+  }
+
+  .goal__container:hover {
+    transform: scale(1.02);
+  }
+
+  #setGoals__container,
+  #completedGoals__container {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
-    body {
-      font-size: 12px;
-    }
-    .goal-type{
-      font-size: 11px;
-    }
-    .player__container img
-    {
-      width: 60px;
-      height: auto;
-    }
-    #setGoals__container{
-      max-height: 35em;
-    }
-    .userImg{
-      display: none;
-    }
-    .compliment-message{
-      width: auto;
-    }
+  body {
+    font-size: 12px;
+  }
+
+  .goal-type {
+    font-size: 11px;
+  }
+
+  .player__container img {
+    width: 60px;
+    height: auto;
+  }
+
+  #setGoals__container {
+    max-height: 35em;
+  }
+
+  .userImg {
+    display: none;
+  }
+
+  .compliment-message {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 1300px) {
-    button{
-      height: auto;
-    }
-    .collapsible{
-      height: 4em;
-    }
-    .goal-type{
-      font-size: 11px;
-    }
-    .player__container img
-    {
-      width: 60px;
-      height: auto;
-    }
-    #setGoals__container{
-      max-height: 35em;
-    }
+  .complimentsHead {
+    height: 7em;
+  }
+
+  button {
+    height: auto;
+  }
+
+  .collapsible {
+    height: 4em;
+  }
+
+  .goal-type {
+    font-size: 11px;
+  }
+
+  .player__container img {
+    width: 60px;
+    height: auto;
+  }
+
+  #setGoals__container {
+    max-height: 30em;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-  body{
+  body {
     font-size: 14px;
-    overflow:auto;
+    overflow: auto;
   }
-  #main__container, #content__container, #super-goals__container, #teamoverview__container, #team-aside__container, #profile__right__container, #compliment__container aside, #compliment__container form #select__container, .center__container {
+
+  #main__container,
+  #content__container,
+  #super-goals__container,
+  #teamoverview__container,
+  #team-aside__container,
+  #profile__right__container,
+  #compliment__container aside,
+  #compliment__container form #select__container,
+  .center__container {
     width: 100%;
     height: 100%;
   }
-  .right__container{
+
+  .right__container {
     background-color: white;
     width: 100%;
     height: 100%;
   }
-  #content__container, .dashboard__container, #compliment__container form {
+
+  #content__container,
+  .dashboard__container,
+  #compliment__container form {
     flex-direction: column;
   }
-  .userImg{
+
+  .goals-content__container {
+    flex-direction: row !important;
+
+    & #main__container {
+      width: 50%;
+
+      & #setGoals__container {
+        & .goal__container {
+          & .goal-buttons__container {
+            & aside {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+
+    & #super-goals__container {
+      width: 50%;
+    }
+  }
+
+  .addGoals__container {
+    & .select {
+      width: 46%;
+      margin: .65%;
+    }
+
+    & .datePicker {
+      width: auto
+    }
+  }
+
+  .goal-editor {
+    font-size: 0.8em;
+  }
+
+  #edit-goals__container {
+    & form {
+      & .select {
+        width: 46% !important;
+        margin: .65%;
+      }
+
+      & .datePicker {
+        width: auto
+      }
+    }
+  }
+
+  .goal-type-image {
+    display: none;
+  }
+
+  .goal-estimate {
+    font-size: 0.8em;
+    width: 50%;
+  }
+
+  #messages__container,
+  #setGoals__container {
+    min-height: 40vh;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  #new-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  #thumbs__container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .userImg {
     display: block;
     width: 15%;
   }
-  .compliment-message{
+
+  .compliment-message {
     width: 80%;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  body{
+  body {
     font-size: 12px;
-    overflow:auto;
+    overflow: auto;
   }
 }
 
 @media screen and (max-width: 822px) {
-    #option__container {
-        height: 8.5em;
-    }
+  #option__container {
+    height: 8.5em;
+  }
 
-    #option__container div:first-of-type {
-        width: 100%;
-    }
+  #option__container div:first-of-type {
+    width: 100%;
+  }
 
-    #team-member__container {
-        margin-top: 2em;
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-    }
+  #team-member__container {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    #team-member__container {
-        margin-top: 2em;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
+  #team-member__container {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 }
