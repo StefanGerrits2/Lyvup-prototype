@@ -54,6 +54,10 @@
     height: 100%;
 }
 
+.box__shadow{
+    box-shadow: 0px 2px 0px 2px $grey;
+}
+
 .gridElement {
     margin-top: 0.75em;
     margin-left: .5em;

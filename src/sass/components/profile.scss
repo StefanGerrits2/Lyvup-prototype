@@ -126,7 +126,10 @@ td {
 .profile__grid__container{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% auto;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
+    margin-right: .5em;
+    margin-left: .5em;
+    margin-top: .75em;
     background-color: $light-grey;
     border-radius: $border-radius-big;
     padding: 1em 0em;
