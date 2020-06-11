@@ -1,12 +1,15 @@
 .goals-head {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 1em;
+
   & img{
     margin-right: 1em;
     width: 3em;
   }
   & h1{
-    width:75%
+    width:75%;
+    margin-bottom: 0;
   }
 }
 
@@ -203,6 +206,7 @@
 .indicator-active {
   background-color: $light-blue;
   color: $white;
+  margin-top: 2em;
 }
 
 #completedGoals__container {

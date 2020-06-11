@@ -2,6 +2,9 @@
         <a href="/"><img id="logo" src="/images/lyvupLogo.png" alt=""></a>
             <div class="select">
                 <select name="team" id="select2">
+                    <option value="Meesterproef">Meesterproef</option>
+                    <option value="test1">Test 1</option>
+                    <option value="test2">Test 2</option>
                     <!-- {{#each data}}
                         <option value={{acc_wly_name}}>{{acc_wly_name}}</option>
                     {{/each}} -->
@@ -10,38 +13,38 @@
 
         <nav>
             <ul>
-                <li {{#if home}} class="active-nav" {{/if}}>
-                    <a href="/">
+                <li>
+                    <a href="/" {{#if home}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-home.svg" alt=""></div>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li {{#if feedback}} class="active-nav" {{/if}}>
-                    <a href="/feedback">
+                <li>
+                    <a href="/feedback" {{#if feedback}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-feedback.svg" alt=""></div>
                         <p>Feedback</p>
                     </a>
                 </li>
-                <li {{#if team}} class="active-nav" {{/if}}>
-                    <a href="/team">
+                <li>
+                    <a href="/team" {{#if team}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-team.svg" alt=""></div>
                         <p>Team</p>
                     </a>
                 </li>
-                <li {{#if goals}} class="active-nav" {{/if}}>
-                    <a href="/goals">
+                <li>
+                    <a href="/goals" {{#if goals}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-goals.svg" alt=""></div>
                         <p>Mijn doelen</p>
                     </a>
                 </li>
-                <li {{#if leaderboard}} class="active-nav" {{/if}}>
-                    <a href="/leaderboard">
+                <li>
+                    <a href="/leaderboard-new" {{#if leaderboard}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-leaderboard.svg" alt=""></div>
                         <p>Leaderboard</p>
                     </a>
                 </li>
-                <li {{#if profile}} class="active-nav" {{/if}}>
-                    <a href="/profile">
+                <li>
+                    <a href="/profile" {{#if profile}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-profile.svg" alt=""></div>
                         <p>Profiel</p>
                     </a>
@@ -52,3 +55,5 @@
             <img src="/images/chevron_left.svg" alt="">
         </div>
     </div>
+
+<script src="js/header.js"></script>

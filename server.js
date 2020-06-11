@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({
-  extended: true
+    extended: true
 });
 const path = require('path');
 const hbs = require('express-handlebars');
@@ -29,55 +29,59 @@ const goals = require('./routes/goals.js');
 const leaderboard = require('./routes/leaderboard.js');
 const leaderboard_new = require('./routes/leaderboard-new.js');
 const profile = require('./routes/profile.js');
+const landing = require('./routes/landing.js');
 
 app
-  .set('view engine', 'hbs')
-  .engine(
-    'hbs',
-    hbs({
-      extname: 'hbs',
-      defaultLayout: 'main',
-      partialsDir: __dirname + '/views/partials/',
-    })
-  )
+    .set('view engine', 'hbs')
+    .engine(
+        'hbs',
+        hbs({
+            extname: 'hbs',
+            defaultLayout: 'main',
+            partialsDir: __dirname + '/views/partials/',
+        })
+    )
 
-  .use(compression())
-  .use('/', express.static(publicPath))
+    .use(compression())
+    .use('/', express.static(publicPath))
 
-  .use(
-    minifyHTML({
-      override: true,
-      exception_url: false,
-      htmlMinifier: {
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true,
-        removeAttributeQuotes: true,
-        removeEmptyAttributes: true,
-        minifyJS: true,
-      },
-    })
-  )
+    .use(
+        minifyHTML({
+            override: true,
+            exception_url: false,
+            htmlMinifier: {
+                removeComments: true,
+                collapseWhitespace: true,
+                collapseBooleanAttributes: true,
+                removeAttributeQuotes: true,
+                removeEmptyAttributes: true,
+                minifyJS: true,
+            },
+        })
+    )
 
-  // Get routes
-  .get('/', home)
-  .get('/feedback', feedback)
-  .get('/compliment-or-feedback', compliment)
-  .post('/compliment-or-feedback', urlencodedParser, compliment)
-  .get('/team', team)
-  .get('/goals', goals)
-  .post('/goals', urlencodedParser, goals)
-  .get('/leaderboard', leaderboard)
-  .get('/leaderboard-new', leaderboard_new)
-  .get('/profile', profile)
 
-  // 404 not found
-  .use(notFound);
+    // Get routes
+    .get('/', home)
+    .get('/feedback', feedback)
+    .get('/compliment-or-feedback', compliment)
+    .post('/compliment-or-feedback', urlencodedParser, compliment)
+    .get('/team', team)
+    .get('/goals', goals)
+    .post('/goals', urlencodedParser, goals)
+    .get('/leaderboard', leaderboard)
+    .get('/leaderboard-new', leaderboard_new)
+    .get('/profile', profile)
+    .get('/landing', landing)
+
+    // 404 not found
+    .use(notFound);
 
 // Socket
 socket.on('connection', (socket) => {
-  // Disconnect
-  socket.on('disconnect', () => {});
+    // Disconnect
+    socket.on('disconnect', () => {
+    });
 });
 
 // Listen
