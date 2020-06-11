@@ -15,7 +15,7 @@ function showTab(n) {
         document.getElementById("nextBtn").style.display = "none";
         document.getElementById("prevBtn").style.display = "none";
     } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
+        document.getElementById("nextBtn").innerHTML = "volgende";
         document.getElementById("nextBtn").style.display = "inline";
     }
     // ... and run a function that displays the correct step indicator:
@@ -67,8 +67,8 @@ function fixStepIndicator(n) {
     // This function removes the "active" class of all steps...
     var i, x = document.getElementsByClassName("step");
     for (i = 0; i < x.length; i++) {
-        x[i].className = x[i].className.replace("active", '');
+        x[i].classList.add("step");
     }
     //... and adds the "active" class to the current step:
-    x[n].className += " active";
+    x[n].classList.toggle("active");
 }

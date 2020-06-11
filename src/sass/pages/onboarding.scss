@@ -3,9 +3,17 @@
     background-color: #ffffff;
     margin: 100px auto;
     padding: 40px;
+    width: 90%;
+    height: 34.6em;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.flex-center {
+    display: flex;
     width: 70%;
-    height: 35em;
-    border-radius: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
 }
 
 /* Style the input fields */
@@ -32,6 +40,7 @@
 #code {
     padding-left: 1em;
     width: fit-content;
+    margin-bottom: 0;
     letter-spacing: 1em;
     text-align: center;
     transition: all 350ms ease-in-out;
@@ -45,35 +54,73 @@ input.invalid {
 /* Hide all steps by default: */
 .tab {
     display: none;
+    margin-bottom: 1em;
 }
 
 /* Make circles that indicate the steps of the form: */
 
 .steps {
-    margin-top: 6em;
+    background: #f7f7f7;
+    width: 10%;
+    border-radius: 10px 0px 0px 10px;
+    z-index: 2;
 }
 
 .step {
-    height: 30px;
-    width: 30px;
+    position: relative;
+    height: 40px;
+    width: 40px;
     text-align: center;
-    margin: 0 2px;
     background-color: #bbbbbb;
+    margin: 2.9em auto;
     border: none;
     border-radius: 50%;
     display: inline-block;
-    opacity: 0.4;
+    opacity: 1;
     transition: all 350ms ease-in-out;
+
+    &::after {
+        content: "";
+        height: 9em;
+        border-left: 2px #ccc solid;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &:last-child::after {
+        content: "";
+        height: 0em;
+        border-left: 2px #ccc solid;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+    }
 }
 
 /* Mark the active step: */
 .step.active {
     opacity: 1;
+    background-color: $green;
+
+    &::after {
+        content: "";
+        height: 9em;
+        border-left: 2px $green solid;
+        top: 0;
+        position: absolute;
+    }
+
+    &:last-child::after {
+        content: "";
+        height: 0em;
+        border-left: 2px #ccc solid;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+    }
 }
 
-.active:after {
-    content: "";
-}
 
 /* Mark the steps that are finished and valid: */
 .step.finish {
@@ -83,7 +130,6 @@ input.invalid {
 .flex-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
 }
 
