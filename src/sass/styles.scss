@@ -104,7 +104,6 @@ p {
 
     & h1 {
         margin-bottom: 0;
-        margin-bottom: 15px;
     }
 }
 
@@ -118,6 +117,7 @@ p {
 }
 
 .goal__container {
+  position: relative;
   box-sizing: border-box;
   border-right: 10px solid #fff;
   margin: 10px;
@@ -129,6 +129,7 @@ p {
   box-shadow: 0px 2px 0px 1px #e5e5e5;
     & p{
       padding-left:15px;
+      margin-bottom: 10px;
     }
 }
 
@@ -153,8 +154,6 @@ p {
     background-color: $light-grey;
     border-radius: $border-radius-big;
     margin-top: 3em;
-    background-image: url(/images/background.png);
-    background-size: 500%;
 }
 
 #setGoals__container {
@@ -249,11 +248,11 @@ button:hover {
     background-color: #114c4c;
 }
 
-button:focus {
-    outline: none;
-    color: $white;
-    background-color: $yellow;
-}
+// button:focus {
+//     outline: none;
+//     color: $white;
+//     background-color: $yellow;
+// }
 
 #super-button__container {
     display: flex;
@@ -464,6 +463,9 @@ option {
 }
 
 @media screen and (max-width: 1300px) {
+    .complimentsHead {
+      height: 7em;
+    }
     button{
       height: auto;
     }
@@ -479,7 +481,7 @@ option {
       height: auto;
     }
     #setGoals__container{
-      max-height: 35em;
+      max-height: 30em;
     }
 }
 
@@ -499,6 +501,71 @@ option {
   }
   #content__container, .dashboard__container, #compliment__container form {
     flex-direction: column;
+  }
+  .goals-content__container {
+    flex-direction: row !important;
+    & #main__container {
+      width: 50%;
+      & #setGoals__container {
+        & .goal__container{
+          & .goal-buttons__container {
+            & aside {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+    & #super-goals__container  {
+      width: 50%;
+    }
+  }
+  .addGoals__container {
+    & .select {
+    width: 46%;
+    margin: .65%;
+  }
+  & .datePicker {
+    width: auto
+  }
+}
+
+.goal-editor {
+  font-size: 0.8em;
+}
+
+#edit-goals__container{
+  & form{
+    & .select {
+      width: 46% !important;
+      margin: .65%;
+    }
+    & .datePicker {
+      width: auto
+    }
+  }
+}
+
+  .goal-type-image{
+    display: none;
+  }
+  .goal-estimate{
+    font-size: 0.8em;
+    width: 50%;
+  }
+  #messages__container, #setGoals__container{
+    min-height: 40vh;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+  #new-header{
+    position:sticky;
+    top: 0;
+    z-index: 1;
+  }
+  #thumbs__container {
+    bottom: 20px;
+    right: 20px;
   }
   .userImg{
     display: block;

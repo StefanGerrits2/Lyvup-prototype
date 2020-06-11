@@ -43,6 +43,31 @@
   background-color: $red;
 }
 
+.goal-editor {
+  font-size: 1em;
+  margin-right: 0;
+  background-color: $green;
+  color: white;
+  opacity: 1;
+  height: auto;
+  position: absolute;
+  border-radius: 0px 0px 5px;
+  bottom: 0;
+  right: -10px;
+  text-align: center;
+  padding: 4px;
+  z-index: 1;
+}
+
+.goal-editor:hover {
+  transform: scale(1);
+}
+
+.goal-editor:focus {
+  outline: none;
+}
+
+
 .userImg{
   margin: auto;
   width: 15%;
@@ -51,6 +76,7 @@
 
 .goals-button:focus{
   background-color: $green;
+  border: none;
 }
 
 .addGoal__form{
@@ -157,7 +183,7 @@
 }
 
 .goal-indicator{
-    width: 150px;
+    width: 200px;
     margin: 8px;
     text-align: center;
     padding: .5em;
@@ -188,6 +214,58 @@
     overflow-x: hidden;
 }
 
+#edit-goals__container {
+  overflow: hidden;
+  border-radius: 0px 0px 0px 10px;
+  background-color: #fceed4;
+  cursor: default;
+  & .id-getter{
+    display: none;
+  }
+  & .select {
+    width: 25%;
+    font-size: 12px;
+  }
+  & .datePicker {
+    & input {
+      font-family: publicSans,sans-serif;
+      background-color: #d4d4d4;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      height: 100%;
+    }
+  }
+  & .goalDescription {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    & label {
+      margin-top: 1em;
+      width: 20%;
+    }
+    & .new-goalText {
+      width: 100% !important;
+      border-radius: 5px;
+      font-family: publicSans,sans-serif;
+      padding: 1em;
+      border: none;
+      margin-top: 0em;
+      display: block;
+      width: 100%;
+      height: 60px;
+      margin-bottom: 0em;
+    }
+    & .submitGoal {
+      height: auto;
+      margin-top: 10px;
+      margin-right: 50%;
+      margin-left: auto;
+    }
+  }
+}
+
 aside{
   width: 150px;
 }
@@ -212,6 +290,10 @@ aside{
   background-image: none !important;
 }
 
+.expandSmall {
+  animation: expandSmall 0.3s linear alternate;
+}
+
 .expand {
   animation: expand 0.3s linear alternate;
 }
@@ -225,7 +307,15 @@ aside{
 }
 
 .invisible{
-  visibility: hidden;
+  display: none;
+}
+
+.flashed {
+  animation: shortFlash 0.3s linear alternate;
+}
+
+.red {
+  background-color: $red;
 }
 
 @keyframes shortFlash {
@@ -237,4 +327,9 @@ aside{
 @keyframes expand {
   0% {height: 1em}
   100% {height: 30em}
+}
+
+@keyframes expandSmall {
+  0% {height: 1em}
+  100% {height: 14em}
 }
