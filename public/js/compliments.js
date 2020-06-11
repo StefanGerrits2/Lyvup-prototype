@@ -68,7 +68,6 @@ function selectAllCheckboxes() {
 
 // Deselect all checkboxes
 function deSelectAllCheckboxes() {
-    console.log('test');
     const checkboxes = document.querySelectorAll(' #team-member__container input[type="checkbox"]');
     for (let i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = false;

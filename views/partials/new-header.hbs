@@ -1,4 +1,4 @@
-    <div id="new-header">
+    <header>
         <a href="/"><img id="logo" src="/images/lyvupLogo.png" alt=""></a>
             <div class="select">
                 <select name="team" id="select2">
@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/" {{#if home}} class="active-nav" {{/if}}>
+                    <a class='focus-visible' href="/" {{#if home}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-home.svg" alt=""></div>
                         <p>Dashboard</p>
                     </a>
@@ -54,6 +54,6 @@
         <div id="toggle-header">
             <img src="/images/chevron_left.svg" alt="">
         </div>
-    </div>
+    </header>
 
 <script src="js/header.js"></script>

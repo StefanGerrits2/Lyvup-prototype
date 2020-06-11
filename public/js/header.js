@@ -1,11 +1,11 @@
 // Header animations
 const toggleHeader = document.querySelector('#toggle-header');
-const header = document.querySelector('#new-header');
-const navTexts = document.querySelectorAll('#new-header li p');
+const header = document.querySelector('header');
+const navTexts = document.querySelectorAll('header li p');
 const logo = document.querySelector('#logo');
-const navIcons = document.querySelectorAll('#new-header li a img');
-const dropdown = document.querySelector('#new-header .select');
-const hoverableIcons = document.querySelectorAll('#new-header li');
+const navIcons = document.querySelectorAll('header li a img');
+const dropdown = document.querySelector('header .select');
+const hoverableIcons = document.querySelectorAll('header li');
 
 toggleHeader.addEventListener('click', () => {
     // Toggle header

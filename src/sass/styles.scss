@@ -1,10 +1,13 @@
+*:focus {
+    outline: none;
+}
+
 @import './components/transitions',
 './components/fonts',
 './components/variables',
 './components/header',
 './components/fixed-thumbs-up',
 './pages/giveCompliment',
-// './components/leaderboard',
 './components/leaderboard-new',
 './pages/team',
 './pages/goals.scss',
@@ -106,7 +109,7 @@ p {
         margin-bottom: 0;
     }
 
-    & > div {
+    & > section {
         margin-top: 2em;
     }
 
@@ -132,6 +135,12 @@ p {
             border: 3px solid $background-color;
             background-color: $white;
             margin: 0em .5em .5em 0em;
+            transition: .2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+                transition: .2s ease-in-out;
+            }
         }
     }
 
@@ -144,11 +153,10 @@ p {
             }
         }
 
-        & label div {
+        & label > div {
             border: 3px solid $white;
             border-radius: $border-radius-small;
         }
-        
     }
 }
 
@@ -320,6 +328,12 @@ button:focus {
         width: 11em;
         text-align: center;
         user-select: none;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: .2s ease-in-out;
+        }
     }
 }
 
@@ -411,7 +425,6 @@ button:focus {
 /* Reset Select */
 select {
     appearance: none;
-    outline: 0;
     box-shadow: none;
     border: 0 !important;
     background: rgb(235, 235, 235);

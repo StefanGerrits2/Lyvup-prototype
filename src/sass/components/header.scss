@@ -1,49 +1,10 @@
-header {
-    font-family: 'publicSans-medium', sans-serif;
-    background-color: white;
-    display: flex;
-    height: 75px;
-    align-items: center;
-    padding-left: 1em;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-header img {
-    max-height: 30px;
-    width: auto;
-    margin-right: 1em;
-}
-
-header ul {
-    display: flex;
-    list-style-type: none;
-}
-
-header ul li {
-    margin: 0 1.25em;
-}
-
-header ul li a {
-    text-decoration: none;
-    padding: .5em;
-    color: $black;
-
-    &:hover {
-        color: $yellow;
-        transition: 200ms;
-        border-bottom: 3px solid $yellow;
-    }
-}
-
 /* new header */
 .active-nav {
     background-color: #D2D1D7;
     transition: 200ms;
 }
 
-#new-header {
+header {
     background-color: $background-color;
     height: 100vh;
     width: 15em;
@@ -60,10 +21,6 @@ header ul li a {
 
     & select {
         background-color: white;
-    }
-
-    & nav {
-        overflow: hidden;
     }
 
     & > a img {
@@ -115,7 +72,6 @@ header ul li a {
         & .hoverable {
             margin-bottom: 1em;
 
-            &:hover {
                 &::before {
                     position: absolute;
                     bottom: 0.1em;
@@ -129,13 +85,14 @@ header ul li a {
                     left: 4.9em;
                     padding: .8em 1em;
                 }
-            }
+            
         }
 
         // After texts per element
         & .hoverable:nth-of-type(1):hover {
             &::before {
                 content: "Dashboard";
+                z-index: 999;
             }
         }
         & .hoverable:nth-of-type(2):hover {
