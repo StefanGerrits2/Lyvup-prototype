@@ -1,0 +1,52 @@
+.compliment__animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px; /* adjust as per your needs */
+    height: 400px; /* adjust as per your needs */
+    margin-left: -200px; /* negative half of width above */
+    margin-top: -200px; /* negative half of height above */
+}
+
+$leafWidth: 150px;
+
+.leaf {
+    width: $leafWidth;
+    height: $leafWidth;
+    border-radius: $leafWidth 0px;
+    background: linear-gradient(45deg, rgba(188, 190, 192, 1) 8%, rgba(158, 31, 99, 1) 30%, rgba(158, 31, 99, 1) 100%);
+    position: absolute;
+    opacity: 0.3;
+    animation: chickenScale 2s linear infinite;
+    transform-origin: top right;
+}
+
+.demo {
+    width: $leafWidth * 1.5;
+    height: $leafWidth * 1.5;
+    position: relative;
+}
+
+@keyframes Lotus {
+    25% {
+        transform: scale(0.45);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    75% {
+        transform: scale(0.65);
+    }
+}
+
+@keyframes chickenScale {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
