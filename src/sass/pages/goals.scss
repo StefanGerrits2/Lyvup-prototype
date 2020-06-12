@@ -194,6 +194,18 @@
     font-size: 13px;
 }
 
+.goal-deleter {
+  font-size: 1em;
+  margin-right: 1em;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-align: center;
+  padding: 0 !important;
+  height: 1.2em !important;
+  background-color: transparent !important;
+  color: red !important;
+}
+
 .goal-type-container{
   width: 200px;
 }
@@ -217,10 +229,15 @@
     overflow-x: hidden;
 }
 
+.id-getter{
+  display: none;
+}
+
 #edit-goals__container {
   overflow: hidden;
   border-radius: 0px 0px 0px 10px;
   background-color: #fceed4;
+  flex-wrap: wrap;
   cursor: default;
   & .id-getter{
     display: none;
@@ -263,7 +280,7 @@
     & .submitGoal {
       height: auto;
       margin-top: 10px;
-      margin-right: 50%;
+      margin-right: auto;
       margin-left: auto;
     }
   }

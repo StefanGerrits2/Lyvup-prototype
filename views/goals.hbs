@@ -82,6 +82,10 @@
                 <input class="submitGoal" type="submit" value="doel aanpassen">
               </div>
           </form>
+          <form action="/goals" method="post">
+            <input class="id-getter" type="number" name="deleteId" value="{{id}}">
+            <input type="submit" class="goal-deleter" value="doel verwijderen">
+          </form>
         </div>
       </article>
       {{/each}}

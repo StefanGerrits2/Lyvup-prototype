@@ -6,7 +6,7 @@ let persistedData = [];
 let fakeId = 29;
 
 async function manageData(req) {
-  if (persistedData.length === 0) {
+  if (persistedData.length == 0 && req == undefined) {
     try {
       const baseURL = 'https://lyvup.com/api/';
       const query = `getUserGoals/2/?token=${process.env.TOKEN}&lang=dutch`;
@@ -27,9 +27,10 @@ async function manageData(req) {
       console.log(error);
     }
     // checks if there is any data received from the form using a POST method
-  } else if (req != undefined && req.editId == undefined) {
+  } else if (req != undefined && req.editId === undefined && req.deleteId === undefined) {
+    console.log("nieuwe data wordt toegevoegd...")
     const newData = {};
-    newData.id = fakeId;
+    newData.id = fakeId.toString();
     newData.title = req.competentie;
     newData.goal_type = req.doel;
     newData.expiry_date = req.deadline;
@@ -37,10 +38,16 @@ async function manageData(req) {
     userGoals.unshift(newData);
 
     fakeId++;
-    console.log(req.editId)
+    return userGoals
+    // if there is data received from a delete form using a POST but it does not contain an editId
+  } else if (req != undefined && req.editId === undefined) {
+    console.log("data wordt verwijderd...")
+    userGoals.splice(userGoals.findIndex(item => item.id === req.deleteId), 1)
     return userGoals
     // if there is data received from an edit form using a POST method and the data has an id
   } else if (req != undefined) {
+    console.log("data wordt aangepast...")
+    // userGoals.splice(userGoals.findIndex(item => item.id === req.deleteId), 1)
     userGoals.map((curr) => {
       if (curr.id == req.editId) {
         if (curr.title != req.competentie) {
@@ -49,11 +56,10 @@ async function manageData(req) {
         if (curr.goal_type != req.doel) {
           curr.goal_type = req.doel
         }
-        if (curr.description != req.toelichting) {
+        if (curr.description != req.toelichting && req.toelichting != "") {
           curr.description = req.toelichting
         }
         curr.expiry_date = req.deadline
-        console.log(curr)
       }
     })
     return userGoals
