@@ -47,7 +47,6 @@ async function manageData(req) {
     // if there is data received from an edit form using a POST method and the data has an id
   } else if (req != undefined) {
     console.log("data wordt aangepast...")
-    // userGoals.splice(userGoals.findIndex(item => item.id === req.deleteId), 1)
     userGoals.map((curr) => {
       if (curr.id == req.editId) {
         if (curr.title != req.competentie) {
