@@ -650,6 +650,10 @@ option {
     }
   }
 
+  .submitGoal{
+    margin-bottom: 2em;
+  }
+
   .addGoals__container {
     & .select {
       width: 46%;
@@ -662,7 +666,7 @@ option {
   }
 
   .goal-editor, .goal-deleter {
-    font-size: 0.8em;
+    font-size: 0.8em !important;
   }
 
   #edit-goals__container {
