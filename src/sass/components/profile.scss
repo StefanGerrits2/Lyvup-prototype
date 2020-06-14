@@ -73,7 +73,6 @@ td {
     padding: 5px;
     background-image: url(/images/background.png);
     background-size: 500%;
-    height: 15em;
     overflow-y: auto;
     margin-top: 1em;
 }
@@ -100,8 +99,9 @@ td {
     background-color: $light-grey;
     border-radius: $border-radius-big;
     padding-bottom: .75em;
-    display: flex;
-    flex-wrap: wrap;
+    padding-top: .25em;
+    // display: flex;
+    // flex-wrap: wrap;
     margin-top: 1em;
 }
 
@@ -172,7 +172,7 @@ td {
     padding: .5em;
     background-color: $light-grey;
     border-radius: $border-radius-big;
-    max-height: 20em;
+    max-height: 30em;
 }
 
 .profile__challange{

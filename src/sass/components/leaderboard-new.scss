@@ -15,9 +15,16 @@
 }
 
 // classes
-.top__container{
+.top__container {
     min-height: 50%;
     height: 62%;
+    background-image: url(/images/background.png);
+    background-size: 500%;
+}
+
+.bottom__container{
+    background-image: url(/images/background.png);
+    background-size: 500%;
 }
 
 .overflow {
@@ -39,6 +46,8 @@
 .individual__challenge {
     width: 50%;
     height: 100%;
+    background-image: url(/images/background.png);
+    background-size: 500%;
 }
 
 .width {
@@ -52,22 +61,24 @@
 .team__challenge {
     width: 50%;
     height: 100%;
+    background-image: url(/images/background.png);
+    background-size: 500%;
 }
 
-.box__shadow{
-    box-shadow: 0px 2px 0px 2px $grey;
+.box__shadow {
+    box-shadow: 0 2px 0 1px #e5e5e5;
 }
 
 .gridElement {
     margin-top: 0.75em;
-    margin-left: .5em;
+    margin-left: 0.5em;
     min-height: 30px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     background-color: $white;
     padding: 0.5em;
-    box-shadow: 0px 2px 0px 2px $grey;
+    box-shadow: 0 2px 0 1px #e5e5e5;
 }
 
 .leaderboard__challange {
@@ -75,7 +86,7 @@
     margin: 0.75em;
     padding: 0.5em;
     border-radius: 10px;
-    box-shadow: 0px 2px 0px 2px $grey;
+    box-shadow: 0 2px 0 1px #e5e5e5;
 }
 
 .leaderboard__challange:hover {
@@ -105,7 +116,7 @@
     margin-top: 0.5em;
 }
 
-.leaderboard__small__title__right{
+.leaderboard__small__title__right {
     margin-left: 0.5em;
 }
 
@@ -134,6 +145,7 @@
 
 .leaderboardNumber {
     margin-right: 0.5em;
+    margin-bottom: 0em;
 }
 
 .selectContainer {

@@ -8,11 +8,11 @@ async function home (req, res) {
     const fullURL = baseURL.concat(query);
 
     // Get clicked beer
-    const userDashboard = await Fetcher.get(fullURL);
-    console.log(userDashboard.getUserDashboard.data);
+    // const userDashboard = await Fetcher.get(fullURL);
+    // console.log(userDashboard.getUserDashboard.data);
 
     res.render('home.hbs', {
-        data: userDashboard.getUserDashboard.data,
+        // data: userDashboard.getUserDashboard.data,
         home: true
     });
 }
