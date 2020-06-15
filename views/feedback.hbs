@@ -7,13 +7,13 @@
             <p>Overzicht van feedback die je hebt gekregen, verstuurd en aangevraagd hebt.</p>
             <div id="button__container">
                 <input name="feedback-type" type="radio" id="received" value="received" checked>
-                <label for="received">Ontvangen</label>
+                <label for="received" tabindex="0">Ontvangen (4)</label>
 
                 <input name="feedback-type" type="radio" id="sent" value="sent">
-                <label for="sent">Verstuurd</label>
+                <label for="sent" tabindex="0">Verstuurd (0)</label>
 
                 <input name="feedback-type" type="radio" id="asked" value="asked">
-                <label for="asked">Aangevraagd</label>
+                <label for="asked" tabindex="0">Aangevraagd (0)</label>
             </div>
             
             <div id="messages__container">
@@ -21,88 +21,88 @@
                         <div class="image__container">
                             <img src="/images/stefan.jpg" alt="">
                             <span>Stefan Gerrits</span>
-                            <span>25-5-2020</span>
                         </div>
                         <div class="text__container">
-                            <p>Goed gewerkt gisteren!</p>
+                            <p>Goed gewerkt gisteren! Ik ben blij dat je goed naar mijn mening luisterde en hier je oordeel over gaf.</p>
                         </div>
+                        <p class="time-stamp">Gisteren, om 18:17</p>
                     </div>
                     <div class="message">
                         <div class="image__container">
                             <img src="/images/reinier.jpg" alt="">
                             <span>Reinier van Limpt</span>
-                            <span>25-5-2020</span>
                         </div>
                         <div class="text__container">
-                            <p>Goede customer story van de huidige app beschreven, duidelijke flow </p>
+                            <p>Je wireframes van de doelen pagina zien er goed uit! Vooral omdat deze ook al bijna helemaal consistent zijn met de andere designs. </p>
                         </div>
+                        <p class="time-stamp">2 dagen geleden</p>
                     </div>
                     <div class="message">
                         <div class="image__container">
-                            <img src="/images/reinier.jpg" alt="">
-                            <span>Reinier van Limpt</span>
-                            <span>25-5-2020</span>
+                            <img src="/images/random3.jpg" alt="">
+                            <span>Anna testpersoon</span>
                         </div>
                         <div class="text__container">
-                            <p>Goede customer story van de huidige app beschreven, duidelijke flow </p>
+                            <p>Ik vind het knap hoe jij, ook namens de groep, naar ons toe (moeilijke) onderwerpen bespreekbaar maakt op een ontwapenende manier. </p>
                         </div>
+                        <p class="time-stamp">4 dagen geleden</p>
                     </div>
                     <div class="message">
                         <div class="image__container">
-                            <img src="/images/reinier.jpg" alt="">
-                            <span>Reinier van Limpt</span>
-                            <span>25-5-2020</span>
+                            <img src="/images/random1.jpg" alt="">
+                            <span>Liesbeth van der testpersoon</span>
                         </div>
                         <div class="text__container">
-                            <p>Goede customer story van de huidige app beschreven, duidelijke flow </p>
+                            <p>Goede customer story van de huidige app beschreven, duidelijke flow. </p>
                         </div>
+                        <p class="time-stamp">1 week geleden</p>
                     </div>
                 </div>
             </div>
         <aside id="super-goals__container">
             <h1>Filteren</h1>
 
-            <div id="filter1">
+            <section id="filter1">
                 <h3>Wanneer</h3>
                 <div>
-                    <input name="filter1" type="radio" id="everything" value="everything" checked>
-                    <label for="everything">Alles</label>
+                    <input  tabindex="-1" name="filter1" type="radio" id="everything" value="everything" checked>
+                    <label for="everything" tabindex="0">Alles</label>
 
                     <input name="filter1" type="radio" id="lastweek" value="lastweek">
-                    <label for="lastweek">Afgelopen week</label>
+                    <label for="lastweek" tabindex="0">Afgelopen week</label>
 
                     <input name="filter1" type="radio" id="lastmonth" value="lastmonth">
-                    <label for="lastmonth">Afgelopen maand</label>
+                    <label for="lastmonth" tabindex="0">Afgelopen maand</label>
 
                     <input name="filter1" type="radio" id="lastyear" value="lastyear">
-                    <label for="lastyear">Afgelopen jaar</label>
+                    <label for="lastyear" tabindex="0">Afgelopen jaar</label>
                 </div>
-            </div>
+            </section>
 
-            <div id="filter2">
+            <section id="filter2">
                 <h3>Van wie</h3>
                 <div>
                     <input name="filter2" type="checkbox" id="1" value="Stefan Gerrits">
-                    <label for="1">Stefan Gerrits</label>
+                    <label for="1" tabindex="0">Stefan Gerrits</label>
 
                     <input name="filter2" type="checkbox" id="2" value="Reinier van Limpt">
-                    <label for="2">Reinier van Limpt</label>
+                    <label for="2" tabindex="0">Reinier van Limpt</label>
 
                     <input name="filter2" type="checkbox" id="3" value="Anna testpersoon">
-                    <label for="3">Anna tespersoon</label>
+                    <label for="3" tabindex="0">Anna tespersoon</label>
 
                     <input name="filter2" type="checkbox" id="4" value="Lex testpersoon">
-                    <label for="4">Lex testpersoon</label>
+                    <label for="4" tabindex="0">Lex testpersoon</label>
                 </div>
-            </div>
+            </section>
 
-            <div id="filter3">
+            <section id="filter3">
                 <h3>Op doel</h3>
                 <p class="text-help">Klik op een doel om ontvangen feedback over dat doel te zien.</p>
                 <div id="goals__container">
 
                     <input name="filter3" type="checkbox" id="goal1" value="goal1">
-                    <label for="goal1">
+                    <label for="goal1" tabindex="0">
                         <div class="goal__container">
                             <div>
                                 <div class="goal-buttons__container">
@@ -116,7 +116,7 @@
                     </label>
 
                     <input name="filter3" type="checkbox" id="goal2" value="goal2">
-                    <label for="goal2">
+                    <label for="goal2" tabindex="0">
                         <div class="goal__container">
                             <div>
                                 <div class="goal-buttons__container">
@@ -129,7 +129,7 @@
                         </div>
                     </label>
                 </div>
-            </div>
+            </section>
         </aside>
     </main>
 </div>

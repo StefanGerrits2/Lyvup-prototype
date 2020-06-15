@@ -1,13 +1,13 @@
 #thumbs__container {
     background-color: $red;
     border-radius: 50%;
-    width: 4.5em;
-    height: 4.5em;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     position: fixed;
-    bottom: 3em;
-    right: 3em;
+    bottom: 30px;
+    right: 30px;
     cursor: pointer;
     transition: 200ms ease-in-out;
 
