@@ -5,7 +5,7 @@ const dataManager = require('../modules/dataManager.js');
 
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({
-  extended: true
+    extended: true
 });
 
 let userGoals = {};
@@ -14,13 +14,13 @@ let fakeId = 29;
 
 function goals(req, res) {
 
-  dataManager(req.body).then(function(result) {
-    result.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
-    res.render('goals.hbs', {
-      data: result,
-      goals: true
+    dataManager(req.body).then(function(result) {
+        result.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
+        res.render('goals.hbs', {
+            data: result,
+            goals: true
+        });
     });
-  })
 }
 
 module.exports = goals;
