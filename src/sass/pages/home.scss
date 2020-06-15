@@ -58,7 +58,7 @@
   background-image: url(/images/background.png);
   background-size: 500%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   overflow-y: auto;
   height: 85vh;
 }
@@ -71,7 +71,6 @@
   margin: 10px;
   transition: 200ms ease-in-out;
   box-shadow: 0 2px 0 1px #e5e5e5;
-  width: 100%;
   display: flex;
 
   & img {
@@ -80,6 +79,11 @@
     margin-right: 1em;
     border-radius: 50%;
   }
+}
+
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card__header {
@@ -176,8 +180,7 @@
 
 .receivers {
   display: flex;
-  text-align: center;
-  justify-content: flex-end;
+  width: 100%;
 }
 
 #more {
@@ -200,5 +203,59 @@
 
   & #goal_filter {
     background-color: $light-blue;
+  }
+}
+
+.new__card {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 10px;
+  transition: 200ms ease-in-out;
+  box-shadow: 0 2px 0 1px #e5e5e5;
+  display: flex;
+
+  & .new__card_sender {
+    margin-right: 1em;
+
+    & img {
+      max-height: 3em;
+      width: 3em;
+      border-radius: 50%;
+    }
+  }
+
+  & .new__card_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & .new__card_header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 1em 1em;
+      border-left: 2px solid $red;
+
+      & h4 {
+        font-size: 14px;
+      }
+    }
+
+    & .new__card_message {
+      padding: 0 0 1em 1em;
+      border-left: 2px solid $red;
+    }
+
+    & .new__card_receivers {
+      display: flex;
+      align-self: flex-end;
+
+      & img {
+        max-height: 3em;
+        width: 3em;
+        border-radius: 50%;
+        margin-right: 1em;
+      }
+    }
   }
 }

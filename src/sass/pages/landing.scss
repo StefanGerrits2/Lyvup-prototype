@@ -175,7 +175,6 @@
 }
 
 #landing__section_6 {
-  background-color: $white;
 
   & .reviews__container {
     display: grid;
@@ -194,6 +193,9 @@
 }
 
 #landing__footer {
+  background-color: $green;
+  color: $white;
+
 
   & .landing__container {
     display: flex;
@@ -205,8 +207,9 @@
     flex-direction: column;
     align-self: flex-end;
 
-    & a{
+    & a {
       margin-bottom: 1em;
+      color: $white;
     }
   }
 
