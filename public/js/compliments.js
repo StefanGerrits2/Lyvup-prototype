@@ -1,6 +1,4 @@
 const superComplimentContainer = document.querySelector('#super-compliment__container');
-const animationButton = document.getElementById('animationButton');
-const animationBox = document.querySelector('.compliment__animation');
 
 document.querySelector('.option1').addEventListener('click', () => {
     if (!document.querySelector('#feedback').checked) {
@@ -117,12 +115,3 @@ function showSelectedMembers() {
         }
     }, 0);
 }
-
-animationButton.addEventListener('click', function PlayAnimation() {
-    console.log('bhoe');
-    animationBox.classList.toggle('hidden');
-
-    setTimeout(function () {
-        animationBox.classList.toggle('hidden');
-    }, 2500);
-});

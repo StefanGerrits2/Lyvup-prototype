@@ -1,3 +1,6 @@
+const animationButton = document.querySelector('animationButton');
+const animationBox = document.querySelector('.compliment__animation');
+
 // adds the goal of the compliment as a class
 document.querySelectorAll('.compliment__container').forEach(item => {
   const complimentGoal = item.querySelector(".goal-type").textContent.replace(/\s/g, '')
@@ -125,5 +128,13 @@ const editButton = document.querySelectorAll('.goal-editor').forEach(item => {
       event.target.classList.remove('red')
       event.target.innerHTML = "doel aanpassen"
     }
-  })
-})
+  });
+});
+
+animationButton.addEventListener('click', function PlayAnimation() {
+  animationBox.classList.toggle('hidden');
+
+  setTimeout(function () {
+      animationBox.classList.toggle('hidden');
+  }, 2500);
+});
