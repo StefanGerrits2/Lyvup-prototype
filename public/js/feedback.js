@@ -30,29 +30,40 @@ document.querySelectorAll('label').forEach(item => {
     });
 });
 
-
-const toggleMembers = document.querySelector('#filter2 p');
-const hiddenLabels = document.querySelectorAll('.hiddenLabels');
+const toggleMembers = document.querySelector('#toggle-members');
+const toggleMembersText = document.querySelector('#toggle-members-text');
+const labelContainer = document.querySelector('#filter2 div');
+const chevronImage = document.querySelector('#toggle-members img');
 
 let toggleMembersState = true;
 
 toggleMembers.addEventListener('click', () => {
 
     if(toggleMembersState) {
-        toggleMembers.textContent = 'Toon minder leden';
+        toggleMembersText.textContent = 'Toon minder leden';
         toggleMembersState = false;
 
-        hiddenLabels.forEach(item => {
-            item.setAttribute('style', 'display: flex');
-        });
+        chevronImage.classList.add('rotateChevron');
+
+        labelContainer.classList.add('increaseContainer');
     }
 
     else {
-        toggleMembers.textContent = 'Toon alle leden';
+        toggleMembersText.textContent = 'Toon alle leden (+4)';
         toggleMembersState = true;
 
-        hiddenLabels.forEach(item => {
-            item.setAttribute('style', 'display: none');
-        });
+        chevronImage.classList.remove('rotateChevron');
+
+        labelContainer.classList.remove('increaseContainer');
     }
+});
+
+// Header animation
+const toggleFooter = document.querySelector('#toggle-header');
+
+toggleFooter.addEventListener('click', () => {
+    const footer = document.querySelector('footer');
+
+    // Toggle footer
+    footer.classList.toggle('footer-shrinked');
 });

@@ -7,6 +7,7 @@
 './components/variables',
 './components/header',
 './components/fixed-thumbs-up',
+'./components/footer.scss',
 './pages/giveCompliment',
 './components/leaderboard-new',
 './components/complimentAnimation',
@@ -17,7 +18,6 @@
 './pages/onboarding.scss',
 './pages/get-started.scss',
 './pages/landing.scss';
-
 
 html {
   font-family: 'publicSans', sans-serif;
@@ -174,15 +174,35 @@ p {
     }
 }
 
-#filter2 > div p {
-  margin: auto .5em .5em auto;
-  cursor: pointer;
-  color: $green;
-  user-select: none;
+#filter2 div {
+    max-height: 8em;
+    overflow: hidden;
+    position: relative;
+    transition: .3s linear;
 }
 
-.hiddenLabels {
-    display: none;
+#filter2 .increaseContainer {
+    max-height: 16em;
+    transition: .3s linear;
+}
+
+#toggle-members {
+    margin: auto;
+    cursor: pointer;
+    color: $green;
+    user-select: none;
+    width: fit-content;
+    bottom: -.5em;
+    display: flex;
+
+    & img {
+        transition: .3s linear;
+    }
+}
+
+.rotateChevron {
+    transform: rotate(180deg)!important;
+    transition: .3s linear;
 }
 
 .text-help {

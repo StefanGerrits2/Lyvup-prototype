@@ -72,3 +72,13 @@ function fixStepIndicator(n) {
     //... and adds the "active" class to the current step:
     x[n].classList.toggle("active");
 }
+
+// Header animations
+const toggleFooter = document.querySelector('#toggle-header');
+
+toggleFooter.addEventListener('click', () => {
+    const footer = document.querySelector('footer');
+    
+    // Toggle footer
+    footer.classList.toggle('footer-shrinked');
+});

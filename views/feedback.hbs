@@ -7,7 +7,7 @@
             <p>Overzicht van feedback die je hebt gekregen, verstuurd en aangevraagd hebt.</p>
             <div id="button__container">
                 <input name="feedback-type" type="radio" id="received" value="received" checked>
-                <label for="received" tabindex="0">Ontvangen (4)</label>
+                <label for="received" tabindex="0">Ontvangen (5)</label>
 
                 <input name="feedback-type" type="radio" id="sent" value="sent">
                 <label for="sent" tabindex="0">Verstuurd (0)</label>
@@ -69,7 +69,7 @@
                             <span>Lex van der testpersoon</span>
                         </div>
                         <div class="text__container">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                         <p class="time-stamp">1 week geleden</p>
                     </div>
@@ -113,17 +113,26 @@
                     <input name="filter2" type="checkbox" id="5" value="Jannes testpersoon">
                     <label for="5" tabindex="0">Tim testpersoon</label>
 
-                    <input name="filter2" type="checkbox" id="6" value="Jannes testpersoon">
+                    <input name="filter2" type="checkbox" id="6" value="Liesbeth testpersoon">
                     <label for="6" class="hiddenLabels" tabindex="0">Liesbeth testpersoon</label>
 
-                    <input name="filter2" type="checkbox" id="7" value="Jannes testpersoon">
-                    <label for="7" class="hiddenLabels" tabindex="0">Anna testpersoon</label>
+                    <input name="filter2" type="checkbox" id="7" value="Anna Grootehuis">
+                    <label for="7" tabindex="0">Anna der Grootehuis</label>
 
-                    <input name="filter2" type="checkbox" id="8" value="Jannes testpersoon">
-                    <label for="8" class="hiddenLabels" tabindex="0">Frank  van der testpersoon</label>
+                    <input name="filter2" type="checkbox" id="8" value="Frank  van der testpersoon">
+                    <label for="8" tabindex="0">Frank  van der testpersoon</label>
 
-                    <p>Toon alle leden</p>
+                    <input name="filter2" type="checkbox" id="9" value="Jeffrey van der Testpersoon">
+                    <label for="9" tabindex="0">Jeffrey van der Testpersoon</label>
+
+                    <input name="filter2" type="checkbox" id="10" value="Wim Kok">
+                    <label for="10" tabindex="0">Wim Kok</label>
                 </div>
+                <div id="toggle-members">
+                    <p id="toggle-members-text">Toon alle leden (+4)</p>
+                    <img src="/images/chevron_down.svg" alt="">
+                </div>
+                
             </section>
 
             <section id="filter3">
@@ -165,5 +174,7 @@
 </div>
 
 {{> thumbs-up}}
+
+{{> footer}}
 
 <script src="js/feedback.js"></script>
