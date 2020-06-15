@@ -7,10 +7,10 @@
                 <h2>Compliment geven</h2>
                 <div id="option__container">
                     <div>
-                        <input id="praise" class="option1" type="radio" value="praise" name="type" checked>
+                        <input id="praise" class="option" type="radio" value="praise" name="type" checked>
                         <label tabindex="0" for="praise">een compliment geven</label>
 
-                        <input id="feedback" class="option2" type="radio" value="ask-feedback" name="type">
+                        <input id="feedback" class="option" type="radio" value="ask-feedback" name="type">
                         <label tabindex="0" for="feedback">feedback vragen</label>
                     </div>
 
@@ -124,33 +124,40 @@
                     <div id="selected-members"></div>
 
                     <h4>Teamlid informatie</h4>
+
                     <div id="goals__container">
                         <p>Selecteer een doel als je hierop een compliment wilt geven.</p>
-                        <div class="goal__container">
-                            <div>
-                                <div class="goal-buttons__container">
-                                    <span class="goal-type">Samenwerken</span><span class="goal-type2">Verbeteren</span>
+                        <input name="goals-selected" type="checkbox" id="goal1" value="goal1">
+                        <label for="goal1" tabindex="0">
+                            <div class="goal__container">
+                                <div>
+                                    <div class="goal-buttons__container">
+                                        <span class="goal-type">Samenwerken</span><span class="goal-type2">Verbeteren</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Beter worden in samen werken door vaker te communiceren</p>
                                 </div>
                             </div>
-                            <div>
-                                <p>Beter worden in samen werken door vaker te communiceren</p>
-                            </div>
-                        </div>
-                        <div class="goal__container">
-                            <div>
-                                <div class="goal-buttons__container">
-                                    <span class="goal-type">Proactief</span><span class="goal-type2">Verbeteren</span>
+                        </label>
+
+                        <input name="goals-selected" type="checkbox" id="goal2" value="goal2">
+                        <label for="goal2" tabindex="0">
+                            <div class="goal__container">
+                                <div>
+                                    <div class="goal-buttons__container">
+                                        <span class="goal-type">Proactief</span><span class="goal-type2">Verbeteren</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Test doel</p>
                                 </div>
                             </div>
-                            <div>
-                                <p>Test doel</p>
-                            </div>
-                        </div>
+                        </label>
                     </div>
-                </div>
 
                 <div id="selected-members__container">
-                    <textarea name="textarea" id="" rows="10" required placeholder="Typ hier je compliment..."></textarea>
+                    <textarea name="textarea" rows="10" required placeholder="Typ hier je compliment..."></textarea>
                     <input type="submit" class="defaultButton" value="Versturen">
                 </div>
             </aside>

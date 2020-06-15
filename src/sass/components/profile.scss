@@ -42,7 +42,7 @@ tr {
 
 .container2 {
     background-color: white;
-    padding: .5em;
+    padding: .5em .5em .5em 2em;
     transition: 200ms ease-in-out;
     border-radius: 5px;
     width: 90%;
@@ -73,7 +73,7 @@ td {
     padding: 5px;
     background-image: url(/images/background.png);
     background-size: 500%;
-    height: 15em;
+    max-height: 47vh;
     overflow-y: auto;
     margin-top: 1em;
 }
@@ -232,6 +232,7 @@ td {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        border-right-color: $green;
     }
 
     .message {

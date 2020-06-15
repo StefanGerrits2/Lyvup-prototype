@@ -166,13 +166,24 @@ p {
             border: 3px solid $white;
             border-radius: $border-radius-small;
         }
+
+        & #goals__container {
+          max-height: 25vh;
+          overflow-y: auto;
+        }
     }
 }
 
+#filter2 > div p {
+  margin: auto .5em .5em auto;
+  cursor: pointer;
+  color: $green;
+  user-select: none;
+}
 
-
-  
-
+.hiddenLabels {
+    display: none;
+}
 
 .text-help {
   margin-top: 1em;
@@ -381,14 +392,20 @@ button:hover {
   border-radius: $border-radius-small;
   box-shadow: 0px 2px 0px 1px #e5e5e5;
   position: relative;
-}
 
-.time-stamp {
-  position: absolute;
-  top: 1em;
-  right: 2em;
-  color: $grey;
-  font-size: 12px;
+  & .feedback-member-pictures {
+    position: absolute;
+    display: flex;
+    bottom: 0em;
+    right: 1.25em;
+
+    & img {
+      border-radius: 50%;
+      width: 2.25em;
+      height: 2.25em;
+      margin-left: 1em;
+    }
+}
 }
 
 .flex {
@@ -396,13 +413,26 @@ button:hover {
   align-content: center;
 }
 
-.message span {
-  display: block;
+
+
+.time-stamp {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  color: $grey;
+  font-size: .9em;
 }
 
-.message span:nth-child(3) {
-  color: $grey;
-  margin-top: .25em;
+.message .compliment-about-goal {
+  color: white;
+  background-color: $light-blue;
+  border-radius: 5px;
+  height: fit-content;
+  padding: .3em;
+  font-size: 0.9em;
+  position: absolute;
+  left: 15.3em;
+  top: 1em;
 }
 
 #messages__container {
@@ -411,7 +441,7 @@ button:hover {
   border-radius: $border-radius-big;
   background-image: url(/images/background.png);
   background-size: 500%;
-  height: 40em;
+  max-height: 70vh;
   overflow-y: auto;
 
   &>div:not(:last-of-type) {
@@ -422,7 +452,7 @@ button:hover {
 .image__container {
   width: 15em;
   border-right: 2px solid $red;
-  padding: .5em;
+  padding: .75em;
   text-align: center;
 }
 
