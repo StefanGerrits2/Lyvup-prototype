@@ -232,8 +232,6 @@ p {
   border-radius: $border-radius-big;
   background-image: url(/images/background.png);
   background-size: 500%;
-  max-height: 40vh;
-  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -271,7 +269,7 @@ p {
 }
 
 .goal__container:hover {
-  transform: scale(1.04);
+  transform: scale(1.01);
 }
 
 .request_count {
@@ -505,6 +503,16 @@ option {
   animation: expandFilter 0.3s linear alternate;
 }
 
+#edit-goals__container {
+  // & form {
+  //   display: flex;
+  // }
+}
+
+#completeCheck{
+  margin-left: 5px;
+}
+
 @media screen and (max-width: 1550px) {
   body {
     font-size: 12.5px;
@@ -535,7 +543,6 @@ option {
 
   #setGoals__container,
   #completedGoals__container {
-    max-height: 43vh;
     margin-bottom: 10px;
   }
 }
@@ -554,12 +561,8 @@ option {
     height: auto;
   }
 
-  #setGoals__container {
-    max-height: 35em;
-  }
-
   .userImg {
-    display: none;
+    display: none !important;
   }
 
   .compliment-message {
@@ -587,10 +590,6 @@ option {
   .player__container img {
     width: 60px;
     height: auto;
-  }
-
-  #setGoals__container {
-    max-height: 30em;
   }
 }
 
@@ -666,7 +665,7 @@ option {
     }
   }
 
-  .goal-editor, .goal-deleter {
+  .goal-editor, .goal-completer {
     font-size: 0.8em !important;
   }
 
@@ -692,8 +691,7 @@ option {
     width: 50%;
   }
 
-  #messages__container,
-  #setGoals__container {
+  #messages__container {
     min-height: 40vh;
     overflow-y: auto;
     max-height: 100%;

@@ -10,7 +10,7 @@ const urlencodedParser = bodyParser.urlencoded({
 
 function goals(req, res) {
   dataManager(req.body).then(function(result) {
-    result.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
+    // result.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
     res.render('goals.hbs', {
       data: result,
       goals: true

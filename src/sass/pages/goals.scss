@@ -54,7 +54,7 @@
   opacity: 1;
   height: auto;
   position: absolute;
-  border-radius: 0px 0px 5px;
+  border-radius: 5px 0px;
   bottom: 0;
   right: -10px;
   text-align: center;
@@ -69,7 +69,6 @@
 .goal-editor:focus {
   outline: none;
 }
-
 
 .userImg{
   margin: auto;
@@ -194,17 +193,11 @@
     font-size: 13px;
 }
 
-.goal-deleter {
-  position:absolute;
+.goal-completer {
   bottom: 5px;
   font-size: 1em;
   margin-right: 1em;
-  text-decoration: underline;
   text-align: center;
-  padding: 0 !important;
-  height: 1.2em !important;
-  background-color: transparent !important;
-  color: red !important;
 }
 
 .goal-type-container{
@@ -235,11 +228,16 @@
 }
 
 #edit-goals__container {
+  padding: 0;
   overflow: hidden;
   border-radius: 0px 0px 0px 10px;
   background-color: #fceed4;
   flex-wrap: wrap;
   cursor: default;
+  & form{
+    padding: 0.75em;
+    display: flex;
+  }
   & .id-getter{
     display: none;
   }
@@ -288,6 +286,61 @@
   }
 }
 
+.complete-toggle{
+  align-items: center;
+  margin: 0.5em;
+  padding: 0.5em;
+  justify-content: flex-start !important;
+}
+
+#complete-goals__container {
+  & .goal-completer {
+    font-size: 1em !important;
+    height: auto;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  overflow: hidden;
+  width: 100%;
+  background-color: #c5d6d5;
+  & form{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+    & label{
+      width: 20%;
+    }
+    & input[type="range"]{
+      width: 40%;
+      & :focus{
+        outline: none;
+      }
+    }
+    & .datePicker{
+      align-items: center;
+      width: 40%;
+    }
+    & textarea {
+      border-radius: 5px;
+      font-family: publicSans, sans-serif;
+      padding: 2em;
+      border: none;
+      margin-top: 2em;
+      display: block;
+      width: 100%;
+      height: 100px;
+      margin-bottom: 2em;
+    }
+    & input[type="submit"]{
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  }
+}
+
 aside{
   width: 150px;
 }
@@ -310,6 +363,11 @@ aside{
 .goals-aside {
   height: 45em !important;
   background-image: none !important;
+}
+
+.goal-completer {
+  display: block !important;
+  margin-left: 5px;
 }
 
 .expandSmall {

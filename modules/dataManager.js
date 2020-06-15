@@ -1,9 +1,13 @@
 require('dotenv').config();
 const Fetcher = require('../modules/fetch.js');
 
-let userGoals = {};
+let userGoalsData = {
+  setGoals: [],
+  completedGoals: []
+};
 let persistedData = [];
 let fakeId = 29;
+let userGoals = ''
 
 async function manageData(req) {
   if (persistedData.length == 0 && req == undefined) {
@@ -18,16 +22,17 @@ async function manageData(req) {
 
       // retrieves the description from an array within the object
       userGoals.forEach(element => element.description = element.skills[0].description);
+      userGoals.forEach(element => userGoalsData.setGoals.push(element))
 
+      console.log(userGoalsData)
       persistedData.push(userGoals);
-
       return userGoals
 
     } catch (error) {
       console.log(error);
     }
     // checks if there is any data received from the form using a POST method
-  } else if (req != undefined && req.editId === undefined && req.deleteId === undefined) {
+  } else if (req != undefined && req.editId === undefined && req.completeId === undefined) {
     console.log("nieuwe data wordt toegevoegd...")
     const newData = {};
     newData.id = fakeId.toString();
@@ -36,13 +41,14 @@ async function manageData(req) {
     newData.expiry_date = req.deadline;
     newData.description = req.toelichting;
     userGoals.unshift(newData);
-
+    console.log(userGoals)
     fakeId++;
     return userGoals
     // if there is data received from a delete form using a POST but it does not contain an editId
   } else if (req != undefined && req.editId === undefined) {
     console.log("data wordt verwijderd...")
-    userGoals.splice(userGoals.findIndex(item => item.id === req.deleteId), 1)
+    userGoals.splice(userGoals.findIndex(item => item.id === req.completeId), 1)
+    console.log(req.voltooid)
     return userGoals
     // if there is data received from an edit form using a POST method and the data has an id
   } else if (req != undefined) {

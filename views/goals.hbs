@@ -78,14 +78,27 @@
               </div>
               <div class="goalDescription">
                 <label for="toelichting">Beschrijving</label>
-                <textarea type="text" class="new-goalText" name="toelichting" rows="10" placeholder="Laat dit veld leeg als je geen nieuwe beschrijving wilt invoeren...">{{description}}</textarea>
+                <textarea type="text" class="new-goalText" name="toelichting" rows="10" placeholder="Laat dit veld leeg als je geen nieuwe beschrijving wilt invoeren..."></textarea>
                 <input class="submitGoal" type="submit" value="doel aanpassen">
               </div>
           </form>
-          <form action="/goals" method="post">
-            <input class="id-getter" type="number" name="deleteId" value="{{id}}">
-            <input type="submit" class="goal-deleter" value="doel verwijderen">
-          </form>
+          <div class="complete-toggle">
+            <label for="voltooid">Voltooid</label>
+            <input class="goal-completer completeCheck" type="checkbox" name="voltooid" value="{{id}}">
+          </div>
+              <div id="complete-goals__container" class="complete-{{id}}">
+                <form action="/goals" method="post">
+                <input class="id-getter" type="number" name="completeId" value="{{id}}">
+                <label for="completionRate">Voltooid %</label>
+                <input type="range" name="completionRate" min="1" max="100" value="0" class="slider">
+                <div class="datePicker">
+                  <label for="completionDate">Datum</label>
+                  <input required name="completionDate" type="date">
+                </div>
+                <textarea type="text" class="new-goalText" name="voltooidTekst" rows="10" placeholder="Hoe heb je het doel behaald..."></textarea>
+                <input type="submit" class="goal-completer" value="doel voltooien">
+              </div>
+            </form>
         </div>
       </article>
       {{/each}}
