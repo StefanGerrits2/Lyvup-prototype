@@ -6,7 +6,7 @@
     margin-top: -200px; /* negative half of height above */
 }
 
-$animationtime: 3s;
+$animationtime: 3.5s;
 $leafWidth: 150px;
 
 
@@ -28,10 +28,10 @@ $leafWidth: 150px;
 }
 
 .leaf_1{
-    animation: Lotus1 $animationtime forwards 1;
+    animation: Lotus1 $animationtime forwards 1 cubic-bezier(.78,.92,.77,.71);
 }
 .leaf_2{
-    animation: Lotus2 $animationtime forwards 1;
+    animation: Lotus2 $animationtime forwards 1 cubic-bezier(.29,.42,.19,.11);
 }
 .leaf_3{
     animation: Lotus3 $animationtime forwards 1;
@@ -43,6 +43,7 @@ $leafWidth: 150px;
     animation: Lotus5 $animationtime forwards 1;
 }
 
+//right bottom
 @keyframes Lotus1 {
     0% {
         transform: rotateZ(135deg);
@@ -52,6 +53,7 @@ $leafWidth: 150px;
     }
 }
 
+//left bottom
 @keyframes Lotus2 {
     0% {
         transform: rotateZ(135deg);
@@ -61,29 +63,32 @@ $leafWidth: 150px;
     }
 }
 
+//left middle
 @keyframes Lotus3 {
     0% {
         transform: rotateZ(135deg);
     }
     100% {
-        transform: rotateZ(90deg);
+        transform: rotateZ(70deg);
     }
 }
 
+//right middle
 @keyframes Lotus4 {
     0% {
         transform: rotateZ(135deg);
     }
     100% {
-        transform: rotateZ(180deg);
+        transform: rotateZ(200deg);
     }
 }
 
+//right top
 @keyframes Lotus5 {
     0% {
         transform: rotateZ(135deg);
     }
     100% {
-        transform: rotateZ(157.5deg);
+        transform: rotateZ(180deg);
     }
 }
