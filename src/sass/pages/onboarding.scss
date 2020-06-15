@@ -1,29 +1,74 @@
-/* Style the form */
 #regForm {
     background-color: #ffffff;
-    margin: 100px auto;
+    margin: 0;
     padding: 40px;
-    width: 90%;
-    height: 35.9em !important;
+    width: 60%;
+    height: 34em;
     border-radius: 0px 10px 10px 0px;
+    overflow: hidden;
+    position: relative;
 }
 
 .flex-center {
     display: flex;
     width: 70%;
     justify-content: center;
-    margin: 0 auto;
+    margin: 5em auto;
     align-items: center;
 }
 
+#code {
+    padding-left: 1em;
+    width: 15em;
+    margin-bottom: 0;
+    letter-spacing: 1em;
+    text-align: center;
+    transition: all 350ms ease-in-out;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+}
+
+.current__tab {
+    display: block;
+    animation: fade 0.7s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.transitionUp {
+    animation: transitionUp 1s ease-in-out;
+}
+
+
 /* Style the input fields */
-.tab input {
+.tab input,
+.current__tab input {
     font-family: publicSans, sans-serif;
     padding: 10px;
-    width: 35%;
+    width: 20em;
     display: block;
-    font-size: 17px;
-    font-family: Raleway;
+    font-size: 13px;
     border: 1px solid #aaaaaa;
     border-radius: 10px;
     margin: 1em;
@@ -31,39 +76,19 @@
     transition: all 350ms ease-in-out
 }
 
-.tab input:focus {
+.tab input:focus,
+.current__tab input:focus {
     border: 1px solid transparent;
     outline: none;
     box-shadow: 0 0 0 3px $green;
 }
-
-#code {
-    padding-left: 1em;
-    width: fit-content;
-    margin-bottom: 0;
-    letter-spacing: 1em;
-    text-align: center;
-    transition: all 350ms ease-in-out;
-}
-
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-    background-color: #ffdddd;
-}
-
-/* Hide all steps by default: */
-.tab {
-    display: none;
-    margin-bottom: 1em;
-}
-
-/* Make circles that indicate the steps of the form: */
 
 .steps {
     background: #f7f7f7;
     width: 10%;
     border-radius: 10px 0px 0px 10px;
     z-index: 2;
+    height: 34em;
 }
 
 .step {
@@ -71,18 +96,17 @@ input.invalid {
     height: 40px;
     width: 40px;
     text-align: center;
-    background-color: #bbbbbb;
-    margin: 2.9em auto;
+    background-color: $yellow;
+    margin: auto;
     border: none;
     border-radius: 50%;
     display: inline-block;
-    opacity: 1;
-    transition: all 350ms ease-in-out;
+    transition: all 150ms ease-in-out;
 
     &::after {
         content: "";
-        height: 9em;
-        border-left: 2px #ccc solid;
+        height: 8.5em;
+        border-left: 2px $yellow solid;
         top: 0;
         position: absolute;
         z-index: -1;
@@ -91,21 +115,26 @@ input.invalid {
     &:last-child::after {
         content: "";
         height: 0em;
-        border-left: 2px #ccc solid;
+        border-left: 2px $yellow solid;
         top: 0;
         position: absolute;
         z-index: -1;
+    }
+
+    &:hover {
+        border: 3px #f7f7f7 solid;
+        transform: scale(1.10);
+        cursor: pointer;
     }
 }
 
 /* Mark the active step: */
 .step.active {
-    opacity: 1;
     background-color: $green;
 
     &::after {
         content: "";
-        height: 9em;
+        height: 8.5em;
         border-left: 2px $green solid;
         top: 0;
         position: absolute;
@@ -119,21 +148,21 @@ input.invalid {
         position: absolute;
         z-index: -1;
     }
-}
 
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-    background-color: $green;
+    &:hover {
+        border: 3px #f7f7f7 solid;
+        transform: scale(1.10);
+        cursor: pointer;
+    }
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 #prevBtn {
+    background-color: #979595;
     margin-right: 17em;
 }
 
@@ -146,8 +175,15 @@ input.invalid {
     height: 35px;
     width: 6em;
     transition: all .2s ease-in-out;
-    display: block;
+    display: inline-block;
     align-items: center;
+    margin-top: 2em;
+    position: relative;
+    z-index: 99;
+}
+
+#nextBtn {
+    background-color: $yellow;
 }
 
 #done {
@@ -160,4 +196,292 @@ input.invalid {
     color: rgb(150, 148, 148);
     font-size: 11px;
     margin: 0;
+}
+
+
+#trappetje1 {
+    position: absolute;
+    width: 75%;
+    margin-left: 30%;
+}
+
+#trappetje2 {
+    position: absolute;
+    width: 85%;
+    margin-left: 30%;
+}
+
+#trappetje3 {
+    position: absolute;
+    width: 70%;
+    margin-left: 25%;
+    transform: rotate(15deg);
+}
+
+
+#trappetje4 {
+    position: absolute;
+    width: 75%;
+    margin-left: 30%;
+}
+
+#letter {
+    position: absolute;
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 55%;
+    z-index: 0;
+    transition: all 350ms ease-in-out;
+
+    & .st1 {
+        transform: translateY(2%);
+        transition: all 350ms ease-in-out;
+    }
+
+    & .st1:hover {
+        transform: translateY(-3%);
+        transition: all 350ms ease-in-out;
+    }
+
+    .st2 {
+        fill: $green;
+    }
+
+    .st4 {
+        fill: #E8E8ED;
+    }
+}
+
+#connection {
+    position: absolute;
+    width: 45%;
+    top: 48%;
+    margin-left: 50%;
+    z-index: 0;
+    transform: rotate(-30deg);
+    transition: all 350ms ease-in-out;
+
+    .st0 {
+        stroke: #E8E8ED;
+        stroke-width: 5;
+    }
+
+    .st1 {
+        fill: $green;
+    }
+
+    .st2 {
+        fill: white;
+    }
+}
+
+#airplaine {
+    position: absolute;
+    width: 50%;
+    margin-top: -5%;
+    margin-left: 35%;
+    z-index: 0;
+    transition: all 350ms ease-in-out;
+
+    & .st {
+        fill: $green;
+    }
+
+    & .st1 {
+        fill: $green;
+    }
+
+    & .st0 {
+        fill: #E8E8ED;
+    }
+
+    & .st1:hover {
+        transform: translateY(-3%);
+        transition: all 350ms ease-in-out;
+    }
+}
+
+#balloons {
+    position: absolute;
+    width: 20%;
+    margin-top: -15%;
+    margin-left: 55%;
+    z-index: 0;
+    transition: all 350ms ease-in-out;
+
+    .st0 {
+        fill: $green;
+    }
+
+    .st0:hover {
+        fill: $yellow;
+    }
+
+    path {
+        stroke: #E8E8ED;
+        stroke-width: 2;
+        stroke-linejoin: round;
+    }
+}
+
+/*--- svg animatie ---*/
+.st0 {
+    fill: #e8e8ed;
+
+    &:nth-child(10) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 0.5s;
+    }
+
+    &:nth-child(17) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 8s;
+    }
+
+    &:nth-child(19) {
+        fill: #e8e8ed;
+        animation: circles 7s ease-in-out infinite;
+        animation-delay: 2s;
+    }
+
+    &:nth-child(26) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 4s;
+    }
+
+    &:nth-child(30) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 2s;
+    }
+
+    &:nth-child(37) {
+        fill: #e8e8ed;
+        animation: circles 6s ease-in-out infinite;
+        animation-delay: 6s;
+    }
+
+    &:nth-child(39) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 0s;
+    }
+
+    &:nth-child(46) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 2s;
+    }
+
+    &:nth-child(46) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 3s;
+    }
+
+    &:nth-child(47) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 7s;
+    }
+
+    &:nth-child(49) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 2s;
+    }
+
+    &:nth-child(51) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 5s;
+    }
+
+    &:nth-child(55) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 1s;
+    }
+
+    &:nth-child(58) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 0s;
+    }
+
+    &:nth-child(66) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 0s;
+    }
+
+    &:nth-child(67) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 3s;
+    }
+
+    &:nth-child(82) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 0.9s;
+    }
+
+    &:nth-child(93) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 5s;
+    }
+
+    &:nth-child(92) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 2s;
+    }
+
+    &:nth-child(95) {
+        fill: #e8e8ed;
+        animation: circles 10s ease-in-out infinite;
+        animation-delay: 0.9s;
+    }
+
+    &:nth-child(107) {
+        fill: #e8e8ed;
+        animation: circles 9s ease-in-out infinite;
+        animation-delay: 0.9s;
+    }
+
+    &:nth-child(120) {
+        fill: #e8e8ed;
+        animation: circles 5s ease-in-out infinite;
+        animation-delay: 0.9s;
+    }
+
+
+    transition: all 350ms ease-in-out
+}
+
+#trappetje1 .st0:hover,
+#trappetje2 .st0:hover,
+#trappetje3 .st0:hover,
+#trappetje4 .st0:hover {
+    fill: $green;
+}
+
+@keyframes circles {
+
+    0% {
+        fill: #e8e8ed;
+    }
+
+    50% {
+        fill: $green;
+    }
+
+    100% {
+        fill: #e8e8ed;
+    }
 }
