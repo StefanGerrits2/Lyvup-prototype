@@ -130,6 +130,33 @@
 
 /* Mark the active step: */
 .step.active {
+    background-color: #58a9ad;
+
+    &::after {
+        content: "";
+        height: 8.5em;
+        border-left: 2px $green solid;
+        top: 0;
+        position: absolute;
+    }
+
+    &:last-child::after {
+        content: "";
+        height: 0em;
+        border-left: 2px #ccc solid;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &:hover {
+        border: 3px #f7f7f7 solid;
+        transform: scale(1.10);
+        cursor: pointer;
+    }
+}
+
+.step.finish {
     background-color: $green;
 
     &::after {
@@ -155,6 +182,7 @@
         cursor: pointer;
     }
 }
+
 
 .flex-column {
     display: flex;
