@@ -98,7 +98,7 @@
   box-sizing: border-box;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #f9f9f9;
+  background-color: #fceed4;
   margin-top: 4em;
   margin-bottom: 1em;
   padding: 2em;
@@ -194,6 +194,19 @@
     font-size: 13px;
 }
 
+.goal-deleter {
+  position:absolute;
+  bottom: 5px;
+  font-size: 1em;
+  margin-right: 1em;
+  text-decoration: underline;
+  text-align: center;
+  padding: 0 !important;
+  height: 1.2em !important;
+  background-color: transparent !important;
+  color: red !important;
+}
+
 .goal-type-container{
   width: 200px;
 }
@@ -206,7 +219,6 @@
 .indicator-active {
   background-color: $light-blue;
   color: $white;
-  margin-top: 2em;
 }
 
 #completedGoals__container {
@@ -218,10 +230,15 @@
     overflow-x: hidden;
 }
 
+.id-getter{
+  display: none;
+}
+
 #edit-goals__container {
   overflow: hidden;
   border-radius: 0px 0px 0px 10px;
   background-color: #fceed4;
+  flex-wrap: wrap;
   cursor: default;
   & .id-getter{
     display: none;
@@ -264,7 +281,7 @@
     & .submitGoal {
       height: auto;
       margin-top: 10px;
-      margin-right: 50%;
+      margin-right: auto;
       margin-left: auto;
     }
   }
@@ -298,8 +315,16 @@ aside{
   animation: expandSmall 0.3s linear alternate;
 }
 
+.shrinkSmall {
+  animation: shrinkSmall 0.3s linear alternate;
+}
+
 .expand {
   animation: expand 0.3s linear alternate;
+}
+
+.shrink {
+  animation: shrink 0.3s linear alternate;
 }
 
 .hidden{
@@ -333,7 +358,17 @@ aside{
   100% {height: 30em}
 }
 
+@keyframes shrink {
+  0% {height: 30em}
+  100% {height: 1em}
+}
+
 @keyframes expandSmall {
   0% {height: 1em}
   100% {height: 14em}
+}
+
+@keyframes shrinkSmall {
+  0% {height: 14em}
+  100% {height: 1em}
 }

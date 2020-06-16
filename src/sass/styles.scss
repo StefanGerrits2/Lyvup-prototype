@@ -171,7 +171,7 @@ p {
 
 
 
-  
+
 
 
 .text-help {
@@ -544,6 +544,7 @@ option {
 
   #setGoals__container,
   #completedGoals__container {
+    max-height: 43vh;
     margin-bottom: 10px;
   }
 }
@@ -577,7 +578,7 @@ option {
 
 @media screen and (max-width: 1300px) {
   .complimentsHead {
-    height: 7em;
+    height: 7.5em;
   }
 
   button {
@@ -606,6 +607,10 @@ option {
   body {
     font-size: 14px;
     overflow: auto;
+  }
+
+  .goals-button {
+    top: 5.5em;
   }
 
   #main__container,
@@ -655,6 +660,10 @@ option {
     }
   }
 
+  .submitGoal{
+    margin-bottom: 2em;
+  }
+
   .addGoals__container {
     & .select {
       width: 46%;
@@ -666,8 +675,8 @@ option {
     }
   }
 
-  .goal-editor {
-    font-size: 0.8em;
+  .goal-editor, .goal-deleter {
+    font-size: 0.8em !important;
   }
 
   #edit-goals__container {

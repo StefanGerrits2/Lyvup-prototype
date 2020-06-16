@@ -8,18 +8,14 @@ const urlencodedParser = bodyParser.urlencoded({
     extended: true
 });
 
-let userGoals = {};
-let persistedData = [];
-let fakeId = 29;
-
 function goals(req, res) {
-
     dataManager(req.body).then(function(result) {
         result.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
         res.render('goals.hbs', {
             data: result,
             goals: true
         });
+
     });
 }
 
