@@ -32,6 +32,7 @@ const onboarding = require('./routes/onboarding.js');
 const get_started = require('./routes/get-started.js');
 const onboarding_post = require('./routes/onboarding-post.js');
 const landing = require('./routes/landing.js');
+const assessment = require('./routes/assessment.js');
 
 app
     .set('view engine', 'hbs')
@@ -76,6 +77,7 @@ app
     .get('/onboarding', onboarding)
     .post('/onboarding', urlencodedParser, onboarding_post)
     .get('/landing', landing)
+    .get('/assessment', assessment)
 
     // 404 not found
     .use(notFound);
