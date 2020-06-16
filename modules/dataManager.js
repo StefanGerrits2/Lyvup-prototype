@@ -12,20 +12,21 @@ async function manageData(req) {
       const query = `getUserGoals/2/?token=${process.env.TOKEN}&lang=dutch`;
       const goalsURL = baseURL.concat(query);
 
-      // Get user goals
-      userGoals = await Fetcher.get(goalsURL);
-      userGoals = userGoals.getUserGoals.data;
 
-      // retrieves the description from an array within the object
-      userGoals.forEach(element => element.description = element.skills[0].description);
+            // Get user goals
+            userGoals = await Fetcher.get(goalsURL);
+            userGoals = userGoals.getUserGoals.data;
 
-      persistedData.push(userGoals);
+            // retrieves the description from an array within the object
+            userGoals.forEach(element => element.description = element.skills[0].description);
 
-      return userGoals
+            persistedData.push(userGoals);
 
-    } catch (error) {
-      console.log(error);
-    }
+            return userGoals;
+
+        } catch (error) {
+            console.log(error);
+        }
     // checks if there is any data received from the form using a POST method
   } else if (req != undefined && req.editId === undefined && req.deleteId === undefined) {
     console.log("nieuwe data wordt toegevoegd...")
@@ -62,12 +63,13 @@ async function manageData(req) {
       }
     })
     return userGoals
+
     // if the page is requested and data is already persisted on the server
-  } else {
+    } else {
 
-    return userGoals
+        return userGoals;
 
-  }
+    }
 }
 
 module.exports = manageData;
