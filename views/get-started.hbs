@@ -1,70 +1,43 @@
 <div id="page">
     {{> new-header}}
-    <div id="content__container">
-        <div id="main__container">
-            <h1>Welkom bij lyvup!</h1>
+    <div id="main__container">
+        <h1>Welkom bij lyvup!</h1>
 
-            <h4 class="margin-top">Nodig je team leden uit</h4>
-            <div class="team_card__container">
-                <div class="team__card">
-                    <img class="team-user-img" src="/images/user.png" alt="">
-                    <label>
-                        <input placeholder="naam" oninput="this.className = ''" name="code" autocomplete="new-password">
-                    </label>
-                    <label>
-                        <input placeholder="email" oninput="this.className = ''" name="code"
-                            autocomplete="new-password">
-                    </label>
-                    <button>Voeg toe</button>
-                </div>
-                <div class="team__card">
-                    <img class="team-user-img" src="/images/user.png" alt="">
-                    <label>
-                        <input placeholder="naam" oninput="this.className = ''" name="code" autocomplete="new-password">
-                    </label>
-                    <label>
-                        <input placeholder="email" oninput="this.className = ''" name="code"
-                            autocomplete="new-password">
-                    </label>
-                    <button>Voeg toe</button>
-                </div>
-                <div class="team__card">
-                    <img class="team-user-img" src="/images/user.png" alt="">
-                    <label>
-                        <input placeholder="naam" oninput="this.className = ''" name="code" autocomplete="new-password">
-                    </label>
-                    <label>
-                        <input placeholder="email" oninput="this.className = ''" name="code"
-                            autocomplete="new-password">
-                    </label>
-                    <button>Voeg toe</button>
-                </div>
-                <a href="">+ voeg meer leden toe</a>
+        <h4 class="margin-top">Nodig je team leden uit</h4>
+        <div class="team_card__container">
+            <div class="team__card">
+                <img class="team-user-img" src="/images/user.png" alt="">
+                <label>
+                    <input placeholder="naam" id="naam" autocomplete="new-password">
+                </label>
+                <label>
+                    <input placeholder="email" id="email" autocomplete="new-password">
+                </label>
+                <button id="addPerson">Voeg toe</button>
             </div>
 
-            <div class="items-container">
-                <div>
-                    <h4 class="margin-top">Schrijf je uitnodigings bericht</h4>
-
-                    <div class="invite-container">
-                        <textarea placeholder="<naam> wilt je uitnodigen voor lyvup! " cols="30" rows="5"></textarea>
-                    </div>
-                </div>
-                <div class='margin-left'>
-                    <h4 class="margin-top">Vul je account gegevens in</h4>
-
-                    <div class="sign-up">
-                        <label>
-                            <input placeholder="Voornaam" type="text" name="" id="">
-                        </label>
-                        <label>
-                            <input placeholder="Wachtwoord" type="password" name="" id="">
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <a id='finish' href="/">finish the setup</a>
+            <div class="person__card-container"></div>
         </div>
+
+        <div>
+            <h4 class="margin-top">Schrijf je uitnodigings bericht</h4>
+
+            <div class="invite-container">
+                <textarea name="textarea" required="" placeholder="<naam> wilt je uitnodigen voor lyvup! "></textarea>
+            </div>
+        </div>
+
+        <h4 class="margin-top">Vul je account gegevens in</h4>
+
+        <div class="sign-up">
+            <label>
+                <input placeholder="Voornaam" type="text" name="" id="">
+            </label>
+            <label>
+                <input placeholder="Wachtwoord (minimaal 8 characters)" type="password" name="" id="">
+            </label>
+        </div>
+        <a id='finish' href="/">finish the setup</a>
     </div>
 </div>
 

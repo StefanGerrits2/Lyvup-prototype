@@ -39,13 +39,13 @@ function showTab(counter) {
 
 function stepCounter(counter) {
     steps.forEach((step) => {
-        step.className = step.className.replace(" finish", "");;
+        step.className = step.className.replace(" active", "");;
     });
     if (counter == counter) {
-        steps[counter].className += " finish";
+        steps[counter].className += " active";
     }
 
-    steps[counter].className += " active";
+    steps[counter].className += " finish";
 }
 
 steps.forEach((step) => {
