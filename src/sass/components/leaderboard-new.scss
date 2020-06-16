@@ -22,7 +22,7 @@
     background-size: 500%;
 }
 
-.bottom__container{
+.bottom__container {
     background-image: url(/images/background.png);
     background-size: 500%;
 }
@@ -82,11 +82,11 @@
 }
 
 .gridElement:nth-child(1) {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .leaderboard__challange {
-  border: 2px solid white;
+    border: 2px solid white;
     background-color: $white;
     margin: 0.75em;
     padding: 0.5em;
@@ -106,7 +106,7 @@
     border: 2px solid #ef923f;
 }
 .border__blue:hover {
-    border: 2px solid #66b0d0
+    border: 2px solid #66b0d0;
 }
 .border__purple:hover {
     border: 2px solid #aa85be;
