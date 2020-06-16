@@ -1,7 +1,7 @@
 <div id="page">
   {{> new-header}}
 <div id="content__container" class="goals-content__container">
-  <div id="main__container">
+  <div id="goals-main__container">
     <div class="goals-head">
       <img src="./images/goals_icon.svg" alt="">
       <h1>Mijn doelen</h1>
@@ -11,7 +11,7 @@
           Doel toevoegen
       </button>
     </div>
-    <section class="addGoals__container">
+    <section class="add-goals__container">
       <h2>Doel toevoegen</h2>
       <h4>Welke kanten van jezelf wil je verder ontwikkelen en/of toepassen?</h4>
       <form class="addGoal__form" action="/goals" method="post">
@@ -43,7 +43,7 @@
     </section>
     <h3>Actieve doelen</h3>
     <div id="setGoals__container">
-      {{#each data}}
+      {{#each setGoals}}
       <article class="goal__container" id='{{id}}'>
           <div class="goal-buttons__container">
             <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image" src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">{{daysToExpiry}}</span>
@@ -89,13 +89,13 @@
               <div id="complete-goals__container" class="complete-{{id}}">
                 <form action="/goals" method="post">
                 <input class="id-getter" type="number" name="completeId" value="{{id}}">
-                <label for="completionRate">Voltooid %</label>
-                <input type="range" name="completionRate" min="1" max="100" value="0" class="slider">
+                <label for="completionRate">Voltooid % <p id="sliderRange" class="range-text-{{id}}"></p></label>
+                <input required type="range" name="completionRate" min="1" max="100" value="0" class="range-slider-{{id}}">
                 <div class="datePicker">
                   <label for="completionDate">Datum</label>
                   <input required name="completionDate" type="date">
                 </div>
-                <textarea type="text" class="new-goalText" name="voltooidTekst" rows="10" placeholder="Hoe heb je het doel behaald..."></textarea>
+                <textarea required type="text" class="new-goalText" name="completionText" rows="3" placeholder="Hoe heb je het doel behaald..."></textarea>
                 <input type="submit" class="goal-completer" value="doel voltooien">
               </div>
             </form>
@@ -103,37 +103,25 @@
       </article>
       {{/each}}
     </div>
+    {{#if completedGoals}}
     <h3>Voltooide doelen</h3>
     <div id=completedGoals__container>
-      <article class="goal__container">
-        <div class="flex">
-          <div class="goal-buttons__container">
-            <aside>
-              <span class="goal-type">Communiceren</span>
-            </aside>
-            <img class="goal-type-image" src="./images/apply.svg" alt=""><span class="goal-type2">apply</span><span class="goal-estimate">Doel behaald: 25-5-2020</span>
-          </div>
+      {{#each completedGoals}}
+      <article class="goal__container" id='{{id}}'>
+        <div class="goal-buttons__container">
+            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image" src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">voltooid op: {{complete_date}} voor {{complete_percentage}}%</span>
         </div>
         <div>
-          <p>Communiceer vaker op Slack</p>
+          <p>{{description}}</p>
+          <hr>
+          <p class="complete-comment">{{complete_comment}}</p>
         </div>
       </article>
-      <article class="goal__container">
-        <div class="flex">
-          <div class="goal-buttons__container">
-            <aside>
-              <span class="goal-type">Communiceren</span>
-            </aside>
-            <img class="goal-type-image" src="./images/improve.svg" alt=""><span class="goal-type2">improve</span><span class="goal-estimate">Doel behaald: 3-6-2020</span>
-          </div>
-        </div>
-        <div>
-          <p>Communiceer vaker op Slack</p>
-        </div>
-      </article>
+      {{/each}}
     </div>
+    {{/if}}
   </div>
-  <aside id="super-goals__container">
+  <aside id="goals-compliments__container">
     <div class="complimentsHead">
       <div class="flex">
           <img class="heading-icon" src="/images/praise_icon.svg" alt="">

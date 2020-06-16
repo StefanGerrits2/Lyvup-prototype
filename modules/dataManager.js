@@ -5,12 +5,15 @@ let userGoalsData = {
   setGoals: [],
   completedGoals: []
 };
-let persistedData = [];
+let persistedData = false;
 let fakeId = 29;
 let userGoals = ''
 
+const today = new Date();
+const date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+
 async function manageData(req) {
-  if (persistedData.length == 0 && req == undefined) {
+  if (persistedData == false && req == undefined) {
     try {
       const baseURL = 'https://lyvup.com/api/';
       const query = `getUserGoals/2/?token=${process.env.TOKEN}&lang=dutch`;
@@ -24,9 +27,8 @@ async function manageData(req) {
       userGoals.forEach(element => element.description = element.skills[0].description);
       userGoals.forEach(element => userGoalsData.setGoals.push(element))
 
-      console.log(userGoalsData)
-      persistedData.push(userGoals);
-      return userGoals
+      persistedData = true
+      return userGoalsData
 
     } catch (error) {
       console.log(error);
@@ -40,20 +42,29 @@ async function manageData(req) {
     newData.goal_type = req.doel;
     newData.expiry_date = req.deadline;
     newData.description = req.toelichting;
-    userGoals.unshift(newData);
-    console.log(userGoals)
+    userGoalsData.setGoals.unshift(newData);
     fakeId++;
-    return userGoals
+    return userGoalsData
+
     // if there is data received from a delete form using a POST but it does not contain an editId
   } else if (req != undefined && req.editId === undefined) {
     console.log("data wordt verwijderd...")
-    userGoals.splice(userGoals.findIndex(item => item.id === req.completeId), 1)
-    console.log(req.voltooid)
-    return userGoals
+    const completedGoal = userGoalsData.setGoals.filter(function(selected) {
+      return selected.id === req.completeId
+    })
+
+    // puts the deleted data into userGoalsData.completedGoals and sets their completion values
+    completedGoal[0].complete_date = req.completionDate
+    completedGoal[0].complete_percentage = req.completionRate
+    completedGoal[0].complete_comment = req.completionText
+    userGoalsData.setGoals.splice(userGoalsData.setGoals.findIndex(item => item.id === req.completeId), 1)
+    userGoalsData.completedGoals.unshift(completedGoal[0])
+
+    return userGoalsData
     // if there is data received from an edit form using a POST method and the data has an id
   } else if (req != undefined) {
     console.log("data wordt aangepast...")
-    userGoals.map((curr) => {
+    userGoalsData.setGoals.map((curr) => {
       if (curr.id == req.editId) {
         if (curr.title != req.competentie) {
           curr.title = req.competentie
@@ -67,11 +78,11 @@ async function manageData(req) {
         curr.expiry_date = req.deadline
       }
     })
-    return userGoals
+    return userGoalsData;
     // if the page is requested and data is already persisted on the server
   } else {
 
-    return userGoals
+    return userGoalsData;
 
   }
 }

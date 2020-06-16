@@ -9,13 +9,17 @@ const urlencodedParser = bodyParser.urlencoded({
 });
 
 function goals(req, res) {
+
   dataManager(req.body).then(function(result) {
-    // result.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
+    const goalsToCheck = result.setGoals
+    goalsToCheck.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
+    console.log(result)
     res.render('goals.hbs', {
-      data: result,
+      setGoals: result.setGoals,
+      completedGoals: result.completedGoals,
       goals: true
     });
-  })
+  });
 }
 
 module.exports = goals;

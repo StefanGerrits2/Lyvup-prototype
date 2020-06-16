@@ -84,6 +84,13 @@ p {
   line-height: 200%;
 }
 
+hr{
+  opacity: 0.3;
+   width:100%;
+   text-align:left;
+   margin-left:0
+}
+
 #content__container {
   display: flex;
   width: 100%;
@@ -199,6 +206,13 @@ p {
     padding-left: 15px;
     margin-bottom: 10px;
   }
+
+  & div{
+    & .complete-comment {
+      font-size: 1.1em;
+      color: $green;
+    }
+  }
 }
 
 #goals__container div:not(:last-of-type) {
@@ -224,7 +238,7 @@ p {
   margin-top: 1em;
 }
 
-#setGoals__container {
+#setGoals__container, #karma__container {
   width: 100%;
   margin-bottom: 2em;
   padding: 10px;
@@ -233,6 +247,10 @@ p {
   background-image: url(/images/background.png);
   background-size: 500%;
   overflow-x: hidden;
+}
+
+aside {
+  width: 150px;
 }
 
 .goal-type {
@@ -378,6 +396,15 @@ button:hover {
   padding: 1.5em 0em;
   border-radius: $border-radius-small;
   box-shadow: 0px 2px 0px 1px #e5e5e5;
+  position: relative;
+}
+
+.time-stamp {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  color: $grey;
+  font-size: 12px;
 }
 
 .flex {
@@ -503,10 +530,11 @@ option {
   animation: expandFilter 0.3s linear alternate;
 }
 
-#edit-goals__container {
-  // & form {
-  //   display: flex;
-  // }
+#goals-compliments__container {
+  width: 40%;
+  background-color: #e8e8ed;
+  padding: 2.1em 3em 3em 3em;
+  border-radius: 10px;
 }
 
 #completeCheck{
@@ -518,10 +546,14 @@ option {
     font-size: 12.5px;
   }
 
+  .profile__container{
+    max-height: 14em;
+  }
+
   #main__container,
   .right__container,
   .center__container,
-  #super-goals__container {
+  #super-goals__container, #goals-compliments__container {
     padding: 1.5em 2em 2em;
   }
 
@@ -552,6 +584,10 @@ option {
     font-size: 12px;
   }
 
+  .profile__container{
+    max-height: 15em;
+  }
+
   .goal-type {
     font-size: 11px;
   }
@@ -571,8 +607,12 @@ option {
 }
 
 @media screen and (max-width: 1300px) {
+  .profile__container{
+    max-height: 15em;
+  }
+
   .complimentsHead {
-    height: 7.5em;
+    height: 8em;
   }
 
   button {
@@ -594,6 +634,14 @@ option {
 }
 
 @media screen and (max-width: 1200px) {
+  .profile__container{
+    max-height: 13em;
+  }
+
+  .complimentsHead {
+    height: 7.7em;
+  }
+
   body {
     font-size: 14px;
     overflow: auto;
@@ -607,6 +655,7 @@ option {
   #content__container,
   #super-goals__container,
   #teamoverview__container,
+  #goals-compliments__container,
   #team-aside__container,
   #profile__right__container,
   #compliment__container aside,
@@ -631,21 +680,18 @@ option {
   .goals-content__container {
     flex-direction: row !important;
 
-    & #main__container {
+    & #main__container, #goals-main__container {
       width: 50%;
 
       & #setGoals__container {
         & .goal__container {
           & .goal-buttons__container {
-            & aside {
-              width: 200px;
-            }
           }
         }
       }
     }
 
-    & #super-goals__container {
+    & #super-goals__container, #goals-compliments__container {
       width: 50%;
     }
   }
@@ -654,7 +700,7 @@ option {
     margin-bottom: 2em;
   }
 
-  .addGoals__container {
+  .add-goals__container {
     & .select {
       width: 46%;
       margin: .65%;

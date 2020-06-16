@@ -5,7 +5,7 @@ document.querySelectorAll('.compliment__container').forEach(item => {
 })
 
 const complimentsButton = document.querySelector('.complimentsButton')
-const complimentsContainer = document.querySelector('#super-goals__container')
+const complimentsContainer = document.querySelector('#goals-compliments__container')
 const filterText = complimentsContainer.querySelector('.goal-indicator')
 const complimentsSection = document.querySelector('#messages__container')
 
@@ -72,7 +72,7 @@ document.querySelectorAll('.goal__container').forEach(item => {
 })
 
 // add goal form animations
-const goalFormContainer = document.querySelector('.addGoals__container');
+const goalFormContainer = document.querySelector('.add-goals__container');
 const goalsButton = document.querySelector('.goals-button');
 
 goalFormContainer.classList.add('hidden');
@@ -138,21 +138,25 @@ const completeFormContainer = document.querySelectorAll('#complete-goals__contai
 
 // Get the checkbox
 const checkBox = document.querySelectorAll(".completeCheck").forEach(item => {
-
   item.onchange = function() {
     if (this.checked) {
-      console.log(this.value)
+      const slider = document.querySelector(`.range-slider-${this.value}`);
+      const output = document.querySelector(`.range-text-${this.value}`);
+      output.innerHTML = slider.value;
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
       const selectedForm = document.querySelector(`.complete-${this.value}`)
       selectedForm.classList.remove('hidden')
       selectedForm.classList.add('visible')
-      selectedForm.classList.remove('shrinkSmall')
-      selectedForm.classList.add('expandSmall')
+      selectedForm.classList.remove('shrinkMedium')
+      selectedForm.classList.add('expandMedium')
     } else {
       const completeFormContainer = document.querySelectorAll('#complete-goals__container').forEach(item => {
         if (item.classList.contains(`complete-${this.value}`)) {
           item.classList.add('hidden')
-          item.classList.remove('expandSmall')
-          item.classList.add('shrinkSmall')
+          item.classList.remove('expandMedium')
+          item.classList.add('shrinkMedium')
           setTimeout(function() {
             item.classList.remove('visible')
           }, 300);
@@ -160,5 +164,4 @@ const checkBox = document.querySelectorAll(".completeCheck").forEach(item => {
       })
     }
   };
-
 })
