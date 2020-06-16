@@ -14,30 +14,51 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
-const dots = document.getElementById('dots');
-const moreText = document.getElementById('more');
-const moreButton = document.getElementById('moreButton');
+const newCard = document.querySelectorAll('.new__card');
 
-moreButton.addEventListener('click', function () {
-    if (dots.style.display === 'none') {
-        dots.style.display = 'inline';
-        moreButton.innerHTML = 'Lees meer';
-        moreText.style.display = 'none';
-        moreButton.blur();
-    } else {
-        dots.style.display = 'none';
-        moreButton.innerHTML = 'Lees minder';
-        moreText.style.display = 'inline';
-        moreButton.blur();
+newCard.forEach((card) => {
+    const expandText = document.getElementsByClassName('more__text');
+    const expandReceivers = document.getElementsByClassName('expanded__receivers');
+    const shortReceivers = document.getElementsByClassName('new__card_receivers');
+
+    card.addEventListener('click', function () {
+        let card_index = Array.prototype.indexOf.call(newCard, card);
+        console.log(expandText[card_index]);
+
+        if (expandText[card_index].classList.contains('hide') && expandReceivers[card_index].classList.contains('hide')) {
+            expandText[card_index].classList.remove('hide');
+            expandReceivers[card_index].classList.remove('hide');
+            expandReceivers[card_index].classList.add('show');
+            shortReceivers[card_index].style.display = 'none';
+        } else {
+            expandText[card_index].classList.add('hide');
+            expandReceivers[card_index].classList.remove('show');
+            expandReceivers[card_index].classList.add('hide');
+            shortReceivers[card_index].style.display = 'flex';
+        }
+    });
+});
+
+
+
+/*newCard.addEventListener('click', function () {
+    const expandText = document.getElementsByClassName('moreText');
+    const expandReceivers = document.getElementsByClassName('moreReceivers');
+    const shortReceivers = document.getElementsByClassName('new__card_receivers');
+
+    for (i = 0; shortReceivers.length; i++) {
+
     }
-});
 
-// Header animations
-const toggleFooter = document.querySelector('#toggle-header');
-
-toggleFooter.addEventListener('click', () => {
-    const footer = document.querySelector('footer');
-    
-    // Toggle footer
-    footer.classList.toggle('footer-shrinked');
-});
+    if (expandText.classList.contains('hide') && expandReceivers.classList.contains('hide')) {
+        expandText.classList.remove('hide');
+        expandReceivers.classList.remove('hide');
+        expandReceivers.classList.add('show');
+        shortReceivers.style.display = 'none';
+    } else {
+        expandText.classList.add('hide');
+        expandReceivers.classList.remove('show');
+        expandReceivers.classList.add('hide');
+        shortReceivers.style.display = 'flex';
+    }
+});*/

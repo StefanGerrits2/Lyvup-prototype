@@ -5,22 +5,21 @@ const dataManager = require('../modules/dataManager.js');
 
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({
-    extended: true
+  extended: true
 });
-
-let userGoals = {};
-let persistedData = [];
-let fakeId = 29;
 
 function goals(req, res) {
 
-    dataManager(req.body).then(function(result) {
-        result.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
-        res.render('goals.hbs', {
-            data: result,
-            goals: true
-        });
+  dataManager(req.body).then(function(result) {
+    const goalsToCheck = result.setGoals
+    goalsToCheck.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
+    console.log(result)
+    res.render('goals.hbs', {
+      setGoals: result.setGoals,
+      completedGoals: result.completedGoals,
+      goals: true
     });
+  });
 }
 
 module.exports = goals;

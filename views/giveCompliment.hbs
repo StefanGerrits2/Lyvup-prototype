@@ -16,7 +16,8 @@
 
                     <div id="super-compliment__container">
                         <input name="superCompliment?" type="checkbox" id="supercompliment" value="yes">
-                        <label tabindex="0" id="super-compliment__button" for="supercompliment">Activeer een super compliment</label>
+                        <label tabindex="0" id="super-compliment__button" for="supercompliment">Activeer een super
+                            compliment</label>
                     </div>
                 </div>
 
@@ -164,14 +165,32 @@
                     </div>
 
                 <div id="selected-members__container">
-                    <textarea name="textarea" rows="10" required placeholder="Typ hier je compliment..."></textarea>
-                    <input type="submit" class="defaultButton" value="Versturen">
+                    <textarea name="textarea" id="" rows="10" required
+                        placeholder="Typ hier je compliment..."></textarea>
+                    <div class="flex">
+                        <input type="submit" class="defaultButton" value="Versturen">
+                        <button type="button" id="animationButton">Animatie</button>
+                    </div>
                 </div>
+
             </aside>
         </form>
+
+        <div class="compliment__animation hidden">
+            <h3 class="floatingText">+15 karmapunten</h3>
+            <section class="demo">
+                <div class="leaf leaf_1"></div>
+                <div class="leaf leaf_2"></div>
+                <div class="leaf leaf_3"></div>
+                <div class="leaf leaf_4"></div>
+                <div class="leaf leaf_5"></div>
+                <h4 id="animationBottomText">Goed bezig</h4>
+
+            </section>
+        </div>
     </main>
 </div>
 
-{{> footer}}
-
 <script src="js/compliments.js"></script>
+<script src="js/animations.js"></script>
+{{> footer}}

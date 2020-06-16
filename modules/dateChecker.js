@@ -2,8 +2,8 @@ function checkDate(data) {
   const today = new Date();
   const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
-  const receivedDate = data.split(' ');
-  receivedDate.pop();
+  // const receivedDate = data.split(' ');
+  // receivedDate.pop();
   const expiryDate = new Date(data);
   const currentDate = new Date(date);
   const timeBetweenDates = expiryDate - currentDate;

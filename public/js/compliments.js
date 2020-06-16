@@ -95,7 +95,7 @@ function showSelectedMembers() {
             title.textContent = 'Geselecteerde personen:';
         }
 
-        else if (values.length  === 0) {
+        else if (values.length === 0) {
             memberInfo.setAttribute('style', 'display: none');
             memberInformationTitle.setAttribute('style', 'display: none');
         }
