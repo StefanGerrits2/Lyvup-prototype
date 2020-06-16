@@ -1,11 +1,139 @@
-{{> new-header}}
+<div id="page">
+    {{> new-header}}
 
+    <main id="content__container">
+        <div id="main__container">
+            <h1>Assessment Center</h1>
 
+            <div class="dash_filter__container">
+                <button>Assessment</button>
+                <button>Assessment rapport</button>
+                <button>Vrienden</button>
+            </div>
 
+            {{!-- persoonlijk --}}
+            <h4>Eigen assessments</h4>
+            <div id="messages__container">
+                <div class="assessment__container assessment__active__right">
+                    <h4 class="assessment__name">Sterke kanten</h4>
+                    <p class="assessment__short__des">Wat zijn jouw belangrijkste persoonlijke competenties?</p>
+                    <div class="assessment_stats">
+                        <p>6 minuten</p>
+                        <p>48 vragen</p>
+                    </div>
+                    <div class="assessment__progress__border">
+                        <div class="assessment__progress" style="width:70%">70%</div>
+                    </div>
+                    <button class="assessment__button">Vragenlijst</button>
+                </div>
 
+                <div class="assessment__container">
+                    <h4 class="assessment__name">Sterke kanten</h4>
+                    <p class="assessment__short__des">Wat zijn jouw belangrijkste persoonlijke competenties?</p>
+                    <div class="assessment__stats">
+                        <p>6 minuten</p>
+                        <p>48 vragen</p>
+                    </div>
+                    <div class="assessment__progress__border">
+                        <div class="assessment__progress" style="width: 45%">45%</div>
+                    </div>
+                    <button class="assessment__button">Vragenlijst</button>
+                </div>
+            </div>
 
+            {{!-- teamleden --}}
+            <h4 class="assessment__title__text">Team genoten assessments</h4>
+            <div id="messages__container">
+                <div class="assessment__container">
+                    <div>
+                        <img class="assessment__image" src="/images/stefan.jpg" alt="">
+                        <p class="assessment__person">Stefan</p>
+                    </div>
 
+                    <h4 class="assessment__name left__auto">Sterke kanten</h4>
+                    <div class="assessment_stats left__auto">
+                        <p>6 minuten</p>
+                        <p>48 vragen</p>
+                    </div>
+                    <div class="assessment__progress__border left__auto">
+                        <div class="assessment__progress" style="width:5%">5%</div>
+                    </div>
+                    <button class="assessment__button">Vragenlijst</button>
+                </div>
 
+                <div class="assessment__container">
+                    <div>
+                        <img class="assessment__image" src="/images/stefan.jpg" alt="">
+                        <p class="assessment__person">Reinier</p>
+                    </div>
+
+                    <h4 class="assessment__name left__auto">Sterke kanten</h4>
+                    <div class="assessment_stats left__auto">
+                        <p>6 minuten</p>
+                        <p>48 vragen</p>
+                    </div>
+                    <div class="assessment__progress__border left__auto">
+                        <div class="assessment__progress" style="width:10%">10%</div>
+                    </div>
+                    <button class="assessment__button">Vragenlijst</button>
+                </div>
+
+                <div class="assessment__container">
+                    <div>
+                        <img class="assessment__image" src="/images/stefan.jpg" alt="">
+                        <p class="assessment__person">Michel</p>
+                    </div>
+
+                    <h4 class="assessment__name left__auto">Sterke kanten</h4>
+                    <div class="assessment_stats left__auto">
+                        <p>6 minuten</p>
+                        <p>48 vragen</p>
+                    </div>
+                    <div class="assessment__progress__border left__auto">
+                        <div class="assessment__progress" style="width:10%">10%</div>
+                    </div>
+                    <button class="assessment__button">Vragenlijst</button>
+                </div>
+
+                <div class="assessment__container">
+                    <div>
+                        <img class="assessment__image" src="/images/stefan.jpg" alt="">
+                        <p class="assessment__person">Monika</p>
+                    </div>
+
+                    <h4 class="assessment__name left__auto">Sterke kanten</h4>
+                    <div class="assessment_stats left__auto">
+                        <p>6 minuten</p>
+                        <p>48 vragen</p>
+                    </div>
+                    <div class="assessment__progress__border left__auto">
+                        <div class="assessment__progress" style="width:10%">10%</div>
+                    </div>
+                    <button class="assessment__button">Vragenlijst</button>
+                </div>
+            </div>
+        </div>
+        <aside id="super-goals__container">
+            <h1>Assessment</h1>
+
+            <div id="messages__container">
+                <div class="assessment__container__right assessment__active__left center__text">
+                    <h3 class="assessment__name">Sterke kanten</h3>
+                    <p class="assessment__short__des">Wat zijn jouw belangrijkste persoonlijke competenties? Dit is een langere beschrijving van de assessment</p>
+                    <div class="center__auto">
+                        <p><span class="bold">Tijd: </span>6 minuten</p>
+                        <p><span class="bold">Aantal vragen:</span> 48</p>
+                    </div>
+                    <div class="assessment__progress__border center__auto">
+                        <div class="assessment__progress" style="width:70%">70%</div>
+                    </div>
+                    <br>
+                    <button class="assessment__button center__auto">Vragenlijst</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+</div>
 
 {{> thumbs-up}}
 

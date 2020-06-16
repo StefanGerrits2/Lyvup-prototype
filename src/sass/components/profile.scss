@@ -100,9 +100,8 @@ td {
     background-color: $light-grey;
     border-radius: $border-radius-big;
     padding-bottom: .75em;
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 1em;
+    padding-top: .25em;
 }
 
 .sides__container {
@@ -172,7 +171,7 @@ td {
     padding: .5em;
     background-color: $light-grey;
     border-radius: $border-radius-big;
-    max-height: 20em;
+    max-height: 30em;
 }
 
 .profile__challange{
