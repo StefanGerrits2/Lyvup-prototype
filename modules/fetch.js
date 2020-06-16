@@ -14,8 +14,8 @@ function checkStatus(response) {
 const Fetcher = {
     get: (url) =>
         fetch(url)
-        .then(checkStatus)
-        .then(res => res.json())
+            .then(checkStatus)
+            .then(res => res.json())
 };
 
 module.exports = Fetcher;

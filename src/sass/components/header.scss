@@ -165,6 +165,9 @@ header {
 .toggle-header {
     width: 5em!important;
     padding: 1em!important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .toggle-nav-text {
