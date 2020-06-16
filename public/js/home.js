@@ -23,7 +23,6 @@ newCard.forEach((card) => {
 
     card.addEventListener('click', function () {
         let card_index = Array.prototype.indexOf.call(newCard, card);
-        console.log(expandText[card_index]);
 
         if (expandText[card_index].classList.contains('hide') && expandReceivers[card_index].classList.contains('hide')) {
             expandText[card_index].classList.remove('hide');
