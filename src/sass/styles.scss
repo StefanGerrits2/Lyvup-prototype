@@ -17,7 +17,10 @@
 './pages/home.scss',
 './pages/onboarding.scss',
 './pages/get-started.scss',
-'./pages/landing.scss';
+'./pages/landing.scss',
+'./pages/assessment.scss',
+'./pages/notFound.scss',
+'./pages/invite.scss';
 
 html {
   font-family: 'publicSans', sans-serif;
@@ -336,8 +339,10 @@ button:hover {
   transform: scale(1.05);
 }
 
-.defaultButton:hover {
-  background-color: #114c4c;
+.defaultButton:hover,
+  input[type="submit"]:hover {
+    background-color: #114c4c;
+    transform: scale(1.05);
 }
 
 // button:focus {

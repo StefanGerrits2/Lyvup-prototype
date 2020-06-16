@@ -1,0 +1,51 @@
+#main__container-ambassador {
+    width: 100%!important;
+    background-color: $white;
+    padding: 2.1em 3em 3em 3em;
+
+    & p {
+        margin-bottom: 3em;
+    }
+
+    & form {
+        & label {
+            margin: 2em 0em .5em 0em;
+            display: block;
+        }
+        & input[type="text"],
+        input[type="email"] {
+            border: 1px solid $grey;
+            display: block;
+            border-radius: $border-radius-small;
+            padding: 1em;
+            z-index: 10;
+
+            &::placeholder {
+                color: $grey;
+            }
+        }
+    
+        & input[type="submit"] {
+            margin-top: 3em;
+        }
+    }
+}
+
+#name__container, 
+#email__container {
+    display: flex;
+    align-items: center;
+
+    & img {
+        cursor: pointer;
+        margin-left: -3em;
+        width: 2em;
+        transition: .4s ease-in-out;
+    }
+}
+
+.show-cross {
+    margin-left: 1em!important;
+    transform: rotate(180deg);
+    transition: .4s ease-in-out;
+}

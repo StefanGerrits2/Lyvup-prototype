@@ -14,6 +14,10 @@ footer {
         color: $grey;
         text-decoration: underline;
     }
+
+    & select {
+        background-color: $white;
+    }
 }
 
 .footer-shrinked {
@@ -21,4 +25,8 @@ footer {
     transition: .2s ease-in;
     overflow: hidden;
     font-size: 0.7em;
+}
+
+.select {
+    margin-top: 1em;
 }

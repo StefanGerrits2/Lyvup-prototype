@@ -23,6 +23,7 @@ header {
 
     & select {
         background-color: white;
+        font-size: 0.9em;
     }
 
     & > a img {
@@ -127,6 +128,21 @@ header {
                 content: "Profiel";
             }
         }
+        & .hoverable:nth-of-type(8):hover {
+            &::before {
+                content: "Uitnodigen";
+            }
+        }
+    }
+}
+
+#invite-others {
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+    border-top: 1px solid $grey;
+
+    & a p {
+        color: $green;
     }
 }
 

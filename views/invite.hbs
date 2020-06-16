@@ -1,0 +1,28 @@
+<div id="page">
+    {{> new-header}}
+
+    <main id="main__container-ambassador">
+        <h1>Word een Lyvup ambassadeur</h1>
+        <p>Door iemand uit te nodigen naar dit platform, word jij aan Lyvup ambassadeur. Vul een naam en een e-mail adres in.</p>
+
+        <form action="/invite" method="post">
+            <label for="name">Naam</label>
+            <div id="name__container">
+                <input type="text" class="input" id="name" placeholder="Voornaam Achternaam" autocomplete="off" required>
+            </div>
+
+            <label for="email">E-mailadres</label>
+            <div id="email__container">
+                <input type="email" class="input" id="email" placeholder="voorbeeld@gmail.com" autocomplete="off" required>
+            </div>
+        
+            <input type="submit" value="Uitnodigen">
+        </form>
+    </main>
+</div>
+
+{{> thumbs-up}}
+
+{{> footer}}
+
+<script src="js/invite.js"></script>
