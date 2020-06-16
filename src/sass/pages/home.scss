@@ -3,10 +3,11 @@
   display: flex;
 }
 
-.left__container {
+.profile__aside {
   background-color: $white;
   padding: 2em;
   border-radius: 10px;
+  margin-bottom: 2em;
 }
 
 .center__container {
@@ -28,7 +29,7 @@
 }
 
 .profile__picture {
-  max-height: 8em;
+  height: 8em;
   width: 8em;
   border-radius: 50%;
   margin-right: 10px;
@@ -58,8 +59,9 @@
   background-image: url(/images/background.png);
   background-size: 500%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   overflow-y: auto;
+  overflow-x: hidden;
   height: 85vh;
 }
 
@@ -71,7 +73,6 @@
   margin: 10px;
   transition: 200ms ease-in-out;
   box-shadow: 0 2px 0 1px #e5e5e5;
-  width: 100%;
   display: flex;
 
   & img {
@@ -80,6 +81,11 @@
     margin-right: 1em;
     border-radius: 50%;
   }
+}
+
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card__header {
@@ -106,6 +112,139 @@
   }
 }
 
+.receivers_tooltip {
+  max-height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-color: $light-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.receivers {
+  display: flex;
+  width: 100%;
+}
+
+#more {
+  display: none;
+}
+
+#moreButton {
+  margin-top: 10px;
+  width: auto;
+  height: 35px;
+}
+
+.dash_filter__container {
+  display: flex;
+  margin-bottom: 2em;
+
+  & #compliment_filter {
+    background-color: $red;
+  }
+
+  & #goal_filter {
+    background-color: $light-blue;
+  }
+}
+
+.new__card {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 10px;
+  transition: 200ms ease-in-out;
+  box-shadow: 0 2px 0 1px #e5e5e5;
+  display: flex;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+  }
+
+  & .new__card_sender {
+    margin-right: 1em;
+
+    & img {
+      max-height: 3em;
+      width: 3em;
+      border-radius: 50%;
+    }
+  }
+
+  & .new__card_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & .new__card_header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 1em 1em;
+      border-left: 2px solid $red;
+
+      & h4 {
+        font-size: 14px;
+      }
+    }
+
+    & .new__card_message {
+      padding: 0 0 1em 1em;
+      border-left: 2px solid $red;
+    }
+
+    & .new__card_receivers {
+      display: flex;
+      align-self: flex-end;
+
+      & img {
+        max-height: 3em;
+        width: 3em;
+        border-radius: 50%;
+        margin-right: 1em;
+      }
+    }
+
+    & .expanded__receivers {
+      align-self: center;
+
+      & .expanded__item {
+        margin-right: 3em;
+        text-align: center;
+
+        & img {
+          max-height: 3em;
+          width: 3em;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.dash__aside {
+  // TO DO
+}
+
+.collapse__container {
+  display: flex;
+  flex-wrap: wrap;
+
+  & .collapsible {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
 .collapsible {
   color: white;
   cursor: pointer;
@@ -123,7 +262,7 @@
 }
 
 .collapsible:after {
-  content: '\002B';
+  content: '\2207';
   color: white;
   font-weight: bold;
   float: right;
@@ -131,13 +270,7 @@
 }
 
 .active:after {
-  content: "\2212";
-}
-
-.collapse-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  content: "\2206";
 }
 
 #totaal_collapse {
@@ -162,43 +295,4 @@
 .todo__item {
   display: flex;
   justify-content: space-between;
-}
-
-.receivers_tooltip {
-  max-height: 3em;
-  width: 3em;
-  border-radius: 50%;
-  background-color: $light-grey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.receivers {
-  display: flex;
-  text-align: center;
-  justify-content: flex-end;
-}
-
-#more {
-  display: none;
-}
-
-#moreButton {
-  margin-top: 10px;
-  width: auto;
-  height: 35px;
-}
-
-.dash_filter__container {
-  display: flex;
-  margin-bottom: 2em;
-
-  & #compliment_filter {
-    background-color: $red;
-  }
-
-  & #goal_filter {
-    background-color: $light-blue;
-  }
 }

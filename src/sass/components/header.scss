@@ -87,6 +87,7 @@ header {
                     left: 4.9em;
                     padding: .8em 1em;
                 }
+
         }
 
         // After texts per element
@@ -114,15 +115,10 @@ header {
         }
         & .hoverable:nth-of-type(5):hover {
             &::before {
-                content: "Assessment";
-            }
-        }
-        & .hoverable:nth-of-type(6):hover {
-            &::before {
                 content: "Leaderboard";
             }
         }
-        & .hoverable:nth-of-type(7):hover {
+        & .hoverable:nth-of-type(6):hover {
             &::before {
                 content: "Profiel";
             }
@@ -169,6 +165,9 @@ header {
 .toggle-header {
     width: 5em!important;
     padding: 1em!important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .toggle-nav-text {

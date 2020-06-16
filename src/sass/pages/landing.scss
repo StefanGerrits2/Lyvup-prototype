@@ -24,6 +24,10 @@
       }
     }
 
+    & a:last-of-type {
+      padding: 0;
+    }
+
     & .header__left {
       display: flex;
       align-items: center;
@@ -72,6 +76,7 @@
 
       & button {
         margin-top: 1em;
+        min-width: 15em;
       }
 
       & img {
@@ -156,15 +161,20 @@
 
     & iframe {
       border-radius: 10px;
-      height: 100%;
+      min-height: 20em;
       width: 100%;
       box-shadow: 0px 2px 0px 1px #e5e5e5;
     }
   }
+
+  & .contact__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 6em;
+  }
 }
 
 #landing__section_6 {
-  background-color: $white;
 
   & .reviews__container {
     display: grid;
@@ -173,8 +183,8 @@
     text-align: center;
 
     & img {
-      max-width: 5em;
-      height: auto;
+      width: 5em;
+      height: 5em;
       border-radius: 50%;
       margin-bottom: 1em;
       box-shadow: 0px 2px 0px 1px #e5e5e5;
@@ -183,9 +193,33 @@
 }
 
 #landing__footer {
+  background-color: $green;
+  color: $white;
+
 
   & .landing__container {
     display: flex;
     justify-content: space-between;
+  }
+
+  & .footer__left {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+
+    & a {
+      margin-bottom: 1em;
+      color: $white;
+    }
+  }
+
+  & .footer__right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+
+    & form {
+      margin-bottom: 1em;
+    }
   }
 }
