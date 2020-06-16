@@ -37,5 +37,4 @@ toggleHeader.addEventListener('click', () => {
 
     // Move toggle header button
     toggleHeader.classList.toggle('move-button');
-    
 });
