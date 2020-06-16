@@ -33,6 +33,7 @@ const get_started = require('./routes/get-started.js');
 const onboarding_post = require('./routes/onboarding-post.js');
 const landing = require('./routes/landing.js');
 const assessment = require('./routes/assessment.js');
+const invite = require('./routes/invite.js');
 
 app
     .set('view engine', 'hbs')
@@ -67,17 +68,20 @@ app
     .get('/', home)
     .get('/feedback', feedback)
     .get('/compliment-or-feedback', compliment)
-    .post('/compliment-or-feedback', urlencodedParser, compliment)
     .get('/team', team)
     .get('/goals', goals)
-    .post('/goals', urlencodedParser, goals)
     .get('/leaderboard', leaderboard_new)
     .get('/profile', profile)
     .get('/get-started', get_started)
     .get('/onboarding', onboarding)
-    .post('/onboarding', urlencodedParser, onboarding_post)
     .get('/landing', landing)
     .get('/assessment', assessment)
+    .get('/invite', invite)
+
+    .post('/compliment-or-feedback', urlencodedParser, compliment)
+    .post('/goals', urlencodedParser, goals)
+    .post('/onboarding', urlencodedParser, onboarding_post)
+    .post('/invite', urlencodedParser, invite)
 
     // 404 not found
     .use(notFound);

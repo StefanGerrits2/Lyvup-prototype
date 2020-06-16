@@ -13,10 +13,14 @@
 './components/complimentAnimation',
 './pages/team',
 './pages/goals.scss',
-'./components/profile',
+'./pages/profile',
 './pages/home.scss',
 './pages/onboarding.scss',
 './pages/get-started.scss',
+'./pages/landing.scss',
+'./pages/assessment.scss',
+'./pages/notFound.scss',
+'./pages/invite.scss',
 './pages/assessment.scss',
 './components/smallAnimations',
 './pages/landing.scss';
@@ -177,7 +181,7 @@ hr{
         }
 
         & #goals__container {
-          max-height: 25vh;
+          max-height: 20em;
           overflow-y: auto;
         }
     }
@@ -307,16 +311,21 @@ aside {
   font-size: 13px;
 }
 
-.goal-buttons__container {
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-
-.goal__container div:nth-of-type(1) {
+.goal__container .goal-buttons__container {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 0!important;
+
+   & div {
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 2em;
+    }
+   }
 }
 
 .goal__container:hover {
@@ -354,8 +363,10 @@ button:hover {
   transform: scale(1.05);
 }
 
-.defaultButton:hover {
-  background-color: #114c4c;
+.defaultButton:hover,
+  input[type="submit"]:hover {
+    background-color: #114c4c;
+    transform: scale(1.05);
 }
 
 // button:focus {
