@@ -171,7 +171,7 @@ p {
         }
 
         & #goals__container {
-          max-height: 25vh;
+          max-height: 20em;
           overflow-y: auto;
         }
     }
@@ -292,16 +292,21 @@ p {
   font-size: 13px;
 }
 
-.goal-buttons__container {
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-
-.goal__container div:nth-of-type(1) {
+.goal__container .goal-buttons__container {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 0!important;
+
+   & div {
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 2em;
+    }
+   }
 }
 
 .goal__container:hover {
@@ -573,6 +578,7 @@ option {
   body {
     font-size: 12.5px;
   }
+
 
   #main__container,
   .right__container,

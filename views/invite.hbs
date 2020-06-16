@@ -2,22 +2,29 @@
     {{> new-header}}
 
     <main id="main__container-ambassador">
-        <h1>Word een Lyvup ambassadeur</h1>
-        <p>Door iemand uit te nodigen naar dit platform, word jij aan Lyvup ambassadeur. Vul een naam en een e-mail adres in.</p>
+        <div>
+            <div>
+                <h1>Word een Lyvup ambassadeur</h1>
+                <p>Door iemand uit te nodigen naar dit platform, word jij aan Lyvup ambassadeur. Vul een naam en een e-mail adres in.</p>
 
-        <form action="/invite" method="post">
-            <label for="name">Naam</label>
-            <div id="name__container">
-                <input type="text" class="input" id="name" placeholder="Voornaam Achternaam" autocomplete="off" required>
-            </div>
+                <form action="/invite" method="post">
+                    <label for="name">Naam</label>
+                    <div id="name__container">
+                        <input type="text" class="input" id="name" placeholder="Voornaam Achternaam" autocomplete="off" required>
+                    </div>
 
-            <label for="email">E-mailadres</label>
-            <div id="email__container">
-                <input type="email" class="input" id="email" placeholder="voorbeeld@gmail.com" autocomplete="off" required>
+                    <label for="email">E-mailadres</label>
+                    <div id="email__container">
+                        <input type="email" class="input" id="email" placeholder="voorbeeld@gmail.com" autocomplete="off" required>
+                    </div>
+                
+                    <input type="submit" value="Uitnodigen">
+                </form>
             </div>
-        
-            <input type="submit" value="Uitnodigen">
-        </form>
+            <div id="aside-ambassador">
+                <img src="/images/teamwork.png" alt="">
+            </div>
+        </div>
     </main>
 </div>
 

@@ -322,10 +322,14 @@ input[type="checkbox"] {
     & > h4 {
         margin: 0;
         margin-right: .5em;
+        font-size: 1.1em;
         display: none;
     }
 
     & #goals__container {
+        max-height: 25vh;
+        overflow-y: auto;
+
         & input {
             display: none;
 
@@ -339,9 +343,23 @@ input[type="checkbox"] {
             border-radius: $border-radius-small;
         }
 
-        & #goals__container {
-          max-height: 25vh;
-          overflow-y: auto;
+        & div:first-of-type {
+            margin-bottom: 0;
+        }
+
+        & .goal-buttons__container {
+            align-items: center;
+            justify-content: space-between;
+
+            & div {
+                justify-content: initial!important;
+                width: fit-content;
+            }
+
+            & img {
+                width: 2em;
+                // margin-right: -2em;
+            }
         }
     }
 }

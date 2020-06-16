@@ -12,7 +12,7 @@ document.querySelector('#email__container').appendChild(cross2);
 // Source https://stackoverflow.com/questions/4220126/run-javascript-function-when-user-finishes-typing-instead-of-on-key-up
 // Setup before functions
 let typingTimer;                // Timer identifier
-const doneTypingInterval = 100;  // Timer 2 seconds
+const doneTypingInterval = 500;  // Timer 2 seconds
 const inputs = document.querySelectorAll('.input');
 
 inputs.forEach(item => {

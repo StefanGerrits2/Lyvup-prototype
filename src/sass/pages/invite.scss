@@ -1,7 +1,20 @@
 #main__container-ambassador {
-    width: 100%!important;
+    width: 100%;
     background-color: $white;
     padding: 2.1em 3em 3em 3em;
+    display: flex;
+    align-items: center;
+
+    & > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: $background-color;
+        width: 100%;
+        border-radius: $border-radius-big;
+        padding: 2.1em 3em 3em 3em;
+    }
 
     & p {
         margin-bottom: 3em;
@@ -20,6 +33,11 @@
             padding: 1em;
             z-index: 10;
 
+            &:focus {
+                color: $green;
+                border-color: $green;
+            }
+
             &::placeholder {
                 color: $grey;
             }
@@ -28,6 +46,18 @@
         & input[type="submit"] {
             margin-top: 3em;
         }
+    }
+}
+
+#aside-ambassador {
+    width: 40%;
+    display: flex;
+    align-items: center;
+
+    & img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
     }
 }
 
@@ -45,7 +75,7 @@
 }
 
 .show-cross {
-    margin-left: 1em!important;
+    margin-left: .75em!important;
     transform: rotate(180deg);
     transition: .4s ease-in-out;
 }
