@@ -6,6 +6,8 @@
     transition: 200ms;
 }
 
+
+
 header {
     background-color: $background-color;
     height: 100vh;
@@ -23,6 +25,7 @@ header {
 
     & select {
         background-color: white;
+        font-size: 0.9em;
     }
 
     & > a img {
@@ -123,6 +126,21 @@ header {
                 content: "Profiel";
             }
         }
+        & .hoverable:nth-of-type(8):hover {
+            &::before {
+                content: "Uitnodigen";
+            }
+        }
+    }
+}
+
+#invite-others {
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+    border-top: 1px solid $grey;
+
+    & a p {
+        color: $green;
     }
 }
 
@@ -165,6 +183,9 @@ header {
 .toggle-header {
     width: 5em!important;
     padding: 1em!important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .toggle-nav-text {

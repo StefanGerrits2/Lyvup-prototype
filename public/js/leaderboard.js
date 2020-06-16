@@ -11,3 +11,13 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
   }
+
+// Header animations
+const toggleFooter = document.querySelector('#toggle-header');
+
+toggleFooter.addEventListener('click', () => {
+    const footer = document.querySelector('footer');
+    
+    // Toggle footer
+    footer.classList.toggle('footer-shrinked');
+});

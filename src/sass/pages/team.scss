@@ -15,6 +15,7 @@
 }
 
 #teamoverview__container {
+  position: relative;
   width: 60%;
   height: fit-content;
   background-color: $white;
@@ -59,6 +60,7 @@
 }
 
 .profile__container {
+  position: relative;
   background-color: white;
   margin: 0.6%;
   padding: 1em;
@@ -106,8 +108,7 @@
 }
 
 .collapse img {
-  margin-left: 4.5em;
-  transition: al 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .profileinfo__container {
@@ -124,11 +125,16 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  text-align: center;
+  padding-left: 3em;
 }
 
 .flex-container2 {
   display: flex;
   align-items: center;
+  & img{
+    border-radius: 0;
+  }
 }
 
 .flex-container2 img {
@@ -283,7 +289,7 @@
 
 .strong-wrapper {
   padding: 0;
-  width: 35%;
+  width: 39%;
 }
 
 .strong__super-container {
@@ -313,7 +319,7 @@
 
 .goal-wrapper {
   padding: 0;
-  width: 60%;
+  width: 59%;
 }
 
 .goalsuper-container span,
@@ -347,7 +353,7 @@
 .achievement-wrapper {
   margin: 0;
   padding: 0;
-  width: 33%;
+  width: 39%;
   margin-top: 1em;
 }
 
@@ -361,7 +367,7 @@
 .challenges-wrapper {
   margin: 0;
   margin-top: 1em;
-  width: 65%;
+  width: 59%;
 }
 
 .challenge__super-container {
@@ -373,4 +379,91 @@
   max-height: 15em;
   overflow: hidden;
   overflow-y: scroll;
+}
+
+.team-admin-options{
+  margin: 0% 5%;
+  left: 0;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  position:absolute;
+  top: 0.5em;
+  height: 2em;
+  & img{
+    width: 30px;
+    height: 25px;
+    margin: 0;
+  }
+  & .admin-checkbox{
+    display: block;
+  }
+}
+
+
+//made these checkboxes using https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+.checkbox-container {
+  display: block;
+  width: auto;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5em;
+   & input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+     height: 0;
+     width: 0;
+   }
+}
+
+.checkmark {
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: $grey;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: white;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid $light-blue;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.admin-enabler, .admin-enabler-button {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  display: block !important;
+}
+
+.admin-enabler-button {
+  top: 1.5em;
 }

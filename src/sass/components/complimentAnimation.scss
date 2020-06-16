@@ -1,102 +1,121 @@
+#animationButton{
+    margin-top: 0 !important;
+}
+
+#animationBottomText{
+    padding-top: 2em;
+    margin-left: 3.5em;
+}
+
 .compliment__animation {
     position: absolute;
     top: 70%;
     left: 50%;
-    margin-left: -200px; /* negative half of width above */
-    margin-top: -200px; /* negative half of height above */
+    margin-left: -20em; /* negative half of width above */
+    margin-top: -20em; /* negative half of height above */
+    text-indent: 1em;
 }
 
-// .demo {
-//     width: $leafWidth * 1.5;
-//     height: $leafWidth * 1.5;
-//     position: relative;
-// }
+$animationtime: 2s;
+$leafWidth: 150px;
 
-// // $leafWidth: 150px;
 
-// .leaf {
-//     width: $leafWidth;
-//     height: $leafWidth;
-//     border-radius: $leafWidth 0px;
-//     background: linear-gradient(45deg, rgba(188, 190, 192, 1) 8%, rgba(158, 31, 99, 1) 30%, rgba(158, 31, 99, 1) 100%);
-//     position: absolute;
-//     opacity: 0.8;
-//     transform-origin: top right;
-//     transform: rotateZ(135deg);
-// }
+.demo {
+    position: relative;
+    text-align: left;
+}
 
-// .leaf_1{
-//     animation: Lotus1 2s linear 1;
-// }
-// .leaf_2{
-//     animation: Lotus2 2s linear 1;
-// }
-// .leaf_3{
-//     animation: Lotus3 2s linear 1;
-// }
-// .leaf_4{
-//     animation: Lotus4 2s linear 1;
-// }
-// .leaf_5{
-//     animation: Lotus5 2s linear 1;
-// }
+.leaf {
+    width: $leafWidth;
+    height: $leafWidth;
+    border-radius: $leafWidth 0px;
+    background: linear-gradient(45deg, rgba(188, 190, 192, 1) 8%, rgba(158, 31, 99, 1) 30%, rgba(158, 31, 99, 1) 100%);
+    position: absolute;
+    opacity: 0.8;
+    transform-origin: top right;
+    transform: rotateZ(135deg);
+}
 
-// @keyframes Lotus1 {
-//     0% {
-//         transform: rotateZ(135deg);
-//     }
-//     50% {
-//         transform: rotateZ(180deg);
-//     }
-//     100% {
-//         transform: rotateZ(225deg);
-//     }
-// }
+.leaf_1{
+    animation: Lotus1 $animationtime forwards 1 cubic-bezier(.48,.6,.69,.54)
+}
+.leaf_2{
+    animation: Lotus2 $animationtime forwards 1 cubic-bezier(.54,.32,.48,.91)
+}
+.leaf_3{
+    animation: Lotus3 $animationtime forwards 1 cubic-bezier(1,.19,.91,.74);
+}
+.leaf_4{
+    animation: Lotus4 $animationtime forwards 1 cubic-bezier(.48,.6,.25,.89)
+}
+.leaf_5{
+    animation: Lotus5 $animationtime forwards 1 cubic-bezier(.79,.14,.55,.74);
+}
 
-// @keyframes Lotus2 {
-//     0% {
-//         transform: rotateZ(135deg);
-//     }
-//     50% {
-//         transform: rotateZ(180deg);
-//     }
-//     100% {
-//         transform: rotateZ(225deg);
-//     }
-// }
+.floatingText{
+    animation: Text $animationtime forwards 1;
+    background-color: $light-grey;
+    border-radius: 5px;
+    padding: .25em;
+}
 
-// @keyframes Lotus3 {
-//     0% {
-//         transform: rotateZ(135deg);
-//     }
-//     50% {
-//         transform: rotateZ(180deg);
-//     }
-//     100% {
-//         transform: rotateZ(225deg);
-//     }
-// }
+//right bottom
+@keyframes Lotus1 {
+    0% {
+        transform: rotateZ(135deg);
+    }
+    100% {
+        transform: rotateZ(225deg);
+    }
+}
 
-// @keyframes Lotus4 {
-//     0% {
-//         transform: rotateZ(135deg);
-//     }
-//     50% {
-//         transform: rotateZ(180deg);
-//     }
-//     100% {
-//         transform: rotateZ(225deg);
-//     }
-// }
+//left bottom
+@keyframes Lotus2 {
+    0% {
+        transform: rotateZ(135deg);
+    }
+    100% {
+        transform: rotateZ(45deg);
+    }
+}
 
-// @keyframes Lotus5 {
-//     0% {
-//         transform: rotateZ(135deg);
-//     }
-//     50% {
-//         transform: rotateZ(180deg);
-//     }
-//     100% {
-//         transform: rotateZ(225deg);
-//     }
-// }
+//left middle
+@keyframes Lotus3 {
+    0% {
+        transform: rotateZ(135deg);
+    }
+    100% {
+        transform: rotateZ(80deg);
+    }
+}
+
+//right middle
+@keyframes Lotus4 {
+    0% {
+        transform: rotateZ(135deg);
+    }
+    100% {
+        transform: rotateZ(205deg);
+    }
+}
+
+//right top
+@keyframes Lotus5 {
+    0% {
+        transform: rotateZ(135deg);
+    }
+    100% {
+        transform: rotateZ(180deg);
+    }
+}
+
+@keyframes Text {
+    0% {
+        transform: translateY(0) scale(.4);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-5em) scale(1);
+        opacity: 1;
+    }
+}

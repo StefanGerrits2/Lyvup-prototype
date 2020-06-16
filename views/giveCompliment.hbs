@@ -7,16 +7,17 @@
                 <h2>Compliment geven</h2>
                 <div id="option__container">
                     <div>
-                        <input id="praise" class="option1" type="radio" value="praise" name="type" checked>
+                        <input id="praise" class="option" type="radio" value="praise" name="type" checked>
                         <label tabindex="0" for="praise">een compliment geven</label>
 
-                        <input id="feedback" class="option2" type="radio" value="ask-feedback" name="type">
+                        <input id="feedback" class="option" type="radio" value="ask-feedback" name="type">
                         <label tabindex="0" for="feedback">feedback vragen</label>
                     </div>
 
                     <div id="super-compliment__container">
                         <input name="superCompliment?" type="checkbox" id="supercompliment" value="yes">
-                        <label tabindex="0" id="super-compliment__button" for="supercompliment">Activeer een super compliment</label>
+                        <label tabindex="0" id="super-compliment__button" for="supercompliment">Activeer een super
+                            compliment</label>
                     </div>
                 </div>
 
@@ -123,39 +124,73 @@
                     <h3>Geselecteerde persoon:</h3>
                     <div id="selected-members"></div>
 
-                    <h4>Teamlid informatie</h4>
+                    <h4>Selecteer een doel als je hierop een compliment wilt geven.</h4>
+
                     <div id="goals__container">
-                        <p>Selecteer een doel als je hierop een compliment wilt geven.</p>
-                        <div class="goal__container">
-                            <div>
-                                <div class="goal-buttons__container">
-                                    <span class="goal-type">Samenwerken</span><span class="goal-type2">Verbeteren</span>
+                        <input name="goals-selected" type="checkbox" id="goal1" value="goal1">
+                        <label for="goal1" tabindex="0">
+                            <div class="goal__container">
+                                <div>
+                                    <div class="goal-buttons__container">
+                                        <span class="goal-type">Samenwerken</span>
+                                        <div>
+                                            <img src="/images/apply.svg" alt="">
+                                            <span class="goal-type2"> Verbeteren</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Beter worden in samen werken door vaker te communiceren</p>
                                 </div>
                             </div>
-                            <div>
-                                <p>Beter worden in samen werken door vaker te communiceren</p>
-                            </div>
-                        </div>
-                        <div class="goal__container">
-                            <div>
-                                <div class="goal-buttons__container">
-                                    <span class="goal-type">Proactief</span><span class="goal-type2">Verbeteren</span>
+                        </label>
+
+                        <input name="goals-selected" type="checkbox" id="goal2" value="goal2">
+                        <label for="goal2" tabindex="0">
+                            <div class="goal__container">
+                                <div>
+                                    <div class="goal-buttons__container">
+                                        <span class="goal-type">Proactief</span>
+                                        <div>
+                                            <img src="/images/apply.svg" alt="">
+                                            <span class="goal-type2"> Verbeteren</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Test doel</p>
                                 </div>
                             </div>
-                            <div>
-                                <p>Test doel</p>
-                            </div>
-                        </div>
+                        </label>
+                    </div>
+
+                <div id="selected-members__container">
+                    <textarea name="textarea" id="" rows="10" required
+                        placeholder="Typ hier je compliment..."></textarea>
+                    <div class="flex">
+                        <input type="submit" class="defaultButton" value="Versturen">
+                        <button type="button" id="animationButton">Animatie</button>
                     </div>
                 </div>
 
-                <div id="selected-members__container">
-                    <textarea name="textarea" id="" rows="10" required placeholder="Typ hier je compliment..."></textarea>
-                    <input type="submit" class="defaultButton" value="Versturen">
-                </div>
             </aside>
         </form>
+
+        <div class="compliment__animation hidden">
+            <h3 class="floatingText">+15 karmapunten</h3>
+            <section class="demo">
+                <div class="leaf leaf_1"></div>
+                <div class="leaf leaf_2"></div>
+                <div class="leaf leaf_3"></div>
+                <div class="leaf leaf_4"></div>
+                <div class="leaf leaf_5"></div>
+                <h4 id="animationBottomText">Goed bezig</h4>
+
+            </section>
+        </div>
     </main>
 </div>
 
 <script src="js/compliments.js"></script>
+<script src="js/animations.js"></script>
+{{> footer}}

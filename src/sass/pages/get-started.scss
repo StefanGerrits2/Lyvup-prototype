@@ -55,6 +55,30 @@
     transition: all 350ms ease-in-out
 }
 
+.person__card-container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.person__card {
+    width: fit-content;
+    margin: 0.5em;
+    background-color: $white;
+    padding: 2em;
+    box-shadow: 0 2px 0 1px #e5e5e5;
+    border-radius: 10px;
+
+}
+
+.person__card img {
+    width: 60px;
+    height: 60px;
+    margin: 0.5em auto;
+    display: block;
+    border-radius: 50%;
+}
+
 .team_card__container a:hover {
     color: $yellow;
 }
@@ -65,7 +89,6 @@
     width: 10em;
     display: block;
     font-size: 13px;
-    font-family: Raleway;
     border: 1px solid #aaaaaa;
     border-radius: 10px;
     margin: 0 auto;
@@ -87,14 +110,15 @@
 }
 
 .invite-container textarea {
+    border-radius: 5px;
     font-family: publicSans, sans-serif;
-    padding: 10px;
-    width: 20em;
+    background-color: white;
+    padding: 2em;
+    border: none;
+    margin-top: 2em;
     display: block;
-    font-size: 13px;
-    font-family: Raleway;
-    border: 1px solid #aaaaaa;
-    border-radius: 10px;
+    width: 25em;
+    height: 7em;
     margin-bottom: 2em;
 
     transition: all 350ms ease-in-out;
@@ -106,12 +130,20 @@
     }
 }
 
-.sign-up,
+.sign-up {
+    padding: 10px;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    width: 25em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .invite-container {
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
-    width: fit-content;
+    width: 35em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
@@ -122,10 +154,11 @@
     width: 20em;
     display: block;
     font-size: 13px;
-    font-family: Raleway;
     border: 1px solid #aaaaaa;
     border-radius: 10px;
     margin: 1em;
+    margin-top: 2.3em;
+    margin-bottom: 2.3em;
     margin-left: 0;
 
     transition: all 350ms ease-in-out;
@@ -143,10 +176,20 @@
 
 #finish {
     text-decoration: none;
-    background-color: $green;
-    color: white;
-    padding: 1em;
+    font-family: publicSans-medium, sans-serif;
+    padding: 10px;
+    background-color: #17686d;
+    color: #fff;
     border-radius: 5px;
+    font-size: 1em;
+    margin-right: auto;
+    margin-bottom: 2em;
+    height: 50px;
+    border: none;
+    width: 10em;
+    transition: all .2s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 
 .items-container {
