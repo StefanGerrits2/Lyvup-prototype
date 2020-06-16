@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li>
-                    <a class='focus-visible' href="/" {{#if home}} class="active-nav" {{/if}}>
+                    <a href="/" {{#if home}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-home.svg" alt=""></div>
                         <p>Dashboard</p>
                     </a>
@@ -34,6 +34,12 @@
                     <a href="/goals" {{#if goals}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-goals.svg" alt=""></div>
                         <p>Mijn doelen</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assessment" {{#if assessment}} class="active-nav" {{/if}}>
+                        <div><img src="/images/nav-assessment.svg" alt=""></div>
+                        <p>Assessment</p>
                     </a>
                 </li>
                 <li>

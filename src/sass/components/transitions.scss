@@ -12,3 +12,8 @@
     0% {height: 3em}
     100% {height: 0em}
 }
+
+@keyframes showLabels {
+    from {height: 0;}
+    to {height: 50px;}
+  }
