@@ -25,9 +25,9 @@
           </div>
           <div class="select">
             <select required name="doel" >
-                <option value="Apply / Improve">Toepassen / Ontwikkelen</option>
-                <option value="Apply">Toepassen</option>
-                <option value="Improve">Ontwikkelen</option>
+                <option value="Toepassen / Ontwikkelen">Toepassen / Ontwikkelen</option>
+                <option value="Toepassen">Toepassen</option>
+                <option value="Ontwikkelen">Ontwikkelen</option>
             </select>
           </div>
           <div class="datePicker">
@@ -47,7 +47,7 @@
       {{#each setGoals}}
       <article class="goal__container" id='{{id}}'>
           <div class="goal-buttons__container">
-            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image" src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">{{daysToExpiry}}</span>
+            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image" src="./images/{{goal_type}}.png" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">{{daysToExpiry}}</span>
           </div>
         <div>
           <p>{{description}}</p>
@@ -68,9 +68,9 @@
               <div class="select">
                 <select name="doel" >
                     <option selected value="{{goal_type}}">{{goal_type}}</option>
-                    <option value="Apply / Improve">Toepassen / Ontwikkelen</option>
-                    <option value="Apply">Toepassen</option>
-                    <option value="Improve">Ontwikkelen</option>
+                    <option value="Toepassen / Ontwikkelen">Toepassen / Ontwikkelen</option>
+                    <option value="Toepassen">Toepassen</option>
+                    <option value="Ontwikkelen">Ontwikkelen</option>
                 </select>
               </div>
               <div class="datePicker">
@@ -120,7 +120,7 @@
       {{#each completedGoals}}
       <article class="goal__container" id='{{id}}'>
         <div class="goal-buttons__container">
-            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image" src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">voltooid op: {{complete_date}} voor {{complete_percentage}}%</span>
+            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image" src="./images/{{goal_type}}.png" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">voltooid op: {{complete_date}} voor {{complete_percentage}}%</span>
         </div>
         <div>
           <p>{{description}}</p>

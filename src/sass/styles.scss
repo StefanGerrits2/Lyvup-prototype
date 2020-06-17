@@ -104,13 +104,13 @@ hr{
 }
 
 input[type="text"],
-input[type="email"], 
+input[type="email"],
 textarea {
   transition: .2s ease-in-out;
 }
 
 input[type="text"]:focus,
-input[type="email"]:focus, 
+input[type="email"]:focus,
 textarea:focus {
     border: 1px solid transparent;
     outline: none;
@@ -339,6 +339,7 @@ aside {
 
 .goal-type-image {
   height: 30px;
+  width: auto !important;
 }
 
 .goal-type2 {

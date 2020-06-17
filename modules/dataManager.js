@@ -23,8 +23,20 @@ async function manageData(req) {
       userGoals = await Fetcher.get(goalsURL);
       userGoals = userGoals.getUserGoals.data;
 
-      // retrieves the description from an array within the object
+      // Retrieves the description from an array within the object
       userGoals.forEach(element => element.description = element.skills[0].description);
+
+      // Some data from the api did not translate to dutch
+      userGoals.map((curr) => {
+        console.log(curr.goal_type)
+        if (curr.goal_type === "Improve") {
+          curr.goal_type = "Ontwikkelen"
+        } else if (curr.goal_type === "Apply") {
+          curr.goal_type = "Toepassen"
+        } else {
+          curr.goal_type = "Toepassen / Ontwikkelen"
+        }
+      })
       userGoals.forEach(element => userGoalsData.setGoals.push(element))
 
       persistedData = true
