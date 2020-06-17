@@ -4,9 +4,21 @@
     <div class="dashboard__container">
         <div class="center__container">
             <div class="dash_filter__container">
-                <a href="/compliment-or-feedback">
-                    <button id="compliment_filter">Geef compliment</button>
-                </a>
+                <h1>Dashboard</h1>
+                <div>
+                    <a href="/compliment-or-feedback">
+                        <button id="compliment_dash">
+                            <span>Geef compliment</span>
+                            <img src="/images/thumbs_up.svg" alt="">
+                        </button>
+                    </a>
+                    <a href="/goals">
+                        <button id="goal_dash">
+                            <span>Stel een doel</span>
+                            <img src="/images/goals_icon.svg" alt="">
+                        </button>
+                    </a>
+                </div>
             </div>
 
             <div class="activity__container">
@@ -18,7 +30,7 @@
                     <div class="new__card_content">
                         <div class="new__card_header">
                             <h4>{{data.activities_data.activities.[0].title}}</h4>
-                            <span>{{data.activities_data.activities.[0].created_on}}</span>
+                            <span>Gisteren, om 10:23</span>
                         </div>
                         <div class="new__card_message">
                             <p>
@@ -54,14 +66,14 @@
                 <!-- NEW CARD -->
                 <div class="new__card">
                     <div class="new__card_sender">
-                        <img src="/images/random1.jpg" alt="">
+                        <img src="/images/random2.jpg" alt="">
                     </div>
                     <div class="new__card_content">
-                        <div class="new__card_header">
+                        <div class="new__card_header blue__border">
                             <h4>{{data.activities_data.activities.[1].title}}</h4>
-                            <span>{{data.activities_data.activities.[1].created_on}}</span>
+                            <span>Gisteren, om 23:57</span>
                         </div>
-                        <div class="new__card_message">
+                        <div class="new__card_message blue__border">
                             <p>
                                 {{data.activities_data.activities.[1].message}}
                                 <span class="more__text hide">
@@ -104,6 +116,164 @@
                     </div>
                 </div>
 
+                <!-- NEW CARD -->
+                <div class="new__card">
+                    <div class="new__card_sender">
+                        <img src="/images/random2.jpg" alt="">
+                    </div>
+                    <div class="new__card_content">
+                        <div class="new__card_header">
+                            <h4>{{data.activities_data.activities.[2].title}}</h4>
+                            <span>1 week geleden</span>
+                        </div>
+                        <div class="new__card_message">
+                            <p>
+                                {{data.activities_data.activities.[2].message}}
+                                <span class="more__text hide">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur atque beatae debitis dolores eaque eos illum
+                                </span>
+                            </p>
+                        </div>
+                        <div class="new__card_receivers">
+                            <img src="/images/random4.jpg" alt="">
+                            <div class="receivers_tooltip">
+                                <h4>+4</h4>
+                            </div>
+                        </div>
+                        <div class="expanded__receivers hide">
+                            <div class="expanded__item">
+                                <img src="/images/random4.jpg" alt="">
+                                <p>Lex</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/random2.jpg" alt="">
+                                <p>Tim</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/random3.jpg" alt="">
+                                <p>Anna</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/reinier.jpg" alt="">
+                                <p>Reinier</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/reinier.jpg" alt="">
+                                <p>Reinier</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/reinier.jpg" alt="">
+                                <p>Reinier</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW CARD -->
+                <div class="new__card">
+                    <div class="new__card_sender">
+                        <img src="/images/random2.jpg" alt="">
+                    </div>
+                    <div class="new__card_content">
+                        <div class="new__card_header blue__border">
+                            <h4>{{data.activities_data.activities.[3].title}}</h4>
+                            <span>3 weken geleden</span>
+                        </div>
+                        <div class="new__card_message blue__border">
+                            <p>
+                                {{data.activities_data.activities.[3].message}}
+                                <span class="more__text hide">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur atque beatae debitis dolores eaque eos illum
+                                </span>
+                            </p>
+                        </div>
+                        <div class="new__card_receivers">
+                            <img src="/images/random4.jpg" alt="">
+                            <div class="receivers_tooltip">
+                                <h4>+4</h4>
+                            </div>
+                        </div>
+                        <div class="expanded__receivers hide">
+                            <div class="expanded__item">
+                                <img src="/images/random4.jpg" alt="">
+                                <p>Lex</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/random2.jpg" alt="">
+                                <p>Tim</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/random3.jpg" alt="">
+                                <p>Anna</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/reinier.jpg" alt="">
+                                <p>Reinier</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/reinier.jpg" alt="">
+                                <p>Reinier</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/reinier.jpg" alt="">
+                                <p>Reinier</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW CARD -->
+                <div class="new__card">
+                    <div class="new__card_sender">
+                        <img src="/images/random2.jpg" alt="">
+                    </div>
+                    <div class="new__card_content">
+                        <div class="new__card_header">
+                            <h4>{{data.activities_data.activities.[4].title}}</h4>
+                            <span>1 maand geleden</span>
+                        </div>
+                        <div class="new__card_message">
+                            <p>
+                                {{data.activities_data.activities.[4].message}}
+                                <span class="more__text hide">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur atque beatae debitis dolores eaque eos illum
+                                </span>
+                            </p>
+                        </div>
+                        <div class="new__card_receivers">
+                            <img src="/images/random4.jpg" alt="">
+                            <div class="receivers_tooltip">
+                                <h4>+4</h4>
+                            </div>
+                        </div>
+                        <div class="expanded__receivers hide">
+                            <div class="expanded__item">
+                                <img src="/images/random4.jpg" alt="">
+                                <p>Lex</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/random2.jpg" alt="">
+                                <p>Tim</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/random3.jpg" alt="">
+                                <p>Anna</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/reinier.jpg" alt="">
+                                <p>Reinier</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/reinier.jpg" alt="">
+                                <p>Reinier</p>
+                            </div>
+                            <div class="expanded__item">
+                                <img src="/images/reinier.jpg" alt="">
+                                <p>Reinier</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <aside class="right__container">

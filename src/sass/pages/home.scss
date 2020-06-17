@@ -60,8 +60,6 @@
   background-size: 500%;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
   height: 85vh;
 }
 
@@ -140,13 +138,33 @@
 .dash_filter__container {
   display: flex;
   margin-bottom: 2em;
+  justify-content: space-between;
 
-  & #compliment_filter {
-    background-color: $red;
-  }
 
-  & #goal_filter {
-    background-color: $light-blue;
+
+  & div:nth-of-type(1) {
+    display: flex;
+
+    & button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      & img {
+        margin-left: 1em;
+      }
+    }
+
+    & #compliment_dash {
+      width: 13em;
+      background-color: $red;
+    }
+
+    & #goal_dash {
+      width: 11em;
+      background-color: $light-blue;
+    }
   }
 }
 
@@ -160,7 +178,7 @@
   display: flex;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: .2s ease-in-out;
     cursor: pointer;
   }
@@ -188,6 +206,10 @@
 
       & h4 {
         font-size: 14px;
+      }
+
+      & span {
+        color: $grey;
       }
     }
 
@@ -295,4 +317,8 @@
 .todo__item {
   display: flex;
   justify-content: space-between;
+}
+
+.blue__border {
+  border-left: 2px solid $light-blue !important;
 }

@@ -1,4 +1,5 @@
 const coll = document.getElementsByClassName('collapsible');
+const content = document.querySelectorAll('.collapse-content')
 let i;
 
 for (i = 0; i < coll.length; i++) {
@@ -13,6 +14,9 @@ for (i = 0; i < coll.length; i++) {
         }
     });
 }
+
+coll[0].click();
+coll[1].click();
 
 const newCard = document.querySelectorAll('.new__card');
 
@@ -38,26 +42,3 @@ newCard.forEach((card) => {
     });
 });
 
-
-
-/*newCard.addEventListener('click', function () {
-    const expandText = document.getElementsByClassName('moreText');
-    const expandReceivers = document.getElementsByClassName('moreReceivers');
-    const shortReceivers = document.getElementsByClassName('new__card_receivers');
-
-    for (i = 0; shortReceivers.length; i++) {
-
-    }
-
-    if (expandText.classList.contains('hide') && expandReceivers.classList.contains('hide')) {
-        expandText.classList.remove('hide');
-        expandReceivers.classList.remove('hide');
-        expandReceivers.classList.add('show');
-        shortReceivers.style.display = 'none';
-    } else {
-        expandText.classList.add('hide');
-        expandReceivers.classList.remove('show');
-        expandReceivers.classList.add('hide');
-        shortReceivers.style.display = 'flex';
-    }
-});*/
