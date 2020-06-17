@@ -33,6 +33,8 @@ const get_started = require('./routes/get-started.js');
 const landing = require('./routes/landing.js');
 const assessment = require('./routes/assessment.js');
 const invite = require('./routes/invite.js');
+const challenge = require('./routes/challenge.js');
+const assessmentAdmin = require('./routes/assessmentAdmin.js');
 
 app
     .set('view engine', 'hbs')
@@ -76,6 +78,8 @@ app
     .get('/landing', landing)
     .get('/assessment', assessment)
     .get('/invite', invite)
+    .get('/challenge', challenge)
+    .get('/assessmentAdmin', assessmentAdmin)
 
     .post('/compliment-or-feedback', urlencodedParser, compliment)
     .post('/goals', urlencodedParser, goals)

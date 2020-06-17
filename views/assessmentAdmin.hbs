@@ -1,0 +1,38 @@
+<div id="page">
+    {{> new-header}}
+
+    <div id="main__container" class="assessment-center__container">
+        <h1>Assessment Admin</h1>
+
+        {{!-- teamleden --}}
+        <h4 class="assessment__title__text">Assessments van teamgenoten</h4>
+        <div id="messages__container">
+            <div class="assessment__container ">
+                <div class="assessment-image__container">
+                    <img class="assessment__image" src="/images/stefan.jpg" alt="">
+                    <p class="assessment__person">Stefan Gerrits</p>
+                </div>
+
+                    <div class="assessment__progress__border left__auto">
+                        <p class="admin__text">Vragen over zelf</p>
+                        <div class="assessment__progress" style="width:5%">5%</div>
+                    </div>
+
+                <div class="assessment__progress__border left__auto">
+                    <p class="admin__text">360-graden testen</p>
+                    <div class="assessment__progress" style="width:40%">40%</div>
+                </div>
+
+                <div class="assessment__progress__border left__auto">
+                    <p class="admin__text">Vrienden en familie</p>
+                    <div class="assessment__progress" style="width:25%">25%</div>
+                </div>
+                <button class="assessment__button">Stuur herinnering</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> thumbs-up}}
+
+{{> footer}}

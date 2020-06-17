@@ -732,6 +732,11 @@ option {
     width: 60px;
     height: auto;
   }
+
+  .achievementIcon{
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -761,8 +766,11 @@ option {
   #profile__right__container,
   #compliment__container aside,
   #compliment__container form #select__container,
-  .center__container {
-    width: 100%;
+  .center__container,
+  .left__width,
+  #leaderboard__container,
+  #leaderboard__right {
+    width: 100% !important;
     height: 100%;
   }
 
@@ -773,6 +781,7 @@ option {
   }
 
   #content__container,
+  #leaderboard__container,
   .dashboard__container,
   #compliment__container form {
     flex-direction: column;
@@ -781,7 +790,7 @@ option {
   .goals-content__container {
     flex-direction: row !important;
 
-    & #main__container, #goals-main__container {
+    & #main__container, #leaderboard__container, #goals-main__container {
       width: 50%;
 
       & #setGoals__container {
@@ -863,7 +872,13 @@ option {
   .compliment-message {
     width: 80%;
   }
+
+  .achievementIcon{
+    width: 30px;
+    height: 30px;
+  }
 }
+
 
 @media screen and (max-width: 1000px) {
   body {
