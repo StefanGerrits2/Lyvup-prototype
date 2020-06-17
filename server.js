@@ -34,6 +34,7 @@ const onboarding_post = require('./routes/onboarding-post.js');
 const landing = require('./routes/landing.js');
 const assessment = require('./routes/assessment.js');
 const invite = require('./routes/invite.js');
+const challenge = require('./routes/challenge.js');
 
 app
     .set('view engine', 'hbs')
@@ -77,6 +78,7 @@ app
     .get('/landing', landing)
     .get('/assessment', assessment)
     .get('/invite', invite)
+    .get('/challenge', challenge)
 
     .post('/compliment-or-feedback', urlencodedParser, compliment)
     .post('/goals', urlencodedParser, goals)
