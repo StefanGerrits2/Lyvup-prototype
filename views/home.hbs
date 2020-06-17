@@ -98,11 +98,11 @@
                         <img src="/images/random2.jpg" alt="">
                     </div>
                     <div class="new__card_content">
-                        <div class="new__card_header blue__border">
+                        <div class="new__card_header">
                             <h4>{{data.activities_data.activities.[2].title}}</h4>
                             <span>1 week geleden</span>
                         </div>
-                        <div class="new__card_message blue__border">
+                        <div class="new__card_message">
                             <p>
                                 {{data.activities_data.activities.[2].message}}
                                 <span class="more__text hide">
@@ -263,17 +263,33 @@
                 </div>
 
                 <div class="collapse__container">
-                    <button class="collapsible">To Do</button>
+                    <button class="collapsible">
+                        <div class="dash__button_flex">
+                            <span>To Do</span>
+                            <span class="dash__notif">
+                                5
+                            </span>
+                        </div>
+                    </button>
                     <div id="todo__collapse" class="collapse-content">
-                        {{#each data.test_data}}
-                            <div class="todo__item">
-                                <p>{{title}}</p>
-                                <img src="/images/cross_icon.svg" alt="">
-                            </div>
-                        {{/each}}
+                        <div class="todo__premium">
+                            <span>Assessment invullen</span>
+                        </div>
+                        <div class="todo__premium">
+                            <span>Vrienden toevoegen</span>
+                        </div>
+                        <div class="todo__item">
+                            <span>Geef je sterke kanten aan</span>
+                        </div>
+                        <a href="/goals" class="todo__item">
+                            <span>Stel een doel</span>
+                        </a>
+                        <a href="/compliment-or-feedback" class="todo__item">
+                            <span>Geef een compliment</span>
+                        </a>
                     </div>
 
-                    <button class="collapsible">Totaal</button>
+                    <button class="collapsible">Totalen statistieken</button>
                     <div id="totaal_collapse" class="collapse-content">
                         <div class="data__container">
                             <p>Complimenten totaal:</p>
