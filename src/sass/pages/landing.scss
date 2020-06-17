@@ -54,7 +54,7 @@
 .landing__container {
   max-width: 80em;
   margin: 0 auto;
-  padding: 6em 1em;
+  padding: 6em 5em;
 }
 
 .section__header {
@@ -81,8 +81,13 @@
       }
 
       & img {
-        max-width: 100%;
+        width: 90%;
         height: auto;
+        margin: 0 auto;
+      }
+
+      & p {
+        margin: 1.75em 0;
       }
     }
   }

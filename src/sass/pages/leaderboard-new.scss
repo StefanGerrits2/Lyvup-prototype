@@ -22,6 +22,10 @@
     border-radius: 10px;
 }
 
+.top__container {
+    margin-top: 1em;
+}
+
 .bottom__container__left {
     background-image: url(/images/background.png);
     background-size: 500%;
@@ -125,12 +129,7 @@
 }
 
 .leaderboard__small__title {
-    margin-left: 0.5em;
     margin-top: 0.5em;
-}
-
-.leaderboard__small__title__right {
-    margin-left: 0.5em;
 }
 
 .goal__leaderboard {

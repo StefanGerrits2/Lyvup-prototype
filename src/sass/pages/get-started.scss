@@ -1,5 +1,5 @@
 .get-started {
-    background-color: $light-grey;
+    background-color: #D2D1D7;
     list-style-type: none;
     height: 3em;
     display: flex;
@@ -13,6 +13,10 @@
     color: #4a494a;
     text-decoration: none;
     margin-top: 1em;
+}
+
+.full-width {
+    width: 100%!important;
 }
 
 .team__card {
@@ -113,11 +117,9 @@
     background-color: white;
     padding: 2em;
     border: none;
-    margin-top: 2em;
     display: block;
     width: 25em;
     height: 7em;
-    margin-bottom: 2em;
 
     transition: all 350ms ease-in-out;
 
@@ -141,7 +143,7 @@
     padding: 10px;
     background-color: $light-grey;
     border-radius: $border-radius-big;
-    width: 35em;
+    width: fit-content;
     margin-top: 1em;
     margin-bottom: 1em;
 }
