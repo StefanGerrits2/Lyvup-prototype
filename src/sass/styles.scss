@@ -229,6 +229,21 @@ textarea:focus {
     }
 }
 
+.container-head{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+
+  & img{
+    margin-right: 1em;
+    width: 3em;
+  }
+  & h1{
+    width:75%;
+    margin-bottom: 0;
+  }
+}
+
 .rotateChevron {
     transform: rotate(180deg)!important;
     transition: .3s linear;
@@ -262,6 +277,7 @@ textarea:focus {
 
   & div{
     & .complete-comment {
+      width: 85%;
       font-size: 1.1em;
       color: $green;
     }
@@ -282,6 +298,10 @@ textarea:focus {
 
 .goal__container img {
   width: 3em;
+}
+
+.goal__container:not(:last-of-type) {
+    margin-bottom: 1em;
 }
 
 #goals__container {
@@ -328,6 +348,7 @@ aside {
 }
 
 .goal__container .goal-buttons__container {
+  min-height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -632,7 +653,8 @@ option {
   #main__container,
   .right__container,
   .center__container,
-  #super-goals__container, #goals-compliments__container {
+
+  #super-goals__container, #goals-compliments__container, #goals-main__container, #teamoverview__container {
     padding: 1.5em 2em 2em;
   }
 
