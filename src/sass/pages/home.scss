@@ -8,6 +8,7 @@
   padding: 2em;
   border-radius: 10px;
   margin-bottom: 2em;
+  box-shadow: 0 2px 0 1px #e5e5e5;
 }
 
 .center__container {
@@ -50,6 +51,20 @@
 
 .active__challenges {
   margin-top: 2em;
+  margin-right: 0;
+
+  & > div {
+    width: 100%;
+
+    & > div {
+      width: 50%;
+      margin: 1em 0 0 0;
+    }
+
+    & > div:first-of-type {
+      margin-right: 1em;
+    }
+  }
 }
 
 .activity__container {
