@@ -1,14 +1,15 @@
-#footer {
+.footer {
     position: absolute;
     left: 0;
     bottom: 0;
-    max-width: 15em;
+    max-width: 17em;
     padding: 2em;
     line-height: 175%;
     color: $grey;
-    font-size: .9em;
+    font-size: .8em;
     transition: .3s ease-in-out;
     overflow: hidden;
+    opacity: 1;
 
     & a {
         color: $grey;
@@ -21,10 +22,9 @@
 }
 
 .footer-shrinked {
-    max-width: 5em;
-    transition: .2s ease-in;
-    overflow: hidden;
-    font-size: 0.7em;
+    opacity: 0;
+    max-width: 0;
+    z-index: 99;
 }
 
 .select {

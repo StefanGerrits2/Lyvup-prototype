@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   background-color: $light-grey;
   border-radius: $border-radius-big;
-  margin-top: 3em;
+  margin-top: 2em;
   background-image: url(/images/background.png);
   background-size: 500%;
 }
@@ -31,6 +31,16 @@
   height: fit-content;
   overflow-y: auto;
   height: 100vh;
+
+  & > p:first-of-type {
+    font-size: 1.2em;
+  }
+
+  & .profile__challange__container {
+    background-color: $light-grey;
+    border-radius: $border-radius-small;
+    padding: .1em 0em;
+  }
 }
 
 #team-aside__container h4 {
@@ -76,7 +86,7 @@
 
 .collapse {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100% !important;
 }
 
 .profile__container h3 {
@@ -190,11 +200,11 @@
   transition: 200ms ease-in-out;
   border-radius: $border-radius-big;
   box-shadow: 0px 2px 0px 1px #e5e5e5;
-}
-
-.player__container:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 2px 0px 1px #e5e5e500;
+  
+  & p {
+    line-height: 150%;
+    margin-top: .5em;
+  }
 }
 
 .player__container img {
@@ -368,6 +378,10 @@
   margin: 0;
   margin-top: 1em;
   width: 59%;
+
+  & .leaderboard__challange img {
+    width: initial;
+  }
 }
 
 .challenge__super-container {

@@ -2,17 +2,21 @@
     {{> new-header}}
 
     <main id="content__container">
-        <div id="main__container">
+        <div id="main__container" class="assessment-center__container">
             <h1>Assessment Center</h1>
+            <div id="button__container">
+                <input name="feedback-type" type="radio" id="received" value="received" checked>
+                <label for="received" tabindex="0">Assessment</label>
 
-            <div class="dash_filter__container">
-                <button>Assessment</button>
-                <button>Assessment rapport</button>
-                <button>Vrienden</button>
+                <input name="feedback-type" type="radio" id="sent" value="sent">
+                <label for="sent" tabindex="0">Assessment rapport</label>
+
+                <input name="feedback-type" type="radio" id="asked" value="asked">
+                <label for="asked" tabindex="0">Vrienden</label>
             </div>
 
             {{!-- persoonlijk --}}
-            <h4>Eigen assessments</h4>
+            <h4>Jouw assessments</h4>
             <div id="messages__container">
                 <div class="assessment__container assessment__active__right">
                     <h4 class="assessment__name">Sterke kanten</h4>
@@ -28,7 +32,7 @@
                 </div>
 
                 <div class="assessment__container">
-                    <h4 class="assessment__name">Sterke kanten</h4>
+                    <h4 class="assessment__name">Communicatie</h4>
                     <p class="assessment__short__des">Wat zijn jouw belangrijkste persoonlijke competenties?</p>
                     <div class="assessment__stats">
                         <p>6 minuten</p>
@@ -42,12 +46,12 @@
             </div>
 
             {{!-- teamleden --}}
-            <h4 class="assessment__title__text">Team genoten assessments</h4>
+            <h4 class="assessment__title__text">Assessments van teamgenoten</h4>
             <div id="messages__container">
-                <div class="assessment__container">
-                    <div>
+                <div class="assessment__container ">
+                    <div class="assessment-image__container">
                         <img class="assessment__image" src="/images/stefan.jpg" alt="">
-                        <p class="assessment__person">Stefan</p>
+                        <p class="assessment__person">Stefan Gerrits</p>
                     </div>
 
                     <h4 class="assessment__name left__auto">Sterke kanten</h4>
@@ -62,9 +66,9 @@
                 </div>
 
                 <div class="assessment__container">
-                    <div>
-                        <img class="assessment__image" src="/images/stefan.jpg" alt="">
-                        <p class="assessment__person">Reinier</p>
+                    <div class="assessment-image__container">
+                        <img class="assessment__image" src="/images/reinier.jpg" alt="">
+                        <p class="assessment__person">Reinier van Limpt</p>
                     </div>
 
                     <h4 class="assessment__name left__auto">Sterke kanten</h4>
@@ -79,12 +83,12 @@
                 </div>
 
                 <div class="assessment__container">
-                    <div>
-                        <img class="assessment__image" src="/images/stefan.jpg" alt="">
-                        <p class="assessment__person">Michel</p>
+                    <div class="assessment-image__container">
+                        <img class="assessment__image" src="/images/random1.jpg" alt="">
+                        <p class="assessment__person">Tim Testpersoon</p>
                     </div>
 
-                    <h4 class="assessment__name left__auto">Sterke kanten</h4>
+                    <h4 class="assessment__name left__auto">Communicatie</h4>
                     <div class="assessment_stats left__auto">
                         <p>6 minuten</p>
                         <p>48 vragen</p>
@@ -96,9 +100,9 @@
                 </div>
 
                 <div class="assessment__container">
-                    <div>
-                        <img class="assessment__image" src="/images/stefan.jpg" alt="">
-                        <p class="assessment__person">Monika</p>
+                    <div class="assessment-image__container">
+                        <img class="assessment__image" src="/images/random3.jpg" alt="">
+                        <p class="assessment__person">Liesbeth van der testpersoon</p>
                     </div>
 
                     <h4 class="assessment__name left__auto">Sterke kanten</h4>
@@ -114,7 +118,7 @@
             </div>
         </div>
         <aside id="super-goals__container">
-            <h1>Assessment</h1>
+            <h1 id="assessment-title">Assessment</h1>
 
             <div id="messages__container">
                 <div class="assessment__container__right assessment__active__left center__text">

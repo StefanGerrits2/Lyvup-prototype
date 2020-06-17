@@ -86,7 +86,7 @@ header {
                     border-radius: $border-radius-small;
                     font-family: 'publicSans', sans-serif;
                     font-size: 14px;
-                    z-index: 999;
+                    z-index: 99;
                     left: 4.9em;
                     padding: .8em 1em;
                 }
@@ -118,10 +118,15 @@ header {
         }
         & .hoverable:nth-of-type(5):hover {
             &::before {
-                content: "Leaderboard";
+                content: "Assessment";
             }
         }
         & .hoverable:nth-of-type(6):hover {
+            &::before {
+                content: "Leaderboard";
+            }
+        }
+        & .hoverable:nth-of-type(7):hover {
             &::before {
                 content: "Profiel";
             }
