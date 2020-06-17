@@ -30,10 +30,11 @@ const leaderboard_new = require('./routes/leaderboard-new.js');
 const profile = require('./routes/profile.js');
 const onboarding = require('./routes/onboarding.js');
 const get_started = require('./routes/get-started.js');
-const onboarding_post = require('./routes/onboarding-post.js');
 const landing = require('./routes/landing.js');
 const assessment = require('./routes/assessment.js');
 const invite = require('./routes/invite.js');
+const challenge = require('./routes/challenge.js');
+const assessmentAdmin = require('./routes/assessmentAdmin.js');
 
 app
     .set('view engine', 'hbs')
@@ -77,10 +78,12 @@ app
     .get('/landing', landing)
     .get('/assessment', assessment)
     .get('/invite', invite)
+    .get('/challenge', challenge)
+    .get('/assessmentAdmin', assessmentAdmin)
 
     .post('/compliment-or-feedback', urlencodedParser, compliment)
     .post('/goals', urlencodedParser, goals)
-    .post('/onboarding', urlencodedParser, onboarding_post)
+    .post('/get-started', urlencodedParser, get_started)
     .post('/invite', urlencodedParser, invite)
 
     // 404 not found

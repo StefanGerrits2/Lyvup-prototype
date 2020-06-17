@@ -34,8 +34,7 @@
             z-index: 10;
 
             &:focus {
-                color: $green;
-                border-color: $green;
+                border-color: $white;
             }
 
             &::placeholder {

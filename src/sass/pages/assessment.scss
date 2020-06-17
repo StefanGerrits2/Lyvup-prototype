@@ -12,6 +12,11 @@
     border-left: 10px solid $yellow;
 }
 
+.assessment__name {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
 .assessment__container {
     align-items: center;
     margin: 10px;
@@ -21,11 +26,53 @@
     border-radius: $border-radius-big;
     box-shadow: 0px 2px 0px 1px #e5e5e5;
     position: relative;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
 }
 
-.assessment__name {
-    margin-right: 0.5em;
-    margin-left: 0.5em;
+.assessment-image__container {
+    margin-left: 1em;
+    width: 10em;
+
+    & p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    & img {
+        width: 3em;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto .5em auto;
+    }
+}
+
+#assessment-title {
+    margin-bottom: .5em!important;
+}
+
+.assessment_filter__container {
+    display: flex;
+    margin: 2em 0em;
+}
+
+.assessment-center__container {
+    & > h4 {
+        margin-bottom: .5em;
+    }
+
+    & #messages__container {
+        margin-bottom: 3em;
+    }
+
+    & label {
+        width: 13em!important;
+    }
 }
 
 .assessment__short__des {
@@ -66,16 +113,6 @@
     margin-top: 1em;
 }
 
-.assessment__image {
-    height: 50px;
-    border-radius: 50px;
-    margin-left: 3em;
-}
-
-.assessment__person {
-    margin-left: 3em;
-}
-
 .left__auto {
     margin-left: auto;
 }
@@ -104,4 +141,12 @@
 
 .bold{
     font-weight: bold;;
+}
+
+.admin__text{
+    background-color: $light-grey;
+    margin-left: -2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
 }

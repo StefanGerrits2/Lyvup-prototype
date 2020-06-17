@@ -1,6 +1,5 @@
 // ID's
 #leaderboard__container #main__container {
-    width: 40%;
     margin-right: 0;
     padding: 2.1em 3em 3em 3em;
     height: 100vh;
@@ -9,22 +8,25 @@
 #leaderboard__container #leaderboard__right {
     width: 60%;
     overflow-y: auto;
-    background-color: $background-color;
     padding: 2.1em 3em 3em 3em;
     height: 100vh;
 }
 
 // classes
-.top__container {
+.top__container__left {
     min-height: 50%;
-    height: 62%;
     background-image: url(/images/background.png);
     background-size: 500%;
+    padding: 10px;
+    margin-bottom: .5em;
+    border-radius: 10px;
 }
 
-.bottom__container {
+.bottom__container__left {
     background-image: url(/images/background.png);
     background-size: 500%;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .overflow {
@@ -45,9 +47,17 @@
 
 .individual__challenge {
     width: 50%;
-    height: 100%;
-    background-image: url(/images/background.png);
-    background-size: 500%;
+    margin-top: .5em;
+}
+
+.team__challenge {
+    width: 50%;
+    margin-top: .5em;
+}
+
+.leaderboard__background{
+    background-color: #f7f7f7;
+    border-radius: 10px;
 }
 
 .width {
@@ -58,11 +68,8 @@
     margin-top: 0.5em;
 }
 
-.team__challenge {
-    width: 50%;
-    height: 100%;
-    background-image: url(/images/background.png);
-    background-size: 500%;
+.top__margin{
+    margin-top: 1em;
 }
 
 .box__shadow {
@@ -96,9 +103,8 @@
 }
 
 .leaderboard__challange:hover {
-    transform: scale(1.05);
-    cursor: pointer;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .border__yellow:hover {
@@ -172,4 +178,19 @@
     margin-left: auto;
     order: 2;
 }
+
+.half__width{
+    width: 49%;
+}
+
+.vHidden{
+    visibility: hidden;
+}
+
+.left__width{
+    width: 40% !important;
+}
 // elements
+a{
+    color: white;
+}

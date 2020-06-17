@@ -3,15 +3,16 @@
     {{> new-header}}
 
     <div id="leaderboard__container">
-        <div id="main__container" id="leaderboard__left">
-          <div class="container-head">
-            <img src="./images/achievements_icon.svg" alt="">
-            <h1>Leaderboard</h1>
-          </div>
-            <div class="top__container">
-                <h3>Karma</h3>
-                <h4 class="leaderboard__small__title">Individueel</h4>
-                <div id="karma__container">
+        <div id="main__container" class="left__width">
+            <div class="container-head">
+                <img src="./images/achievements_icon.svg" alt="">
+                <h1>Leaderboard</h1>
+            </div>
+
+            <h3>Karma</h3>
+            <h4 class="leaderboard__small__title">Individueel</h4>
+            <div class="top__container__left">
+
                 <div class="gridElement">
                     <h4 class="leaderboardNumber">#1</h4>
                     <img class="leaderboardImage" src="/images/reinier.jpg" alt="profile">
@@ -49,11 +50,12 @@
                     <h4 class="leaderboardName">Max</h4>
                     <p class="leaderboardKarma">800 karma punten</p>
                 </div>
-            </div>
 
-            <div class="bottom__container">
-                <h3>Karma</h3>
-                <h4 class="leaderboard__small__title">Team</h4>
+            </div>
+            <h3>Karma</h3>
+            <h4 class="leaderboard__small__title">Team</h4>
+            <div class="bottom__container__left">
+
                 <div class="gridElement">
                     <h4 class="leaderboardNumber">#1</h4>
                     <h4 class="leaderboardName">Meesterproef</h4>
@@ -64,18 +66,19 @@
                     <h4 class="leaderboardName">Meester2</h4>
                     <p>10050 karma punten</p>
                 </div>
-              </div>
             </div>
         </div>
 
         <aside id="leaderboard__right">
+            <h1 class="vHidden">leaderboard</h1>
+            <h3>Challenges</h3>
+            <div class="flex">
+                <h4 class="leaderboard__small__title__right half__width">Individueel</h4>
+                <h4 class="leaderboard__small__title__right">Team</h4>
+            </div>
             <div class="top__container">
-                <h3>Challenges</h3>
-
-                <div class="flex">
+                <div class="flex leaderboard__background">
                     <div class="individual__challenge">
-                        <h4 class="leaderboard__small__title__right">Individueel</h4>
-
                         <div class="leaderboard__challange border__orange">
                             <p class="bodyTextBold">Complimenten geven</p>
                             <img class="float__right leaderboardImage " src="/images/icon4.png" alt="achievement">
@@ -97,7 +100,6 @@
                     </div>
 
                     <div class="team__challenge">
-                        <h4 class="leaderboard__small__title__right">Team</h4>
 
                         <div class="leaderboard__challange border__yellow">
                             <p class="bodyTextBold">Complimenten geven</p>
@@ -119,16 +121,20 @@
                         </div>
                     </div>
                 </div>
-                <button class="left__margin">Add challenge</button>
+                <button class="left__margin top__margin">
+                    <a href="/challenge">Add challenge</a>
+                </button>
+            </div>
+
+            <h3>Achievements</h3>
+            <div class="flex">
+                <h4 class="leaderboard__small__title__right half__width">Individueel</h4>
+                <h4 class="leaderboard__small__title__right">Team</h4>
             </div>
 
             <div class="challenge__achievement__container bottom__container">
-                <h3>Achievements</h3>
-
                 <div class="flex ">
                     <div class="width">
-                        <h4 class="leaderboard__small__title__right">Individueel</h4>
-
                         <div class="profile__grid__container box__shadow">
                             <div id="achievement__container" class="profile__grid__element hint--left"><img
                                     class="achievementIcon" src="/images/icon1.png"></div>
@@ -151,12 +157,9 @@
                             <div id="achievement__container" class="profile__grid__element hint--left"><img
                                     class="achievementIcon" src="/images/icon2.png"></div>
                         </div>
-                        {{!-- </div> --}}
                     </div>
 
                     <div class="width">
-                        <h4 class="leaderboard__small__title__right">Team</h4>
-
                         <div class="profile__grid__container box__shadow">
                             <div id="achievement__container" class="profile__grid__element hint--left"><img
                                     class="achievementIcon" src="/images/icon1.png"></div>
