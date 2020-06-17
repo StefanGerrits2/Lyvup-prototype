@@ -1,33 +1,33 @@
 <div id="page">
   {{> new-header}}
-<div id="content__container" class="goals-content__container">
-  <div id="goals-main__container">
-    <div class="container-head">
-      <img src="./images/goals_icon.svg" alt="">
-      <h1>Mijn doelen</h1>
-    </div>
-    <div class=addGoals>
-      <button class="goals-button" type="button">
+  <div id="content__container" class="goals-content__container">
+    <div id="goals-main__container">
+      <div class="container-head">
+        <img src="./images/goals_icon.svg" alt="">
+        <h1>Mijn doelen</h1>
+      </div>
+      <div class=addGoals>
+        <button class="goals-button" type="button">
           Doel toevoegen
-      </button>
-    </div>
-    <section class="add-goals__container">
-      <h2>Doel toevoegen</h2>
-      <h4>Welke kanten van jezelf wil je verder ontwikkelen en/of toepassen?</h4>
-      <form class="addGoal__form" action="/goals" method="post">
+        </button>
+      </div>
+      <section class="add-goals__container">
+        <h2>Doel toevoegen</h2>
+        <h4>Welke kanten van jezelf wil je verder ontwikkelen en/of toepassen?</h4>
+        <form class="addGoal__form" action="/goals" method="post">
           <div class="select">
-            <select required name="competentie" >
-                <option value="Stressbestendig">Stressbestendig</option>
-                <option value="Proactief">Proactief</option>
-                <option value="Flexibiliteit">Flexibiliteit</option>
-                <option value="Communiceren">Communiceren</option>
+            <select required name="competentie">
+              <option value="Stressbestendig">Stressbestendig</option>
+              <option value="Proactief">Proactief</option>
+              <option value="Flexibiliteit">Flexibiliteit</option>
+              <option value="Communiceren">Communiceren</option>
             </select>
           </div>
           <div class="select">
-            <select required name="doel" >
-                <option value="Apply / Improve">Toepassen / Ontwikkelen</option>
-                <option value="Apply">Toepassen</option>
-                <option value="Improve">Ontwikkelen</option>
+            <select required name="doel">
+              <option value="Apply / Improve">Toepassen / Ontwikkelen</option>
+              <option value="Apply">Toepassen</option>
+              <option value="Improve">Ontwikkelen</option>
             </select>
           </div>
           <div class="datePicker">
@@ -36,41 +36,44 @@
           </div>
           <div class="goalDescription">
             <label for="toelichting">Beschrijving</label>
-            <textarea required name="toelichting" id="" rows="10" required placeholder="Schrijf hier de beschrijving van jouw doel..."></textarea>
+            <textarea required name="toelichting" id="" rows="10" required
+              placeholder="Schrijf hier de beschrijving van jouw doel..."></textarea>
           </div>
           <input class="submitGoal" type="submit" value="doel toevoegen">
-      </form>
-    </section>
-    <h3>Actieve doelen</h3>
-    <div id="setGoals__container">
-      {{#if setGoals}}
-      {{#each setGoals}}
-      <article class="goal__container" id='{{id}}'>
+        </form>
+      </section>
+      <h3>Actieve doelen</h3>
+      <div id="setGoals__container">
+        {{#if setGoals}}
+        {{#each setGoals}}
+        <article class="goal__container" id='{{id}}'>
           <div class="goal-buttons__container">
-            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image" src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">{{daysToExpiry}}</span>
+            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image"
+              src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span
+              class="goal-estimate">{{daysToExpiry}}</span>
           </div>
-        <div>
-          <p>{{description}}</p>
-        </div>
-        <button id="{{id}}"class="goal-editor">Doel aanpassen</button>
-        <div id="edit-goals__container" class="edit-{{id}}">
-          <form class="addGoal__form" action="/goals" method="post">
-            <input class="id-getter" type="number" name="editId" value="{{id}}">
+          <div>
+            <p>{{description}}</p>
+          </div>
+          <button id="{{id}}" class="goal-editor">Doel aanpassen</button>
+          <div id="edit-goals__container" class="edit-{{id}}">
+            <form class="addGoal__form" action="/goals" method="post">
+              <input class="id-getter" type="number" name="editId" value="{{id}}">
               <div class="select">
-                <select name="competentie" >
-                    <option selected value="{{title}}">{{title}}</option>
-                    <option value="Stressbestendig">Stressbestendig</option>
-                    <option value="Proactief">Proactief</option>
-                    <option value="Flexibiliteit">Flexibiliteit</option>
-                    <option value="Communiceren">Communiceren</option>
+                <select name="competentie">
+                  <option selected value="{{title}}">{{title}}</option>
+                  <option value="Stressbestendig">Stressbestendig</option>
+                  <option value="Proactief">Proactief</option>
+                  <option value="Flexibiliteit">Flexibiliteit</option>
+                  <option value="Communiceren">Communiceren</option>
                 </select>
               </div>
               <div class="select">
-                <select name="doel" >
-                    <option selected value="{{goal_type}}">{{goal_type}}</option>
-                    <option value="Apply / Improve">Toepassen / Ontwikkelen</option>
-                    <option value="Apply">Toepassen</option>
-                    <option value="Improve">Ontwikkelen</option>
+                <select name="doel">
+                  <option selected value="{{goal_type}}">{{goal_type}}</option>
+                  <option value="Apply / Improve">Toepassen / Ontwikkelen</option>
+                  <option value="Apply">Toepassen</option>
+                  <option value="Improve">Ontwikkelen</option>
                 </select>
               </div>
               <div class="datePicker">
@@ -79,118 +82,146 @@
               </div>
               <div class="goalDescription">
                 <label for="toelichting">Beschrijving</label>
-                <textarea type="text" class="new-goalText" name="toelichting" rows="10" placeholder="Laat dit veld leeg als je geen nieuwe beschrijving wilt invoeren..."></textarea>
+                <textarea type="text" class="new-goalText" name="toelichting" rows="10"
+                  placeholder="Laat dit veld leeg als je geen nieuwe beschrijving wilt invoeren..."></textarea>
                 <input class="submitGoal" type="submit" value="doel aanpassen">
               </div>
-          </form>
-          <div class="complete-toggle">
-            <label for="voltooid">Voltooid</label>
-            <input class="goal-completer completeCheck" type="checkbox" name="voltooid" value="{{id}}">
-          </div>
-              <div id="complete-goals__container" class="complete-{{id}}">
-                <form action="/goals" method="post">
+            </form>
+            <div class="complete-toggle">
+              <label for="voltooid">Voltooid</label>
+              <input class="goal-completer completeCheck" type="checkbox" name="voltooid" value="{{id}}">
+            </div>
+            <div id="complete-goals__container" class="complete-{{id}}">
+              <form action="/goals" method="post">
                 <input class="id-getter" type="number" name="completeId" value="{{id}}">
                 <label for="completionRate">Voltooid % <p id="sliderRange" class="range-text-{{id}}"></p></label>
-                <input required type="range" name="completionRate" min="1" max="100" value="0" class="range-slider-{{id}}">
+                <input required type="range" name="completionRate" min="1" max="100" value="0"
+                  class="range-slider-{{id}}">
                 <div class="datePicker">
                   <label for="completionDate">Datum</label>
                   <input required name="completionDate" type="date">
                 </div>
-                <textarea required type="text" class="new-goalText" name="completionText" rows="3" placeholder="Hoe heb je het doel behaald..."></textarea>
-                <input type="submit" class="goal-completer" value="doel voltooien">
-              </div>
+                <textarea required type="text" class="new-goalText" name="completionText" rows="3"
+                  placeholder="Hoe heb je het doel behaald..."></textarea>
+                <div class="flex">
+                  <input id="goalAnimation" type="submit" class="goal-completer" value="doel voltooien">
+                  <button type="button" id="animationButton">Animatie</button>
+                </div>
+            </div>
             </form>
-        </div>
-      </article>
-      {{/each}}
-      {{else}}
-      <article class="goal__container" id='{{id}}'>
+          </div>
+        </article>
+        {{/each}}
+        {{else}}
+        <article class="goal__container" id='{{id}}'>
           <div class="goal-buttons__container">
             <aside><span class="goal-type">Doel aanmaken</span></aside>
           </div>
-        <div>
-          <p>Klik op "Doel toevoegen" om een doel aan te maken</p>
-        </div>
-      </article>
-      {{/if}}
+          <div>
+            <p>Klik op "Doel toevoegen" om een doel aan te maken</p>
+          </div>
+        </article>
+        {{/if}}
+      </div>
+      <h3>Voltooide doelen</h3>
+      <div id=completedGoals__container>
+        {{#if completedGoals}}
+        {{#each completedGoals}}
+        <article class="goal__container" id='{{id}}'>
+          <div class="goal-buttons__container">
+            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image"
+              src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span
+              class="goal-estimate">voltooid op: {{complete_date}} voor {{complete_percentage}}%</span>
+          </div>
+          <div>
+            <p>{{description}}</p>
+            <hr>
+            <p class="complete-comment">{{complete_comment}}</p>
+          </div>
+          <form action="/goals" method="post">
+            <input class="id-getter" type="number" name="deleteId" value="{{id}}">
+            <input type="submit" class="goal-deleter" value="doel verwijderen">
+          </form>
+        </article>
+        {{/each}}
+        {{else}}
+        <p>Hier kan je jouw voltooide doelen terugvinden...</p>
+        {{/if}}
+      </div>
     </div>
-    <h3>Voltooide doelen</h3>
-    <div id=completedGoals__container>
-      {{#if completedGoals}}
-      {{#each completedGoals}}
-      <article class="goal__container" id='{{id}}'>
-        <div class="goal-buttons__container">
-            <aside><span class="goal-type">{{title}}</span></aside><img class="goal-type-image" src="./images/{{goal_type}}.svg" alt=""><span class="goal-type2">{{goal_type}}</span><span class="goal-estimate">voltooid op: {{complete_date}} voor {{complete_percentage}}%</span>
-        </div>
-        <div>
-          <p>{{description}}</p>
-          <hr>
-          <p class="complete-comment">{{complete_comment}}</p>
-        </div>
-        <form action="/goals" method="post">
-          <input class="id-getter" type="number" name="deleteId" value="{{id}}">
-          <input type="submit" class="goal-deleter" value="doel verwijderen">
-        </form>
-      </article>
-      {{/each}}
-      {{else}}
-      <p>Hier kan je jouw voltooide doelen terugvinden...</p>
-    {{/if}}
-    </div>
-  </div>
-  <aside id="goals-compliments__container">
-    <div class="complimentsHead">
-      <div class="flex">
+    <aside id="goals-compliments__container">
+      <div class="complimentsHead">
+        <div class="flex">
           <img class="heading-icon" src="/images/praise_icon.svg" alt="">
           <h1>Complimenten</h1>
+        </div>
+        <h3 class="goal-indicator indicator-inactive">Klik op een doel om te filteren.</h3>
       </div>
-      <h3 class="goal-indicator indicator-inactive">Klik op een doel om te filteren.</h3>
-    </div>
-    <div id="messages__container" class="goals-aside">
-      <article class="compliment__container visible">
-        <div class="compliments-buttons__container">
-          <p><b>Monika Streljajevravejejeva</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Conflict hanteren</span>
-        </div>
-        <img class="userImg" src="/images/reinier.jpg">
-        <p class="compliment-message">Je wireframes van de doelenpagina zien er goed uit! Vooral omdat deze ook al bijna helemaal consistent zijn met de andere designs.</p>
-      </article>
-      <article class="compliment__container visible">
-        <div class="compliments-buttons__container">
-          <p><b>Reinier van Limpt</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Stressbestendig</span>
-        </div>
-        <img class="userImg" src="/images/user.png">
-        <p class="compliment-message">Goed gewerkt gister.</p>
-      </article>
-      <article class="compliment__container visible">
-        <div class="compliments-buttons__container">
-          <p><b>Frank Wood</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Stressbestendig</span>
-        </div>
-        <img class="userImg" src="/images/reinier.jpg">
-        <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.</p>
-      </article>
-      <article class="compliment__container visible">
-        <div class="compliments-buttons__container">
-          <p><b>Stefan</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Proactief</span>
-        </div>
-        <img class="userImg" src="/images/stefan.jpg">
-        <p class="compliment-message">Ik vond je presentatie voor de groep gisteren uitstekend (persoonlijk). Je hebt het zeer duidelijk en to the point verteld en die grap over UX was hilarisch.</p>
-      </article>
-      <article class="compliment__container visible">
-        <div class="compliments-buttons__container">
-          <p><b>Stefan</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Communiceren</span>
-        </div>
-        <img class="userImg" src="/images/stefan.jpg">
-        <p class="compliment-message">Ik vind het knap hoe jij, ook namens de groep, naar ons toe (moeilijke) onderwerpen bespreekbaar maakt op een ontwapenende manier.</p>
-      </article>
-      <button class="complimentsButton" type="button">
+      <div id="messages__container" class="goals-aside">
+        <article class="compliment__container visible">
+          <div class="compliments-buttons__container">
+            <p><b>Monika Streljajevravejejeva</b></p> <span class="compliment-date">Vandaag</span><span
+              class="goal-type">Conflict hanteren</span>
+          </div>
+          <img class="userImg" src="/images/reinier.jpg">
+          <p class="compliment-message">Je wireframes van de doelenpagina zien er goed uit! Vooral omdat deze ook al
+            bijna helemaal consistent zijn met de andere designs.</p>
+        </article>
+        <article class="compliment__container visible">
+          <div class="compliments-buttons__container">
+            <p><b>Reinier van Limpt</b></p> <span class="compliment-date">Vandaag</span><span
+              class="goal-type">Stressbestendig</span>
+          </div>
+          <img class="userImg" src="/images/user.png">
+          <p class="compliment-message">Goed gewerkt gister.</p>
+        </article>
+        <article class="compliment__container visible">
+          <div class="compliments-buttons__container">
+            <p><b>Frank Wood</b></p> <span class="compliment-date">Vandaag</span><span
+              class="goal-type">Stressbestendig</span>
+          </div>
+          <img class="userImg" src="/images/reinier.jpg">
+          <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice
+            to solve most of the world’s problems.</p>
+        </article>
+        <article class="compliment__container visible">
+          <div class="compliments-buttons__container">
+            <p><b>Stefan</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Proactief</span>
+          </div>
+          <img class="userImg" src="/images/stefan.jpg">
+          <p class="compliment-message">Ik vond je presentatie voor de groep gisteren uitstekend (persoonlijk). Je hebt
+            het zeer duidelijk en to the point verteld en die grap over UX was hilarisch.</p>
+        </article>
+        <article class="compliment__container visible">
+          <div class="compliments-buttons__container">
+            <p><b>Stefan</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Communiceren</span>
+          </div>
+          <img class="userImg" src="/images/stefan.jpg">
+          <p class="compliment-message">Ik vind het knap hoe jij, ook namens de groep, naar ons toe (moeilijke)
+            onderwerpen bespreekbaar maakt op een ontwapenende manier.</p>
+        </article>
+        <button class="complimentsButton" type="button">
           Alle complimenten tonen
-      </button>
-    </div>
-  </aside>
-</div>
+        </button>
+      </div>
+    </aside>
+    <div class="compliment__animation hidden">
+            <h3 class="floatingText">+15 karmapunten</h3>
+            <section class="demo">
+                <div class="leaf leaf_1"></div>
+                <div class="leaf leaf_2"></div>
+                <div class="leaf leaf_3"></div>
+                <div class="leaf leaf_4"></div>
+                <div class="leaf leaf_5"></div>
+                <h4 id="animationBottomText">Goed bezig</h4>
 
-{{> thumbs-up}}
+            </section>
+        </div>
+  </div>
 
-{{> footer}}
+  {{> thumbs-up}}
 
-<script src="js/goals.js"></script>
+  {{> footer}}
+
+  <script src="js/goals.js"></script>
+<script src="js/animations.js"></script>
