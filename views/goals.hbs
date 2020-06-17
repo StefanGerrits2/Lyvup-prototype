@@ -2,7 +2,7 @@
   {{> new-header}}
 <div id="content__container" class="goals-content__container">
   <div id="goals-main__container">
-    <div class="goals-head">
+    <div class="container-head">
       <img src="./images/goals_icon.svg" alt="">
       <h1>Mijn doelen</h1>
     </div>
@@ -43,6 +43,7 @@
     </section>
     <h3>Actieve doelen</h3>
     <div id="setGoals__container">
+      {{#if setGoals}}
       {{#each setGoals}}
       <article class="goal__container" id='{{id}}'>
           <div class="goal-buttons__container">
@@ -102,10 +103,20 @@
         </div>
       </article>
       {{/each}}
+      {{else}}
+      <article class="goal__container" id='{{id}}'>
+          <div class="goal-buttons__container">
+            <aside><span class="goal-type">Doel aanmaken</span></aside>
+          </div>
+        <div>
+          <p>Klik op "Doel toevoegen" om een doel aan te maken</p>
+        </div>
+      </article>
+      {{/if}}
     </div>
-    {{#if completedGoals}}
     <h3>Voltooide doelen</h3>
     <div id=completedGoals__container>
+      {{#if completedGoals}}
       {{#each completedGoals}}
       <article class="goal__container" id='{{id}}'>
         <div class="goal-buttons__container">
@@ -116,10 +127,16 @@
           <hr>
           <p class="complete-comment">{{complete_comment}}</p>
         </div>
+        <form action="/goals" method="post">
+          <input class="id-getter" type="number" name="deleteId" value="{{id}}">
+          <input type="submit" class="goal-deleter" value="doel verwijderen">
+        </form>
       </article>
       {{/each}}
-    </div>
+      {{else}}
+      <p>Hier kan je jouw voltooide doelen terugvinden...</p>
     {{/if}}
+    </div>
   </div>
   <aside id="goals-compliments__container">
     <div class="complimentsHead">

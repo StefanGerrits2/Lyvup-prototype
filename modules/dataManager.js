@@ -34,7 +34,7 @@ async function manageData(req) {
       console.log(error);
     }
     // checks if there is any data received from the form using a POST method
-  } else if (req != undefined && req.editId === undefined && req.completeId === undefined) {
+  } else if (req != undefined && req.editId === undefined && req.completeId === undefined && req.deleteId === undefined) {
     console.log("nieuwe data wordt toegevoegd...")
     const newData = {};
     newData.id = fakeId.toString();
@@ -47,8 +47,8 @@ async function manageData(req) {
     return userGoalsData
 
     // if there is data received from a delete form using a POST but it does not contain an editId
-  } else if (req != undefined && req.editId === undefined) {
-    console.log("data wordt verwijderd...")
+  } else if (req != undefined && req.editId === undefined && req.deleteId === undefined) {
+    console.log("data wordt verplaatst...")
     const completedGoal = userGoalsData.setGoals.filter(function(selected) {
       return selected.id === req.completeId
     })
@@ -62,7 +62,7 @@ async function manageData(req) {
 
     return userGoalsData
     // if there is data received from an edit form using a POST method and the data has an id
-  } else if (req != undefined) {
+  } else if (req != undefined && req.deleteId === undefined) {
     console.log("data wordt aangepast...")
     userGoalsData.setGoals.map((curr) => {
       if (curr.id == req.editId) {
@@ -80,10 +80,12 @@ async function manageData(req) {
     })
     return userGoalsData;
     // if the page is requested and data is already persisted on the server
-  } else {
-
+  } else if (req != undefined) {
+    console.log("data wordt verwijderd...")
+    userGoalsData.completedGoals.splice(userGoalsData.completedGoals.findIndex(item => item.id === req.deleteId), 1)
     return userGoalsData;
-
+  } else {
+    return userGoalsData;
   }
 }
 
