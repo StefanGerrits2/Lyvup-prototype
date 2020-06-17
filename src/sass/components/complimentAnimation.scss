@@ -121,7 +121,10 @@ $leafWidth: 150px;
 }
 
 #animationButton{
+    color: $green;
+    text-decoration:underline;
     align-self: flex-start;
     height: auto;
     width: auto;
+    background-color: transparent;
 }
