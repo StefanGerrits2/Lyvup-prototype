@@ -13,7 +13,6 @@ function goals(req, res) {
   dataManager(req.body).then(function(result) {
     const goalsToCheck = result.setGoals
     goalsToCheck.forEach(element => element.daysToExpiry = dateChecker(element.expiry_date));
-    console.log(result)
     res.render('goals.hbs', {
       setGoals: result.setGoals,
       completedGoals: result.completedGoals,

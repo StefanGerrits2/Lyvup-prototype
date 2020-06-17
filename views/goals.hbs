@@ -2,7 +2,7 @@
   {{> new-header}}
 <div id="content__container" class="goals-content__container">
   <div id="goals-main__container">
-    <div class="goals-head">
+    <div class="container-head">
       <img src="./images/goals_icon.svg" alt="">
       <h1>Mijn doelen</h1>
     </div>
@@ -43,6 +43,7 @@
     </section>
     <h3>Actieve doelen</h3>
     <div id="setGoals__container">
+      {{#if setGoals}}
       {{#each setGoals}}
       <article class="goal__container" id='{{id}}'>
           <div class="goal-buttons__container">
@@ -102,10 +103,20 @@
         </div>
       </article>
       {{/each}}
+      {{else}}
+      <article class="goal__container" id='{{id}}'>
+          <div class="goal-buttons__container">
+            <aside><span class="goal-type">Doel aanmaken</span></aside>
+          </div>
+        <div>
+          <p>Klik op "Doel toevoegen" om een doel aan te maken</p>
+        </div>
+      </article>
+      {{/if}}
     </div>
-    {{#if completedGoals}}
     <h3>Voltooide doelen</h3>
     <div id=completedGoals__container>
+      {{#if completedGoals}}
       {{#each completedGoals}}
       <article class="goal__container" id='{{id}}'>
         <div class="goal-buttons__container">
@@ -116,10 +127,16 @@
           <hr>
           <p class="complete-comment">{{complete_comment}}</p>
         </div>
+        <form action="/goals" method="post">
+          <input class="id-getter" type="number" name="deleteId" value="{{id}}">
+          <input type="submit" class="goal-deleter" value="doel verwijderen">
+        </form>
       </article>
       {{/each}}
-    </div>
+      {{else}}
+      <p>Hier kan je jouw voltooide doelen terugvinden...</p>
     {{/if}}
+    </div>
   </div>
   <aside id="goals-compliments__container">
     <div class="complimentsHead">
@@ -130,41 +147,41 @@
       <h3 class="goal-indicator indicator-inactive">Klik op een doel om te filteren.</h3>
     </div>
     <div id="messages__container" class="goals-aside">
-      <div class="compliment__container visible">
+      <article class="compliment__container visible">
         <div class="compliments-buttons__container">
           <p><b>Monika Streljajevravejejeva</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Conflict hanteren</span>
         </div>
         <img class="userImg" src="/images/reinier.jpg">
         <p class="compliment-message">Je wireframes van de doelenpagina zien er goed uit! Vooral omdat deze ook al bijna helemaal consistent zijn met de andere designs.</p>
-      </div>
-      <div class="compliment__container visible">
+      </article>
+      <article class="compliment__container visible">
         <div class="compliments-buttons__container">
           <p><b>Reinier van Limpt</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Stressbestendig</span>
         </div>
         <img class="userImg" src="/images/user.png">
         <p class="compliment-message">Goed gewerkt gister.</p>
-      </div>
-      <div class="compliment__container visible">
+      </article>
+      <article class="compliment__container visible">
         <div class="compliments-buttons__container">
           <p><b>Frank Wood</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Stressbestendig</span>
         </div>
         <img class="userImg" src="/images/reinier.jpg">
         <p class="compliment-message">The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.</p>
-      </div>
-      <div class="compliment__container visible">
+      </article>
+      <article class="compliment__container visible">
         <div class="compliments-buttons__container">
           <p><b>Stefan</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Proactief</span>
         </div>
         <img class="userImg" src="/images/stefan.jpg">
         <p class="compliment-message">Ik vond je presentatie voor de groep gisteren uitstekend (persoonlijk). Je hebt het zeer duidelijk en to the point verteld en die grap over UX was hilarisch.</p>
-      </div>
-      <div class="compliment__container visible">
+      </article>
+      <article class="compliment__container visible">
         <div class="compliments-buttons__container">
           <p><b>Stefan</b></p> <span class="compliment-date">Vandaag</span><span class="goal-type">Communiceren</span>
         </div>
         <img class="userImg" src="/images/stefan.jpg">
         <p class="compliment-message">Ik vind het knap hoe jij, ook namens de groep, naar ons toe (moeilijke) onderwerpen bespreekbaar maakt op een ontwapenende manier.</p>
-      </div>
+      </article>
       <button class="complimentsButton" type="button">
           Alle complimenten tonen
       </button>
