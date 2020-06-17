@@ -12,7 +12,6 @@ profile__container.forEach((element) => {
   })
 });
 
-
 const adminCheckBox = document.querySelector(".admin-enabler-button")
 
 //sets all admin button fields to hidden

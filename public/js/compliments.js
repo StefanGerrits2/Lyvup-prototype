@@ -1,33 +1,21 @@
 const superComplimentContainer = document.querySelector('#super-compliment__container');
+const options = document.querySelectorAll('.option');
 
-document.querySelector('.option1').addEventListener('click', () => {
-    if (!document.querySelector('#feedback').checked) {
-        document.querySelector('h2').textContent = 'Compliment geven';
-        document.querySelector('textarea').placeholder = 'Typ hier je compliment';
-        superComplimentContainer.setAttribute('style', 'display: flex');
-    }
-
-    else {
-        document.querySelector('h2').textContent = 'Feedback vragen';
-        document.querySelector('textarea').placeholder = 'Vraag hier om feedback';
-        superComplimentContainer.setAttribute('style', 'display: none');
-        document.querySelector('#supercompliment').checked = false;
-    }
-});
-
-document.querySelector('.option2').addEventListener('click', () => {
-    if (!document.querySelector('#feedback').checked) {
-        document.querySelector('h2').textContent = 'Compliment geven';
-        document.querySelector('textarea').placeholder = 'Typ hier je compliment';
-        superComplimentContainer.setAttribute('style', 'display: flex');
-    }
-
-    else {
-        document.querySelector('h2').textContent = 'Feedback vragen';
-        document.querySelector('textarea').placeholder = 'Vraag hier om feedback';
-        superComplimentContainer.setAttribute('style', 'display: none');
-        document.querySelector('#supercompliment').checked = false;
-    }
+options.forEach(item => {
+    item.addEventListener('click', () => {
+        if (!document.querySelector('#feedback').checked) {
+            document.querySelector('h2').textContent = 'Compliment geven';
+            document.querySelector('textarea').placeholder = 'Typ hier je compliment';
+            superComplimentContainer.setAttribute('style', 'display: flex');
+        }
+    
+        else {
+            document.querySelector('h2').textContent = 'Feedback vragen';
+            document.querySelector('textarea').placeholder = 'Vraag hier om feedback';
+            superComplimentContainer.setAttribute('style', 'display: none');
+            document.querySelector('#supercompliment').checked = false;
+        }
+    });
 });
 
 // Super compliment button
@@ -99,19 +87,33 @@ function showSelectedMembers() {
         const title = document.querySelector('#more-information h3');
 
         const memberInfo = document.querySelector('#goals__container');
+        const memberInformationTitle = document.querySelector('#more-information h4');
 
         if (values.length > 1) {
             memberInfo.setAttribute('style', 'display: none');
+            memberInformationTitle.setAttribute('style', 'display: none');
             title.textContent = 'Geselecteerde personen:';
         }
 
-        else if (values.length  === 0) {
+        else if (values.length === 0) {
             memberInfo.setAttribute('style', 'display: none');
+            memberInformationTitle.setAttribute('style', 'display: none');
         }
 
         else {
             title.textContent = 'Geselecteerde persoon:';
             memberInfo.setAttribute('style', 'display: flex');
+            memberInformationTitle.setAttribute('style', 'display: flex');
         }
     }, 0);
 }
+
+// Header animation
+const toggleFooter = document.querySelector('#toggle-header');
+
+toggleFooter.addEventListener('click', () => {
+    const footer = document.querySelector('footer');
+    
+    // Toggle footer
+    footer.classList.toggle('footer-shrinked');
+});

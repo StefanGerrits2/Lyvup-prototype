@@ -57,7 +57,6 @@
 #select__container {
     & #select-button__container {
         display: flex;
-        margin-top: 2em;
 
         & button {
             margin: 1em 1em 0 0;
@@ -98,7 +97,7 @@ input[type="checkbox"] {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     overflow-y: auto;
-    height: 50vh;
+    height: 65vh;
 
     & input[type="checkbox"]:checked + label img {
         border: 5px solid $yellow;
@@ -230,6 +229,7 @@ input[type="checkbox"] {
         margin-right: 1em;
     }
 
+    /* https://codepen.io/Chester/pen/QPoyjN */
     & label {
         cursor: pointer;
         margin-right: 2em;
@@ -273,7 +273,7 @@ input[type="checkbox"] {
                 top: 6px;
                 width: calc(100% - 12px);
                 height: calc(100% - 12px);
-                background: white;
+                background: $white;
                 box-sizing: border-box;
             }
         }
@@ -322,6 +322,45 @@ input[type="checkbox"] {
     & > h4 {
         margin: 0;
         margin-right: .5em;
+        font-size: 1.1em;
+        display: none;
+    }
+
+    & #goals__container {
+        max-height: 25vh;
+        overflow-y: auto;
+
+        & input {
+            display: none;
+
+            &:checked+label>div {
+                border: 3px solid $yellow;
+            }
+        }
+
+        & label > div {
+            border: 3px solid $white;
+            border-radius: $border-radius-small;
+        }
+
+        & div:first-of-type {
+            margin-bottom: 0;
+        }
+
+        & .goal-buttons__container {
+            align-items: center;
+            justify-content: space-between;
+
+            & div {
+                justify-content: initial!important;
+                width: fit-content;
+            }
+
+            & img {
+                width: 2em;
+                // margin-right: -2em;
+            }
+        }
     }
 }
 

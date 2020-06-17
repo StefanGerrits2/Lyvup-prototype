@@ -1,4 +1,4 @@
-// Header animations
+// Header animation
 const toggleFooter = document.querySelector('#toggle-header');
 
 toggleFooter.addEventListener('click', () => {

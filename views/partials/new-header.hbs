@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li>
-                    <a class='focus-visible' href="/" {{#if home}} class="active-nav" {{/if}}>
+                    <a href="/" {{#if home}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-home.svg" alt=""></div>
                         <p>Dashboard</p>
                     </a>
@@ -37,6 +37,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/assessment" {{#if assessment}} class="active-nav" {{/if}}>
+                        <div><img src="/images/nav-assessment.svg" alt=""></div>
+                        <p>Assessment</p>
+                    </a>
+                </li>
+                <li>
                     <a href="/leaderboard" {{#if leaderboard}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-leaderboard.svg" alt=""></div>
                         <p>Leaderboard</p>
@@ -46,6 +52,12 @@
                     <a href="/profile" {{#if profile}} class="active-nav" {{/if}}>
                         <div><img src="/images/nav-profile.svg" alt=""></div>
                         <p>Profiel</p>
+                    </a>
+                </li>
+                <li id="invite-others">
+                    <a href="/invite" {{#if invite}} class="active-nav" {{/if}}>
+                        <div><img src="/images/add_person.svg" alt=""></div>
+                        <p>Uitnodigen</p>
                     </a>
                 </li>
             </ul>
