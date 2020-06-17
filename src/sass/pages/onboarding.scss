@@ -22,9 +22,9 @@
 
 .flex-center {
     display: flex;
-    width: 60%;
+    width: 80%;
     justify-content: center;
-    margin: 5em auto;
+    margin: 4em auto;
     align-items: center;
     background-color: #f7f7f7;
     border-radius: 10px;
@@ -180,28 +180,20 @@
 }
 
 #prevBtn {
-    background-color: #979595;
+    background-color: $grey;
     margin-right: 17em;
 }
 
 #onboarding__form #prevBtn,
 #onboarding__form #nextBtn {
     font-family: publicSans-medium, sans-serif;
-    padding: 10px;
     border-radius: 5px;
-    font-size: 0.8em;
-    height: 35px;
-    width: 6em;
     transition: all .2s ease-in-out;
     display: inline-block;
     align-items: center;
     margin-top: 2em;
     position: relative;
     z-index: 99;
-}
-
-#nextBtn {
-    background-color: $yellow;
 }
 
 #done {
@@ -504,6 +496,35 @@
     }
 }
 
+@media screen and (min-width: 1500px) {
+
+    #letter {
+        width: 25%;
+        margin-top: -2%;
+        margin-left: 65%;
+    }
+
+    #trappetje2 {
+        width: 60%;
+        margin-left: 50%;
+    }
+
+    #connection {
+        width: 40%;
+        margin-top: -5%;
+    }
+
+
+    #trappetje3 {
+        width: 50%;
+        margin-left: 50%;
+    }
+
+    #balloons {
+        margin-top: -10%;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #onboardingBody {
         font-size: 12px;
@@ -543,7 +564,7 @@
 
     .flex-center {
         width: 100%;
-        margin: 5em auto;
+        margin: 4em auto;
     }
 
     #letter {
@@ -580,34 +601,5 @@
         width: 50%;
         margin-top: 10%;
         margin-left: 50%;
-    }
-}
-
-@media screen and (min-width: 1500px) {
-
-    #letter {
-        width: 25%;
-        margin-top: -2%;
-        margin-left: 65%;
-    }
-
-    #trappetje2 {
-        width: 60%;
-        margin-left: 50%;
-    }
-
-    #connection {
-        width: 40%;
-        margin-top: -5%;
-    }
-
-
-    #trappetje3 {
-        width: 50%;
-        margin-left: 50%;
-    }
-
-    #balloons {
-        margin-top: -10%;
     }
 }

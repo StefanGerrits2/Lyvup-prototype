@@ -4,10 +4,6 @@
     text-align: center;
 }
 
-.assessment__active__right {
-    border-right: 10px solid $yellow;
-}
-
 .assessment__active__left {
     border-left: 10px solid $yellow;
 }
@@ -18,6 +14,7 @@
 }
 
 .assessment__container {
+    border-right: 10px solid $white;
     align-items: center;
     margin: 10px;
     display: flex;
@@ -33,6 +30,10 @@
         cursor: pointer;
         transition: .2s ease-in-out;
     }
+}
+
+.assessment__active__right {
+    border-right: 10px solid $yellow;
 }
 
 .assessment-image__container {
@@ -90,8 +91,8 @@
     width: 15%;
     background-color: #d0acac;
     text-align: left;
-    padding-left: 1px;
     margin-left: 1em;
+    height: 1.5em;
 }
 
 .assessment__progress {
@@ -99,7 +100,8 @@
     color: black;
     background-color: #69bd45;
     border-radius: 10px;
-    padding: 1px;
+    padding: 3px;
+    height: 1.5em;
 }
 
 .assessment__button {
@@ -149,4 +151,8 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     
+}
+
+.no-background {
+    background-image: none!important;
 }
