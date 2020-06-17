@@ -11,6 +11,16 @@ addPerson.addEventListener('click', () => {
 
     const personCard = document.querySelector('.person__card-container');
 
-    console.log(personCard)
+    console.log(personCard);
     personCard.insertAdjacentHTML('afterbegin', `<div class="person__card"><img src="/images/user.png" alt=""><p>${name}</p><p>${mail}</p></div>`);
+});
+
+// Header animation
+const toggleFooter = document.querySelector('#toggle-header');
+
+toggleFooter.addEventListener('click', () => {
+    const footer = document.querySelector('footer');
+    
+    // Toggle footer
+    footer.classList.toggle('footer-shrinked');
 });
