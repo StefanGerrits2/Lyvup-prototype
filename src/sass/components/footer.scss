@@ -21,10 +21,11 @@
 }
 
 .footer-shrinked {
-    max-width: 5em;
+    max-width: 5em!important;
     transition: .2s ease-in;
-    overflow: hidden;
-    font-size: 0.7em;
+    overflow: hidden!important;
+    font-size: 0.7em!important;
+    z-index: 99;
 }
 
 .select {
