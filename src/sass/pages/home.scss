@@ -8,6 +8,7 @@
   padding: 2em;
   border-radius: 10px;
   margin-bottom: 2em;
+  box-shadow: 0 2px 0 1px #e5e5e5;
 }
 
 .center__container {
@@ -50,6 +51,20 @@
 
 .active__challenges {
   margin-top: 2em;
+  margin-right: 0;
+
+  & > div {
+    width: 100%;
+
+    & > div {
+      width: 50%;
+      margin: 1em 0 0 0;
+    }
+
+    & > div:first-of-type {
+      margin-right: 1em;
+    }
+  }
 }
 
 .activity__container {
@@ -60,9 +75,8 @@
   background-size: 500%;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
   height: 85vh;
+  overflow-y: auto;
 }
 
 
@@ -140,13 +154,33 @@
 .dash_filter__container {
   display: flex;
   margin-bottom: 2em;
+  justify-content: space-between;
 
-  & #compliment_filter {
-    background-color: $red;
-  }
 
-  & #goal_filter {
-    background-color: $light-blue;
+
+  & div:nth-of-type(1) {
+    display: flex;
+
+    & button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      & img {
+        margin-left: 1em;
+      }
+    }
+
+    & #compliment_dash {
+      width: 13em;
+      background-color: $red;
+    }
+
+    & #goal_dash {
+      width: 11em;
+      background-color: $light-blue;
+    }
   }
 }
 
@@ -160,7 +194,7 @@
   display: flex;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: .2s ease-in-out;
     cursor: pointer;
   }
@@ -188,6 +222,10 @@
 
       & h4 {
         font-size: 14px;
+      }
+
+      & span {
+        color: $grey;
       }
     }
 
@@ -255,10 +293,30 @@
   outline: none;
   font-size: 15px;
   margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash__button_flex {
+  display: flex;
+  align-items: center;
+}
+
+.dash__notif {
+  margin-left: .5em;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .active {
-  background-color: $yellow;
+  background-color: $green;
 }
 
 .collapsible:after {
@@ -274,6 +332,7 @@
 }
 
 #totaal_collapse {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -295,4 +354,51 @@
 .todo__item {
   display: flex;
   justify-content: space-between;
+  text-decoration: none;
+  color: $black;
+  padding: 1em;
+  background-color: $white;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 1px #e5e5e5;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.todo__premium {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: $black;
+  padding: 1em;
+  opacity: .8;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 1px #e5e5e5;
+  cursor: not-allowed;
+  transition: 200ms ease-in-out;
+  position: relative;
+
+  &:hover {
+
+    &::before {
+      content: "Upgrade naar premium om dit te voltooien";
+      position: absolute;
+      color: white;
+      background-color: black;
+      padding: .75em;
+      border-radius: $border-radius-small;
+      width: 10em;
+      font-family: 'publicSans', sans-serif;
+      font-size: 14px;
+    }
+  }
+}
+
+.blue__border {
+  border-left: 2px solid $light-blue !important;
 }

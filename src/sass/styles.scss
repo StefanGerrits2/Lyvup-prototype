@@ -103,6 +103,22 @@ hr{
   margin: 0 auto;
 }
 
+input[type="text"],
+input[type="email"], 
+textarea {
+  transition: .2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus, 
+textarea:focus {
+    border: 1px solid transparent;
+    outline: none;
+    box-shadow: 0 0 0 2px $green;
+    color: $green;
+    transition: .2s ease-in-out;
+}
+
 #main__container {
   position: relative;
   width: 65%;
@@ -213,6 +229,21 @@ hr{
     }
 }
 
+.container-head{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+
+  & img{
+    margin-right: 1em;
+    width: 3em;
+  }
+  & h1{
+    width:75%;
+    margin-bottom: 0;
+  }
+}
+
 .rotateChevron {
     transform: rotate(180deg)!important;
     transition: .3s linear;
@@ -246,6 +277,7 @@ hr{
 
   & div{
     & .complete-comment {
+      width: 85%;
       font-size: 1.1em;
       color: $green;
     }
@@ -266,6 +298,10 @@ hr{
 
 .goal__container img {
   width: 3em;
+}
+
+.goal__container:not(:last-of-type) {
+    margin-bottom: 1em;
 }
 
 #goals__container {
@@ -312,6 +348,7 @@ aside {
 }
 
 .goal__container .goal-buttons__container {
+  min-height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -616,7 +653,8 @@ option {
   #main__container,
   .right__container,
   .center__container,
-  #super-goals__container, #goals-compliments__container {
+
+  #super-goals__container, #goals-compliments__container, #goals-main__container, #teamoverview__container {
     padding: 1.5em 2em 2em;
   }
 

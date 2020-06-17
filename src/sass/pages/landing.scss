@@ -45,6 +45,7 @@
 
       & button {
         margin-right: 0;
+        font-size: 14px;
       }
     }
   }
@@ -66,7 +67,7 @@
 
   & .landing__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
     grid-gap: 6em;
 
     & div {
@@ -94,7 +95,7 @@
 
     & .section__grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
       grid-gap: 6em;
 
       & div {
@@ -156,7 +157,7 @@
 
   & .aboutus__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
     grid-gap: 6em;
 
     & iframe {
@@ -171,6 +172,10 @@
     display: flex;
     justify-content: center;
     margin-top: 6em;
+
+    & a button {
+      min-width: 15em;
+    }
   }
 }
 
@@ -178,7 +183,7 @@
 
   & .reviews__container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     grid-gap: 6em;
     text-align: center;
 

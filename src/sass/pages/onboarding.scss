@@ -90,13 +90,6 @@
     transition: all 350ms ease-in-out
 }
 
-.tab input:focus,
-.current__tab input:focus {
-    border: 1px solid transparent;
-    outline: none;
-    box-shadow: 0 0 0 3px $green;
-}
-
 .steps {
     background: #e8e8ed;
     width: 10%;

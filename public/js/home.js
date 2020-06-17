@@ -1,4 +1,5 @@
 const coll = document.getElementsByClassName('collapsible');
+const content = document.querySelectorAll('.collapse-content')
 let i;
 
 for (i = 0; i < coll.length; i++) {
@@ -14,6 +15,9 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+coll[0].click();
+coll[1].click();
+
 const newCard = document.querySelectorAll('.new__card');
 
 newCard.forEach((card) => {
@@ -23,7 +27,6 @@ newCard.forEach((card) => {
 
     card.addEventListener('click', function () {
         let card_index = Array.prototype.indexOf.call(newCard, card);
-        console.log(expandText[card_index]);
 
         if (expandText[card_index].classList.contains('hide') && expandReceivers[card_index].classList.contains('hide')) {
             expandText[card_index].classList.remove('hide');
@@ -40,25 +43,12 @@ newCard.forEach((card) => {
 });
 
 
+// Header animation
+const toggleFooter = document.querySelector('#toggle-header');
 
-/*newCard.addEventListener('click', function () {
-    const expandText = document.getElementsByClassName('moreText');
-    const expandReceivers = document.getElementsByClassName('moreReceivers');
-    const shortReceivers = document.getElementsByClassName('new__card_receivers');
-
-    for (i = 0; shortReceivers.length; i++) {
-
-    }
-
-    if (expandText.classList.contains('hide') && expandReceivers.classList.contains('hide')) {
-        expandText.classList.remove('hide');
-        expandReceivers.classList.remove('hide');
-        expandReceivers.classList.add('show');
-        shortReceivers.style.display = 'none';
-    } else {
-        expandText.classList.add('hide');
-        expandReceivers.classList.remove('show');
-        expandReceivers.classList.add('hide');
-        shortReceivers.style.display = 'flex';
-    }
-});*/
+toggleFooter.addEventListener('click', () => {
+    const footer = document.querySelector('footer');
+    
+    // Toggle footer
+    footer.classList.toggle('footer-shrinked');
+});
