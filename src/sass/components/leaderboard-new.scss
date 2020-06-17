@@ -1,6 +1,5 @@
 // ID's
 #leaderboard__container #main__container {
-    width: 40%;
     margin-right: 0;
     padding: 2.1em 3em 3em 3em;
     height: 100vh;
@@ -9,7 +8,6 @@
 #leaderboard__container #leaderboard__right {
     width: 60%;
     overflow-y: auto;
-    // background-color: $background-color;
     padding: 2.1em 3em 3em 3em;
     height: 100vh;
 }
@@ -49,15 +47,11 @@
 
 .individual__challenge {
     width: 50%;
-    // margin: -.5em;
-    // background-color: #f7f7f7;
     margin-top: .5em;
 }
 
 .team__challenge {
     width: 50%;
-    // margin: -.5em;
-    // background-color: #f7f7f7;
     margin-top: .5em;
 }
 
@@ -192,5 +186,9 @@
 
 .vHidden{
     visibility: hidden;
+}
+
+.left__width{
+    width: 40% !important;
 }
 // elements
