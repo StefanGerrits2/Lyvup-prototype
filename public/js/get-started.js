@@ -2,7 +2,7 @@ const container = document.querySelector('#get-started');
 const addPerson = document.querySelector('#addPerson')
 
 container.insertAdjacentHTML('afterend', `<li class = "get-started">
-<a href = "/get-started"> get started </a> </li>`);
+<a href = "/get-started"> Get started </a> </li>`);
 
 addPerson.addEventListener('click', () => {
 

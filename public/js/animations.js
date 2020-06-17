@@ -3,11 +3,21 @@ const animationBox = document.querySelector('.compliment__animation');
 const complimentSend = document.querySelector('.defaultButton');
 const complimentSwitch = document.querySelector('.complimentBounce');
 const feedbackSwitch = document.querySelector('.feedbackBounce');
+const goalAnimation = document.getElementById('goalAnimation');
 
-PlayAnyAnimation(complimentSend, 'Shake', 500);
+if (complimentSend != null) {
+    PlayAnyAnimation(complimentSend, 'Shake', 500);
+}
+
+if (goalAnimation != null) {
+    PlayAnyAnimation(goalAnimation, 'Shake', 500);
+}
+
 
 animationButton.addEventListener('click', function PlayAnimation() {
     animationBox.classList.toggle('hidden');
+
+    console.log('bob');
 
     setTimeout(function () {
         animationBox.classList.toggle('hidden');
@@ -15,7 +25,7 @@ animationButton.addEventListener('click', function PlayAnimation() {
 });
 
 function PlayAnyAnimation(elementToAnimate, className, time) {
-    complimentSend.addEventListener('click', function () {
+    elementToAnimate.addEventListener('click', function () {
         elementToAnimate.classList.add(className);
 
         setTimeout(function () {

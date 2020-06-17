@@ -9,7 +9,7 @@
 './components/fixed-thumbs-up',
 './components/footer.scss',
 './pages/giveCompliment',
-'./components/leaderboard-new',
+'./pages/leaderboard-new',
 './components/complimentAnimation',
 './pages/team',
 './pages/goals.scss',
@@ -141,6 +141,8 @@ textarea:focus {
     background-color: $background-color;
     padding: 2.1em 3em 3em 3em;
     border-radius: $border-radius-big;
+    height: 100vh;
+    overflow-y: auto;
 
     & h1 {
         margin-bottom: 0;
@@ -197,8 +199,6 @@ textarea:focus {
         }
 
         & #goals__container {
-          max-height: 20em;
-          overflow-y: auto;
         }
     }
 }
@@ -497,10 +497,8 @@ button:hover {
 
 .flex {
   display: flex;
-  align-content: center;
+  align-items: center;
 }
-
-
 
 .time-stamp {
   position: absolute;
@@ -717,10 +715,6 @@ option {
     height: 8em;
   }
 
-  button {
-    height: auto;
-  }
-
   .collapsible {
     height: 4em;
   }
@@ -803,7 +797,7 @@ option {
     }
 
     & #super-goals__container, #goals-compliments__container {
-      width: 50%;
+      width: 50% !important;
     }
   }
 
