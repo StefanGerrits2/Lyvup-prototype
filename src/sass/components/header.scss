@@ -185,14 +185,6 @@ header {
     transition: .3s linear;
 }
 
-.toggle-header {
-    width: 5em!important;
-    padding: 1em!important;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-
 .toggle-nav-text {
     display: none;
 }
@@ -215,4 +207,13 @@ header {
 
 .move-button {
     top: 3.5em!important;
+}
+
+.toggle-header {
+    width: 5em!important;
+    padding: 1em!important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    transition: .3s linear;
 }
