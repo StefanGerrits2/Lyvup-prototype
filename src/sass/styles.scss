@@ -735,6 +735,12 @@ option {
 }
 
 @media screen and (max-width: 1200px) {
+  .goal-buttons__container {
+    & .goal-type2 {
+      display: none;
+    }
+  }
+
   .profile__container{
     max-height: 13em;
   }
@@ -749,6 +755,7 @@ option {
   }
 
   .goals-button {
+    height: auto;
     top: 5.5em;
   }
 
@@ -801,9 +808,10 @@ option {
     }
   }
 
-  .submitGoal{
+  .submitGoal, .goal-completer{
     margin-bottom: 2em;
   }
+
 
   .add-goals__container {
     & .select {
@@ -813,6 +821,12 @@ option {
 
     & .datePicker {
       width: auto
+    }
+  }
+
+  .complete-toggle {
+    & input {
+      margin-bottom: 0;
     }
   }
 

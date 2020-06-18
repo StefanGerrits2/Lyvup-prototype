@@ -1,0 +1,196 @@
+// ID's
+#leaderboard__container #main__container {
+    margin-right: 0;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vh;
+}
+
+#leaderboard__container #leaderboard__right {
+    width: 60%;
+    overflow-y: auto;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vh;
+}
+
+// classes
+.top__container__left {
+    min-height: 50%;
+    background-image: url(/images/background.png);
+    background-size: 500%;
+    padding: 10px;
+    margin-bottom: .5em;
+    border-radius: 10px;
+}
+
+.bottom__container__left {
+    background-image: url(/images/background.png);
+    background-size: 500%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.overflow {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+#leaderboard__container {
+    width: 100%;
+    display: flex;
+}
+
+.grey__Background {
+    background-size: 500%;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+.individual__challenge {
+    width: 50%;
+    margin-top: .5em;
+}
+
+.team__challenge {
+    width: 50%;
+    margin-top: .5em;
+}
+
+.leaderboard__background{
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.width {
+    width: 100%;
+}
+
+.challengeButton {
+    margin-top: 0.5em;
+}
+
+.top__margin{
+    margin-top: 1em;
+}
+
+.box__shadow {
+    box-shadow: 0 2px 0 1px #e5e5e5;
+}
+
+.gridElement {
+    margin-top: 0.75em;
+    margin-left: 0.5em;
+    min-height: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    padding: 0.5em;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+}
+
+.gridElement:nth-child(1) {
+    margin-top: 0;
+}
+
+.leaderboard__challange {
+    border: 2px solid white;
+    background-color: $white;
+    margin: 0.75em;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0 2px 0 1px #e5e5e5;
+    transition: 0.3s ease-in-out;
+}
+
+.leaderboard__challange:hover {
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.border__yellow:hover {
+    border: 2px solid #f4b83d;
+}
+.border__orange:hover {
+    border: 2px solid #ef923f;
+}
+.border__blue:hover {
+    border: 2px solid #66b0d0;
+}
+.border__purple:hover {
+    border: 2px solid #aa85be;
+}
+
+.align__center {
+    align-items: center;
+}
+
+.leaderboard__small__title {
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+}
+
+.leaderboard__small__title__right {
+    margin-left: 0.5em;
+}
+
+.goal__leaderboard {
+    border-radius: 10px;
+    background-color: $white;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.goal__leaderboard:hover {
+    transform: scale(1.05);
+}
+
+.leaderboardImage {
+    max-height: 40px;
+    margin-right: 0.5em;
+    border-radius: 50px;
+}
+
+.leaderboardName {
+    border-right: 2px solid #e51f4f;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+}
+
+.leaderboardNumber {
+    margin-right: 0.5em;
+    margin-bottom: 0em;
+}
+
+.selectContainer {
+    display: inline-block;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.dots {
+    max-width: 30px;
+    max-height: 30px;
+    margin-top: 0.5em;
+    margin-bottom: -0.5em;
+}
+
+.left__margin {
+    margin-left: auto;
+    order: 2;
+}
+
+.half__width{
+    width: 49%;
+}
+
+.vHidden{
+    visibility: hidden;
+}
+
+.left__width{
+    width: 40% !important;
+}
+// elements
+a{
+    color: white;
+}
