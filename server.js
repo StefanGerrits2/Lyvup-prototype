@@ -89,11 +89,5 @@ app
     // 404 not found
     .use(notFound);
 
-// Socket
-socket.on('connection', (socket) => {
-    // Disconnect
-    socket.on('disconnect', () => {});
-});
-
 // Listen
 server.listen(port, () => console.log(`App listening on port ${port}!`));
