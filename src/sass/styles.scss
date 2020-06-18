@@ -617,6 +617,10 @@ option {
   color: $black;
 }
 
+.fix-border {
+  border-radius: 5px!important;
+}
+
 .show {
   display: flex;
 }
