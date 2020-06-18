@@ -9,7 +9,6 @@ const hbs = require('express-handlebars');
 
 const app = express();
 const server = require('http').Server(app);
-const socket = require('socket.io')(server);
 
 const minifyHTML = require('express-minify-html-2');
 const compression = require('compression');
