@@ -1,4 +1,4 @@
-# Meesterproef 2019 @cmda-minor-web · 2019-2020
+# Meesterproef 2020 @cmda-minor-web · 2019-2020
 
 During the Meesterproef, we created a prototype for Lyvup. We designed and programmed a brand new frontend with an onboarding process for new users.
 
