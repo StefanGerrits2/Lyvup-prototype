@@ -1,11 +1,9 @@
 const profile__container = document.querySelectorAll('.profile__container');
 
 profile__container.forEach((element) => {
-    console.log(element.querySelector('.info__container'));
     const completeFormContainer = element.querySelectorAll('.info__container').forEach(item => {
         item.addEventListener('click', () => {
             let card_index = Array.prototype.indexOf.call(profile__container);
-            console.log(card_index);
 
             element.classList.toggle('collapse');
         });

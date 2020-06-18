@@ -10,7 +10,6 @@ async function home (req, res) {
 
         // Get clicked beer
         const userDashboard = await Fetcher.get(fullURL);
-        console.log(userDashboard.getUserDashboard.data);
 
         res.render('home.hbs', {
             data: userDashboard.getUserDashboard.data,
