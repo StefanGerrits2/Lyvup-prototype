@@ -66,7 +66,7 @@ app
     )
 
     // Get routes
-    .get('/', home)
+    .get('/', landing)
     .get('/feedback', feedback)
     .get('/compliment-or-feedback', compliment)
     .get('/team', team)
@@ -75,7 +75,7 @@ app
     .get('/profile', profile)
     .get('/get-started', get_started)
     .get('/onboarding', onboarding)
-    .get('/landing', landing)
+    .get('/dashboard', home)
     .get('/assessment', assessment)
     .get('/invite', invite)
     .get('/challenge', challenge)
