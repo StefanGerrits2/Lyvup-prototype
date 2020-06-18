@@ -357,6 +357,10 @@
   border-left: 10px solid white;
 }
 
+.compliment__container:not(:last-of-type) {
+    margin-bottom: 1em;
+}
+
 .my__goal__container {
   box-sizing: border-box;
   border-right: 10px solid white !important;
