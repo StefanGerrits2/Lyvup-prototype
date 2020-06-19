@@ -891,6 +891,10 @@ option {
     font-size: 12px;
     overflow: auto;
   }
+
+  .profile__container {
+    max-height: 14.5em;
+  }
 }
 
 @media screen and (max-width: 822px) {
