@@ -17,8 +17,6 @@ if (goalAnimation != null) {
 animationButton.addEventListener('click', function PlayAnimation() {
     animationBox.classList.toggle('hidden');
 
-    console.log('bob');
-
     setTimeout(function () {
         animationBox.classList.toggle('hidden');
     }, 2500);

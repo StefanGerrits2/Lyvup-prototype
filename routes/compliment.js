@@ -30,7 +30,6 @@ async function compliment(req, res) {
 
         // console.log('stefan log', user);
 
-        console.log(req.body);
     } catch (error) {
         res.render('giveCompliment.hbs', {
             //

@@ -11,7 +11,6 @@ addPerson.addEventListener('click', () => {
 
     const personCard = document.querySelector('.person__card-container');
 
-    console.log(personCard);
     personCard.insertAdjacentHTML('afterbegin', `<div class="person__card"><img src="/images/user.png" alt=""><p>${name}</p><p>${mail}</p></div>`);
 });
 

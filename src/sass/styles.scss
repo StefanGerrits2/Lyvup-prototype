@@ -104,13 +104,13 @@ hr{
 }
 
 input[type="text"],
-input[type="email"], 
+input[type="email"],
 textarea {
   transition: .2s ease-in-out;
 }
 
 input[type="text"]:focus,
-input[type="email"]:focus, 
+input[type="email"]:focus,
 textarea:focus {
     border: 1px solid transparent;
     outline: none;
@@ -195,7 +195,7 @@ textarea:focus {
 
         & label > div {
             border: 3px solid $white;
-            border-radius: $border-radius-small;
+            border-radius: $border-radius-big;
         }
 
         & #goals__container {
@@ -318,7 +318,7 @@ textarea:focus {
   background-color: $light-grey;
   border-radius: $border-radius-big;
   background-image: url(/images/background.png);
-  background-size: 500%;
+  background-size: 320%;
   overflow-x: hidden;
 }
 
@@ -339,6 +339,7 @@ aside {
 
 .goal-type-image {
   height: 30px;
+  width: auto !important;
 }
 
 .goal-type2 {
@@ -475,7 +476,7 @@ button:hover {
   display: flex;
   background-color: $white;
   padding: 1.5em 0em;
-  border-radius: $border-radius-small;
+  border-radius: $border-radius-big;
   box-shadow: 0px 2px 0px 1px #e5e5e5;
   position: relative;
 
@@ -510,7 +511,7 @@ button:hover {
 .message .compliment-about-goal {
   color: white;
   background-color: $light-blue;
-  border-radius: 5px;
+  border-radius: 10px;
   height: fit-content;
   padding: .3em;
   font-size: 0.9em;
@@ -524,7 +525,7 @@ button:hover {
   background-color: $light-grey;
   border-radius: $border-radius-big;
   background-image: url(/images/background.png);
-  background-size: 500%;
+  background-size: 320%;
   max-height: 70vh;
   overflow-y: auto;
 
@@ -614,6 +615,10 @@ option {
   padding: 1em;
   margin: 1em;
   color: $black;
+}
+
+.fix-border {
+  border-radius: 5px!important;
 }
 
 .show {
@@ -734,6 +739,12 @@ option {
 }
 
 @media screen and (max-width: 1200px) {
+  .goal-buttons__container {
+    & .goal-type2 {
+      display: none;
+    }
+  }
+
   .profile__container{
     max-height: 13em;
   }
@@ -748,6 +759,7 @@ option {
   }
 
   .goals-button {
+    height: auto;
     top: 5.5em;
   }
 
@@ -786,23 +798,17 @@ option {
 
     & #main__container, #leaderboard__container, #goals-main__container {
       width: 50%;
-
-      & #setGoals__container {
-        & .goal__container {
-          & .goal-buttons__container {
-          }
-        }
-      }
     }
 
     & #super-goals__container, #goals-compliments__container {
-      width: 50%;
+      width: 50% !important;
     }
   }
 
-  .submitGoal{
+  .submitGoal, .goal-completer{
     margin-bottom: 2em;
   }
+
 
   .add-goals__container {
     & .select {
@@ -812,6 +818,12 @@ option {
 
     & .datePicker {
       width: auto
+    }
+  }
+
+  .complete-toggle {
+    & input {
+      margin-bottom: 0;
     }
   }
 
@@ -878,6 +890,10 @@ option {
   body {
     font-size: 12px;
     overflow: auto;
+  }
+
+  .profile__container {
+    max-height: 14.5em;
   }
 }
 

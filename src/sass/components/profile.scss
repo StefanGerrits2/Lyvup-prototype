@@ -1,0 +1,257 @@
+.bodyTextBold {
+    font-family: "publicSans-medium", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bodyTextItalic {
+    font-family: "publicSans-medium", sans-serif;
+    font-size: 13px;
+    font-style: italic;;
+}
+
+p,
+tr {
+    font-family: "publicSans" !important;
+    line-height: 125%;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    padding: 1em;
+    padding-bottom: 2em;
+    margin: 1%;
+    width: 35%;
+    height: 30%;
+    border-radius: 15px;
+}
+
+.content {
+    background-color: white;
+    padding: 1em;
+    margin: 1%;
+    width: 70%;
+    border-radius: 15px;
+    padding-bottom: 2em;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.container2 {
+    background-color: white;
+    padding: .5em;
+    transition: 200ms ease-in-out;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.container3 {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.container4 {
+    width: 95%;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+td {
+    padding: 0.5em;
+}
+
+.profile__goals__container {
+    width: 100%;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    margin-bottom: .5em;
+    justify-content: space-between;
+    padding: 5px;
+    background-image: url(/images/background.png);
+    background-size: 500%;
+    height: 15em;
+    overflow-y: auto;
+    margin-top: 1em;
+}
+
+.goal__profile {
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    transition: 200ms ease-in-out;
+    border-radius: $border-radius-big;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+    margin: .5em;
+}
+
+.goal__profile>div {
+    padding-right: .75em;
+    padding-left: .75em;
+    padding-bottom: .75em;
+    padding-top: .35em;
+}
+
+.profile__sides__container {
+    width: 100%;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    padding-bottom: .75em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+.sides__container {
+    margin: .1em;
+    padding: 0px 5px;
+    background-color: white;
+    color: black;
+    transition: 200ms ease-in-out;
+    border-radius: $border-radius-big;
+    box-shadow: 0px 2px 0px 1px #e5e5e5;
+    width: fit-content;
+    margin: .75em .75em 0 .75em;
+}
+
+.goal-type2 {
+    padding: .5em;
+    color: $green;
+    font-size: 13px;
+}
+
+.profile__grid__container{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% auto;
+    margin-bottom: 2em;
+    margin-right: .5em;
+    margin-left: .5em;
+    margin-top: .75em;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    padding: 1em 0em;
+}
+
+.profile__grid__element{
+    border-radius: 50px;
+    min-height: 50px;
+    margin: .5em;
+}
+
+.achievementIcon{
+    border-radius: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 1px 0px 2px #e5e5e5;
+}
+
+.achievementIcon:hover{
+    border-radius: 50px;
+}
+
+.profile__challenge__container {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+
+    & > div  {
+        width: 48%;
+
+        & h4 {
+            margin-bottom: .5em;
+        }
+    }
+}
+
+.profile__individual{
+    overflow: auto;
+    padding: .5em;
+    background-color: $light-grey;
+    border-radius: $border-radius-big;
+    max-height: 20em;
+}
+
+.profile__challange{
+    background-color: $white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: $border-radius-small;
+}
+
+.float__right{
+    float: right;
+}
+
+.profile__bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > div {
+        width: 48%;
+    }
+
+    & img {
+        width: 3em;
+        margin-right: 1em;
+    }
+}
+
+#achievement__container {
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+
+        &::before {
+            content: "Achievement 1: 5/5 complimenten gegeven";
+            position: absolute;
+            top: -5.5em;
+            left: -2em;
+            color: white;
+            background-color: black;
+            padding: .75em;
+            border-radius: $border-radius-small;
+            width: 10em;
+            font-family: 'publicSans', sans-serif;
+            font-size: 14px;
+        }
+    }
+}
+
+#profile__main__container {
+    margin: 3em 0;
+    background-color: $white;
+
+    .image__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .message {
+        margin: 0;
+    }
+
+    & img {
+       width: 10em;
+       height: 10em;
+    }
+}
+
+#profile__right__container {
+    width: 40%;
+    background-color: $background-color;
+    padding: 2.1em 3em 3em 3em;
+    height: 100vw;
+    overflow-y: auto;
+
+    & > button {
+        margin-top: 1.5em;
+    }
+}

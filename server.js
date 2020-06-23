@@ -9,7 +9,6 @@ const hbs = require('express-handlebars');
 
 const app = express();
 const server = require('http').Server(app);
-const socket = require('socket.io')(server);
 
 const minifyHTML = require('express-minify-html-2');
 const compression = require('compression');
@@ -66,7 +65,7 @@ app
     )
 
     // Get routes
-    .get('/', home)
+    .get('/', landing)
     .get('/feedback', feedback)
     .get('/compliment-or-feedback', compliment)
     .get('/team', team)
@@ -75,7 +74,7 @@ app
     .get('/profile', profile)
     .get('/get-started', get_started)
     .get('/onboarding', onboarding)
-    .get('/landing', landing)
+    .get('/dashboard', home)
     .get('/assessment', assessment)
     .get('/invite', invite)
     .get('/challenge', challenge)
@@ -88,12 +87,6 @@ app
 
     // 404 not found
     .use(notFound);
-
-// Socket
-socket.on('connection', (socket) => {
-    // Disconnect
-    socket.on('disconnect', () => {});
-});
 
 // Listen
 server.listen(port, () => console.log(`App listening on port ${port}!`));
