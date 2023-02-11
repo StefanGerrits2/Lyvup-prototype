@@ -40,7 +40,7 @@
         "gulp": "^4.0.2",
         "gulp-clean-css": "^4.3.0",
         "gulp-sass": "^4.1.0",
-        "nodemon": "^2.0.4",
+        "nodemon": "^2.0.20",
         "rimraf": "^3.0.2"
     }
 }
